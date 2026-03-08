@@ -1,0 +1,358 @@
+     LUKS Streckenuntersuchung     Projekt Dissertation: Kreuzungsbahnhof DB (Doppel)
+     Betriebsvariante              Standard
+     Version 3.9.1                 Strecke Teststrecke
+     18.03.2025 12:33:05           
+     ������������������������������������������������������������������������������������
+
+     Ma�gebender Abschnitt des Betriebsprogramms:
+     ��������������������������������������������
+     Eingl. Abschnitt:  DB1 (DB 1)  -  DB2 (DB 2)
+
+     Beschreibung des Streckenprojektes
+     ����������������������������������
+
+      ----
+
+     Strecken-Definition
+     �������������������
+
+      Streckengleis Richtung 1  Richtung 1
+
+      Betriebs-                    Fahrwegpunkte
+      stelle          von       -           �ber           -       nach      
+
+      S1      Gleisende  3521-0 - FzMessPkt  Streckengleis - BstGrenze  3521-0 
+      DB1     BstGrenze  3521-0 - FzMessPkt  Gleis 1       - BstGrenze  3521-0 
+      S2      BstGrenze  3521-0 - FzMessPkt  Streckengleis - BstGrenze  3521-0 
+      DB2     BstGrenze  3521-0 - FzMessPkt  Gleis 1       - BstGrenze  3521-0 
+      S3      BstGrenze  3521-0 - FzMessPkt  Streckengleis - Gleisende  3521-0 
+
+      Streckengleis Richtung 2  Richtung 2
+
+      Betriebs-                    Fahrwegpunkte
+      stelle          von       -           �ber           -       nach      
+
+      S3      Gleisende  3521-0 - FzMessPkt  Streckengleis - BstGrenze  3521-0 
+      DB2     BstGrenze  3521-0 - FzMessPkt  Gleis 1       - BstGrenze  3521-0 
+      S2      BstGrenze  3521-0 - FzMessPkt  Streckengleis - BstGrenze  3521-0 
+      DB1     BstGrenze  3521-0 - FzMessPkt  Gleis 1       - BstGrenze  3521-0 
+      S1      BstGrenze  3521-0 - FzMessPkt  Streckengleis - Gleisende  3521-0 
+
+      �berholungsm�glichkeiten
+
+      Spalte Kreuzung:  X = das durchgehende Hauptgleis der Gegenrichtung
+                            muss gekreuzt werden
+
+      Betriebs-                              Halte            Aus- / Ein-
+      stelle        Gleis        Richtung   Rz   Gz  Kreuzung  f�delung
+
+      DB1     FzMessPkt  Gleis 2    1       ja  nein          DB1    DB1    
+      DB1     FzMessPkt  Gleis 2    2       ja  nein          DB1    DB1    
+      DB2     FzMessPkt  Gleis 2    1       ja  nein          DB2    DB2    
+      DB2     FzMessPkt  Gleis 2    2       ja  nein          DB2    DB2    
+
+
+     Infrastrukturelemente der durchgehenden Hauptgleise
+     ���������������������������������������������������
+
+      Streckengleis Richtung 1  Richtung 1
+
+      Bst Strecke  km 	Name	Erl�uterung
+
+      S1    3521 0.000	3521-0	Gleisende
+      S1    3521 0.000		ZB-Anfang	Steigend, PZB
+      S1    3521 0.000		ZB-Anfang	Steigend, ETCS1( DB Netz AG SRS 3.6.0  <ETCS 1 (FS) | ETCS 2>)
+      S1    3521 0.000		Geschwindigkeit Zul�ssig	Steigend, v=100km/h, 
+                     	   	Wirkung ab hier, Alle
+      S1    3521 0.000		Bremsweg	Steigend, l=1000m
+      S1    3521 2.750	Streckengleis	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      S1    3521 5.500	3521-0	Betriebsstellengrenze	=>DB1 3521-0, Gleis 0
+      DB1   3521 5.500	3521-0	Betriebsstellengrenze	=>S1 3521-0, Gleis 0
+      DB1   3521 5.765	01Va	Vorsignal	Steigend, Fb=9s, KS-Signal
+      DB1   3521 6.442		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      DB1   3521 6.505		Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      DB1   3521 6.765	01A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      DB1   3521 6.765	01Vn	Vorsignal	Steigend, Fb=9s, KS-Signal
+      DB1   3521 6.965		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      DB1   3521 6.990	01W1	Weiche, Anfang
+      DB1   3521 6.990	01W1	Weiche, Stamm
+      DB1   3521 7.035		Zugschlussstelle	Steigend, Fahrstra�e, Fa=3.00s, SvL
+      DB1   3521 7.442		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      DB1   3521 7.500	Gleis 1	Fahrzeitmesspunkt	Beide Richtungen
+      DB1   3521 7.505	PZB 500	Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      DB1   3521 7.760	Gl 1 s	Halteplatz	Steigend, Personenzug, l=520.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h
+      DB1   3521 7.765	01N1	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      DB1   3521 7.965		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      DB1   3521 8.010	01W2	Weiche, Stamm
+      DB1   3521 8.010	01W2	Weiche, Anfang
+      DB1   3521 8.035		Zugschlussstelle	Steigend, Fahrstra�e, Fa=3.00s, SvL
+      DB1   3521 8.035		Geschwindigkeit Zul�ssig	Steigend, v=100km/h, 
+                     	   	Wirkung ab hier, Alle
+      DB1   3521 9.500	3521-0	Betriebsstellengrenze	=>S2 3521-0, Gleis 0
+      S2    3521 9.500	3521-0	Betriebsstellengrenze	=>DB1 3521-0, Gleis 0
+      S2    3521 15.000	Streckengleis	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      S2    3521 20.500	3521-0	Betriebsstellengrenze	=>DB2 3521-0, Gleis 0
+      DB2   3521 20.500	3521-0	Betriebsstellengrenze	=>S2 3521-0, Gleis 0
+      DB2   3521 20.765	02Va	Vorsignal	Steigend, Fb=9s, Unbekannt
+      DB2   3521 21.442		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      DB2   3521 21.505		Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      DB2   3521 21.765	02A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      DB2   3521 21.765	02Vn	Vorsignal	Steigend, Fb=9s, Unbekannt
+      DB2   3521 21.965		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      DB2   3521 21.990	02W1	Weiche, Anfang
+      DB2   3521 21.990	02W1	Weiche, Stamm
+      DB2   3521 22.035		Zugschlussstelle	Steigend, Fahrstra�e, Fa=3.00s, SvL
+      DB2   3521 22.442		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      DB2   3521 22.500	Gleis 1	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      DB2   3521 22.505	PZB 500	Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      DB2   3521 22.760	Gl 1 s	Halteplatz	Steigend, Personenzug, l=520.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h
+      DB2   3521 22.765	02N1	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      DB2   3521 22.965		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      DB2   3521 23.010	02W2	Weiche, Stamm
+      DB2   3521 23.010	02W2	Weiche, Anfang
+      DB2   3521 23.035		Zugschlussstelle	Steigend, Fahrstra�e, Fa=3.00s, SvL
+      DB2   3521 23.035		Geschwindigkeit Zul�ssig	Steigend, v=100km/h, 
+                     	   	Wirkung ab hier, Alle
+      DB2   3521 24.500	3521-0	Betriebsstellengrenze	=>S3 3521-0, Gleis 0
+      S3    3521 24.500	3521-0	Betriebsstellengrenze	=>DB2 3521-0, Gleis 0
+      S3    3521 27.250	Streckengleis	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      S3    3521 30.000	3521-0	Gleisende
+
+      Streckengleis Richtung 2  Richtung 2
+
+      Bst Strecke  km 	Name	Erl�uterung
+
+      S3    3521 30.000	3521-0	Gleisende
+      S3    3521 30.000		ZB-Anfang	Fallend, PZB
+      S3    3521 30.000		ZB-Anfang	Fallend, ETCS1( DB Netz AG SRS 3.6.0  <ETCS 1 (FS) | ETCS 2>)
+      S3    3521 30.000		Geschwindigkeit Zul�ssig	Fallend, v=100km/h, 
+                     	   	Wirkung ab hier, Alle
+      S3    3521 30.000		Bremsweg	Fallend, l=1000m
+      S3    3521 27.250	Streckengleis	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      S3    3521 24.500	3521-0	Betriebsstellengrenze	=>DB2 3521-0, Gleis 0
+      DB2   3521 24.500	3521-0	Betriebsstellengrenze	=>S3 3521-0, Gleis 0
+      DB2   3521 24.235	02Vf	Vorsignal	Fallend, Fb=9s, Unbekannt
+      DB2   3521 23.558		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      DB2   3521 23.495		Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      DB2   3521 23.235	02F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      DB2   3521 23.235	02Vp	Vorsignal	Fallend, Fb=9s, Unbekannt
+      DB2   3521 23.035		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      DB2   3521 23.010	02W2	Weiche, Anfang
+      DB2   3521 23.010	02W2	Weiche, Stamm
+      DB2   3521 22.965		Zugschlussstelle	Fallend, Fahrstra�e, Fa=3.00s, SvL
+      DB2   3521 22.558		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      DB2   3521 22.500	Gleis 1	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      DB2   3521 22.495	PZB 500	Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      DB2   3521 22.240	Gl 1 f	Halteplatz	Fallend, Personenzug, l=520.0m, Links, sEoA=0m, sSVL=0m, rs=-1km/h
+      DB2   3521 22.235	02P1	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      DB2   3521 22.035		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      DB2   3521 21.990	02W1	Weiche, Stamm
+      DB2   3521 21.990	02W1	Weiche, Anfang
+      DB2   3521 21.965		Zugschlussstelle	Fallend, Fahrstra�e, Fa=3.00s, SvL
+      DB2   3521 21.965		Geschwindigkeit Zul�ssig	Fallend, v=100km/h, 
+                     	   	Wirkung ab hier, Alle
+      DB2   3521 20.500	3521-0	Betriebsstellengrenze	=>S2 3521-0, Gleis 0
+      S2    3521 20.500	3521-0	Betriebsstellengrenze	=>DB2 3521-0, Gleis 0
+      S2    3521 15.000	Streckengleis	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      S2    3521 9.500	3521-0	Betriebsstellengrenze	=>DB1 3521-0, Gleis 0
+      DB1   3521 9.500	3521-0	Betriebsstellengrenze	=>S2 3521-0, Gleis 0
+      DB1   3521 9.235	01Vf	Vorsignal	Fallend, Fb=9s, KS-Signal
+      DB1   3521 8.558		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      DB1   3521 8.495		Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      DB1   3521 8.235	01F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      DB1   3521 8.235	01Vp	Vorsignal	Fallend, Fb=9s, Unbekannt
+      DB1   3521 8.035		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      DB1   3521 8.010	01W2	Weiche, Anfang
+      DB1   3521 8.010	01W2	Weiche, Stamm
+      DB1   3521 7.965		Zugschlussstelle	Fallend, Fahrstra�e, Fa=3.00s, SvL
+      DB1   3521 7.558		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      DB1   3521 7.500	Gleis 1	Fahrzeitmesspunkt	Beide Richtungen
+      DB1   3521 7.495	PZB 500	Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      DB1   3521 7.240	Gl 1 f	Halteplatz	Fallend, Personenzug, l=520.0m, Links, sEoA=0m, sSVL=0m, rs=-1km/h
+      DB1   3521 7.235	01P1	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      DB1   3521 7.035		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      DB1   3521 6.990	01W1	Weiche, Stamm
+      DB1   3521 6.990	01W1	Weiche, Anfang
+      DB1   3521 6.965		Zugschlussstelle	Fallend, Fahrstra�e, Fa=3.00s, SvL
+      DB1   3521 6.965		Geschwindigkeit Zul�ssig	Fallend, v=100km/h, 
+                     	   	Wirkung ab hier, Alle
+      DB1   3521 5.500	3521-0	Betriebsstellengrenze	=>S1 3521-0, Gleis 0
+      S1    3521 5.500	3521-0	Betriebsstellengrenze	=>DB1 3521-0, Gleis 0
+      S1    3521 2.750	Streckengleis	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      S1    3521 0.000	3521-0	Gleisende
+
+     Modellzugdaten
+     ��������������
+
+      Richtung 1  Richtung 1
+
+      Zugfamilie Name           ETCS steigend
+      Modellzug Name            ETCS steigend
+      Betriebsprogramm          Anzahl im U-Zeitraum    32 Fahrten
+        0-1   1-2   2-3   3-4   4-5   5-6   6-7   7-8   8-9   9-10 10-11 11-12 Uhr
+         -     -     -     -     2     2     2     2     2     2     2     2   
+       12-13 13-14 14-15 15-16 16-17 17-18 18-19 19-20 20-21 21-22 22-23 23-24 Uhr
+         2     2     2     2     2     2     2     2     2     2     2     2   
+      Teilzug  Zugnummer        ETCS steigend
+        Zugklasse NRz           Zuggattung DPN
+        Rang Betrieb10
+        Triebfahrzeug(e)        80 0622-19.0  80 0622 LINT 54, 3x390kW, 150SP, 
+                                    Vmax140 [D]
+        Zugl�nge 54 m           Wagenzugl�nge 0 m       Wagenzugmasse 0 t
+        Wagenanzahl 0           V_max 140 km/h          vMax_Signalsicht 140 km/h
+        Bremsstellung R+Mg      Bremshundertstel 180
+        Sicherungstechnik       ETCS Level 1 LS / 1   
+        Neigetechnik            ---
+        Versp�tungsniveau       p_V,ein  50 %           t_V,ein,m  2 min
+        Laufweg von - bis       S1 - S3
+        Betriebsstellen
+          S1      Fahrweg:      null - Strecke 1 - VDV 1
+          DB1     Fahrweg: Strecke 1 - Gleis 1 - Strecke 2Halt 1.0 / 1.0 min
+          S2      Fahrweg:      VDV 1 - Strecke 2 - VDV 2
+          DB2     Fahrweg: Strecke 2 - Gleis 2 - Strecke 3Halt 1.0 / 1.0 min
+          S3      Fahrweg:      VDV 2 - Strecke 3 - null
+
+      Richtung 2  Richtung 2
+
+      Zugfamilie Name           ETCS fallend
+      Modellzug Name            ETCS fallend
+      Betriebsprogramm          Anzahl im U-Zeitraum    32 Fahrten
+        0-1   1-2   2-3   3-4   4-5   5-6   6-7   7-8   8-9   9-10 10-11 11-12 Uhr
+         -     -     -     -     2     2     2     2     2     2     2     2   
+       12-13 13-14 14-15 15-16 16-17 17-18 18-19 19-20 20-21 21-22 22-23 23-24 Uhr
+         2     2     2     2     2     2     2     2     2     2     2     2   
+      Teilzug  Zugnummer        ETCS fallend
+        Zugklasse NRz           Zuggattung DPN
+        Rang Betrieb10
+        Triebfahrzeug(e)        80 0622-19.0  80 0622 LINT 54, 3x390kW, 150SP, 
+                                    Vmax140 [D]
+        Zugl�nge 54 m           Wagenzugl�nge 0 m       Wagenzugmasse 0 t
+        Wagenanzahl 0           V_max 140 km/h          vMax_Signalsicht 140 km/h
+        Bremsstellung R+Mg      Bremshundertstel 180
+        Sicherungstechnik       ETCS Level 1 LS / 1   
+        Neigetechnik            ---
+        Versp�tungsniveau       p_V,ein  50 %           t_V,ein,m  2 min
+        Laufweg von - bis       S3 - S1
+        Betriebsstellen
+          S3      Fahrweg:      null - Strecke 3 - VDV 2
+          DB2     Fahrweg: Strecke 3 - Gleis 1 - Strecke 2Halt 1.0 / 1.0 min
+          S2      Fahrweg:      VDV 2 - Strecke 2 - VDV 1
+          DB1     Fahrweg: Strecke 2 - Gleis 2 - Strecke 1Halt 1.0 / 1.0 min
+          S1      Fahrweg:      VDV 1 - Strecke 1 - null
+
+     Allgemeine Angaben zur Berechnung
+     ���������������������������������
+
+     Bezugszeitraum:                16 Stunden von 6 bis 22 Uhr
+     Rangordnung der Zugfolgef�lle: ungleichrangige Zugfolgef�lle gleichrangig, 
+                                    wenn g�nstiger (Matrixvergleich)
+     Zugfolgef�lle:                 nach erweitertem Ganglinienverfahren
+     Mindestl�nge der �berholungsabschnitte f�r G�terz�ge:  3000 m
+
+     Ma�gebender eingleisiger Abschnitt:    von DB1 (Weiche 01W2)
+                                            bis DB2 (Weiche 02W1)
+     Anzahl der Warteschlangen:     1
+     Verfahren zur Ermittlung der Folgeversp�tungen: 
+                                    Mittelwert-basiert (nach Schwanh�u�er 1974)
+     Qualit�tsfaktoren q
+                Qualit�tsstufe      Bereich        Hochrechnung f�r
+                premium             q < 0.5            q = 0.5
+                optimal             0.5 <= q <= 1.2    q = 1.0
+                risikobehaftet      1.2 <  q <= 1.5    q = 1.2
+                mangelhaft          q > 1.5            q = 1.5
+
+
+     Leistungskennwerte der Strecke Teststrecke  (beide Richtungen)
+     ��������������������������������������������������������������
+
+      Betriebsprogramm im Bezugszeitraum
+      ����������������������������������
+
+      lfd.   Zug-       Zug-      Rang Anzahl   Versp�tungsniveau 
+      Nr.   gattung    nummer                  t_V,ein,m   p_V,ein
+
+        1     DPN   ETCS steigend  10    32       2.00      0.50
+        2     DPN   ETCS fallend   10    32       2.00      0.50
+
+      Summe                              64
+
+
+      Leistungskennwerte
+      ������������������
+
+      Anteil der Reisez�ge                           p_Rz           1.000
+
+      zul�ssige Summen der Folgeversp�tungen
+
+         Betriebsqualit�t     Summe der Folgeversp�tungen     zugeh�rige L�nge   
+                             im Bezugszeitraum   je Stunde    der Warteschlange  
+                                   [min]          [min/h]             [-]        
+
+         premium                    34              2.13             0.04        
+         optimal *                  68              4.25             0.07        
+         risikobehaftet             82              5.10             0.09        
+         mangelhaft                 102             6.38             0.11        
+
+         * gilt f�r die Nennleistung (= optimale Zugzahl Betrieb)
+
+      mittlere Mindestzugfolgezeit [min]
+
+         f�r alle Zugfolgef�lle                      t_Zm            9.93
+         f�r gleichrangige Zugfolgef�lle             t_Zgr           9.93
+         f�r verschiedenrangige Zugfolgef�lle        t_Zvr           0.00
+
+      Wahrscheinlichkeit gleichrangiger 
+      Zugfolgef�lle:                                 p_gr           1.000
+
+      vorhandene Summe der Folgeversp�tungen
+
+         im Bezugszeitraum [min / 16 h]                                40
+         je Stunde [min / h]                                         2.48
+         zugeh�rige mittlere Pufferzeit [min]        t_P,m           5.07
+
+      Nennleistung (= optimale Zugzahl Betrieb)
+
+         im Bezugszeitraum [Anzahl Z�ge / 16 h]      L_F               71
+         je Stunde [Anzahl Z�ge / h]                                 4.44
+         zugeh�rige mittlere Pufferzeit [min]        t_P,m           3.68
+         Nutzungsgrad                                                0.91
+         Qualit�tsfaktor                             q_0             0.58
+
+      Faktor zur Hochrechnung des zugrunde gelegten Betriebsprogramms
+      an die Leistungsgrenze (Hochrechnungsfaktor) bei Qualit�tsstufe
+
+         premium                                                     0.97
+         optimal                                                     1.10
+         risikobehaftet                                              1.13
+         mangelhaft                                                  1.17
+
+
+      weitere Kennwerte
+      �����������������
+                                  Anzahl nach      zul�ssige Anzahl der Z�ge     
+      lfd.   Zug-       Zug-       Betriebs-         bei Betriebsqualit�t        
+      Nr.   gattung    nummer      programm    premium optimal risikobeh. mangelh.
+
+        1     DPN   ETCS steigend     32       31.0     35.3     36.3     37.5
+        2     DPN   ETCS fallend      32       31.0     35.3     36.3     37.5
+
+      Summe (abgerundet)              64         62       70       72       75
+
+      zul�ssige Anzahl der Z�ge
+         in der Spitzenstunde *                   5        5        5        5
+           bei mittl. Pufferzeit [min]         2.07     2.07     2.07     2.07   
+         in 4 Spitzenstunden *                   17       18       19       19
+           bei mittl. Pufferzeit [min]         4.19     3.40     2.70     2.70   
+
+         * Die zul�ssige Anzahl der Z�ge in 1 bzw. 4 Spitzenstunden
+           entspricht der Anzahl der Zugfolgezeiten, die bei
+           zuf�lliger H�ufung kleiner Pufferzeiten vollst�ndig in
+           diesem Zeitraum liegen k�nnen.
+
+      Theoretische Leistungsf�higkeit (ohne Pufferzeiten)
+
+         im Bezugszeitraum [Anzahl Z�ge / 16 h]      L_F,th            96
+         je Stunde [Anzahl Z�ge / h]                                 6.00
+         Nutzungsgrad der theoret. Leistungsf�higkeit                0.67
+
+

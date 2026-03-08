@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<railml xmlns="http://www.railml.org/schemas/2013" version="2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.railml.org/schemas/2013 https://schemas.railml.org/2013/railML-2.2/railML.xsd">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:creator>wink</dc:creator>
+    <dc:date>2025-03-18T13:54:19.937Z</dc:date>
+    <dc:description>Capacity Planning</dc:description>
+    <dc:format>railML 2.2</dc:format>
+    <dc:identifier>LUKS 3.9.1</dc:identifier>
+    <dc:language>de-DE</dc:language>
+    <dc:publisher>VIA Consulting &amp; Development</dc:publisher>
+    <dc:source>LUKS® https://www.via-con.de/development/luks/</dc:source>
+    <dc:title>Dissertation: Kreuzungsbahnhof VDV (Doppel)</dc:title>
+  </metadata>
+  <infrastructure id="is">
+    <tracks>
+      <track id="track_1" name="0" type="mainTrack">
+        <trackTopology>
+          <trackBegin id="tb_track_1" pos="0" absPos="5500">
+            <macroscopicNode ocpRef="ocp_0"/>
+          </trackBegin>
+          <trackEnd id="te_track_1" pos="0" absPos="5500">
+            <macroscopicNode ocpRef="ocp_3"/>
+          </trackEnd>
+        </trackTopology>
+      </track>
+      <track id="track_2" name="Streckengleis" type="stationTrack">
+        <trackTopology>
+          <trackBegin id="tb_track_2" pos="0">
+            <macroscopicNode ocpRef="ocp_0"/>
+          </trackBegin>
+          <trackEnd id="te_track_2" pos="5500">
+            <macroscopicNode ocpRef="ocp_0"/>
+          </trackEnd>
+        </trackTopology>
+      </track>
+      <track id="track_3" name="0" type="mainTrack">
+        <trackTopology>
+          <trackBegin id="tb_track_3" pos="0" absPos="9500">
+            <macroscopicNode ocpRef="ocp_1"/>
+          </trackBegin>
+          <trackEnd id="te_track_3" pos="0" absPos="9500">
+            <macroscopicNode ocpRef="ocp_3"/>
+          </trackEnd>
+        </trackTopology>
+      </track>
+      <track id="track_4" name="0" type="mainTrack">
+        <trackTopology>
+          <trackBegin id="tb_track_4" pos="0" absPos="20500">
+            <macroscopicNode ocpRef="ocp_1"/>
+          </trackBegin>
+          <trackEnd id="te_track_4" pos="0" absPos="20500">
+            <macroscopicNode ocpRef="ocp_4"/>
+          </trackEnd>
+        </trackTopology>
+      </track>
+      <track id="track_5" name="Streckengleis" type="stationTrack">
+        <trackTopology>
+          <trackBegin id="tb_track_5" pos="0">
+            <macroscopicNode ocpRef="ocp_1"/>
+          </trackBegin>
+          <trackEnd id="te_track_5" pos="11000">
+            <macroscopicNode ocpRef="ocp_1"/>
+          </trackEnd>
+        </trackTopology>
+      </track>
+      <track id="track_6" name="0" type="mainTrack">
+        <trackTopology>
+          <trackBegin id="tb_track_6" pos="0" absPos="24500">
+            <macroscopicNode ocpRef="ocp_2"/>
+          </trackBegin>
+          <trackEnd id="te_track_6" pos="0" absPos="24500">
+            <macroscopicNode ocpRef="ocp_4"/>
+          </trackEnd>
+        </trackTopology>
+      </track>
+      <track id="track_7" name="Streckengleis" type="stationTrack">
+        <trackTopology>
+          <trackBegin id="tb_track_7" pos="0">
+            <macroscopicNode ocpRef="ocp_2"/>
+          </trackBegin>
+          <trackEnd id="te_track_7" pos="5500">
+            <macroscopicNode ocpRef="ocp_2"/>
+          </trackEnd>
+        </trackTopology>
+      </track>
+      <track id="track_8" name="0" type="mainTrack">
+        <trackTopology>
+          <trackBegin id="tb_track_8" pos="0" absPos="5500">
+            <macroscopicNode ocpRef="ocp_3"/>
+          </trackBegin>
+          <trackEnd id="te_track_8" pos="0" absPos="5500">
+            <macroscopicNode ocpRef="ocp_0"/>
+          </trackEnd>
+        </trackTopology>
+      </track>
+      <track id="track_9" name="0" type="mainTrack">
+        <trackTopology>
+          <trackBegin id="tb_track_9" pos="0" absPos="9500">
+            <macroscopicNode ocpRef="ocp_3"/>
+          </trackBegin>
+          <trackEnd id="te_track_9" pos="0" absPos="9500">
+            <macroscopicNode ocpRef="ocp_1"/>
+          </trackEnd>
+        </trackTopology>
+      </track>
+      <track id="track_10" name="Gleis 1" type="stationTrack">
+        <trackTopology>
+          <trackBegin id="tb_track_10" pos="0">
+            <macroscopicNode ocpRef="ocp_3"/>
+          </trackBegin>
+          <trackEnd id="te_track_10" pos="520">
+            <macroscopicNode ocpRef="ocp_3"/>
+          </trackEnd>
+        </trackTopology>
+        <ocsElements>
+          <stopPosts>
+            <stopPost id="stp_VDV1_Gl1f_109" code="Gl 1 f" name="Gl 1 f" pos="0" ocpRef="ocp_3"/>
+            <stopPost id="stp_VDV1_Gl1s_115" code="Gl 1 s" name="Gl 1 s" pos="0" ocpRef="ocp_3"/>
+          </stopPosts>
+        </ocsElements>
+      </track>
+      <track id="track_11" name="Gleis 2" type="stationTrack">
+        <trackTopology>
+          <trackBegin id="tb_track_11" pos="0">
+            <macroscopicNode ocpRef="ocp_3"/>
+          </trackBegin>
+          <trackEnd id="te_track_11" pos="520">
+            <macroscopicNode ocpRef="ocp_3"/>
+          </trackEnd>
+        </trackTopology>
+        <ocsElements>
+          <stopPosts>
+            <stopPost id="stp_VDV1_Gl2f_89" code="Gl 2 f" name="Gl 2 f" pos="0" ocpRef="ocp_3"/>
+            <stopPost id="stp_VDV1_Gl2s_95" code="Gl 2 s" name="Gl 2 s" pos="0" ocpRef="ocp_3"/>
+          </stopPosts>
+        </ocsElements>
+      </track>
+      <track id="track_12" name="0" type="mainTrack">
+        <trackTopology>
+          <trackBegin id="tb_track_12" pos="0" absPos="20500">
+            <macroscopicNode ocpRef="ocp_4"/>
+          </trackBegin>
+          <trackEnd id="te_track_12" pos="0" absPos="20500">
+            <macroscopicNode ocpRef="ocp_1"/>
+          </trackEnd>
+        </trackTopology>
+      </track>
+      <track id="track_13" name="0" type="mainTrack">
+        <trackTopology>
+          <trackBegin id="tb_track_13" pos="0" absPos="24500">
+            <macroscopicNode ocpRef="ocp_4"/>
+          </trackBegin>
+          <trackEnd id="te_track_13" pos="0" absPos="24500">
+            <macroscopicNode ocpRef="ocp_2"/>
+          </trackEnd>
+        </trackTopology>
+      </track>
+      <track id="track_14" name="Gleis 1" type="stationTrack">
+        <trackTopology>
+          <trackBegin id="tb_track_14" pos="0">
+            <macroscopicNode ocpRef="ocp_4"/>
+          </trackBegin>
+          <trackEnd id="te_track_14" pos="520">
+            <macroscopicNode ocpRef="ocp_4"/>
+          </trackEnd>
+        </trackTopology>
+        <ocsElements>
+          <stopPosts>
+            <stopPost id="stp_VDV2_Gl1f_39" code="Gl 1 f" name="Gl 1 f" pos="0" ocpRef="ocp_4"/>
+            <stopPost id="stp_VDV2_Gl1s_45" code="Gl 1 s" name="Gl 1 s" pos="0" ocpRef="ocp_4"/>
+          </stopPosts>
+        </ocsElements>
+      </track>
+      <track id="track_15" name="Gleis 2" type="stationTrack">
+        <trackTopology>
+          <trackBegin id="tb_track_15" pos="0">
+            <macroscopicNode ocpRef="ocp_4"/>
+          </trackBegin>
+          <trackEnd id="te_track_15" pos="520">
+            <macroscopicNode ocpRef="ocp_4"/>
+          </trackEnd>
+        </trackTopology>
+        <ocsElements>
+          <stopPosts>
+            <stopPost id="stp_VDV2_Gl2f_19" code="Gl 2 f" name="Gl 2 f" pos="0" ocpRef="ocp_4"/>
+            <stopPost id="stp_VDV2_Gl2s_25" code="Gl 2 s" name="Gl 2 s" pos="0" ocpRef="ocp_4"/>
+          </stopPosts>
+        </ocsElements>
+      </track>
+    </tracks>
+    <trackGroups><line id="line_689" name="3521" description="Mainz - Abzw Kaiserbrücke">
+        <trackRef ref="track_1"/>
+        <trackRef ref="track_2"/>
+        <trackRef ref="track_3"/>
+        <trackRef ref="track_4"/>
+        <trackRef ref="track_5"/>
+        <trackRef ref="track_6"/>
+        <trackRef ref="track_7"/>
+        <trackRef ref="track_8"/>
+        <trackRef ref="track_9"/>
+        <trackRef ref="track_10"/>
+        <trackRef ref="track_11"/>
+        <trackRef ref="track_12"/>
+        <trackRef ref="track_13"/>
+        <trackRef ref="track_14"/>
+        <trackRef ref="track_15"/>
+      </line></trackGroups>
+    <operationControlPoints>
+      <ocp id="ocp_0" name="Strecke 1" abbrevation="S1">
+        <propOperational operationalType="station"/>
+      </ocp>
+      <ocp id="ocp_1" name="Strecke 2" abbrevation="S2">
+        <propOperational operationalType="station"/>
+      </ocp>
+      <ocp id="ocp_2" name="Strecke 3" abbrevation="S3">
+        <propOperational operationalType="station"/>
+      </ocp>
+      <ocp id="ocp_3" name="VDV 1" abbrevation="VDV1">
+        <propOperational operationalType="station"/>
+      </ocp>
+      <ocp id="ocp_4" name="VDV 2" abbrevation="VDV2">
+        <propOperational operationalType="station"/>
+      </ocp>
+    </operationControlPoints>
+  </infrastructure>
+  <rollingstock id="rs">
+    <vehicles>
+      <vehicle id="ve_0" name="80 0622-19.0" code="80 0622-19.0" length="54.000" speed="140.000" bruttoWeight="118.000">
+        <engine>
+          <propulsion id="prop_ve_0" power="0" powerType="diesel" rotationMassFactor="0.0375999994575977">
+            <tractiveEffort>
+              <valueTable xValueName="Speed" xValueUnit="km/h" yValueName="Tractive effort" yValueUnit="N">
+                <valueLine xValue="0">
+                  <values yValue="124906"/>
+                </valueLine>
+                <valueLine xValue="20">
+                  <values yValue="96257"/>
+                </valueLine>
+                <valueLine xValue="40">
+                  <values yValue="82216"/>
+                </valueLine>
+                <valueLine xValue="60">
+                  <values yValue="54053"/>
+                </valueLine>
+                <valueLine xValue="80">
+                  <values yValue="42110"/>
+                </valueLine>
+                <valueLine xValue="100">
+                  <values yValue="31642"/>
+                </valueLine>
+                <valueLine xValue="120">
+                  <values yValue="25208"/>
+                </valueLine>
+                <valueLine xValue="140">
+                  <values yValue="24249"/>
+                </valueLine>
+              </valueTable>
+            </tractiveEffort>
+          </propulsion>
+        </engine>
+      </vehicle>
+    </vehicles>
+    <formations>
+      <formation id="fo_0" speed="140.000" length="54.000" bruttoWeight="118.000">
+        <trainOrder>
+          <vehicleRef vehicleRef="ve_0" orderNumber="1"/>
+        </trainOrder>
+      </formation>
+      <formation id="fo_1" speed="140.000" length="54.000" bruttoWeight="118.000">
+        <trainOrder>
+          <vehicleRef vehicleRef="ve_0" orderNumber="1"/>
+        </trainOrder>
+      </formation>
+      <formation id="fo_2" speed="140.000" length="54.000" bruttoWeight="118.000">
+        <trainOrder>
+          <vehicleRef vehicleRef="ve_0" orderNumber="1"/>
+        </trainOrder>
+      </formation>
+      <formation id="fo_3" speed="140.000" length="54.000" bruttoWeight="118.000">
+        <trainOrder>
+          <vehicleRef vehicleRef="ve_0" orderNumber="1"/>
+        </trainOrder>
+      </formation>
+    </formations>
+  </rollingstock>
+  <timetable id="tt">
+    <timetablePeriods>
+      <timetablePeriod id="ttp_1" startDate="2025-03-18" endDate="2025-03-18"/>
+    </timetablePeriods>
+    <operatingPeriods>
+      <operatingPeriod id="op_ttp_1" timetablePeriodRef="ttp_1" startDate="2025-03-18" endDate="2025-03-18" bitMask="1"/>
+    </operatingPeriods>
+    <categories>
+      <category id="cat_0" name="DPN" description="Nahreisezug Dritter (Regelverkehr)" trainUsage="passenger" deadrun="false"/>
+    </categories>
+    
+    
+    
+  </timetable>
+</railml>

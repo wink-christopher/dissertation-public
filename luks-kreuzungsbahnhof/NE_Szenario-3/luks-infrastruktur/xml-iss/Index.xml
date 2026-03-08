@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<XmlIssIndex xsi:noNamespaceSchemaLocation=".\schema\xmliss.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Ersteller>LUKS_User</Ersteller>
+    <Erstellzeitpunkt>18.03.2025 14:01:22</Erstellzeitpunkt>
+    <Kommentar></Kommentar>
+    <WerkzeugName>LUKS</WerkzeugName>
+    <WerkzeugVersion>3.9.1</WerkzeugVersion>
+    <SchnittstelleVersion>3.4</SchnittstelleVersion>
+    <StammdatenVersion>
+        <Name>JFPL 2021 (1. Berichtigung)</Name>
+        <Nummer>2</Nummer>
+        <GueltigAb>01.01.2009</GueltigAb>
+        <GueltigBis>31.12.2009</GueltigBis>
+        <Beschreibung>Stammdaten 2021</Beschreibung>
+        <LetzteAenderung>01.01.2009 01:01:01</LetzteAenderung>
+    </StammdatenVersion>
+    <OrdnungsrahmenVersion>
+        <Name>JFPL 2021 (1. Berichtigung)</Name>
+        <Nummer>2</Nummer>
+        <GueltigAb>01.01.2009</GueltigAb>
+        <GueltigBis>31.12.2009</GueltigBis>
+        <Beschreibung>Ordnungsrahmen 2021</Beschreibung>
+        <LetzteAenderung>01.01.2009 01:01:01</LetzteAenderung>
+    </OrdnungsrahmenVersion>
+    <SpurplandatenVersion>
+        <Name>-1</Name>
+        <Nummer>0</Nummer>
+        <GueltigAb>01.01.2009</GueltigAb>
+        <GueltigBis>31.12.2009</GueltigBis>
+        <Beschreibung></Beschreibung>
+        <LetzteAenderung>01.01.2009 01:01:01</LetzteAenderung>
+    </SpurplandatenVersion>
+    <Dateien>
+        <Datei>
+            <Name>Stammdaten_Bremsarten-Triebfahrzeugbaureihen.xml</Name>
+            <Pruefsumme>00000000000000000000000000000000</Pruefsumme>
+        </Datei>
+        <Datei>
+            <Name>Stammdaten_ZugartenFV-Zuggattungshauptnummern.xml</Name>
+            <Pruefsumme>00000000000000000000000000000000</Pruefsumme>
+        </Datei>
+        <Datei>
+            <Name>Ordnungsrahmen_ORBtrstS1-ORBtrstVDV2.xml</Name>
+            <Pruefsumme>00000000000000000000000000000000</Pruefsumme>
+        </Datei>
+        <Datei>
+            <Name>Ordnungsrahmen_ORStr3521-ORStr3521.xml</Name>
+            <Pruefsumme>00000000000000000000000000000000</Pruefsumme>
+        </Datei>
+        <Datei>
+            <Name>Spurplanbetriebsstellen_S1-VDV2.xml</Name>
+            <Pruefsumme>00000000000000000000000000000000</Pruefsumme>
+        </Datei>
+    </Dateien>
+    <Pruefsumme>00000000000000000000000000000000</Pruefsumme>
+</XmlIssIndex>

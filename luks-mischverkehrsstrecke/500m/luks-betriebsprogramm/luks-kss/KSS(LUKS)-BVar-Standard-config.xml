@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<KSS xsi:noNamespaceSchemaLocation=".\schema\LUKSKSS_2_4_10.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+    <header>
+        <description>
+            <scheduleVersion>
+                <mode>Studie</mode>
+                <name>Jahresfahrplan</name>
+                <number>0</number>
+                <validity>
+                    <validFrom>2012-01-01</validFrom>
+                    <validTo>2012-01-01</validTo>
+                </validity>
+                <yearTimetable>2014</yearTimetable>
+                <rectifyingNumber>0</rectifyingNumber>
+                <class>gemeinsam</class>
+                <timeOfBuild>2025-04-14</timeOfBuild>
+                <comment></comment>
+                <status>FREIGEGEBEN</status>
+            </scheduleVersion>
+            <shortDescription></shortDescription>
+        </description>
+        <comment>LUKS Version 3.9.1 ( - 05.11.2024 12:06:16)</comment>
+        <userAbbreviation></userAbbreviation>
+        <userTelephone></userTelephone>
+        <userEmail></userEmail>
+        <timeOfBuild>2025-04-14T11:27:45</timeOfBuild>
+        <spurplanVersionDescription>
+            <mode>Studie</mode>
+            <name>Jahresfahrplan</name>
+            <number>0</number>
+            <validity>
+                <validFrom>2012-01-01</validFrom>
+                <validTo>2012-01-01</validTo>
+            </validity>
+        </spurplanVersionDescription>
+        <gfdiVersionDescription>
+            <mode>Studie</mode>
+            <name>Jahresfahrplan</name>
+            <number>0</number>
+            <validity>
+                <validFrom>2012-01-01</validFrom>
+                <validTo>2012-01-01</validTo>
+            </validity>
+        </gfdiVersionDescription>
+        <establishment>WEST</establishment>
+    </header>
+    <LUKS_Betriebsvariante>
+        <Name>Standard</Name>
+        <Kommentar></Kommentar>
+        <AktiveSperrungen/>
+        <Szenarien>
+            <Ordner Name="ETCS L1 FS" Beschreibung="">
+                <Element Typ="Zugfamilie" Name="FV Ri 1_L1 FS"/>
+                <Element Typ="Zugfamilie" Name="GV langsam Ri 1_L1 FS"/>
+                <Element Typ="Zugfamilie" Name="GV schnell Ri 1_L1 FS"/>
+                <Element Typ="Zugfamilie" Name="NV langsam Ri 1_L1 FS"/>
+                <Element Typ="Zugfamilie" Name="NV schnell Ri 1_L1 FS"/>
+                <Element Typ="Zugfamilie" Name="FV Ri 2_L1 FS"/>
+                <Element Typ="Zugfamilie" Name="GV langsam Ri 2_L1 FS"/>
+                <Element Typ="Zugfamilie" Name="GV schnell Ri 2_L1 FS"/>
+                <Element Typ="Zugfamilie" Name="NV langsam Ri 2_L1 FS"/>
+                <Element Typ="Zugfamilie" Name="NV schnell Ri 2_L1 FS"/>
+            </Ordner>
+            <Ordner Name="ETCS L2" Beschreibung="">
+                <Element Typ="Zugfamilie" Name="FV Ri 1_L2"/>
+                <Element Typ="Zugfamilie" Name="FV Ri 2_L2"/>
+                <Element Typ="Zugfamilie" Name="GV langsam Ri 1_L2"/>
+                <Element Typ="Zugfamilie" Name="GV langsam Ri 2_L2"/>
+                <Element Typ="Zugfamilie" Name="GV schnell Ri 1_L2"/>
+                <Element Typ="Zugfamilie" Name="GV schnell Ri 2_L2"/>
+                <Element Typ="Zugfamilie" Name="NV langsam Ri 1_L2"/>
+                <Element Typ="Zugfamilie" Name="NV langsam Ri 2_L2"/>
+                <Element Typ="Zugfamilie" Name="NV schnell Ri 1_L2"/>
+                <Element Typ="Zugfamilie" Name="NV schnell Ri 2_L2"/>
+            </Ordner>
+        </Szenarien>
+    </LUKS_Betriebsvariante>
+</KSS>

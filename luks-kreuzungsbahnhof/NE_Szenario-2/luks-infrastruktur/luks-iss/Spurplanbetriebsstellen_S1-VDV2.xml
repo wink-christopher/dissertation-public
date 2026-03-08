@@ -1,0 +1,1690 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<LuksISSDaten xsi:noNamespaceSchemaLocation=".\schema\LUKSISS_3_3_1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Ersteller>LUKS_User</Ersteller>
+    <Erstellzeitpunkt>18.03.2025 13:56:58</Erstellzeitpunkt>
+    <Indexdatei>Index.xml</Indexdatei>
+    <Version>
+        <Name>-1</Name>
+        <Nummer>0</Nummer>
+        <GueltigAb>01.01.2009</GueltigAb>
+        <GueltigBis>31.12.2009</GueltigBis>
+        <Beschreibung></Beschreibung>
+        <LetzteAenderung>01.01.2009 01:01:01</LetzteAenderung>
+    </Version>
+    <Spurplanbetriebsstellen>
+        <Spurplanbetriebsstelle>
+            <Betriebsstelle>S1</Betriebsstelle>
+            <Spurplanabschnitte>
+                <Spurplanabschnitt>
+                    <Strecke>3521</Strecke>
+                    <Spurplanknoten>
+                        <Gleisende>
+                            <ID>130</ID>
+                            <Kilometrierung>0,000+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>3521-0</Name>
+                            <Bildkoordinaten>
+                                <X>-8,08290386200000</X>
+                                <Y>12,00000000000000</Y>
+                            </Bildkoordinaten>
+                        </Gleisende>
+                        <PZBAnfangS>
+                            <ID>131</ID>
+                            <Kilometrierung>0,000+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                        </PZBAnfangS>
+                        <ETCSAnfangS>
+                            <ID>132</ID>
+                            <Kilometrierung>0,000+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <ETCSProfile>
+                                <ETCS1FS> DB Netz AG SRS 3.6.0  &lt;ETCS 1 (FS) | ETCS 2&gt;</ETCS1FS>
+                            </ETCSProfile>
+                        </ETCSAnfangS>
+                        <GeschwZulaessigS>
+                            <ID>133</ID>
+                            <Kilometrierung>0,000+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">80</Geschw>
+                            <Wirkungsort>Hier</Wirkungsort>
+                            <Zugbeeinflussung>Alle</Zugbeeinflussung>
+                        </GeschwZulaessigS>
+                        <BremswegS>
+                            <ID>134</ID>
+                            <Kilometrierung>0,000+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Wert Typ="BREMSWEG-ART" Schluessel="7">700 m Bremsweg</Wert>
+                        </BremswegS>
+                        <Fahrzeitmesspunkt>
+                            <ID>135</ID>
+                            <Kilometrierung>2,750+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>Streckengleis</Name>
+                            <BSMitte/>
+                        </Fahrzeitmesspunkt>
+                        <Betriebsstellengrenze>
+                            <ID>136</ID>
+                            <Kilometrierung>5,500+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <PartnerBtrst>VDV1</PartnerBtrst>
+                            <Bildkoordinaten>
+                                <X>1,15469992200000</X>
+                                <Y>12,00000000000000</Y>
+                            </Bildkoordinaten>
+                            <Gleiskennzeichen>0</Gleiskennzeichen>
+                        </Betriebsstellengrenze>
+                    </Spurplanknoten>
+                </Spurplanabschnitt>
+            </Spurplanabschnitte>
+            <Betriebsstellenfahrwege>
+                <Betriebsstellenfahrweg>
+                    <Name>null - Strecke 1 - VDV 1</Name>
+                    <Anfang Typ="Gleisende" ID="130">3521-0</Anfang>
+                    <Ende Typ="Betriebsstellengrenze" ID="136">3521-0</Ende>
+                    <Fahrzeitmesspunkt Typ="Fahrzeitmesspunkt" ID="135">Streckengleis</Fahrzeitmesspunkt>
+                    <Attribute>
+                        <DurchfahrtOhneHaltMoeglich/>
+                        <Elektrifiziert/>
+                    </Attribute>
+                    <Verlauf/>
+                    <Aktiv>true</Aktiv>
+                    <Prioritaeten>
+                        <Prioritaet Typ="FRz">100</Prioritaet>
+                        <Prioritaet Typ="NRz">100</Prioritaet>
+                        <Prioritaet Typ="Rz">100</Prioritaet>
+                        <Prioritaet Typ="FGz">100</Prioritaet>
+                        <Prioritaet Typ="NGz">100</Prioritaet>
+                        <Prioritaet Typ="Gz">100</Prioritaet>
+                        <Prioritaet Typ="S">100</Prioritaet>
+                        <Prioritaet Typ="Lz">100</Prioritaet>
+                        <Prioritaet Typ="GzG">100</Prioritaet>
+                        <Prioritaet Typ="Rf">0</Prioritaet>
+                    </Prioritaeten>
+                    <Laengen StartBisFzMp="2750" FzMpBisEnde="2750" Gesamt="5500"/>
+                </Betriebsstellenfahrweg>
+                <Betriebsstellenfahrweg>
+                    <Name>VDV 1 - Strecke 1 - null</Name>
+                    <Anfang Typ="Betriebsstellengrenze" ID="136">3521-0</Anfang>
+                    <Ende Typ="Gleisende" ID="130">3521-0</Ende>
+                    <Fahrzeitmesspunkt Typ="Fahrzeitmesspunkt" ID="135">Streckengleis</Fahrzeitmesspunkt>
+                    <Attribute>
+                        <DurchfahrtOhneHaltMoeglich/>
+                        <Elektrifiziert/>
+                    </Attribute>
+                    <Verlauf/>
+                    <Aktiv>true</Aktiv>
+                    <Prioritaeten>
+                        <Prioritaet Typ="FRz">100</Prioritaet>
+                        <Prioritaet Typ="NRz">100</Prioritaet>
+                        <Prioritaet Typ="Rz">100</Prioritaet>
+                        <Prioritaet Typ="FGz">100</Prioritaet>
+                        <Prioritaet Typ="NGz">100</Prioritaet>
+                        <Prioritaet Typ="Gz">100</Prioritaet>
+                        <Prioritaet Typ="S">100</Prioritaet>
+                        <Prioritaet Typ="Lz">100</Prioritaet>
+                        <Prioritaet Typ="GzG">100</Prioritaet>
+                        <Prioritaet Typ="Rf">0</Prioritaet>
+                    </Prioritaeten>
+                    <Laengen StartBisFzMp="2750" FzMpBisEnde="2750" Gesamt="5500"/>
+                </Betriebsstellenfahrweg>
+            </Betriebsstellenfahrwege>
+        </Spurplanbetriebsstelle>
+        <Spurplanbetriebsstelle>
+            <Betriebsstelle>S2</Betriebsstelle>
+            <Spurplanabschnitte>
+                <Spurplanabschnitt>
+                    <Strecke>3521</Strecke>
+                    <Spurplanknoten>
+                        <Betriebsstellengrenze>
+                            <ID>127</ID>
+                            <Kilometrierung>9,500+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <PartnerBtrst>VDV1</PartnerBtrst>
+                            <Bildkoordinaten>
+                                <X>40,41452026000000</X>
+                                <Y>12,00000000000000</Y>
+                            </Bildkoordinaten>
+                            <Gleiskennzeichen>0</Gleiskennzeichen>
+                        </Betriebsstellengrenze>
+                        <Fahrzeitmesspunkt>
+                            <ID>128</ID>
+                            <Kilometrierung>15,000+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>Streckengleis</Name>
+                            <BSMitte/>
+                        </Fahrzeitmesspunkt>
+                        <Betriebsstellengrenze>
+                            <ID>129</ID>
+                            <Kilometrierung>20,500+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <PartnerBtrst>VDV2</PartnerBtrst>
+                            <Bildkoordinaten>
+                                <X>49,65212250000000</X>
+                                <Y>12,00000000000000</Y>
+                            </Bildkoordinaten>
+                            <Gleiskennzeichen>0</Gleiskennzeichen>
+                        </Betriebsstellengrenze>
+                    </Spurplanknoten>
+                </Spurplanabschnitt>
+            </Spurplanabschnitte>
+            <Betriebsstellenfahrwege>
+                <Betriebsstellenfahrweg>
+                    <Name>VDV 1 - Strecke 2 - VDV 2</Name>
+                    <Anfang Typ="Betriebsstellengrenze" ID="127">3521-0</Anfang>
+                    <Ende Typ="Betriebsstellengrenze" ID="129">3521-0</Ende>
+                    <Fahrzeitmesspunkt Typ="Fahrzeitmesspunkt" ID="128">Streckengleis</Fahrzeitmesspunkt>
+                    <Attribute>
+                        <DurchfahrtOhneHaltMoeglich/>
+                        <Elektrifiziert/>
+                    </Attribute>
+                    <Verlauf/>
+                    <Aktiv>true</Aktiv>
+                    <Prioritaeten>
+                        <Prioritaet Typ="FRz">100</Prioritaet>
+                        <Prioritaet Typ="NRz">100</Prioritaet>
+                        <Prioritaet Typ="Rz">100</Prioritaet>
+                        <Prioritaet Typ="FGz">100</Prioritaet>
+                        <Prioritaet Typ="NGz">100</Prioritaet>
+                        <Prioritaet Typ="Gz">100</Prioritaet>
+                        <Prioritaet Typ="S">100</Prioritaet>
+                        <Prioritaet Typ="Lz">100</Prioritaet>
+                        <Prioritaet Typ="GzG">100</Prioritaet>
+                        <Prioritaet Typ="Rf">0</Prioritaet>
+                    </Prioritaeten>
+                    <Laengen StartBisFzMp="5500" FzMpBisEnde="5500" Gesamt="11000"/>
+                </Betriebsstellenfahrweg>
+                <Betriebsstellenfahrweg>
+                    <Name>VDV 2 - Strecke 2 - VDV 1</Name>
+                    <Anfang Typ="Betriebsstellengrenze" ID="129">3521-0</Anfang>
+                    <Ende Typ="Betriebsstellengrenze" ID="127">3521-0</Ende>
+                    <Fahrzeitmesspunkt Typ="Fahrzeitmesspunkt" ID="128">Streckengleis</Fahrzeitmesspunkt>
+                    <Attribute>
+                        <DurchfahrtOhneHaltMoeglich/>
+                        <Elektrifiziert/>
+                    </Attribute>
+                    <Verlauf/>
+                    <Aktiv>true</Aktiv>
+                    <Prioritaeten>
+                        <Prioritaet Typ="FRz">100</Prioritaet>
+                        <Prioritaet Typ="NRz">100</Prioritaet>
+                        <Prioritaet Typ="Rz">100</Prioritaet>
+                        <Prioritaet Typ="FGz">100</Prioritaet>
+                        <Prioritaet Typ="NGz">100</Prioritaet>
+                        <Prioritaet Typ="Gz">100</Prioritaet>
+                        <Prioritaet Typ="S">100</Prioritaet>
+                        <Prioritaet Typ="Lz">100</Prioritaet>
+                        <Prioritaet Typ="GzG">100</Prioritaet>
+                        <Prioritaet Typ="Rf">0</Prioritaet>
+                    </Prioritaeten>
+                    <Laengen StartBisFzMp="5500" FzMpBisEnde="5500" Gesamt="11000"/>
+                </Betriebsstellenfahrweg>
+            </Betriebsstellenfahrwege>
+        </Spurplanbetriebsstelle>
+        <Spurplanbetriebsstelle>
+            <Betriebsstelle>S3</Betriebsstelle>
+            <Spurplanabschnitte>
+                <Spurplanabschnitt>
+                    <Strecke>3521</Strecke>
+                    <Spurplanknoten>
+                        <Betriebsstellengrenze>
+                            <ID>120</ID>
+                            <Kilometrierung>24,500+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <PartnerBtrst>VDV2</PartnerBtrst>
+                            <Bildkoordinaten>
+                                <X>88,91194153000000</X>
+                                <Y>12,00000000000000</Y>
+                            </Bildkoordinaten>
+                            <Gleiskennzeichen>0</Gleiskennzeichen>
+                        </Betriebsstellengrenze>
+                        <Fahrzeitmesspunkt>
+                            <ID>121</ID>
+                            <Kilometrierung>27,250+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>Streckengleis</Name>
+                            <BSMitte/>
+                        </Fahrzeitmesspunkt>
+                        <BremswegF>
+                            <ID>122</ID>
+                            <Kilometrierung>30,000+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Wert Typ="BREMSWEG-ART" Schluessel="7">700 m Bremsweg</Wert>
+                        </BremswegF>
+                        <GeschwZulaessigF>
+                            <ID>123</ID>
+                            <Kilometrierung>30,000+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">80</Geschw>
+                            <Wirkungsort>Hier</Wirkungsort>
+                            <Zugbeeinflussung>Alle</Zugbeeinflussung>
+                        </GeschwZulaessigF>
+                        <ETCSAnfangF>
+                            <ID>124</ID>
+                            <Kilometrierung>30,000+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <ETCSProfile>
+                                <ETCS1FS> DB Netz AG SRS 3.6.0  &lt;ETCS 1 (FS) | ETCS 2&gt;</ETCS1FS>
+                            </ETCSProfile>
+                        </ETCSAnfangF>
+                        <PZBAnfangF>
+                            <ID>125</ID>
+                            <Kilometrierung>30,000+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                        </PZBAnfangF>
+                        <Gleisende>
+                            <ID>126</ID>
+                            <Kilometrierung>30,000+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>3521-0</Name>
+                            <Bildkoordinaten>
+                                <X>98,14954376000000</X>
+                                <Y>12,00000000000000</Y>
+                            </Bildkoordinaten>
+                        </Gleisende>
+                    </Spurplanknoten>
+                </Spurplanabschnitt>
+            </Spurplanabschnitte>
+            <Betriebsstellenfahrwege>
+                <Betriebsstellenfahrweg>
+                    <Name>VDV 2 - Strecke 3 - null</Name>
+                    <Anfang Typ="Betriebsstellengrenze" ID="120">3521-0</Anfang>
+                    <Ende Typ="Gleisende" ID="126">3521-0</Ende>
+                    <Fahrzeitmesspunkt Typ="Fahrzeitmesspunkt" ID="121">Streckengleis</Fahrzeitmesspunkt>
+                    <Attribute>
+                        <DurchfahrtOhneHaltMoeglich/>
+                        <Elektrifiziert/>
+                    </Attribute>
+                    <Verlauf/>
+                    <Aktiv>true</Aktiv>
+                    <Prioritaeten>
+                        <Prioritaet Typ="FRz">100</Prioritaet>
+                        <Prioritaet Typ="NRz">100</Prioritaet>
+                        <Prioritaet Typ="Rz">100</Prioritaet>
+                        <Prioritaet Typ="FGz">100</Prioritaet>
+                        <Prioritaet Typ="NGz">100</Prioritaet>
+                        <Prioritaet Typ="Gz">100</Prioritaet>
+                        <Prioritaet Typ="S">100</Prioritaet>
+                        <Prioritaet Typ="Lz">100</Prioritaet>
+                        <Prioritaet Typ="GzG">100</Prioritaet>
+                        <Prioritaet Typ="Rf">0</Prioritaet>
+                    </Prioritaeten>
+                    <Laengen StartBisFzMp="2750" FzMpBisEnde="2750" Gesamt="5500"/>
+                </Betriebsstellenfahrweg>
+                <Betriebsstellenfahrweg>
+                    <Name>null - Strecke 3 - VDV 2</Name>
+                    <Anfang Typ="Gleisende" ID="126">3521-0</Anfang>
+                    <Ende Typ="Betriebsstellengrenze" ID="120">3521-0</Ende>
+                    <Fahrzeitmesspunkt Typ="Fahrzeitmesspunkt" ID="121">Streckengleis</Fahrzeitmesspunkt>
+                    <Attribute>
+                        <DurchfahrtOhneHaltMoeglich/>
+                        <Elektrifiziert/>
+                    </Attribute>
+                    <Verlauf/>
+                    <Aktiv>true</Aktiv>
+                    <Prioritaeten>
+                        <Prioritaet Typ="FRz">100</Prioritaet>
+                        <Prioritaet Typ="NRz">100</Prioritaet>
+                        <Prioritaet Typ="Rz">100</Prioritaet>
+                        <Prioritaet Typ="FGz">100</Prioritaet>
+                        <Prioritaet Typ="NGz">100</Prioritaet>
+                        <Prioritaet Typ="Gz">100</Prioritaet>
+                        <Prioritaet Typ="S">100</Prioritaet>
+                        <Prioritaet Typ="Lz">100</Prioritaet>
+                        <Prioritaet Typ="GzG">100</Prioritaet>
+                        <Prioritaet Typ="Rf">0</Prioritaet>
+                    </Prioritaeten>
+                    <Laengen StartBisFzMp="2750" FzMpBisEnde="2750" Gesamt="5500"/>
+                </Betriebsstellenfahrweg>
+            </Betriebsstellenfahrwege>
+        </Spurplanbetriebsstelle>
+        <Spurplanbetriebsstelle>
+            <Betriebsstelle>VDV1</Betriebsstelle>
+            <Spurplanabschnitte>
+                <Spurplanabschnitt>
+                    <Strecke>3521</Strecke>
+                    <Spurplanknoten>
+                        <Weichenstamm>
+                            <ID>105</ID>
+                            <Kilometrierung>7,140+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Partner Typ="Weichenanfang" ID="69">01W1</Partner>
+                            <ETCSLT>25</ETCSLT>
+                        </Weichenstamm>
+                        <FstrZugschlussstelleS>
+                            <ID>106</ID>
+                            <Kilometrierung>7,185+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </FstrZugschlussstelleS>
+                        <SignalZugschlussstelleF>
+                            <ID>107</ID>
+                            <Kilometrierung>7,185+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </SignalZugschlussstelleF>
+                        <HauptsignalF>
+                            <ID>108</ID>
+                            <Kilometrierung>7,235+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>01P1</Name>
+                            <DwegAufloesezeit Einheit="s">3</DwegAufloesezeit>
+                            <ReleaseSpeed Einheit="km/h">20</ReleaseSpeed>
+                            <VS-Zuordnung>0</VS-Zuordnung>
+                            <ApproachSpeed Einheit="km/h">0</ApproachSpeed>
+                            <StutzenWahrscheinlichkeit>0.00</StutzenWahrscheinlichkeit>
+                            <StutzenDauer Einheit="m">0.00</StutzenDauer>
+                        </HauptsignalF>
+                        <HalteplatzRzLinksF>
+                            <ID>109</ID>
+                            <Kilometrierung>7,240+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>Gl 1 f</Name>
+                            <Laenge Einheit="m">520</Laenge>
+                            <EinfahrtAufHalt/>
+                            <sEoA Einheit="m">0</sEoA>
+                            <sSVL Einheit="m">0</sSVL>
+                            <ReleaseSpeed Einheit="km/h">-1</ReleaseSpeed>
+                            <tDPMA Einheit="s">-1</tDPMA>
+                            <sDPMA Einheit="m">-1</sDPMA>
+                        </HalteplatzRzLinksF>
+                        <PZBMagnetF>
+                            <ID>110</ID>
+                            <Kilometrierung>7,485+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>PZB 500</Name>
+                        </PZBMagnetF>
+                        <ETCSBaliseF>
+                            <ID>111</ID>
+                            <Kilometrierung>7,486+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseF>
+                        <Fahrzeitmesspunkt>
+                            <ID>112</ID>
+                            <Kilometrierung>7,500+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>Gleis 1</Name>
+                        </Fahrzeitmesspunkt>
+                        <ETCSBaliseS>
+                            <ID>113</ID>
+                            <Kilometrierung>7,514+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseS>
+                        <PZBMagnetS>
+                            <ID>114</ID>
+                            <Kilometrierung>7,515+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>PZB 500</Name>
+                        </PZBMagnetS>
+                        <HalteplatzRzRechtsS>
+                            <ID>115</ID>
+                            <Kilometrierung>7,760+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>Gl 1 s</Name>
+                            <Laenge Einheit="m">520</Laenge>
+                            <EinfahrtAufHalt/>
+                            <sEoA Einheit="m">0</sEoA>
+                            <sSVL Einheit="m">0</sSVL>
+                            <ReleaseSpeed Einheit="km/h">-1</ReleaseSpeed>
+                            <tDPMA Einheit="s">-1</tDPMA>
+                            <sDPMA Einheit="m">-1</sDPMA>
+                        </HalteplatzRzRechtsS>
+                        <HauptsignalS>
+                            <ID>116</ID>
+                            <Kilometrierung>7,765+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>01N1</Name>
+                            <DwegAufloesezeit Einheit="s">3</DwegAufloesezeit>
+                            <ReleaseSpeed Einheit="km/h">20</ReleaseSpeed>
+                            <VS-Zuordnung>0</VS-Zuordnung>
+                            <ApproachSpeed Einheit="km/h">0</ApproachSpeed>
+                            <StutzenWahrscheinlichkeit>0.00</StutzenWahrscheinlichkeit>
+                            <StutzenDauer Einheit="m">0.00</StutzenDauer>
+                        </HauptsignalS>
+                        <SignalZugschlussstelleS>
+                            <ID>117</ID>
+                            <Kilometrierung>7,815+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </SignalZugschlussstelleS>
+                        <FstrZugschlussstelleF>
+                            <ID>118</ID>
+                            <Kilometrierung>7,815+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </FstrZugschlussstelleF>
+                        <Weichenstamm>
+                            <ID>119</ID>
+                            <Kilometrierung>7,860+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Partner Typ="Weichenanfang" ID="70">01W2</Partner>
+                            <ETCSLT>25</ETCSLT>
+                        </Weichenstamm>
+                    </Spurplanknoten>
+                </Spurplanabschnitt>
+                <Spurplanabschnitt>
+                    <Strecke>3521</Strecke>
+                    <Spurplanknoten>
+                        <WeichenabzweigLinks>
+                            <ID>80</ID>
+                            <Kilometrierung>7,140+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Partner Typ="Weichenanfang" ID="69">01W1</Partner>
+                            <ETCSLT>25</ETCSLT>
+                        </WeichenabzweigLinks>
+                        <GeschwZulaessigS>
+                            <ID>81</ID>
+                            <Kilometrierung>7,140+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Signal</Wirkungsort>
+                            <Zugbeeinflussung>PZB</Zugbeeinflussung>
+                        </GeschwZulaessigS>
+                        <GeschwZulaessigS>
+                            <ID>82</ID>
+                            <Kilometrierung>7,140+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Signal</Wirkungsort>
+                            <Zugbeeinflussung>ETCS1</Zugbeeinflussung>
+                        </GeschwZulaessigS>
+                        <Bildpunkt>
+                            <ID>83</ID>
+                            <Kilometrierung>7,150+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Bildkoordinaten>
+                                <X>11,54700470000000</X>
+                                <Y>10,00000000000000</Y>
+                            </Bildkoordinaten>
+                        </Bildpunkt>
+                        <FstrZugschlussstelleS>
+                            <ID>84</ID>
+                            <Kilometrierung>7,185+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </FstrZugschlussstelleS>
+                        <SignalZugschlussstelleF>
+                            <ID>85</ID>
+                            <Kilometrierung>7,185+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </SignalZugschlussstelleF>
+                        <GeschwZulaessigF>
+                            <ID>86</ID>
+                            <Kilometrierung>7,235+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Hier</Wirkungsort>
+                            <Zugbeeinflussung>ETCS1</Zugbeeinflussung>
+                        </GeschwZulaessigF>
+                        <GeschwZulaessigF>
+                            <ID>87</ID>
+                            <Kilometrierung>7,235+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Hier</Wirkungsort>
+                            <Zugbeeinflussung>PZB</Zugbeeinflussung>
+                        </GeschwZulaessigF>
+                        <HauptsignalF>
+                            <ID>88</ID>
+                            <Kilometrierung>7,235+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>01P2</Name>
+                            <DwegAufloesezeit Einheit="s">3</DwegAufloesezeit>
+                            <ReleaseSpeed Einheit="km/h">20</ReleaseSpeed>
+                            <VS-Zuordnung>0</VS-Zuordnung>
+                            <ApproachSpeed Einheit="km/h">0</ApproachSpeed>
+                            <StutzenWahrscheinlichkeit>0.00</StutzenWahrscheinlichkeit>
+                            <StutzenDauer Einheit="m">0.00</StutzenDauer>
+                        </HauptsignalF>
+                        <HalteplatzRzRechtsF>
+                            <ID>89</ID>
+                            <Kilometrierung>7,240+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>Gl 2 f</Name>
+                            <Laenge Einheit="m">520</Laenge>
+                            <EinfahrtAufHalt/>
+                            <sEoA Einheit="m">0</sEoA>
+                            <sSVL Einheit="m">0</sSVL>
+                            <ReleaseSpeed Einheit="km/h">-1</ReleaseSpeed>
+                            <tDPMA Einheit="s">-1</tDPMA>
+                            <sDPMA Einheit="m">-1</sDPMA>
+                        </HalteplatzRzRechtsF>
+                        <PZBMagnetF>
+                            <ID>90</ID>
+                            <Kilometrierung>7,485+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>PZB 500</Name>
+                        </PZBMagnetF>
+                        <ETCSBaliseF>
+                            <ID>91</ID>
+                            <Kilometrierung>7,486+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseF>
+                        <Fahrzeitmesspunkt>
+                            <ID>92</ID>
+                            <Kilometrierung>7,500+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>Gleis 2</Name>
+                            <BSMitte/>
+                        </Fahrzeitmesspunkt>
+                        <ETCSBaliseS>
+                            <ID>93</ID>
+                            <Kilometrierung>7,514+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseS>
+                        <PZBMagnetS>
+                            <ID>94</ID>
+                            <Kilometrierung>7,515+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>PZB 500</Name>
+                        </PZBMagnetS>
+                        <HalteplatzRzLinksS>
+                            <ID>95</ID>
+                            <Kilometrierung>7,760+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>Gl 2 s</Name>
+                            <Laenge Einheit="m">520</Laenge>
+                            <EinfahrtAufHalt/>
+                            <sEoA Einheit="m">0</sEoA>
+                            <sSVL Einheit="m">0</sSVL>
+                            <ReleaseSpeed Einheit="km/h">-1</ReleaseSpeed>
+                            <tDPMA Einheit="s">-1</tDPMA>
+                            <sDPMA Einheit="m">-1</sDPMA>
+                        </HalteplatzRzLinksS>
+                        <HauptsignalS>
+                            <ID>96</ID>
+                            <Kilometrierung>7,765+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>01N2</Name>
+                            <DwegAufloesezeit Einheit="s">3</DwegAufloesezeit>
+                            <ReleaseSpeed Einheit="km/h">20</ReleaseSpeed>
+                            <VS-Zuordnung>0</VS-Zuordnung>
+                            <ApproachSpeed Einheit="km/h">0</ApproachSpeed>
+                            <StutzenWahrscheinlichkeit>0.00</StutzenWahrscheinlichkeit>
+                            <StutzenDauer Einheit="m">0.00</StutzenDauer>
+                        </HauptsignalS>
+                        <GeschwZulaessigS>
+                            <ID>97</ID>
+                            <Kilometrierung>7,765+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Hier</Wirkungsort>
+                            <Zugbeeinflussung>ETCS1</Zugbeeinflussung>
+                        </GeschwZulaessigS>
+                        <GeschwZulaessigS>
+                            <ID>98</ID>
+                            <Kilometrierung>7,765+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Hier</Wirkungsort>
+                            <Zugbeeinflussung>PZB</Zugbeeinflussung>
+                        </GeschwZulaessigS>
+                        <SignalZugschlussstelleS>
+                            <ID>99</ID>
+                            <Kilometrierung>7,815+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </SignalZugschlussstelleS>
+                        <FstrZugschlussstelleF>
+                            <ID>100</ID>
+                            <Kilometrierung>7,815+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </FstrZugschlussstelleF>
+                        <Bildpunkt>
+                            <ID>101</ID>
+                            <Kilometrierung>7,850+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Bildkoordinaten>
+                                <X>30,02221489000000</X>
+                                <Y>10,00000000000000</Y>
+                            </Bildkoordinaten>
+                        </Bildpunkt>
+                        <GeschwZulaessigF>
+                            <ID>102</ID>
+                            <Kilometrierung>7,860+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Signal</Wirkungsort>
+                            <Zugbeeinflussung>PZB</Zugbeeinflussung>
+                        </GeschwZulaessigF>
+                        <GeschwZulaessigF>
+                            <ID>103</ID>
+                            <Kilometrierung>7,860+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Weiche</Wirkungsort>
+                            <Zugbeeinflussung>ETCS1</Zugbeeinflussung>
+                        </GeschwZulaessigF>
+                        <WeichenabzweigRechts>
+                            <ID>104</ID>
+                            <Kilometrierung>7,860+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Partner Typ="Weichenanfang" ID="70">01W2</Partner>
+                            <ETCSLT>25</ETCSLT>
+                        </WeichenabzweigRechts>
+                    </Spurplanknoten>
+                </Spurplanabschnitt>
+                <Spurplanabschnitt>
+                    <Strecke>3521</Strecke>
+                    <Spurplanknoten>
+                        <Weichenanfang>
+                            <ID>70</ID>
+                            <Kilometrierung>7,860+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>01W2</Name>
+                            <Stamm Typ="Weichenstamm" ID="119">01W2</Stamm>
+                            <Abzweig Typ="WeichenabzweigRechts" ID="104">01W2</Abzweig>
+                            <Bildkoordinaten>
+                                <X>31,17691422000000</X>
+                                <Y>12,00000000000000</Y>
+                            </Bildkoordinaten>
+                            <ETCSLT>25</ETCSLT>
+                        </Weichenanfang>
+                        <FstrZugschlussstelleS>
+                            <ID>71</ID>
+                            <Kilometrierung>7,885+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </FstrZugschlussstelleS>
+                        <GeschwZulaessigS>
+                            <ID>72</ID>
+                            <Kilometrierung>7,885+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">80</Geschw>
+                            <Wirkungsort>Hier</Wirkungsort>
+                            <Zugbeeinflussung>Alle</Zugbeeinflussung>
+                        </GeschwZulaessigS>
+                        <SignalZugschlussstelleF>
+                            <ID>73</ID>
+                            <Kilometrierung>7,885+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </SignalZugschlussstelleF>
+                        <ETCSBaliseF>
+                            <ID>74</ID>
+                            <Kilometrierung>7,934+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseF>
+                        <VorsignalF>
+                            <ID>75</ID>
+                            <Kilometrierung>7,935+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>01Vp</Name>
+                            <FstrBildezeit Einheit="s">9</FstrBildezeit>
+                            <Bauart>0</Bauart>
+                        </VorsignalF>
+                        <HauptsignalF>
+                            <ID>76</ID>
+                            <Kilometrierung>7,935+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>01F</Name>
+                            <DwegAufloesezeit Einheit="s">3</DwegAufloesezeit>
+                            <ReleaseSpeed Einheit="km/h">20</ReleaseSpeed>
+                            <VS-Zuordnung>0</VS-Zuordnung>
+                            <ApproachSpeed Einheit="km/h">0</ApproachSpeed>
+                            <StutzenWahrscheinlichkeit>0.00</StutzenWahrscheinlichkeit>
+                            <StutzenDauer Einheit="m">0.00</StutzenDauer>
+                        </HauptsignalF>
+                        <PZBMagnetF>
+                            <ID>138</ID>
+                            <Kilometrierung>8,185+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                        </PZBMagnetF>
+                        <ETCSBaliseF>
+                            <ID>77</ID>
+                            <Kilometrierung>8,186+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseF>
+                        <VorsignalF>
+                            <ID>78</ID>
+                            <Kilometrierung>8,635+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>01Vf</Name>
+                            <FstrBildezeit Einheit="s">9</FstrBildezeit>
+                            <Bauart>4</Bauart>
+                        </VorsignalF>
+                        <Betriebsstellengrenze>
+                            <ID>79</ID>
+                            <Kilometrierung>9,500+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <PartnerBtrst>S2</PartnerBtrst>
+                            <Bildkoordinaten>
+                                <X>40,41452026000000</X>
+                                <Y>12,00000000000000</Y>
+                            </Bildkoordinaten>
+                            <Gleiskennzeichen>0</Gleiskennzeichen>
+                        </Betriebsstellengrenze>
+                    </Spurplanknoten>
+                </Spurplanabschnitt>
+                <Spurplanabschnitt>
+                    <Strecke>3521</Strecke>
+                    <Spurplanknoten>
+                        <Betriebsstellengrenze>
+                            <ID>60</ID>
+                            <Kilometrierung>5,500+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <PartnerBtrst>S1</PartnerBtrst>
+                            <Bildkoordinaten>
+                                <X>1,15469992200000</X>
+                                <Y>12,00000000000000</Y>
+                            </Bildkoordinaten>
+                            <Gleiskennzeichen>0</Gleiskennzeichen>
+                        </Betriebsstellengrenze>
+                        <VorsignalS>
+                            <ID>61</ID>
+                            <Kilometrierung>6,365+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>01Va</Name>
+                            <FstrBildezeit Einheit="s">9</FstrBildezeit>
+                            <Bauart>4</Bauart>
+                        </VorsignalS>
+                        <ETCSBaliseS>
+                            <ID>62</ID>
+                            <Kilometrierung>6,814+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseS>
+                        <PZBMagnetS>
+                            <ID>137</ID>
+                            <Kilometrierung>6,815+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                        </PZBMagnetS>
+                        <HauptsignalS>
+                            <ID>63</ID>
+                            <Kilometrierung>7,065+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>01A</Name>
+                            <DwegAufloesezeit Einheit="s">3</DwegAufloesezeit>
+                            <ReleaseSpeed Einheit="km/h">20</ReleaseSpeed>
+                            <VS-Zuordnung>0</VS-Zuordnung>
+                            <ApproachSpeed Einheit="km/h">0</ApproachSpeed>
+                            <StutzenWahrscheinlichkeit>0.00</StutzenWahrscheinlichkeit>
+                            <StutzenDauer Einheit="m">0.00</StutzenDauer>
+                        </HauptsignalS>
+                        <VorsignalS>
+                            <ID>64</ID>
+                            <Kilometrierung>7,065+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>01Vn</Name>
+                            <FstrBildezeit Einheit="s">9</FstrBildezeit>
+                            <Bauart>4</Bauart>
+                        </VorsignalS>
+                        <ETCSBaliseS>
+                            <ID>65</ID>
+                            <Kilometrierung>7,066+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseS>
+                        <SignalZugschlussstelleS>
+                            <ID>66</ID>
+                            <Kilometrierung>7,115+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </SignalZugschlussstelleS>
+                        <GeschwZulaessigF>
+                            <ID>67</ID>
+                            <Kilometrierung>7,115+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">80</Geschw>
+                            <Wirkungsort>Hier</Wirkungsort>
+                            <Zugbeeinflussung>Alle</Zugbeeinflussung>
+                        </GeschwZulaessigF>
+                        <FstrZugschlussstelleF>
+                            <ID>68</ID>
+                            <Kilometrierung>7,115+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </FstrZugschlussstelleF>
+                        <Weichenanfang>
+                            <ID>69</ID>
+                            <Kilometrierung>7,140+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>01W1</Name>
+                            <Stamm Typ="Weichenstamm" ID="105">01W1</Stamm>
+                            <Abzweig Typ="WeichenabzweigLinks" ID="80">01W1</Abzweig>
+                            <Bildkoordinaten>
+                                <X>10,39230537000000</X>
+                                <Y>12,00000000000000</Y>
+                            </Bildkoordinaten>
+                            <ETCSLT>25</ETCSLT>
+                        </Weichenanfang>
+                    </Spurplanknoten>
+                </Spurplanabschnitt>
+            </Spurplanabschnitte>
+            <Betriebsstellenfahrwege>
+                <Betriebsstellenfahrweg>
+                    <Name>Strecke 1 - Gleis 1 - Strecke 2</Name>
+                    <Anfang Typ="Betriebsstellengrenze" ID="60">3521-0</Anfang>
+                    <Ende Typ="Betriebsstellengrenze" ID="79">3521-0</Ende>
+                    <Fahrzeitmesspunkt Typ="Fahrzeitmesspunkt" ID="112">Gleis 1</Fahrzeitmesspunkt>
+                    <Reisezughalt Typ="HalteplatzRzRechtsS" ID="115">Gl 1 s</Reisezughalt>
+                    <Attribute>
+                        <DurchfahrtOhneHaltMoeglich/>
+                        <Elektrifiziert/>
+                    </Attribute>
+                    <Verlauf>
+                        <Stamm/>
+                        <Stamm/>
+                    </Verlauf>
+                    <Aktiv>true</Aktiv>
+                    <Prioritaeten>
+                        <Prioritaet Typ="FRz">100</Prioritaet>
+                        <Prioritaet Typ="NRz">100</Prioritaet>
+                        <Prioritaet Typ="Rz">100</Prioritaet>
+                        <Prioritaet Typ="FGz">100</Prioritaet>
+                        <Prioritaet Typ="NGz">100</Prioritaet>
+                        <Prioritaet Typ="Gz">100</Prioritaet>
+                        <Prioritaet Typ="S">100</Prioritaet>
+                        <Prioritaet Typ="Lz">100</Prioritaet>
+                        <Prioritaet Typ="GzG">100</Prioritaet>
+                        <Prioritaet Typ="Rf">0</Prioritaet>
+                    </Prioritaeten>
+                    <Laengen StartBisFzMp="2000" FzMpBisEnde="2000" Gesamt="4000"/>
+                </Betriebsstellenfahrweg>
+                <Betriebsstellenfahrweg>
+                    <Name>Strecke 1 - Gleis 2 - Strecke 2</Name>
+                    <Anfang Typ="Betriebsstellengrenze" ID="60">3521-0</Anfang>
+                    <Ende Typ="Betriebsstellengrenze" ID="79">3521-0</Ende>
+                    <Fahrzeitmesspunkt Typ="Fahrzeitmesspunkt" ID="92">Gleis 2</Fahrzeitmesspunkt>
+                    <Reisezughalt Typ="HalteplatzRzLinksS" ID="95">Gl 2 s</Reisezughalt>
+                    <Attribute>
+                        <DurchfahrtOhneHaltMoeglich/>
+                        <Elektrifiziert/>
+                    </Attribute>
+                    <Verlauf>
+                        <Abzweig/>
+                        <Abzweig/>
+                    </Verlauf>
+                    <Aktiv>true</Aktiv>
+                    <Prioritaeten>
+                        <Prioritaet Typ="FRz">80</Prioritaet>
+                        <Prioritaet Typ="NRz">80</Prioritaet>
+                        <Prioritaet Typ="Rz">80</Prioritaet>
+                        <Prioritaet Typ="FGz">80</Prioritaet>
+                        <Prioritaet Typ="NGz">80</Prioritaet>
+                        <Prioritaet Typ="Gz">80</Prioritaet>
+                        <Prioritaet Typ="S">80</Prioritaet>
+                        <Prioritaet Typ="Lz">80</Prioritaet>
+                        <Prioritaet Typ="GzG">80</Prioritaet>
+                        <Prioritaet Typ="Rf">0</Prioritaet>
+                    </Prioritaeten>
+                    <Laengen StartBisFzMp="2000" FzMpBisEnde="2000" Gesamt="4000"/>
+                </Betriebsstellenfahrweg>
+                <Betriebsstellenfahrweg>
+                    <Name>Strecke 2 - Gleis 1 - Strecke 1</Name>
+                    <Anfang Typ="Betriebsstellengrenze" ID="79">3521-0</Anfang>
+                    <Ende Typ="Betriebsstellengrenze" ID="60">3521-0</Ende>
+                    <Fahrzeitmesspunkt Typ="Fahrzeitmesspunkt" ID="112">Gleis 1</Fahrzeitmesspunkt>
+                    <Reisezughalt Typ="HalteplatzRzLinksF" ID="109">Gl 1 f</Reisezughalt>
+                    <Attribute>
+                        <DurchfahrtOhneHaltMoeglich/>
+                        <Elektrifiziert/>
+                    </Attribute>
+                    <Verlauf>
+                        <Stamm/>
+                        <Stamm/>
+                    </Verlauf>
+                    <Aktiv>true</Aktiv>
+                    <Prioritaeten>
+                        <Prioritaet Typ="FRz">100</Prioritaet>
+                        <Prioritaet Typ="NRz">100</Prioritaet>
+                        <Prioritaet Typ="Rz">100</Prioritaet>
+                        <Prioritaet Typ="FGz">100</Prioritaet>
+                        <Prioritaet Typ="NGz">100</Prioritaet>
+                        <Prioritaet Typ="Gz">100</Prioritaet>
+                        <Prioritaet Typ="S">100</Prioritaet>
+                        <Prioritaet Typ="Lz">100</Prioritaet>
+                        <Prioritaet Typ="GzG">100</Prioritaet>
+                        <Prioritaet Typ="Rf">0</Prioritaet>
+                    </Prioritaeten>
+                    <Laengen StartBisFzMp="2000" FzMpBisEnde="2000" Gesamt="4000"/>
+                </Betriebsstellenfahrweg>
+                <Betriebsstellenfahrweg>
+                    <Name>Strecke 2 - Gleis 2 - Strecke 1</Name>
+                    <Anfang Typ="Betriebsstellengrenze" ID="79">3521-0</Anfang>
+                    <Ende Typ="Betriebsstellengrenze" ID="60">3521-0</Ende>
+                    <Fahrzeitmesspunkt Typ="Fahrzeitmesspunkt" ID="92">Gleis 2</Fahrzeitmesspunkt>
+                    <Reisezughalt Typ="HalteplatzRzRechtsF" ID="89">Gl 2 f</Reisezughalt>
+                    <Attribute>
+                        <DurchfahrtOhneHaltMoeglich/>
+                        <Elektrifiziert/>
+                    </Attribute>
+                    <Verlauf>
+                        <Abzweig/>
+                        <Abzweig/>
+                    </Verlauf>
+                    <Aktiv>true</Aktiv>
+                    <Prioritaeten>
+                        <Prioritaet Typ="FRz">80</Prioritaet>
+                        <Prioritaet Typ="NRz">80</Prioritaet>
+                        <Prioritaet Typ="Rz">80</Prioritaet>
+                        <Prioritaet Typ="FGz">80</Prioritaet>
+                        <Prioritaet Typ="NGz">80</Prioritaet>
+                        <Prioritaet Typ="Gz">80</Prioritaet>
+                        <Prioritaet Typ="S">80</Prioritaet>
+                        <Prioritaet Typ="Lz">80</Prioritaet>
+                        <Prioritaet Typ="GzG">80</Prioritaet>
+                        <Prioritaet Typ="Rf">0</Prioritaet>
+                    </Prioritaeten>
+                    <Laengen StartBisFzMp="2000" FzMpBisEnde="2000" Gesamt="4000"/>
+                </Betriebsstellenfahrweg>
+            </Betriebsstellenfahrwege>
+        </Spurplanbetriebsstelle>
+        <Spurplanbetriebsstelle>
+            <Betriebsstelle>VDV2</Betriebsstelle>
+            <Spurplanabschnitte>
+                <Spurplanabschnitt>
+                    <Strecke>3521</Strecke>
+                    <Spurplanknoten>
+                        <Betriebsstellengrenze>
+                            <ID>50</ID>
+                            <Kilometrierung>20,500+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <PartnerBtrst>S2</PartnerBtrst>
+                            <Bildkoordinaten>
+                                <X>49,65212250000000</X>
+                                <Y>12,00000000000000</Y>
+                            </Bildkoordinaten>
+                            <Gleiskennzeichen>0</Gleiskennzeichen>
+                        </Betriebsstellengrenze>
+                        <VorsignalS>
+                            <ID>51</ID>
+                            <Kilometrierung>21,365+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>02Va</Name>
+                            <FstrBildezeit Einheit="s">9</FstrBildezeit>
+                            <Bauart>0</Bauart>
+                        </VorsignalS>
+                        <ETCSBaliseS>
+                            <ID>52</ID>
+                            <Kilometrierung>21,814+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseS>
+                        <PZBMagnetS>
+                            <ID>139</ID>
+                            <Kilometrierung>21,815+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                        </PZBMagnetS>
+                        <HauptsignalS>
+                            <ID>53</ID>
+                            <Kilometrierung>22,065+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>02A</Name>
+                            <DwegAufloesezeit Einheit="s">3</DwegAufloesezeit>
+                            <ReleaseSpeed Einheit="km/h">20</ReleaseSpeed>
+                            <VS-Zuordnung>0</VS-Zuordnung>
+                            <ApproachSpeed Einheit="km/h">0</ApproachSpeed>
+                            <StutzenWahrscheinlichkeit>0.00</StutzenWahrscheinlichkeit>
+                            <StutzenDauer Einheit="m">0.00</StutzenDauer>
+                        </HauptsignalS>
+                        <VorsignalS>
+                            <ID>54</ID>
+                            <Kilometrierung>22,065+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>02Vn</Name>
+                            <FstrBildezeit Einheit="s">9</FstrBildezeit>
+                            <Bauart>0</Bauart>
+                        </VorsignalS>
+                        <ETCSBaliseS>
+                            <ID>55</ID>
+                            <Kilometrierung>22,066+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseS>
+                        <SignalZugschlussstelleS>
+                            <ID>56</ID>
+                            <Kilometrierung>22,115+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </SignalZugschlussstelleS>
+                        <GeschwZulaessigF>
+                            <ID>57</ID>
+                            <Kilometrierung>22,115+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">80</Geschw>
+                            <Wirkungsort>Hier</Wirkungsort>
+                            <Zugbeeinflussung>Alle</Zugbeeinflussung>
+                        </GeschwZulaessigF>
+                        <FstrZugschlussstelleF>
+                            <ID>58</ID>
+                            <Kilometrierung>22,115+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </FstrZugschlussstelleF>
+                        <Weichenanfang>
+                            <ID>59</ID>
+                            <Kilometrierung>22,140+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>02W1</Name>
+                            <Stamm Typ="Weichenstamm" ID="35">02W1</Stamm>
+                            <Abzweig Typ="WeichenabzweigLinks" ID="10">02W1</Abzweig>
+                            <Bildkoordinaten>
+                                <X>58,88972855000000</X>
+                                <Y>12,00000000000000</Y>
+                            </Bildkoordinaten>
+                            <ETCSLT>25</ETCSLT>
+                        </Weichenanfang>
+                    </Spurplanknoten>
+                </Spurplanabschnitt>
+                <Spurplanabschnitt>
+                    <Strecke>3521</Strecke>
+                    <Spurplanknoten>
+                        <Weichenstamm>
+                            <ID>35</ID>
+                            <Kilometrierung>22,140+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Partner Typ="Weichenanfang" ID="59">02W1</Partner>
+                            <ETCSLT>25</ETCSLT>
+                        </Weichenstamm>
+                        <FstrZugschlussstelleS>
+                            <ID>36</ID>
+                            <Kilometrierung>22,185+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </FstrZugschlussstelleS>
+                        <SignalZugschlussstelleF>
+                            <ID>37</ID>
+                            <Kilometrierung>22,185+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </SignalZugschlussstelleF>
+                        <HauptsignalF>
+                            <ID>38</ID>
+                            <Kilometrierung>22,235+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>02P1</Name>
+                            <DwegAufloesezeit Einheit="s">3</DwegAufloesezeit>
+                            <ReleaseSpeed Einheit="km/h">20</ReleaseSpeed>
+                            <VS-Zuordnung>0</VS-Zuordnung>
+                            <ApproachSpeed Einheit="km/h">0</ApproachSpeed>
+                            <StutzenWahrscheinlichkeit>0.00</StutzenWahrscheinlichkeit>
+                            <StutzenDauer Einheit="m">0.00</StutzenDauer>
+                        </HauptsignalF>
+                        <HalteplatzRzLinksF>
+                            <ID>39</ID>
+                            <Kilometrierung>22,240+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>Gl 1 f</Name>
+                            <Laenge Einheit="m">520</Laenge>
+                            <sEoA Einheit="m">0</sEoA>
+                            <sSVL Einheit="m">0</sSVL>
+                            <ReleaseSpeed Einheit="km/h">-1</ReleaseSpeed>
+                            <tDPMA Einheit="s">-1</tDPMA>
+                            <sDPMA Einheit="m">-1</sDPMA>
+                        </HalteplatzRzLinksF>
+                        <PZBMagnetF>
+                            <ID>40</ID>
+                            <Kilometrierung>22,485+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>PZB 500</Name>
+                        </PZBMagnetF>
+                        <ETCSBaliseF>
+                            <ID>41</ID>
+                            <Kilometrierung>22,486+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseF>
+                        <Fahrzeitmesspunkt>
+                            <ID>42</ID>
+                            <Kilometrierung>22,500+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>Gleis 1</Name>
+                            <BSMitte/>
+                        </Fahrzeitmesspunkt>
+                        <ETCSBaliseS>
+                            <ID>43</ID>
+                            <Kilometrierung>22,514+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseS>
+                        <PZBMagnetS>
+                            <ID>44</ID>
+                            <Kilometrierung>22,515+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>PZB 500</Name>
+                        </PZBMagnetS>
+                        <HalteplatzRzRechtsS>
+                            <ID>45</ID>
+                            <Kilometrierung>22,760+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>Gl 1 s</Name>
+                            <Laenge Einheit="m">520</Laenge>
+                            <sEoA Einheit="m">0</sEoA>
+                            <sSVL Einheit="m">0</sSVL>
+                            <ReleaseSpeed Einheit="km/h">-1</ReleaseSpeed>
+                            <tDPMA Einheit="s">-1</tDPMA>
+                            <sDPMA Einheit="m">-1</sDPMA>
+                        </HalteplatzRzRechtsS>
+                        <HauptsignalS>
+                            <ID>46</ID>
+                            <Kilometrierung>22,765+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>02N1</Name>
+                            <DwegAufloesezeit Einheit="s">3</DwegAufloesezeit>
+                            <ReleaseSpeed Einheit="km/h">20</ReleaseSpeed>
+                            <VS-Zuordnung>0</VS-Zuordnung>
+                            <ApproachSpeed Einheit="km/h">0</ApproachSpeed>
+                            <StutzenWahrscheinlichkeit>0.00</StutzenWahrscheinlichkeit>
+                            <StutzenDauer Einheit="m">0.00</StutzenDauer>
+                        </HauptsignalS>
+                        <SignalZugschlussstelleS>
+                            <ID>47</ID>
+                            <Kilometrierung>22,815+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </SignalZugschlussstelleS>
+                        <FstrZugschlussstelleF>
+                            <ID>48</ID>
+                            <Kilometrierung>22,815+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </FstrZugschlussstelleF>
+                        <Weichenstamm>
+                            <ID>49</ID>
+                            <Kilometrierung>22,860+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Partner Typ="Weichenanfang" ID="0">02W2</Partner>
+                            <ETCSLT>25</ETCSLT>
+                        </Weichenstamm>
+                    </Spurplanknoten>
+                </Spurplanabschnitt>
+                <Spurplanabschnitt>
+                    <Strecke>3521</Strecke>
+                    <Spurplanknoten>
+                        <WeichenabzweigLinks>
+                            <ID>10</ID>
+                            <Kilometrierung>22,140+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Partner Typ="Weichenanfang" ID="59">02W1</Partner>
+                            <ETCSLT>25</ETCSLT>
+                        </WeichenabzweigLinks>
+                        <GeschwZulaessigS>
+                            <ID>11</ID>
+                            <Kilometrierung>22,140+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Weiche</Wirkungsort>
+                            <Zugbeeinflussung>ETCS1</Zugbeeinflussung>
+                        </GeschwZulaessigS>
+                        <GeschwZulaessigS>
+                            <ID>12</ID>
+                            <Kilometrierung>22,140+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Signal</Wirkungsort>
+                            <Zugbeeinflussung>PZB</Zugbeeinflussung>
+                        </GeschwZulaessigS>
+                        <Bildpunkt>
+                            <ID>13</ID>
+                            <Kilometrierung>22,150+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Bildkoordinaten>
+                                <X>60,04442978000000</X>
+                                <Y>10,00000000000000</Y>
+                            </Bildkoordinaten>
+                        </Bildpunkt>
+                        <FstrZugschlussstelleS>
+                            <ID>14</ID>
+                            <Kilometrierung>22,185+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </FstrZugschlussstelleS>
+                        <SignalZugschlussstelleF>
+                            <ID>15</ID>
+                            <Kilometrierung>22,185+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </SignalZugschlussstelleF>
+                        <GeschwZulaessigF>
+                            <ID>16</ID>
+                            <Kilometrierung>22,235+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Hier</Wirkungsort>
+                            <Zugbeeinflussung>ETCS1</Zugbeeinflussung>
+                        </GeschwZulaessigF>
+                        <GeschwZulaessigF>
+                            <ID>17</ID>
+                            <Kilometrierung>22,235+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Hier</Wirkungsort>
+                            <Zugbeeinflussung>PZB</Zugbeeinflussung>
+                        </GeschwZulaessigF>
+                        <HauptsignalF>
+                            <ID>18</ID>
+                            <Kilometrierung>22,235+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>02P2</Name>
+                            <DwegAufloesezeit Einheit="s">3</DwegAufloesezeit>
+                            <ReleaseSpeed Einheit="km/h">20</ReleaseSpeed>
+                            <VS-Zuordnung>0</VS-Zuordnung>
+                            <ApproachSpeed Einheit="km/h">0</ApproachSpeed>
+                            <StutzenWahrscheinlichkeit>0.00</StutzenWahrscheinlichkeit>
+                            <StutzenDauer Einheit="m">0.00</StutzenDauer>
+                        </HauptsignalF>
+                        <HalteplatzRzRechtsF>
+                            <ID>19</ID>
+                            <Kilometrierung>22,240+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>Gl 2 f</Name>
+                            <Laenge Einheit="m">520</Laenge>
+                            <sEoA Einheit="m">0</sEoA>
+                            <sSVL Einheit="m">0</sSVL>
+                            <ReleaseSpeed Einheit="km/h">-1</ReleaseSpeed>
+                            <tDPMA Einheit="s">-1</tDPMA>
+                            <sDPMA Einheit="m">-1</sDPMA>
+                        </HalteplatzRzRechtsF>
+                        <PZBMagnetF>
+                            <ID>20</ID>
+                            <Kilometrierung>22,485+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>PZB 500</Name>
+                        </PZBMagnetF>
+                        <ETCSBaliseF>
+                            <ID>21</ID>
+                            <Kilometrierung>22,486+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseF>
+                        <Fahrzeitmesspunkt>
+                            <ID>22</ID>
+                            <Kilometrierung>22,500+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>Gleis 2</Name>
+                            <BSMitte/>
+                        </Fahrzeitmesspunkt>
+                        <ETCSBaliseS>
+                            <ID>23</ID>
+                            <Kilometrierung>22,514+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseS>
+                        <PZBMagnetS>
+                            <ID>24</ID>
+                            <Kilometrierung>22,515+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>PZB 500</Name>
+                        </PZBMagnetS>
+                        <HalteplatzRzLinksS>
+                            <ID>25</ID>
+                            <Kilometrierung>22,760+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>Gl 2 s</Name>
+                            <Laenge Einheit="m">520</Laenge>
+                            <sEoA Einheit="m">0</sEoA>
+                            <sSVL Einheit="m">0</sSVL>
+                            <ReleaseSpeed Einheit="km/h">-1</ReleaseSpeed>
+                            <tDPMA Einheit="s">-1</tDPMA>
+                            <sDPMA Einheit="m">-1</sDPMA>
+                        </HalteplatzRzLinksS>
+                        <HauptsignalS>
+                            <ID>26</ID>
+                            <Kilometrierung>22,765+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>02N2</Name>
+                            <DwegAufloesezeit Einheit="s">3</DwegAufloesezeit>
+                            <ReleaseSpeed Einheit="km/h">20</ReleaseSpeed>
+                            <VS-Zuordnung>0</VS-Zuordnung>
+                            <ApproachSpeed Einheit="km/h">0</ApproachSpeed>
+                            <StutzenWahrscheinlichkeit>0.00</StutzenWahrscheinlichkeit>
+                            <StutzenDauer Einheit="m">0.00</StutzenDauer>
+                        </HauptsignalS>
+                        <GeschwZulaessigS>
+                            <ID>27</ID>
+                            <Kilometrierung>22,765+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Hier</Wirkungsort>
+                            <Zugbeeinflussung>ETCS1</Zugbeeinflussung>
+                        </GeschwZulaessigS>
+                        <GeschwZulaessigS>
+                            <ID>28</ID>
+                            <Kilometrierung>22,765+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Hier</Wirkungsort>
+                            <Zugbeeinflussung>PZB</Zugbeeinflussung>
+                        </GeschwZulaessigS>
+                        <SignalZugschlussstelleS>
+                            <ID>29</ID>
+                            <Kilometrierung>22,815+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </SignalZugschlussstelleS>
+                        <FstrZugschlussstelleF>
+                            <ID>30</ID>
+                            <Kilometrierung>22,815+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </FstrZugschlussstelleF>
+                        <Bildpunkt>
+                            <ID>31</ID>
+                            <Kilometrierung>22,850+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Bildkoordinaten>
+                                <X>78,51963806000000</X>
+                                <Y>10,00000000000000</Y>
+                            </Bildkoordinaten>
+                        </Bildpunkt>
+                        <GeschwZulaessigF>
+                            <ID>32</ID>
+                            <Kilometrierung>22,860+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Weiche</Wirkungsort>
+                            <Zugbeeinflussung>ETCS1</Zugbeeinflussung>
+                        </GeschwZulaessigF>
+                        <GeschwZulaessigF>
+                            <ID>33</ID>
+                            <Kilometrierung>22,860+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">60</Geschw>
+                            <Wirkungsort>Signal</Wirkungsort>
+                            <Zugbeeinflussung>PZB</Zugbeeinflussung>
+                        </GeschwZulaessigF>
+                        <WeichenabzweigRechts>
+                            <ID>34</ID>
+                            <Kilometrierung>22,860+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Partner Typ="Weichenanfang" ID="0">02W2</Partner>
+                            <ETCSLT>25</ETCSLT>
+                        </WeichenabzweigRechts>
+                    </Spurplanknoten>
+                </Spurplanabschnitt>
+                <Spurplanabschnitt>
+                    <Strecke>3521</Strecke>
+                    <Spurplanknoten>
+                        <Weichenanfang>
+                            <ID>0</ID>
+                            <Kilometrierung>22,860+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>02W2</Name>
+                            <Stamm Typ="Weichenstamm" ID="49">02W2</Stamm>
+                            <Abzweig Typ="WeichenabzweigRechts" ID="34">02W2</Abzweig>
+                            <Bildkoordinaten>
+                                <X>79,67433929000000</X>
+                                <Y>11,99999905000000</Y>
+                            </Bildkoordinaten>
+                            <ETCSLT>25</ETCSLT>
+                        </Weichenanfang>
+                        <FstrZugschlussstelleS>
+                            <ID>1</ID>
+                            <Kilometrierung>22,885+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </FstrZugschlussstelleS>
+                        <GeschwZulaessigS>
+                            <ID>2</ID>
+                            <Kilometrierung>22,885+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Geschw Einheit="km/h">80</Geschw>
+                            <Wirkungsort>Hier</Wirkungsort>
+                            <Zugbeeinflussung>Alle</Zugbeeinflussung>
+                        </GeschwZulaessigS>
+                        <SignalZugschlussstelleF>
+                            <ID>3</ID>
+                            <Kilometrierung>22,885+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <FstrAufloesezeit Einheit="s">3</FstrAufloesezeit>
+                            <GueltigAb>0</GueltigAb>
+                            <Virtuell>false</Virtuell>
+                            <Ausfall Anfang="00:00:00" Ende="00:00:00"/>
+                        </SignalZugschlussstelleF>
+                        <ETCSBaliseF>
+                            <ID>4</ID>
+                            <Kilometrierung>22,934+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseF>
+                        <VorsignalF>
+                            <ID>5</ID>
+                            <Kilometrierung>22,935+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>02Vp</Name>
+                            <FstrBildezeit Einheit="s">9</FstrBildezeit>
+                            <Bauart>0</Bauart>
+                        </VorsignalF>
+                        <HauptsignalF>
+                            <ID>6</ID>
+                            <Kilometrierung>22,935+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>02F</Name>
+                            <DwegAufloesezeit Einheit="s">3</DwegAufloesezeit>
+                            <ReleaseSpeed Einheit="km/h">20</ReleaseSpeed>
+                            <VS-Zuordnung>0</VS-Zuordnung>
+                            <ApproachSpeed Einheit="km/h">0</ApproachSpeed>
+                            <StutzenWahrscheinlichkeit>0.00</StutzenWahrscheinlichkeit>
+                            <StutzenDauer Einheit="m">0.00</StutzenDauer>
+                        </HauptsignalF>
+                        <PZBMagnetF>
+                            <ID>140</ID>
+                            <Kilometrierung>23,185+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                        </PZBMagnetF>
+                        <ETCSBaliseF>
+                            <ID>7</ID>
+                            <Kilometrierung>23,186+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Typ>1</Typ>
+                        </ETCSBaliseF>
+                        <VorsignalF>
+                            <ID>8</ID>
+                            <Kilometrierung>23,635+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <Name>02Vf</Name>
+                            <FstrBildezeit Einheit="s">9</FstrBildezeit>
+                            <Bauart>0</Bauart>
+                        </VorsignalF>
+                        <Betriebsstellengrenze>
+                            <ID>9</ID>
+                            <Kilometrierung>24,500+0</Kilometrierung>
+                            <LetzteAenderung>01.01.2012 12:00:00</LetzteAenderung>
+                            <PartnerBtrst>S3</PartnerBtrst>
+                            <Bildkoordinaten>
+                                <X>88,91194153000000</X>
+                                <Y>12,00000000000000</Y>
+                            </Bildkoordinaten>
+                            <Gleiskennzeichen>0</Gleiskennzeichen>
+                        </Betriebsstellengrenze>
+                    </Spurplanknoten>
+                </Spurplanabschnitt>
+            </Spurplanabschnitte>
+            <Betriebsstellenfahrwege>
+                <Betriebsstellenfahrweg>
+                    <Name>Strecke 2 - Gleis 1 - Strecke 3</Name>
+                    <Anfang Typ="Betriebsstellengrenze" ID="50">3521-0</Anfang>
+                    <Ende Typ="Betriebsstellengrenze" ID="9">3521-0</Ende>
+                    <Fahrzeitmesspunkt Typ="Fahrzeitmesspunkt" ID="42">Gleis 1</Fahrzeitmesspunkt>
+                    <Reisezughalt Typ="HalteplatzRzRechtsS" ID="45">Gl 1 s</Reisezughalt>
+                    <Attribute>
+                        <DurchfahrtOhneHaltMoeglich/>
+                        <Elektrifiziert/>
+                    </Attribute>
+                    <Verlauf>
+                        <Stamm/>
+                        <Stamm/>
+                    </Verlauf>
+                    <Aktiv>true</Aktiv>
+                    <Prioritaeten>
+                        <Prioritaet Typ="FRz">100</Prioritaet>
+                        <Prioritaet Typ="NRz">100</Prioritaet>
+                        <Prioritaet Typ="Rz">100</Prioritaet>
+                        <Prioritaet Typ="FGz">100</Prioritaet>
+                        <Prioritaet Typ="NGz">100</Prioritaet>
+                        <Prioritaet Typ="Gz">100</Prioritaet>
+                        <Prioritaet Typ="S">100</Prioritaet>
+                        <Prioritaet Typ="Lz">100</Prioritaet>
+                        <Prioritaet Typ="GzG">100</Prioritaet>
+                        <Prioritaet Typ="Rf">0</Prioritaet>
+                    </Prioritaeten>
+                    <Laengen StartBisFzMp="2000" FzMpBisEnde="2000" Gesamt="4000"/>
+                </Betriebsstellenfahrweg>
+                <Betriebsstellenfahrweg>
+                    <Name>Strecke 2 - Gleis 2 - Strecke 3</Name>
+                    <Anfang Typ="Betriebsstellengrenze" ID="50">3521-0</Anfang>
+                    <Ende Typ="Betriebsstellengrenze" ID="9">3521-0</Ende>
+                    <Fahrzeitmesspunkt Typ="Fahrzeitmesspunkt" ID="22">Gleis 2</Fahrzeitmesspunkt>
+                    <Reisezughalt Typ="HalteplatzRzLinksS" ID="25">Gl 2 s</Reisezughalt>
+                    <Attribute>
+                        <DurchfahrtOhneHaltMoeglich/>
+                        <Elektrifiziert/>
+                    </Attribute>
+                    <Verlauf>
+                        <Abzweig/>
+                        <Abzweig/>
+                    </Verlauf>
+                    <Aktiv>true</Aktiv>
+                    <Prioritaeten>
+                        <Prioritaet Typ="FRz">80</Prioritaet>
+                        <Prioritaet Typ="NRz">80</Prioritaet>
+                        <Prioritaet Typ="Rz">80</Prioritaet>
+                        <Prioritaet Typ="FGz">80</Prioritaet>
+                        <Prioritaet Typ="NGz">80</Prioritaet>
+                        <Prioritaet Typ="Gz">80</Prioritaet>
+                        <Prioritaet Typ="S">80</Prioritaet>
+                        <Prioritaet Typ="Lz">80</Prioritaet>
+                        <Prioritaet Typ="GzG">80</Prioritaet>
+                        <Prioritaet Typ="Rf">0</Prioritaet>
+                    </Prioritaeten>
+                    <Laengen StartBisFzMp="2000" FzMpBisEnde="2000" Gesamt="4000"/>
+                </Betriebsstellenfahrweg>
+                <Betriebsstellenfahrweg>
+                    <Name>Strecke 3 - Gleis 1 - Strecke 2</Name>
+                    <Anfang Typ="Betriebsstellengrenze" ID="9">3521-0</Anfang>
+                    <Ende Typ="Betriebsstellengrenze" ID="50">3521-0</Ende>
+                    <Fahrzeitmesspunkt Typ="Fahrzeitmesspunkt" ID="42">Gleis 1</Fahrzeitmesspunkt>
+                    <Reisezughalt Typ="HalteplatzRzLinksF" ID="39">Gl 1 f</Reisezughalt>
+                    <Attribute>
+                        <DurchfahrtOhneHaltMoeglich/>
+                        <Elektrifiziert/>
+                    </Attribute>
+                    <Verlauf>
+                        <Stamm/>
+                        <Stamm/>
+                    </Verlauf>
+                    <Aktiv>true</Aktiv>
+                    <Prioritaeten>
+                        <Prioritaet Typ="FRz">100</Prioritaet>
+                        <Prioritaet Typ="NRz">100</Prioritaet>
+                        <Prioritaet Typ="Rz">100</Prioritaet>
+                        <Prioritaet Typ="FGz">100</Prioritaet>
+                        <Prioritaet Typ="NGz">100</Prioritaet>
+                        <Prioritaet Typ="Gz">100</Prioritaet>
+                        <Prioritaet Typ="S">100</Prioritaet>
+                        <Prioritaet Typ="Lz">100</Prioritaet>
+                        <Prioritaet Typ="GzG">100</Prioritaet>
+                        <Prioritaet Typ="Rf">0</Prioritaet>
+                    </Prioritaeten>
+                    <Laengen StartBisFzMp="2000" FzMpBisEnde="2000" Gesamt="4000"/>
+                </Betriebsstellenfahrweg>
+                <Betriebsstellenfahrweg>
+                    <Name>Strecke 3 - Gleis 2 - Strecke 2</Name>
+                    <Anfang Typ="Betriebsstellengrenze" ID="9">3521-0</Anfang>
+                    <Ende Typ="Betriebsstellengrenze" ID="50">3521-0</Ende>
+                    <Fahrzeitmesspunkt Typ="Fahrzeitmesspunkt" ID="22">Gleis 2</Fahrzeitmesspunkt>
+                    <Reisezughalt Typ="HalteplatzRzRechtsF" ID="19">Gl 2 f</Reisezughalt>
+                    <Attribute>
+                        <DurchfahrtOhneHaltMoeglich/>
+                        <Elektrifiziert/>
+                    </Attribute>
+                    <Verlauf>
+                        <Abzweig/>
+                        <Abzweig/>
+                    </Verlauf>
+                    <Aktiv>true</Aktiv>
+                    <Prioritaeten>
+                        <Prioritaet Typ="FRz">80</Prioritaet>
+                        <Prioritaet Typ="NRz">80</Prioritaet>
+                        <Prioritaet Typ="Rz">80</Prioritaet>
+                        <Prioritaet Typ="FGz">80</Prioritaet>
+                        <Prioritaet Typ="NGz">80</Prioritaet>
+                        <Prioritaet Typ="Gz">80</Prioritaet>
+                        <Prioritaet Typ="S">80</Prioritaet>
+                        <Prioritaet Typ="Lz">80</Prioritaet>
+                        <Prioritaet Typ="GzG">80</Prioritaet>
+                        <Prioritaet Typ="Rf">0</Prioritaet>
+                    </Prioritaeten>
+                    <Laengen StartBisFzMp="2000" FzMpBisEnde="2000" Gesamt="4000"/>
+                </Betriebsstellenfahrweg>
+            </Betriebsstellenfahrwege>
+        </Spurplanbetriebsstelle>
+    </Spurplanbetriebsstellen>
+</LuksISSDaten>

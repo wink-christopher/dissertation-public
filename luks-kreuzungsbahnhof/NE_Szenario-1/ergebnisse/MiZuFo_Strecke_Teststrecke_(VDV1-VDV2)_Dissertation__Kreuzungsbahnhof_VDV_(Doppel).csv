@@ -1,0 +1,9 @@
+MiZuFo für Strecke Teststrecke beide Richtungen;;
+
+;;;;Nr.;1;2;
+;;;;Richtung;1;2;
+;;;;Gattung;DPN;DPN;
+;;;;Zugnummer;ETCS steigend;ETCS fallend;
+Nr.;Ri.;Gattung;Zugnummer;Anzahl;32;32;
+1;1;DPN;ETCS steigend;32;11:55;12:00;
+2;2;DPN;ETCS fallend;32;12:00;11:55;

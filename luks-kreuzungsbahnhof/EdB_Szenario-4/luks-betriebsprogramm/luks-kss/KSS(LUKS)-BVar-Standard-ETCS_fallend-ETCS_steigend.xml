@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<KSS xsi:noNamespaceSchemaLocation=".\schema\LUKSKSS_2_4_10.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+    <header>
+        <description>
+            <scheduleVersion>
+                <mode>Studie</mode>
+                <name>Jahresfahrplan</name>
+                <number>0</number>
+                <validity>
+                    <validFrom>2012-01-01</validFrom>
+                    <validTo>2012-01-01</validTo>
+                </validity>
+                <yearTimetable>2014</yearTimetable>
+                <rectifyingNumber>0</rectifyingNumber>
+                <class>gemeinsam</class>
+                <timeOfBuild>2025-03-18</timeOfBuild>
+                <comment></comment>
+                <status>FREIGEGEBEN</status>
+            </scheduleVersion>
+            <shortDescription></shortDescription>
+        </description>
+        <comment>LUKS Version 3.9.1 ( - 05.11.2024 12:06:16)</comment>
+        <userAbbreviation></userAbbreviation>
+        <userTelephone></userTelephone>
+        <userEmail></userEmail>
+        <timeOfBuild>2025-03-18T09:55:18</timeOfBuild>
+        <spurplanVersionDescription>
+            <mode>Studie</mode>
+            <name>Jahresfahrplan</name>
+            <number>0</number>
+            <validity>
+                <validFrom>2012-01-01</validFrom>
+                <validTo>2012-01-01</validTo>
+            </validity>
+        </spurplanVersionDescription>
+        <gfdiVersionDescription>
+            <mode>Studie</mode>
+            <name>Jahresfahrplan</name>
+            <number>0</number>
+            <validity>
+                <validFrom>2012-01-01</validFrom>
+                <validTo>2012-01-01</validTo>
+            </validity>
+        </gfdiVersionDescription>
+        <establishment>WEST</establishment>
+    </header>
+    <LUKS_Zugfamilien Betriebsvariante="Standard">
+        <LUKS_Zugfamilie>
+            <LUKS_Zugfamilie_Kurz>ETCS fallend</LUKS_Zugfamilie_Kurz>
+        </LUKS_Zugfamilie>
+        <LUKS_Zugfamilie>
+            <LUKS_Zugfamilie_Kurz>ETCS steigend</LUKS_Zugfamilie_Kurz>
+        </LUKS_Zugfamilie>
+    </LUKS_Zugfamilien>
+    <indexTrassen/>
+    <railml>
+        <LUKS_Modellzuege>
+            <train trainNumber="ETCS fallend/1" kind="DPN 32.1" trainStatus="freig" remarks="Geltungszeit: 01.01.2012 - 01.01.2012">
+                <LUKS_Zugdaten>
+                    <LUKS_Zugname>ETCS fallend</LUKS_Zugname>
+                    <LUKS_Zugfamilie>ETCS fallend</LUKS_Zugfamilie>
+                    <ReisezeitRestriktion>0</ReisezeitRestriktion>
+                </LUKS_Zugdaten>
+                <fineConstruction>
+                    <constructionTrain>
+                        <trainNumber>
+                            <mainNumber>ETCS fallend</mainNumber>
+                            <subNumber>0</subNumber>
+                            <userAbbreviation>x</userAbbreviation>
+                        </trainNumber>
+                        <LUKS_ExternerZugname></LUKS_ExternerZugname>
+                        <status>Ok</status>
+                        <characteristic>
+                            <onDemand>false</onDemand>
+                            <tractionUnits>
+                                <tractionUnit>
+                                    <isStandardTractionUnit>true</isStandardTractionUnit>
+                                    <position Typ="ZUGLOK-STELLUNG-ART" Schluessel="1">SP</position>
+                                    <tractionUnitDesignSeries>
+                                        <designSeries Typ="L" Nr="80">0622</designSeries>
+                                        <variante>19</variante>
+                                        <stromart Typ="STROMART" Schluessel="0">ohne Stromart</stromart>
+                                    </tractionUnitDesignSeries>
+                                </tractionUnit>
+                            </tractionUnits>
+                            <numberOfPassengerCars>0</numberOfPassengerCars>
+                            <trainsetLength>0,0</trainsetLength>
+                            <trainsetWeight>0,0</trainsetWeight>
+                            <tonnageRating>false</tonnageRating>
+                            <trainsetVelocity>140</trainsetVelocity>
+                            <constructionVelocity>140</constructionVelocity>
+                            <maxVelocity>140</maxVelocity>
+                            <lockingTrip>false</lockingTrip>
+                            <isPhantom>false</isPhantom>
+                            <kind Hauptnummer="32" ZuggattungsProdukt="DPN">1</kind>
+                            <trainClass>NRz</trainClass>
+                            <relevantStopPositionMode>R</relevantStopPositionMode>
+                            <trainProtection>false</trainProtection>
+                            <totalLength>54,0</totalLength>
+                            <totalWeight>118,0</totalWeight>
+                            <brakedWeightPercentage>180</brakedWeightPercentage>
+                            <brakingSystem Typ="BREMSSTELLUNG-ZUG" Schluessel="4">R+Mg</brakingSystem>
+                            <recoveryMarginProportion>100</recoveryMarginProportion>
+                            <LUKS_characteristics>
+                                <PlanRang>10</PlanRang>
+                                <BetriebsRang>10</BetriebsRang>
+                                <Einbruchsverspaetungen mittlereEinbruchsVersp="2" WahrschEinbruchsVersp="50"/>
+                                <Urverspaetungen>
+                                    <EinbruchsVersp SystemAnteil="0" Wahrscheinlichkeit="0" MittlVersp="0"/>
+                                    <cEinbruchsFrueh Wahrscheinlichkeit="0" MittlVersp="0"/>
+                                    <VerkehrshalteKomplex>false</VerkehrshalteKomplex>
+                                    <VerkehrshalteEinf SystemAnteil="0" Wahrscheinlichkeit="0" MittlVersp="0"/>
+                                    <VerkehrshalteKomplFrueh SystemAnteil="0" Wahrscheinlichkeit="0" MittlVersp="0"/>
+                                    <VerkehrshalteKomplPuenktl SystemAnteil="0" Wahrscheinlichkeit="0" MittlVersp="0"/>
+                                    <VerkehrshalteKomplVersp SystemAnteil="0" Wahrscheinlichkeit="0" MittlVersp="0"/>
+                                    <VerkehrshalteFruehGrenze>0</VerkehrshalteFruehGrenze>
+                                    <VerkehrshalteSpaetGrenze>0</VerkehrshalteSpaetGrenze>
+                                    <BetriebshalteUV SystemAnteil="0" Wahrscheinlichkeit="0" MittlVersp="0"/>
+                                    <MaxAufschlag>1</MaxAufschlag>
+                                </Urverspaetungen>
+                                <BauZuschlagAbbau>0,5</BauZuschlagAbbau>
+                                <PZBaktiv>false</PZBaktiv>
+                                <ETCS1>true</ETCS1>
+                                <SBIavailable>true</SBIavailable>
+                                <Umleiter>false</Umleiter>
+                                <InArbeit>false</InArbeit>
+                                <Geschwindigkeitsbaender isUsed="false"/>
+                            </LUKS_characteristics>
+                        </characteristic>
+                        <services>
+                            <service description="Verkehrt: 01.01.12 - 01.01.12 täglich (127 00)" startDate="2012-01-01" endDate="2012-01-01" bitMask="1">
+                                <operatingDay operatingCode="1111111" dayType="regularday"/>
+                            </service>
+                        </services>
+                        <sequence>
+                            <breakin>true</breakin>
+                            <breakout>true</breakout>
+                            <startingVelocity>140</startingVelocity>
+                            <LUKS_Startverhalten Art="1" V_Einbruch="140" AnfangsHaltAuswerten="false">Einbruch mit [km/h]</LUKS_Startverhalten>
+                            <LUKS_Endverhalten Art="1" V_Ausbruch="140" EndeHaltAuswerten="false">Ausbruch mit [km/h]</LUKS_Endverhalten>
+                            <sequenceServicePoints>
+                                <sequenceServicePoint>
+                                    <servicePoint>S3</servicePoint>
+                                    <longAppellation>Strecke 3</longAppellation>
+                                    <trackSystem>null - Strecke 3 - VDV 2</trackSystem>
+                                    <trackSystemLength StartBisFzMp="2750" FzMpBisEnde="2750" Gesamt="5500"/>
+                                    <LUKS_FahrwegAnfang Art="GE">3521-0</LUKS_FahrwegAnfang>
+                                    <LUKS_FahrwegEnde Art="BS" Partner="DB2">3521-0</LUKS_FahrwegEnde>
+                                    <LUKS_FahrzeitMesspunkt Art="FZ">Streckengleis</LUKS_FahrzeitMesspunkt>
+                                    <departure>
+                                        <time>00:30:00.00</time>
+                                    </departure>
+                                    <LUKS_Biegezuschlagfaktor>1,0000</LUKS_Biegezuschlagfaktor>
+                                </sequenceServicePoint>
+                                <sequenceServicePoint>
+                                    <servicePoint>DB2</servicePoint>
+                                    <longAppellation>DB 2</longAppellation>
+                                    <trackSystem>Strecke 3 - Gleis 1 - Strecke 2</trackSystem>
+                                    <trackSystemLength StartBisFzMp="2000" FzMpBisEnde="2000" Gesamt="4000"/>
+                                    <LUKS_FahrwegAnfang Art="BS" Partner="S3">3521-0</LUKS_FahrwegAnfang>
+                                    <LUKS_FahrwegEnde Art="BS" Partner="S2">3521-0</LUKS_FahrwegEnde>
+                                    <LUKS_FahrzeitMesspunkt Art="FZ">Gleis 1</LUKS_FahrzeitMesspunkt>
+                                    <LUKS_Halteplatz Art="HP">Gl 1 f</LUKS_Halteplatz>
+                                    <arrival>
+                                        <time>00:33:28.64</time>
+                                    </arrival>
+                                    <departure>
+                                        <time>00:35:58.64</time>
+                                    </departure>
+                                    <stopMode Typ="HALT-ART" Schluessel="4">H</stopMode>
+                                    <minStopTime>PT1M</minStopTime>
+                                    <LUKS_Biegezuschlagfaktor>1,0000</LUKS_Biegezuschlagfaktor>
+                                </sequenceServicePoint>
+                                <sequenceServicePoint>
+                                    <servicePoint>S2</servicePoint>
+                                    <longAppellation>Strecke 2</longAppellation>
+                                    <trackSystem>VDV 2 - Strecke 2 - VDV 1</trackSystem>
+                                    <trackSystemLength StartBisFzMp="5500" FzMpBisEnde="5500" Gesamt="11000"/>
+                                    <LUKS_FahrwegAnfang Art="BS" Partner="DB2">3521-0</LUKS_FahrwegAnfang>
+                                    <LUKS_FahrwegEnde Art="BS" Partner="DB1">3521-0</LUKS_FahrwegEnde>
+                                    <LUKS_FahrzeitMesspunkt Art="FZ">Streckengleis</LUKS_FahrzeitMesspunkt>
+                                    <departure>
+                                        <time>00:40:53.66</time>
+                                    </departure>
+                                    <LUKS_Biegezuschlagfaktor>1,0000</LUKS_Biegezuschlagfaktor>
+                                </sequenceServicePoint>
+                                <sequenceServicePoint>
+                                    <servicePoint>DB1</servicePoint>
+                                    <longAppellation>DB 1</longAppellation>
+                                    <trackSystem>Strecke 2 - Gleis 2 - Strecke 1</trackSystem>
+                                    <trackSystemLength StartBisFzMp="2000" FzMpBisEnde="2000" Gesamt="4000"/>
+                                    <LUKS_FahrwegAnfang Art="BS" Partner="S2">3521-0</LUKS_FahrwegAnfang>
+                                    <LUKS_FahrwegEnde Art="BS" Partner="S1">3521-0</LUKS_FahrwegEnde>
+                                    <LUKS_FahrzeitMesspunkt Art="FZ">Gleis 2</LUKS_FahrzeitMesspunkt>
+                                    <LUKS_Halteplatz Art="HP">Gl 2 f</LUKS_Halteplatz>
+                                    <arrival>
+                                        <time>00:46:15.69</time>
+                                    </arrival>
+                                    <departure>
+                                        <time>00:48:45.69</time>
+                                    </departure>
+                                    <stopMode Typ="HALT-ART" Schluessel="4">H</stopMode>
+                                    <minStopTime>PT1M</minStopTime>
+                                    <LUKS_Biegezuschlagfaktor>1,0000</LUKS_Biegezuschlagfaktor>
+                                </sequenceServicePoint>
+                                <sequenceServicePoint>
+                                    <servicePoint>S1</servicePoint>
+                                    <longAppellation>Strecke 1</longAppellation>
+                                    <trackSystem>VDV 1 - Strecke 1 - null</trackSystem>
+                                    <trackSystemLength StartBisFzMp="2750" FzMpBisEnde="2750" Gesamt="5500"/>
+                                    <LUKS_FahrwegAnfang Art="BS" Partner="DB1">3521-0</LUKS_FahrwegAnfang>
+                                    <LUKS_FahrwegEnde Art="GE">3521-0</LUKS_FahrwegEnde>
+                                    <LUKS_FahrzeitMesspunkt Art="FZ">Streckengleis</LUKS_FahrzeitMesspunkt>
+                                    <departure>
+                                        <time>00:51:58.73</time>
+                                    </departure>
+                                    <LUKS_Biegezuschlagfaktor>1,0000</LUKS_Biegezuschlagfaktor>
+                                </sequenceServicePoint>
+                            </sequenceServicePoints>
+                        </sequence>
+                    </constructionTrain>
+                </fineConstruction>
+                <LUKS_MzBetriebsprogramm>
+                    <MzReferenzBS Ankunft="false">S3</MzReferenzBS>
+                    <Variation verteilt="normal">0</Variation>
+                    <Zeiten>
+                        <Zeit TaktID="0" TaktNr="1">04:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="2">04:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="3">05:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="4">05:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="5">06:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="6">06:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="7">07:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="8">07:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="9">08:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="10">08:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="11">09:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="12">09:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="13">10:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="14">10:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="15">11:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="16">11:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="17">12:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="18">12:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="19">13:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="20">13:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="21">14:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="22">14:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="23">15:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="24">15:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="25">16:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="26">16:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="27">17:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="28">17:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="29">18:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="30">18:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="31">19:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="32">19:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="33">20:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="34">20:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="35">21:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="36">21:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="37">22:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="38">22:45:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="39">23:15:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="40">23:45:00.00</Zeit>
+                    </Zeiten>
+                </LUKS_MzBetriebsprogramm>
+            </train>
+            <train trainNumber="ETCS steigend/1" kind="DPN 32.1" trainStatus="freig" remarks="Geltungszeit: 01.01.2012 - 01.01.2012">
+                <LUKS_Zugdaten>
+                    <LUKS_Zugname>ETCS steigend</LUKS_Zugname>
+                    <LUKS_Zugfamilie>ETCS steigend</LUKS_Zugfamilie>
+                    <ReisezeitRestriktion>0</ReisezeitRestriktion>
+                </LUKS_Zugdaten>
+                <fineConstruction>
+                    <constructionTrain>
+                        <trainNumber>
+                            <mainNumber>ETCS steigend</mainNumber>
+                            <subNumber>0</subNumber>
+                            <userAbbreviation>x</userAbbreviation>
+                        </trainNumber>
+                        <LUKS_ExternerZugname></LUKS_ExternerZugname>
+                        <status>Ok</status>
+                        <characteristic>
+                            <onDemand>false</onDemand>
+                            <tractionUnits>
+                                <tractionUnit>
+                                    <isStandardTractionUnit>true</isStandardTractionUnit>
+                                    <position Typ="ZUGLOK-STELLUNG-ART" Schluessel="1">SP</position>
+                                    <tractionUnitDesignSeries>
+                                        <designSeries Typ="L" Nr="80">0622</designSeries>
+                                        <variante>19</variante>
+                                        <stromart Typ="STROMART" Schluessel="0">ohne Stromart</stromart>
+                                    </tractionUnitDesignSeries>
+                                </tractionUnit>
+                            </tractionUnits>
+                            <numberOfPassengerCars>0</numberOfPassengerCars>
+                            <trainsetLength>0,0</trainsetLength>
+                            <trainsetWeight>0,0</trainsetWeight>
+                            <tonnageRating>false</tonnageRating>
+                            <trainsetVelocity>140</trainsetVelocity>
+                            <constructionVelocity>140</constructionVelocity>
+                            <maxVelocity>140</maxVelocity>
+                            <lockingTrip>false</lockingTrip>
+                            <isPhantom>false</isPhantom>
+                            <kind Hauptnummer="32" ZuggattungsProdukt="DPN">1</kind>
+                            <trainClass>NRz</trainClass>
+                            <relevantStopPositionMode>R</relevantStopPositionMode>
+                            <trainProtection>false</trainProtection>
+                            <totalLength>54,0</totalLength>
+                            <totalWeight>118,0</totalWeight>
+                            <brakedWeightPercentage>180</brakedWeightPercentage>
+                            <brakingSystem Typ="BREMSSTELLUNG-ZUG" Schluessel="4">R+Mg</brakingSystem>
+                            <recoveryMarginProportion>100</recoveryMarginProportion>
+                            <LUKS_characteristics>
+                                <PlanRang>10</PlanRang>
+                                <BetriebsRang>10</BetriebsRang>
+                                <Einbruchsverspaetungen mittlereEinbruchsVersp="2" WahrschEinbruchsVersp="50"/>
+                                <Urverspaetungen>
+                                    <EinbruchsVersp SystemAnteil="0" Wahrscheinlichkeit="0" MittlVersp="0"/>
+                                    <cEinbruchsFrueh Wahrscheinlichkeit="0" MittlVersp="0"/>
+                                    <VerkehrshalteKomplex>false</VerkehrshalteKomplex>
+                                    <VerkehrshalteEinf SystemAnteil="0" Wahrscheinlichkeit="0" MittlVersp="0"/>
+                                    <VerkehrshalteKomplFrueh SystemAnteil="0" Wahrscheinlichkeit="0" MittlVersp="0"/>
+                                    <VerkehrshalteKomplPuenktl SystemAnteil="0" Wahrscheinlichkeit="0" MittlVersp="0"/>
+                                    <VerkehrshalteKomplVersp SystemAnteil="0" Wahrscheinlichkeit="0" MittlVersp="0"/>
+                                    <VerkehrshalteFruehGrenze>0</VerkehrshalteFruehGrenze>
+                                    <VerkehrshalteSpaetGrenze>0</VerkehrshalteSpaetGrenze>
+                                    <BetriebshalteUV SystemAnteil="0" Wahrscheinlichkeit="0" MittlVersp="0"/>
+                                    <MaxAufschlag>1</MaxAufschlag>
+                                </Urverspaetungen>
+                                <BauZuschlagAbbau>0,5</BauZuschlagAbbau>
+                                <PZBaktiv>false</PZBaktiv>
+                                <ETCS1>true</ETCS1>
+                                <SBIavailable>true</SBIavailable>
+                                <Umleiter>false</Umleiter>
+                                <InArbeit>false</InArbeit>
+                                <Geschwindigkeitsbaender isUsed="false"/>
+                            </LUKS_characteristics>
+                        </characteristic>
+                        <services>
+                            <service description="Verkehrt: 01.01.12 - 01.01.12 täglich (127 00)" startDate="2012-01-01" endDate="2012-01-01" bitMask="1">
+                                <operatingDay operatingCode="1111111" dayType="regularday"/>
+                            </service>
+                        </services>
+                        <sequence>
+                            <breakin>true</breakin>
+                            <breakout>true</breakout>
+                            <startingVelocity>140</startingVelocity>
+                            <LUKS_Startverhalten Art="1" V_Einbruch="140" AnfangsHaltAuswerten="false">Einbruch mit [km/h]</LUKS_Startverhalten>
+                            <LUKS_Endverhalten Art="1" V_Ausbruch="140" EndeHaltAuswerten="false">Ausbruch mit [km/h]</LUKS_Endverhalten>
+                            <sequenceServicePoints>
+                                <sequenceServicePoint>
+                                    <servicePoint>S1</servicePoint>
+                                    <longAppellation>Strecke 1</longAppellation>
+                                    <trackSystem>null - Strecke 1 - VDV 1</trackSystem>
+                                    <trackSystemLength StartBisFzMp="2750" FzMpBisEnde="2750" Gesamt="5500"/>
+                                    <LUKS_FahrwegAnfang Art="GE">3521-0</LUKS_FahrwegAnfang>
+                                    <LUKS_FahrwegEnde Art="BS" Partner="DB1">3521-0</LUKS_FahrwegEnde>
+                                    <LUKS_FahrzeitMesspunkt Art="FZ">Streckengleis</LUKS_FahrzeitMesspunkt>
+                                    <departure>
+                                        <time>00:30:00.00</time>
+                                    </departure>
+                                    <LUKS_Biegezuschlagfaktor>1,0000</LUKS_Biegezuschlagfaktor>
+                                </sequenceServicePoint>
+                                <sequenceServicePoint>
+                                    <servicePoint>DB1</servicePoint>
+                                    <longAppellation>DB 1</longAppellation>
+                                    <trackSystem>Strecke 1 - Gleis 1 - Strecke 2</trackSystem>
+                                    <trackSystemLength StartBisFzMp="2000" FzMpBisEnde="2000" Gesamt="4000"/>
+                                    <LUKS_FahrwegAnfang Art="BS" Partner="S1">3521-0</LUKS_FahrwegAnfang>
+                                    <LUKS_FahrwegEnde Art="BS" Partner="S2">3521-0</LUKS_FahrwegEnde>
+                                    <LUKS_FahrzeitMesspunkt Art="FZ">Gleis 1</LUKS_FahrzeitMesspunkt>
+                                    <LUKS_Halteplatz Art="HP">Gl 1 s</LUKS_Halteplatz>
+                                    <arrival>
+                                        <time>00:33:28.64</time>
+                                    </arrival>
+                                    <departure>
+                                        <time>00:35:58.64</time>
+                                    </departure>
+                                    <stopMode Typ="HALT-ART" Schluessel="4">H</stopMode>
+                                    <minStopTime>PT1M</minStopTime>
+                                    <LUKS_Biegezuschlagfaktor>1,0000</LUKS_Biegezuschlagfaktor>
+                                </sequenceServicePoint>
+                                <sequenceServicePoint>
+                                    <servicePoint>S2</servicePoint>
+                                    <longAppellation>Strecke 2</longAppellation>
+                                    <trackSystem>VDV 1 - Strecke 2 - VDV 2</trackSystem>
+                                    <trackSystemLength StartBisFzMp="5500" FzMpBisEnde="5500" Gesamt="11000"/>
+                                    <LUKS_FahrwegAnfang Art="BS" Partner="DB1">3521-0</LUKS_FahrwegAnfang>
+                                    <LUKS_FahrwegEnde Art="BS" Partner="DB2">3521-0</LUKS_FahrwegEnde>
+                                    <LUKS_FahrzeitMesspunkt Art="FZ">Streckengleis</LUKS_FahrzeitMesspunkt>
+                                    <departure>
+                                        <time>00:40:53.66</time>
+                                    </departure>
+                                    <LUKS_Biegezuschlagfaktor>1,0000</LUKS_Biegezuschlagfaktor>
+                                </sequenceServicePoint>
+                                <sequenceServicePoint>
+                                    <servicePoint>DB2</servicePoint>
+                                    <longAppellation>DB 2</longAppellation>
+                                    <trackSystem>Strecke 2 - Gleis 2 - Strecke 3</trackSystem>
+                                    <trackSystemLength StartBisFzMp="2000" FzMpBisEnde="2000" Gesamt="4000"/>
+                                    <LUKS_FahrwegAnfang Art="BS" Partner="S2">3521-0</LUKS_FahrwegAnfang>
+                                    <LUKS_FahrwegEnde Art="BS" Partner="S3">3521-0</LUKS_FahrwegEnde>
+                                    <LUKS_FahrzeitMesspunkt Art="FZ">Gleis 2</LUKS_FahrzeitMesspunkt>
+                                    <LUKS_Halteplatz Art="HP">Gl 2 s</LUKS_Halteplatz>
+                                    <arrival>
+                                        <time>00:46:15.69</time>
+                                    </arrival>
+                                    <departure>
+                                        <time>00:48:45.69</time>
+                                    </departure>
+                                    <stopMode Typ="HALT-ART" Schluessel="4">H</stopMode>
+                                    <minStopTime>PT1M</minStopTime>
+                                    <LUKS_Biegezuschlagfaktor>1,0000</LUKS_Biegezuschlagfaktor>
+                                </sequenceServicePoint>
+                                <sequenceServicePoint>
+                                    <servicePoint>S3</servicePoint>
+                                    <longAppellation>Strecke 3</longAppellation>
+                                    <trackSystem>VDV 2 - Strecke 3 - null</trackSystem>
+                                    <trackSystemLength StartBisFzMp="2750" FzMpBisEnde="2750" Gesamt="5500"/>
+                                    <LUKS_FahrwegAnfang Art="BS" Partner="DB2">3521-0</LUKS_FahrwegAnfang>
+                                    <LUKS_FahrwegEnde Art="GE">3521-0</LUKS_FahrwegEnde>
+                                    <LUKS_FahrzeitMesspunkt Art="FZ">Streckengleis</LUKS_FahrzeitMesspunkt>
+                                    <departure>
+                                        <time>00:51:58.73</time>
+                                    </departure>
+                                    <LUKS_Biegezuschlagfaktor>1,0000</LUKS_Biegezuschlagfaktor>
+                                </sequenceServicePoint>
+                            </sequenceServicePoints>
+                        </sequence>
+                    </constructionTrain>
+                </fineConstruction>
+                <LUKS_MzBetriebsprogramm>
+                    <MzReferenzBS Ankunft="false">S1</MzReferenzBS>
+                    <Variation verteilt="normal">0</Variation>
+                    <Zeiten>
+                        <Zeit TaktID="0" TaktNr="1">04:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="2">04:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="3">05:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="4">05:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="5">06:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="6">06:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="7">07:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="8">07:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="9">08:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="10">08:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="11">09:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="12">09:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="13">10:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="14">10:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="15">11:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="16">11:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="17">12:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="18">12:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="19">13:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="20">13:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="21">14:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="22">14:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="23">15:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="24">15:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="25">16:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="26">16:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="27">17:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="28">17:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="29">18:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="30">18:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="31">19:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="32">19:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="33">20:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="34">20:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="35">21:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="36">21:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="37">22:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="38">22:30:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="39">23:00:00.00</Zeit>
+                        <Zeit TaktID="0" TaktNr="40">23:30:00.00</Zeit>
+                    </Zeiten>
+                </LUKS_MzBetriebsprogramm>
+            </train>
+        </LUKS_Modellzuege>
+        <timetable version="1.00">
+            <timetablePeriods>
+                <timetablePeriod timetablePeriodID="2012" description="Studie" startDate="2012-01-01" endDate="2012-01-01"/>
+            </timetablePeriods>
+        </timetable>
+    </railml>
+</KSS>

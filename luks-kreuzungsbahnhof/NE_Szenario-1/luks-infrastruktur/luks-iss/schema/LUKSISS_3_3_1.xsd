@@ -1,0 +1,3111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="xsi.xsd"/-->
+	<!-- Schema einer Indexdatei -->	
+	<xs:element name="LuksISSIndex">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Ersteller" type="xs:normalizedString"/>
+				<xs:element name="Erstellzeitpunkt" type="xs:normalizedString"/>
+				<xs:element name="Kommentar" type="xs:string"/>
+				<xs:element name="WerkzeugName" type="xs:normalizedString"/>
+				<xs:element name="WerkzeugVersion" type="xs:token"/>
+				<xs:element name="SchnittstelleVersion" type="xs:token" fixed="3.3.1"/>
+				<xs:element name="StammdatenVersion" type="DatenVersion"/>
+				<xs:element name="OrdnungsrahmenVersion" type="DatenVersion"/>
+				<xs:element name="SpurplandatenVersion" type="DatenVersion"/>
+				<xs:element name="Dateien">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" name="Datei">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Name" type="xs:normalizedString"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<!--xs:attribute ref="xsi:noNamespaceSchemaLocation" use="required"/-->
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="DatenVersion">
+		<xs:sequence>
+			<xs:element ref="Name"/>
+			<xs:element name="Nummer" type="xs:token"/>
+			<xs:element name="GueltigAb" type="xs:token"/>
+			<xs:element name="GueltigBis" type="xs:token"/>
+			<xs:element ref="Beschreibung"/>
+			<xs:element ref="LetzteAenderung"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Ende Schema einer Indexdatei -->	
+
+
+  
+	<!-- Schema einer Datendatei -->		
+	<xs:element name="LuksISSDaten">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Ersteller" type="xs:normalizedString"/>
+				<xs:element name="Erstellzeitpunkt" type="xs:normalizedString"/>
+				<xs:element name="Indexdatei" type="xs:normalizedString"/>
+    			<xs:element name="Version">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="Name"/>
+							<xs:element name="Nummer" type="xs:token"/>
+							<xs:element name="GueltigAb" type="xs:token"/>
+							<xs:element name="GueltigBis" type="xs:token"/>
+							<xs:element ref="Beschreibung"/>
+							<xs:element ref="LetzteAenderung"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" ref="Stammdaten"/>
+				<xs:element minOccurs="0" ref="Ordnungsrahmen"/>
+				<xs:element minOccurs="0" ref="Spurplanbetriebsstellen"/>
+				<xs:element minOccurs="0" ref="LDDefinitionen"/>
+				<xs:element minOccurs="0" ref="InfrastrukturBereiche"/>
+			</xs:sequence>
+			<!--xs:attribute ref="xsi:noNamespaceSchemaLocation" use="required"/-->
+		</xs:complexType>
+	</xs:element>		
+		
+	<!-- Definitionen einiger mehrfach verwendeter Datentypen/Felder-->
+	<xs:element name="Name" type="xs:normalizedString"/>
+	<xs:element name="Beschreibung" type="xs:string"/>
+	<xs:element name="LetzteAenderung" type="xs:token"/>
+	<xs:simpleType name="JaNein">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Ja"/>
+			<xs:enumeration value="Nein"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Ende Definition der Datentypen -->
+	
+	<!-- Definition der linienförmigen Darstellung -->
+	<xs:element name="LDDefinitionen">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" name="LDDefinition">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element ref="ID"/>
+								<xs:element ref="Name"/>
+								<xs:element name="Beschreibung" type="xs:string"/>
+								<xs:element name="Zugklasse" type="xs:normalizedString"/>
+								<xs:element name="Masstab" type="xs:integer"/>
+								<xs:element name="Masstabfaktor" type="xs:integer"/>
+								<xs:element name="LDLaufwege">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element minOccurs="0" maxOccurs="unbounded" name="LDLaufweg">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="IDX" type="xs:integer"/>
+														<xs:element name="Beachten" type="xs:integer"/>
+														<xs:element name="Betriebsstelle" type="xs:normalizedString"/>
+														<xs:element minOccurs="0" name="Fahrweg" type="xs:string"/>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="InfrastrukturBereiche">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" name="InfrastrukturBereich">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element ref="ID"/>
+								<xs:element ref="Name"/>
+								<xs:element name="FesterSchluesselWertTyp" type="xs:string" minOccurs="0" />
+								<xs:element minOccurs="0" name="UnterBereiche">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                                                <xs:element name="UnterBereich" type="UnterBereichAllgemein"/>
+                                                <xs:element name="UnterBereichStreckenKM" type="UnterBereichStreckenKM"/>
+                                            </xs:choice>
+                                        </xs:sequence>
+                                    </xs:complexType>
+								</xs:element>
+								<xs:element name="Typ" type="xs:integer" />
+								<xs:element name="MehrereUnterbereicheProElementErlaubt" type="xs:boolean" />
+							</xs:sequence>
+						</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Eisenbahnunternehmen">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Nr">
+					<xs:simpleType>
+						<xs:restriction base="GanzeZahl">
+							<!-- "-1" für Dummy values -->
+							<xs:minInclusive value="-1"/>
+							<xs:maxInclusive value="9999"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Kurzname" type="Name"/>
+				<xs:element name="Langname" type="Name"/>
+				<xs:element name="NeUICKennzeichen" type="NeUIC"/>
+				<xs:element ref="LetzteAenderung"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="RefEU">
+		<xs:simpleContent>
+			<xs:extension base="Name">
+				<xs:attribute name="Typ" type="NeUIC" use="required"/>
+				<xs:attribute name="Nr" use="required">
+					<xs:simpleType>
+						<xs:restriction base="GanzeZahl">
+							<!-- "-1" für Dummy values -->
+							<xs:minInclusive value="-1"/>
+							<xs:maxInclusive value="9999"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="RefEU_Laendercode">
+		<xs:simpleContent>
+			<xs:extension base="Name">
+				<xs:attribute name="Typ" type="LcNeUIC" use="required"/>
+				<xs:attribute name="Nr" use="required">
+					<xs:simpleType>
+						<xs:restriction base="GanzeZahl">
+							<!-- "-1" für Dummy values -->
+							<xs:minInclusive value="-1"/>
+							<xs:maxInclusive value="9999"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:simpleType name="NeUIC">
+		<xs:annotation>
+			<xs:documentation>Werte: U, N</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:whiteSpace value="collapse" fixed="true"/>
+			<xs:enumeration value="N"/>
+			<xs:enumeration value="U"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="LcNeUIC">
+		<xs:annotation>
+			<xs:documentation>Werte: L, N, U</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:whiteSpace value="collapse" fixed="true"/>
+			<xs:enumeration value="L"/>
+			<xs:enumeration value="N"/>
+			<xs:enumeration value="U"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="GanzeZahl">
+		<xs:annotation>
+			<xs:documentation>Format: 123</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:whiteSpace value="collapse" fixed="true"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="Name">
+		<xs:annotation>
+			<xs:documentation>String mit Leerzeichen</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="preserve" fixed="true"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:element name="Geschwindigkeitsband">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="IstStandardband" type="xs:boolean"/>
+				<xs:element name="Name" type="xs:token"/>
+				<xs:element name="DefaultGeschwindigkeit" type="xs:integer"/>
+				<xs:element name="Wirkung" type="xs:integer"/>
+				<xs:element name="ETCSTrainCategory" minOccurs="0" type="xs:integer"/>
+				<xs:element name="Farbe" minOccurs="0" type="xs:token"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- Definitionen des Ordnungsrahmens -->
+	<xs:element name="Ordnungsrahmen">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="Betriebsstellen">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" name="Betriebsstelle">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DS100" type="xs:normalizedString"/>
+										<xs:element ref="Name"/>
+										<xs:element name="Kurzname" type="xs:normalizedString"/>
+										<xs:element name="Langname" type="xs:normalizedString" minOccurs="0"/>
+										<xs:element minOccurs="0" name="Anzeigekategorie" type="xs:token"/>
+										<xs:element name="Position">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="X" type="xs:token"/>
+													<xs:element name="Y" type="xs:token"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Eisenbahnunternehmen" type="RefEU"/>
+										<xs:element name="EisenbahnunternehmenGrenze1" type="RefEU" minOccurs="0"/>
+										<xs:element name="EisenbahnunternehmenGrenze2" type="RefEU" minOccurs="0"/>
+										<xs:element name="LUKS_Art" type="xs:integer"/>
+										<xs:element name="ZustOrgeinheit" type="RefOE" />
+										<xs:element ref="LetzteAenderung"/>
+										<xs:element name="GFD_DB_ID" type="xs:integer"/>	
+										<xs:element name="Planungshorizont" type="xs:token"/>
+										<xs:element name="Attribute">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" name="EinfahrtHalt"/>
+													<xs:element minOccurs="0" name="KLDurchsatz"/>
+													<xs:element minOccurs="0" name="Schreibschutz"/>
+													<xs:element minOccurs="0" name="BetriebshalteZulassen"/>
+													<xs:element minOccurs="0" name="KeinWegsetzen"/>
+													<xs:element minOccurs="0" name="KeineGleisaenderung"/>
+													<xs:element minOccurs="0" name="NichtErweitern"/>
+													<xs:element minOccurs="0" name="OhneBiegen"/>
+													<xs:element minOccurs="0" name="KreuzungNebengleis"/>
+													<xs:element minOccurs="0" name="LWMalusNutzung"/>
+													<xs:element minOccurs="0" name="LWMalus" type="xs:integer"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Fixiert">
+											<xs:complexType mixed="true">
+												<xs:attribute name="Rz" use="required" type="xs:token"/>
+												<xs:attribute name="Gz" use="required" type="xs:token"/>
+												<xs:attribute name="Lz" use="required" type="xs:token"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Kommentar" type="xs:token"/>
+										<xs:element ref="OptDis" />
+										<xs:element name="Bundesland" type="RefSchluesselwert" minOccurs="0"/>
+										<xs:element name="BundeslandGrenze1" type="RefSchluesselwert" minOccurs="0"/>
+										<xs:element name="BundeslandGrenze2" type="RefSchluesselwert" minOccurs="0"/>
+										<xs:element name="ArtXMLISS" type="RefSchluesselwert" minOccurs="0" />
+										<xs:element name="Laendercode" type="RefSchluesselwert" minOccurs="0" />
+										<xs:element name="BahnstellenNr" type="GanzeZahl" minOccurs="0"/>
+										<xs:element name="PrimaryCode" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="GanzeZahl">
+													<xs:minInclusive value="0"/>
+													<xs:maxInclusive value="99999"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="NachbarOrgeinheit" type="RefOE" minOccurs="0"/>
+										<xs:element name="Grenze1Orgeinheit" type="RefOE" minOccurs="0"/>
+										<xs:element name="Grenze2Orgeinheit" type="RefOE" minOccurs="0"/>
+										<xs:element name="Betriebsstandort" type="RefOE" minOccurs="0"/>
+										<xs:element name="MutterBtrst" type="xs:string" minOccurs="0"/>
+										<xs:element name="ZubWechselstelle" type="Wahrheit" minOccurs="0"/>
+										<xs:element name="Traktionswechsel" type="Wahrheit" minOccurs="0"/>
+										<xs:element name="Lokpersonalwechsel" type="Wahrheit" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="Strecken">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" name="Strecke">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Nr" type="xs:normalizedString"/>
+										<xs:element name="Kurzname" type="xs:normalizedString"/>
+										<xs:element ref="Name"/>
+										<xs:element ref="LetzteAenderung"/>
+										<xs:element minOccurs="0" name="BetriebsstellenAnStrecke">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element maxOccurs="unbounded" name="BetriebsstellenZuordnung">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Betriebsstelle" type="xs:token"/>
+																<xs:element name="BetriebsstellenlageRechts" type="xs:token"/>
+																<xs:element ref="LetzteAenderung"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="Streckenabschnitte">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element maxOccurs="unbounded" name="Streckenabschnitt">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="BetrName" type="Text" minOccurs="0"/>
+																<xs:element name="BetrKurzname" type="Text" minOccurs="0"/>
+																<xs:element name="Name11" type="Text" minOccurs="0"/>
+																<xs:element name="KilometrierungVon" type="Kilometrierung"/>
+																<xs:element name="KilometrierungBis" type="Kilometrierung"/>
+																<xs:element name="AnfangsBetriebsstelle" type="xs:normalizedString"/>
+																<xs:element name="EndeBetriebsstelle" minOccurs="0">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="DS100" type="xs:normalizedString"/>
+																			<xs:element name="ZusaetzlicheZugmeldestelle" type="Wahrheit" minOccurs="0"/>
+																			<xs:element name="FplBearbeitungsgrenze" type="RefSchluesselwert" minOccurs="0"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="Eisenbahnunternehmen" type="RefEU" minOccurs="0"/>
+																<xs:element name="Druckertuechtigung" type="Wahrheit" minOccurs="0"/>
+																<xs:element name="Notbremsueberbrueckung" type="Wahrheit" minOccurs="0"/>
+																<xs:element name="Lauffaehigkeit" type="Geschw" minOccurs="0"/>
+																<xs:element name="Infrastrukturbearbeitungsbereich" type="RefOE" minOccurs="0"/>
+																<xs:element name="Fahrplanbearbeitungsbereich" type="RefOE" minOccurs="0"/>
+																<xs:element name="Art" type="RefSchluesselwert" minOccurs="0"/>
+																<xs:element name="Bahnart" type="RefSchluesselwert" minOccurs="0"/>
+																<xs:element name="Bahnnutzung" type="RefSchluesselwert" minOccurs="0"/>
+																<xs:element name="Betriebsart" type="RefSchluesselwert" minOccurs="0"/>
+																<xs:element name="Betreiberart" type="RefSchluesselwert" minOccurs="0"/>
+																<xs:element name="Betriebsweise" type="RefSchluesselwert" minOccurs="0"/>
+																<xs:element name="Spurweite" type="xs:token"/>
+																<xs:element name="Streckenklassifizierung" type="RefSchluesselwert" minOccurs="0"/>
+																<xs:element name="Streckenkategorie" type="RefSchluesselwert" minOccurs="0"/>
+																<xs:element name="Streckenqualitaet" type="RefSchluesselwert" minOccurs="0"/>
+																<xs:element name="Zugleitstelle" type="RefSchluesselwert" minOccurs="0"/>
+																<xs:element name="Zugleitbetrieb" type="RefSchluesselwert" minOccurs="0"/>
+																<xs:element name="ZugleitBtrst" type="xs:normalizedString" minOccurs="0"/>
+																<xs:element name="Zugfunk" type="RefSchluesselwert" minOccurs="0"/>
+																<xs:element name="KanalNr" minOccurs="0">
+																	<xs:simpleType>
+																		<xs:restriction base="GanzeZahl">
+																			<xs:minInclusive value="0"/>
+																			<xs:maxInclusive value="999"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="Zugschiebefunk" type="Wahrheit" minOccurs="0"/>
+																<xs:element name="Gleisigkeit" type="GanzeZahl" minOccurs="0"/>
+																<xs:element name="EU-Korridore" minOccurs="0">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="PaP" type="RefSchluesselwert" minOccurs="0" maxOccurs="unbounded"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="Vorraenge" minOccurs="0">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="Vorrang" maxOccurs="unbounded">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="ZugartFV" type="RefZugartFV"/>
+																						<xs:element name="Anfangszeit" type="Uhrzeit"/>
+																						<xs:element name="Endzeit" type="Uhrzeit"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="LetzteAenderung" type="Zeitstempel"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+	<!-- Ende Definition des Ordnungsrahmens -->
+	
+	<!-- Definitionen der Stammdaten -->
+	<xs:element name="Stammdaten">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="Bremsarten">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="Bremsart">
+								<xs:complexType>
+									<xs:sequence minOccurs="0">
+										<xs:element name="BremsartKennzeichen">
+											<xs:complexType mixed="true">
+												<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+												<xs:attribute name="Typ" use="required" type="xs:token" fixed="BREMSART-KENNZEICHEN"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="BremsstellungZug">
+											<xs:complexType mixed="true">
+												<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+												<xs:attribute name="Typ" use="required" type="xs:token" fixed="BREMSSTELLUNG-ZUG"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Bremsstellungbezeichnung" type="xs:token"/>
+										<xs:element ref="LetzteAenderung"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>	
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="Bremstafelkerne">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="Bremstafelkern">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="Geschwindigkeit"/>
+										<xs:element ref="Bremsart"/>
+										<xs:element ref="Bremswegart"/>
+										<xs:element ref="LetzteAenderung"/>
+										<xs:element name="Bremstafeln">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element maxOccurs="unbounded" name="Bremstafel">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Neigung" type="xs:token"/>
+																<xs:element ref="MindestBremshundertstel"/>
+																<xs:element ref="LetzteAenderung"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Eisenbahnunternehmensliste" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="Eisenbahnunternehmen" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="ETCSZugausruestungen">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" >
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="ETCSZugausruestung">
+								<xs:complexType>
+									<xs:sequence minOccurs="0">
+										<xs:element name="Nr" type="xs:integer"/>
+										<xs:element name="Beschreibung" type="xs:normalizedString"/>
+										<xs:element name="Zusatzbeschreibung" type="xs:normalizedString"/>
+										<xs:element ref="LetzteAenderung"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>	
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="ETCSZuordnungsmatrix">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" >
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="ETCSZuordnung">
+								<xs:complexType>
+									<xs:sequence minOccurs="0">
+										<xs:element name="Art" type="ETCSDBArt"/>
+										<xs:element name="ETCSZugausruestung" type="ETCSZugausr"/>
+										<xs:element name="ETCSFuehrungsfaehig" type="xs:normalizedString"/>
+										<xs:element ref="LetzteAenderung"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>	
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Fahrplanperioden" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Fahrplanperiode" type="Fahrplanperiode" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="LZBBremstafeln">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="LZBBremstafel">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="Bremswegart"/>
+										<xs:element name="BremsartKz">
+											<xs:complexType>
+												<xs:attribute name="Schluessel" type="xs:token" use="required"/>
+												<xs:attribute name="Typ" use="required" type="xs:token" fixed="BREMSART-KENNZEICHEN"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element ref="Geschwindigkeit"/>
+										<xs:element name="Gefaelle" type="xs:token"/>
+										<xs:element ref="MindestBremshundertstel"/>
+										<xs:element name="Bremskurve">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:token">
+														<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+														<xs:attribute name="Typ" use="required" type="xs:token" fixed="BREMSKURVE"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element ref="LetzteAenderung"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Organisationseinheiten" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Organisationseinheit" type="Organisationseinheit" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>				
+				<xs:element minOccurs="0" name="Schluesselwerttypen">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="Schluesselwerttyp">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="Name"/>
+										<xs:element name="SWTypID" type="xs:integer"/>
+										<xs:element ref="LetzteAenderung"/>
+										<xs:element minOccurs="0" name="Schluesselwerte">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" maxOccurs="unbounded" name="Schluesselwert">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element minOccurs="0" name="Kurztext" type="xs:normalizedString"/>
+																<xs:element minOccurs="0" name="Mitteltext" type="xs:normalizedString"/>
+																<xs:element minOccurs="0" name="Langtext" type="xs:normalizedString"/>
+																<xs:element minOccurs="0" name="Kategorie" type="xs:token"/>
+																<xs:element ref="LetzteAenderung"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>									
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="Triebfahrzeugbaureihen">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" >
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="Triebfahrzeugbaureihe">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Nr" type="xs:token"/>
+										<xs:element name="Triebfahrzeugart">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:token">
+														<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+														<xs:attribute name="Typ" use="required" type="xs:token"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Neigungstechnik" type="RefSchluesselwert" minOccurs="0"/>
+										<xs:element name="Eisenbahnunternehmen" type="RefEU_Laendercode"/>
+										<xs:element name="TriebfahrzeugBaureiheTyp" type="xs:token"/>
+										<xs:element ref="LetzteAenderung"/>
+										<xs:element name="Triebfahrzeugbaureihenvarianten">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element maxOccurs="unbounded" name="Triebfahrzeugbaureihenvariante">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Variante" type="xs:token"/>
+																<xs:element name="Bezeichnung" type="xs:normalizedString"/>
+																<xs:element name="Achslast" type="Gewicht"/>
+																<xs:element name="EigenGewicht" type="Gewicht"/>
+																<xs:element name="DienstGewicht" type="Gewicht" minOccurs="0"/>
+																<xs:element name="MasseZuschlag" type="xs:token"/>
+																<xs:element name="ZulaessigeGeschwindigkeit" type="xs:integer"/>
+																<xs:element name="AutomatischeKupplung" type="JaNein"/>
+																<xs:element name="ScharfenbergKupplung" type="JaNein"/>
+																<xs:element name="LaengeUeberPuffer" type="xs:token"/>
+																<xs:element name="Laufwiderstandsfaktor1" type="xs:token"/>
+																<xs:element name="Laufwiderstandsfaktor2" type="xs:token"/>
+																<xs:element name="Laufwiderstandsfaktor3" type="xs:token"/>
+																<xs:element name="CIRELKE" type="JaNein"/>
+																<xs:element name="LinienfoermigeZugbeeinflussung" type="JaNein"/>
+																<xs:element name="PunktfoermigeZugbeeinflussung" type="JaNein"/>
+																<xs:element name="EBuLa" type="JaNein"/>
+																<xs:element name="Druckertuechtigung" type="JaNein"/>
+																<xs:element name="Notbremsueberbrueckung" type="JaNein"/>
+																<xs:element name="Wendezugfaehigkeit" type="JaNein"/>
+																<xs:element name="TBL1PZugbeeinflussung" type="JaNein"/>
+																<xs:element name="TBL1PPZugbeeinflussung" type="JaNein"/>
+																<xs:element name="EBICABZugbeeinflussung" type="JaNein"/>
+																<xs:element name="IstICE" type="JaNein"/>
+																<xs:element name="DATC" type="JaNein"/>
+																<xs:element name="FATC" type="JaNein"/>
+																<xs:element ref="LetzteAenderung"/>
+																<xs:element name="Bremsgewichte" minOccurs="0" >
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element minOccurs="1" maxOccurs="unbounded" name="Bremsgewicht">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="Gewicht">
+																							<xs:complexType mixed="true">
+																								<xs:attribute name="Einheit" use="required" type="xs:token" fixed="t"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element name="Bremsstellung">
+																							<xs:complexType mixed="true">
+																								<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+																								<xs:attribute name="Typ" use="required" type="xs:token" fixed="BREMSSTELLUNG"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element ref="LetzteAenderung"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="Heizungsarten" minOccurs="0">
+																	<xs:complexType>
+																		<xs:sequence maxOccurs="unbounded">
+																			<xs:element name="Heizungsart" type="RefSchluesselwert"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="Stromartausruestungen">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element maxOccurs="unbounded" name="Stromartausruestung">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="Darstellung" type="xs:integer"/>
+																						<xs:element name="Stromart">
+																							<xs:complexType mixed="true">
+																								<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+																								<xs:attribute name="Typ" use="required" type="xs:token" fixed="STROMART"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element ref="LetzteAenderung"/>
+																						<xs:element name="Zugkraftfaktoren">
+																							<xs:complexType>
+																								<xs:choice>
+																									<xs:sequence>
+																										<xs:element name="ZugkraftfaktorVWertListe" type="xs:token"/>
+																										<xs:element name="ZugkraftfaktorZWertListe" type="xs:token"/>
+																									</xs:sequence>
+																									<xs:sequence>
+																										<xs:element minOccurs="0" maxOccurs="unbounded" name="Zugkraftfaktor">
+																											<xs:complexType>
+																												<xs:sequence>
+																													<xs:element name="Faktor1" type="xs:token"/>
+																													<xs:element name="Faktor2" type="xs:token"/>
+																													<xs:element name="Faktor3" type="xs:token"/>
+																													<xs:element name="GeschwindigkeitVon" type="xs:token"/>
+																													<xs:element name="GeschwindigkeitBis" type="xs:token"/>
+																													<xs:element ref="LetzteAenderung"/>
+																												</xs:sequence>
+																											</xs:complexType>
+																										</xs:element>
+																									</xs:sequence>
+																								</xs:choice>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element minOccurs="0" name="Nutzbremse">
+																							<xs:complexType>
+																								<xs:sequence>
+																									<xs:element minOccurs="0" maxOccurs="unbounded" name="Eintrag">
+																										<xs:complexType>
+																											<xs:sequence>
+																												<xs:element name="Faktor1" type="xs:token"/>
+																												<xs:element name="Faktor2" type="xs:token"/>
+																												<xs:element name="Faktor3" type="xs:token"/>
+																												<xs:element name="Geschwindigkeit" type="xs:token"/>
+																											</xs:sequence>
+																										</xs:complexType>
+																									</xs:element>
+																								</xs:sequence>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element minOccurs="0" name="Wirkungsgrad" type="xs:token"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="ETCSBremswerte">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element minOccurs="0" name="Emergency">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element minOccurs="0" maxOccurs="unbounded" name="EmergencyEntry" type="BremskurvenEintrag" />
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element minOccurs="0" name="Service">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceEntry" type="BremskurvenEintrag" />
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="tBrakeEmergency" type="xs:token"/>
+																			<xs:element name="tBrakeService" type="xs:token"/>
+																			<xs:element name="a" type="xs:token"/>
+																			<xs:element name="b" type="xs:token"/>
+																			<xs:element name="c" type="xs:token"/>
+																			<xs:element name="kto" type="xs:token"/>
+																			<xs:element name="GammaTrain" type="xs:boolean"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element minOccurs="0" name="Energiebedarf">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="Heizung" type="xs:token"/>
+																			<xs:element name="Sonst" type="xs:token"/>
+																			<xs:element name="Wirkungsgrad" type="xs:token"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element minOccurs="0" name="ATO">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="aktiv" type="xs:boolean"/>
+																			<xs:element minOccurs="0" name="BrakeCurve">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element minOccurs="0" maxOccurs="unbounded" name="BrakeCurveEntry" type="BremskurvenEintrag" />
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element minOccurs="0" name="tPreEbiFZR" type="xs:token"/>
+																			<xs:element minOccurs="0" name="tPreEbiBE" type="xs:token"/>
+																			<xs:element minOccurs="0" name="tPreVGoal" type="xs:token"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element minOccurs="0" name="GC">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="aktiv" type="xs:boolean"/>
+																			<xs:element minOccurs="0" name="GuidanceCurve">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element minOccurs="0" maxOccurs="unbounded" name="GuidanceCurveEntry" type="BremskurvenEintrag" />
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														<xs:attribute name="istStudie" type="Wahrheit"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>	
+									</xs:sequence>
+								<xs:attribute name="istStudie" type="Wahrheit"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Verkehrstageschluesselliste" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Verkehrstageschluessel" type="Verkehrstageschluessel" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="ZugartenFV">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" >
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="ZugartFV">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Art" type="xs:token"/>
+										<xs:element ref="Beschreibung"/>
+										<xs:element name="MaximaleGeschwindigkeit" type="xs:integer"/>
+										<xs:element ref="LetzteAenderung"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="Konstruktionszuggruppen">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" maxOccurs="unbounded" ref="Konstruktionszuggruppe"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="Zuggattungshauptnummern">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="Zuggattungshauptnummer">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Hauptnummer" type="xs:integer"/>
+										<xs:element ref="LetzteAenderung"/>
+										<xs:element name="Zuggattungen">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element maxOccurs="unbounded" name="Zuggattung">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="UnterNr" type="xs:integer"/>
+																<xs:element name="ZuggattungsProdukt">
+																	<xs:complexType mixed="true">
+																		<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+																		<xs:attribute name="Typ" use="required" type="xs:token" fixed="ZUGGATTUNG-PRODUKT"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="ZuggattungsunternummernBezeichner">
+																	<xs:complexType mixed="true">
+																		<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+																		<xs:attribute name="Typ" use="required" type="xs:token" fixed="ZUGG-UNTERNR-BEZEICHNUNG"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="ZugartFV" type="xs:token"/>
+																<xs:element name="Bedarfszug" type="Wahrheit"/>
+																<xs:element minOccurs="0" name="Konstruktionszuggruppe" type="xs:token"/>
+																<xs:element minOccurs="0" name="ZugartETCS">
+																	<xs:complexType mixed="true">
+																		<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+																		<xs:attribute name="Typ" use="required" type="xs:token" fixed="ZUGART-ETCS"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element minOccurs="0" ref="Abfertigungszeit"/>
+																<xs:element ref="LetzteAenderung"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>										
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="ETCSKorrekturwertSaetze">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="ETCSProfil">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ID" type="xs:integer"/>
+										<xs:element name="Name" type="xs:token"/>
+										<xs:element name="Content">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="ETCSKonfiguration" type="xs:anyType"/>
+													<xs:element name="NationalValues" type="xs:anyType"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element ref="LetzteAenderung"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="Geschwindigkeitsbaender">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" >
+							<xs:element minOccurs="0" maxOccurs="unbounded" ref="Geschwindigkeitsband"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Bremsart">
+		<xs:complexType>
+			<xs:attribute name="Schluessel" type="xs:token" use="required"/>
+			<xs:attribute name="Typ" type="xs:token" use="required" fixed="BREMSART-KENNZEICHEN"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Bremswegart">
+		<xs:complexType mixed="true">
+			<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+			<xs:attribute name="Typ" use="required" type="xs:token" fixed="BREMSWEG-ART"/>
+		</xs:complexType>
+	</xs:element>	
+	<xs:complexType name="ETCSDBArt" mixed="true">
+		<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+		<xs:attribute name="Typ" use="required" type="xs:token" fixed="STRABSCH-ART"/>
+	</xs:complexType>
+	<xs:complexType name="ETCSZugausr" mixed="true">
+		<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+		<xs:attribute name="Typ" use="required" type="xs:token" fixed="ETCS-ZUGAUSRUESTUNG"/>
+	</xs:complexType>
+	<xs:complexType name="SignalArtType" mixed="true">
+		<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+		<xs:attribute name="Typ" use="required" type="xs:token" fixed="FAHRWEGPUNKT-ART"/>
+		<xs:attribute name="Kategorie" use="required" type="xs:token" fixed="SIG"/>
+	</xs:complexType>
+	<xs:element name="MindestBremshundertstel" type="xs:nonNegativeInteger"/>
+	<xs:element name="Konstruktionszuggruppe">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Nr" type="xs:token"/>
+				<xs:element name="Reihenfolge" type="xs:integer"/>
+				<xs:element name="Abkuerzung" type="xs:token"/>
+				<xs:element name="Bezeichnung" type="xs:token"/>
+				<xs:element name="Bremsverzoegerung" type="xs:token"/>
+				<xs:element name="MaxGeschwindigkeitKonventionell">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:integer">
+							<xs:attribute name="Einheit" use="required" fixed="km/h"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>	
+				<xs:element name="MaxGeschwindigkeitLZB">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:integer">
+							<xs:attribute name="Einheit" use="required" fixed="km/h"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>	
+				<xs:element name="RelevanteHalteplatzArt" type="xs:token"/>
+				<xs:element name="MindestHaltMin">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:integer">
+							<xs:attribute name="Einheit" use="required" fixed="s"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MindestHaltMax">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:integer">
+							<xs:attribute name="Einheit" use="required" fixed="s"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="StandardBrH" type="xs:integer"/>
+				<xs:element ref="LetzteAenderung"/>
+				<xs:element name="PufferzeitOben" type="xs:string" minOccurs="0"/>
+				<xs:element name="PufferzeitUnten" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ETCSEintragLaenge" mixed="true">
+		<xs:attribute name="Laenge" type="xs:token" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="ETCSEintragGeschw" mixed="true">
+		<xs:attribute name="Geschw" type="xs:token" use="required"/>
+	</xs:complexType>
+	<!-- Ende Definition der Stammdaten -->
+	
+	
+	
+	
+	<!-- Definition der Spurplandaten -->
+	<xs:element name="Spurplanbetriebsstellen">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" name="Spurplanbetriebsstelle">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Betriebsstelle" type="xs:normalizedString"/>
+							<xs:element name="Spurplanabschnitte">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" maxOccurs="unbounded" name="Spurplanabschnitt">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Strecke" type="xs:token"/>
+													<xs:element name="Spurplanknoten">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:choice minOccurs="0" maxOccurs="unbounded">
+																	<xs:element name="Bahnuebergang" type="Bahnuebergang"/>
+																	<xs:element name="Betriebsstellengrenze" type="Betriebsstellengrenze"/>
+																	<xs:element name="Bildpunkt" type="Bildpunkt"/>
+																	<xs:element name="Bogen" type="Bogen"/>
+																	<xs:element name="BremswegF" type="Spurplanknoten_Wert"/>
+																	<xs:element name="BremswegS" type="Spurplanknoten_Wert"/>
+																	<xs:element name="ETCSAnfangF" type="Spurplanknoten_ETCSProfile"/>
+																	<xs:element name="ETCSAnfangS" type="Spurplanknoten_ETCSProfile"/>
+																	<xs:element name="ETCSBaliseF" type="Spurplanknoten_Typ"/>
+																	<xs:element name="ETCSBaliseS" type="Spurplanknoten_Typ"/>
+																	<xs:element name="ETCSBlockkennzeichenF" type="ETCSBlockkennzeichen"/>
+																	<xs:element name="ETCSBlockkennzeichenS" type="ETCSBlockkennzeichen"/>
+																	<xs:element name="ETCSEndeF" type="Spurplanknoten_ETCSProfile"/>
+																	<xs:element name="ETCSEndeS" type="Spurplanknoten_ETCSProfile"/>
+																	<xs:element name="ETCSZugschlussstelleF" type="Spurplanknoten_Zugschlussstelle"/>
+																	<xs:element name="ETCSZugschlussstelleS" type="Spurplanknoten_Zugschlussstelle"/>
+																	<xs:element name="Fahrzeitmesspunkt" type="Fahrzeitmesspunkt"/>
+																	<xs:element name="FSigAnfangF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="FSigAnfangS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="FSigEndeF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="FSigEndeS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="FstrZugschlussstelleF" type="Spurplanknoten_Zugschlussstelle"/>
+																	<xs:element name="FstrZugschlussstelleS" type="Spurplanknoten_Zugschlussstelle"/>
+																	<xs:element name="GeschwAbweichendF" type="GeschwAbweichend"/>
+																	<xs:element name="GeschwAbweichendS" type="GeschwAbweichend"/>
+																	<xs:element name="GeschwEndeSpeziellF" type="GeschwEndeSpeziell"/>
+																	<xs:element name="GeschwEndeSpeziellS" type="GeschwEndeSpeziell"/>
+																	<xs:element name="GeschwZulaessigF" type="GeschwZulaessig"/>
+																	<xs:element name="GeschwZulaessigS" type="GeschwZulaessig"/>
+																	<xs:element name="GleisabschnittESTW" type="Spurplanknoten_Name"/>
+																	<xs:element name="Gleisbezeichnung" type="Gleisbezeichnung"/>
+																	<xs:element name="Gleisende" type="Gleisende"/>
+																	<xs:element name="HalteplatzGzF" type="Spurplanknoten_Halteplatz"/>
+																	<xs:element name="HalteplatzGzS" type="Spurplanknoten_Halteplatz"/>
+																	<xs:element name="HalteplatzRzLinksF" type="Spurplanknoten_Halteplatz"/>
+																	<xs:element name="HalteplatzRzLinksS" type="Spurplanknoten_Halteplatz"/>
+																	<xs:element name="HalteplatzRzRechtsF" type="Spurplanknoten_Halteplatz"/>
+																	<xs:element name="HalteplatzRzRechtsLinksF" type="Spurplanknoten_Halteplatz"/>
+																	<xs:element name="HalteplatzRzRechtsLinksS" type="Spurplanknoten_Halteplatz"/>
+																	<xs:element name="HalteplatzRzRechtsS" type="Spurplanknoten_Halteplatz"/>
+																	<xs:element name="HauptsignalF" type="Hauptsignal"/>
+																	<xs:element name="HauptsignalS" type="Hauptsignal"/>
+																	<xs:element name="KmSprungAnfang" type="Spurplanknoten_Partnerknoten_Bildkoordinaten"/>
+																	<xs:element name="KmSprungEnde" type="Spurplanknoten_Partnerknoten"/>
+																	<xs:element name="KreuzungAnfangLinks" type="KreuzungAnfangLinks"/>
+																	<xs:element name="KreuzungAnfangRechts" type="KreuzungRechts"/>
+																	<xs:element name="KreuzungEndeLinks" type="KreuzungEndeLinks"/>
+																	<xs:element name="KreuzungEndeRechts" type="KreuzungRechts"/>
+																	<xs:element name="KreuzungsweicheAnfangLinks" type="KreuzungsweicheAnfangLinks"/>
+																	<xs:element name="KreuzungsweicheAnfangRechts" type="KreuzungRechts"/>
+																	<xs:element name="KreuzungsweicheEndeLinks" type="KreuzungsweicheEndeLinks"/>
+																	<xs:element name="KreuzungsweicheEndeRechts" type="KreuzungRechts"/>
+																	<xs:element name="LZBAnfangF" type="LZBAnfang"/>
+																	<xs:element name="LZBAnfangS" type="LZBAnfang"/>
+																	<xs:element name="LZBBerKennungWechselF" type="LZBBerKennungWechsel"/>
+																	<xs:element name="LZBBerKennungWechselS" type="LZBBerKennungWechsel"/>
+																	<xs:element name="LZBBlockkennzeichenF" type="LZBBlockkennzeichen"/>
+																	<xs:element name="LZBBlockkennzeichenS" type="LZBBlockkennzeichen"/>
+																	<xs:element name="LZBEndeF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="LZBEndeS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="LZBZugschlussstelleF" type="LZBZugschlussstelle"/>
+																	<xs:element name="LZBZugschlussstelleS" type="LZBZugschlussstelle"/>
+																	<xs:element name="MassgebendeNeigungBrhF" type="MassgebendeNeigungBrh"/>
+																	<xs:element name="MassgebendeNeigungBrhS" type="MassgebendeNeigungBrh"/>
+																	<xs:element name="MassgebendeNeigungGrenzeF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="MassgebendeNeigungGrenzeS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="MassgebendeNeigungSaegelinieF" type="MassgebendeNeigungSaegelinie"/>
+																	<xs:element name="MassgebendeNeigungSaegelinieS" type="MassgebendeNeigungSaegelinie"/>
+																	<xs:element name="NachbargleisbeziehungLinksF" type="NachbargleisbeziehungType"/>
+																	<xs:element name="NachbargleisbeziehungLinksS" type="NachbargleisbeziehungType"/>
+																	<xs:element name="NachbargleisbeziehungRechtsF" type="NachbargleisbeziehungType"/>
+																	<xs:element name="NachbargleisbeziehungRechtsS" type="NachbargleisbeziehungType"/>
+																	<xs:element name="Ne14F" type="Ne14"/>
+																	<xs:element name="Ne14S" type="Ne14"/>
+																	<xs:element name="Neigung" type="Neigung"/>
+																	<xs:element name="NVAnfangF" type="NVAnfang"/>
+																	<xs:element name="NVAnfangS" type="NVAnfang"/>
+																	<xs:element name="NVEndeF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="NVEndeS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="Oberleitungsschaltgruppe" type="Oberleitungsschaltgruppe"/>
+																	<xs:element name="Prellbock" type="Prellbock"/>
+																	<xs:element name="PunktgeschwF" type="Punktgeschw"/>
+																	<xs:element name="PunktgeschwS" type="Punktgeschw"/>
+																	<xs:element name="PZBAnfangF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="PZBAnfangS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="PZBEndeF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="PZBEndeS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="PZBMagnetF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="PZBMagnetS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="SchutzsignalF" type="Schutzsignal"/>
+																	<xs:element name="SchutzsignalS" type="Schutzsignal"/>
+																	<xs:element name="SignalZugschlussstelleF" type="SignalZugschlussstelle"/>
+																	<xs:element name="SignalZugschlussstelleS" type="SignalZugschlussstelle"/>
+																	<xs:element name="Sperrung" type="Sperrung"/>
+																	<xs:element name="Streckenklasse" type="Streckenklasse"/>
+																	<xs:element name="Streckenwechsel0" type="Spurplanknoten_Partnerknoten_Bildkoordinaten"/>
+																	<xs:element name="Streckenwechsel1" type="Spurplanknoten_Partnerknoten"/>
+																	<xs:element name="NoStoppingZoneAnfangS" type="NoStoppingZoneAnfang"/>
+																	<xs:element name="NoStoppingZoneAnfangF" type="NoStoppingZoneAnfang"/>
+																	<xs:element name="NoStoppingZoneEndeS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="NoStoppingZoneEndeF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="ATOAnfangS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="ATOAnfangF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="ATOEndeS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="ATOEndeF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="StromAnfangS" type="StromAnfang"/>
+																	<xs:element name="StromAnfangF" type="StromAnfang"/>
+																	<xs:element name="StromEndeS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="StromEndeF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="SichtAnfangF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="SichtAnfangS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="SichtEndeF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="SichtEndeS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="ATCBaliseF" type="Spurplanknoten_Modus"/>
+																	<xs:element name="ATCBaliseS" type="Spurplanknoten_Modus"/>
+																	<xs:element name="ATCAnfangF" type="Spurplanknoten_Modus"/>
+																	<xs:element name="ATCAnfangS" type="Spurplanknoten_Modus"/>
+																	<xs:element name="ATCEndeF" type="Spurplanknoten_Modus"/>
+																	<xs:element name="ATCEndeS" type="Spurplanknoten_Modus"/>
+																	<xs:element name="TBL1AnfangF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="TBL1AnfangS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="TBL1BaliseF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="TBL1BaliseS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="TBL1EndeF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="TBL1EndeS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="Tunnel" type="Tunnel"/>
+																	<xs:element name="VorsignalF" type="Vorsignal"/>
+																	<xs:element name="VorsignalS" type="Vorsignal"/>
+																	<xs:element name="WeichenabzweigLinks" type="Weichenelement"/>
+																	<xs:element name="WeichenabzweigRechts" type="Weichenelement"/>
+																	<xs:element name="Weichenanfang" type="Weichenanfang"/>
+																	<xs:element name="Weichenstamm" type="Weichenelement"/>
+																	<xs:element name="ZLBAnfangF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="ZLBAnfangS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="ZLBEndeF" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="ZLBEndeS" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="Zugang" type="Zugang"/>
+																	<xs:element name="Zugfunk" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="Zulassungsbereich" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="Zustand" type="Spurplanknoten_Name_NoMinOccurs"/>
+																	<xs:element name="ZwangshaltF" type="Zwangshalt"/>
+																	<xs:element name="ZwangshaltS" type="Zwangshalt"/>
+																	<xs:element name="BegegnungsverbotIn" type="Begegnungsverbottyp"/>
+																	<xs:element name="BegegnungsverbotGegen" type="Begegnungsverbottyp"/>
+																	<xs:element name="KzaEZugartFahrdienstVorschrift" type="KzaEZugartFahrdienstVorschrift"/>
+																	<xs:element name="KzaEZugartFahrdienstBaureihe" type="KzaEZugartFahrdienstBaureihe"/>
+																	<xs:element name="KzaEFuerSchluesselwert" type="KzaEFuerSchluesselwert"/>
+																	<xs:element name="UICProfil" type="UICProfil"/>
+																	<xs:element name="GrenzeKzaE" type="GrenzeKzaE"/>
+																	<xs:element name="GrenzeKzaEWW" type="GrenzeKzaEWW"/>
+																	<xs:element name="GrenzeElektrifizierung" type="GrenzeElektrifizierung"/>
+																	<xs:element name="GrenzeElektrifizierungWW" type="GrenzeElektrifizierungWW"/>
+																	<xs:element name="GrenzeKVProfil" type="GrenzeKVProfil"/>
+																	<xs:element name="GrenzeKVProfilWW" type="GrenzeKVProfilWW"/>
+																	<xs:element name="GrenzeBVe" type="GrenzeBVe"/>
+																	<xs:element name="GrenzeBVeWW" type="GrenzeBVeWW"/>
+																	<xs:element name="GrenzeStreckencluster" type="GrenzeStreckencluster"/>
+																	<xs:element name="GrenzeStreckenclusterWW" type="GrenzeStreckenclusterWW"/>
+																	<xs:element name="GrenzeZustaendigkeitsbereich" type="GrenzeZustaendigkeitsbereich"/>
+																	<xs:element name="GrenzeZustaendigkeitsbereichWW" type="GrenzeZustaendigkeitsbereichWW"/>
+																	<xs:element name="GeschwindigkeitsgruppeS" type="Geschwindigkeitsgruppe"/>
+																	<xs:element name="GeschwindigkeitsgruppeF" type="Geschwindigkeitsgruppe"/>
+																	<xs:element name="GeschwindigkeitsgruppeEndeS" type="GeschwindigkeitsgruppeEnde"/>
+																	<xs:element name="GeschwindigkeitsgruppeEndeF" type="GeschwindigkeitsgruppeEnde"/>
+																	<xs:element name="PunktGeschwindigkeitsgruppeS" type="PunktGeschwindigkeitsgruppe"/>
+																	<xs:element name="PunktGeschwindigkeitsgruppeF" type="PunktGeschwindigkeitsgruppe"/>
+																</xs:choice>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Betriebsstellenfahrwege">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" maxOccurs="unbounded" name="Betriebsstellenfahrweg">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="Name"/>
+													<xs:element name="Anfang" type="ElementIDVerweis"/>
+													<xs:element name="Ende" type="ElementIDVerweis"/>
+													<xs:element minOccurs="0" name="Fahrzeitmesspunkt" type="ElementIDVerweis"/>
+													<xs:element minOccurs="0" name="Reisezughalt" type="ElementIDVerweis"/>
+													<xs:element minOccurs="0" name="Gueterzughalt" type="ElementIDVerweis"/>
+													<xs:element minOccurs="0" name="Attribute">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element minOccurs="0" name="DurchfahrtOhneHaltMoeglich">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element minOccurs="0" name="Elektrifiziert">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element minOccurs="0" name="Falschfahrt">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element minOccurs="0" name="Gleiswechselbetrieb">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element minOccurs="0" name="Stumpfgleis">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element minOccurs="0" name="AusDurchfahrt40">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element minOccurs="0" name="HaltImmerMoeglich">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element minOccurs="0" name="AutomatischErzeugt">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element minOccurs="0" name="UmleitungStreckenwechsel">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element minOccurs="0" name="HerausDurchgehendesHauptgleis">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element minOccurs="0" name="HineinDurchgehendesHauptgleis">
+																	<xs:complexType/>
+																</xs:element>
+																<xs:element minOccurs="0" name="Rangierfahrt">
+																	<xs:complexType/>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element ref="Verlauf"/>
+													<xs:element name="Aktiv" type="xs:boolean"/>
+													<xs:element minOccurs="0" name="AbwDurchrutschweg">
+														<xs:complexType>
+															<xs:choice>
+																<xs:element ref="Laenge"/>
+                                                    			<xs:sequence>
+                                                    				<xs:element ref="Verlauf"/>
+    			                                                    <xs:element minOccurs="0" name="Ende" type="ElementIDVerweis"/>
+			                                                    </xs:sequence>	
+															</xs:choice>
+														</xs:complexType>
+													</xs:element>
+													<xs:element minOccurs="0" name="EntfallendeKnoten">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element maxOccurs="unbounded" name="EntfallenderKnoten" type="ElementIDVerweis"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element minOccurs="0" name="GeschwBeschraenkungen">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element maxOccurs="unbounded" name="GeschwBeschraenkung">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="Knoten" type="ElementIDVerweis"/>
+																			<xs:element ref="Zugbeeinflussung"/>
+																			<xs:element ref="Geschw"/>
+																			<xs:element ref="Wirkungsort"/>
+																			<xs:element minOccurs="0" ref="Laenge"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element minOccurs="0" name="AlternativeWerte">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element maxOccurs="unbounded" name="AlternativerWert">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="Knoten" type="ElementIDVerweis"/>
+																			<xs:element minOccurs="0" ref="Laenge"/>
+																			<xs:element minOccurs="0" ref="Geschwindigkeit"/>
+																			<xs:element minOccurs="0" ref="DwegAufloesezeit"/>
+																			<xs:element minOccurs="0" ref="FstrBildezeit"/>
+																			<xs:element minOccurs="0" ref="AnzahlVSigBisRelevant"/>
+																			<xs:element minOccurs="0" ref="ApproachSpeed"/>
+																			<xs:element minOccurs="0" ref="ReleaseSpeed"/>
+																			<xs:element minOccurs="0" ref="HaltEinfahrt"/>
+																			<xs:element minOccurs="0" ref="sEoA"/>
+																			<xs:element minOccurs="0" ref="sSVL"/>
+																			<xs:element minOccurs="0" ref="tDPMA"/>
+																			<xs:element minOccurs="0" ref="sDPMA"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Prioritaeten">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element maxOccurs="unbounded" name="Prioritaet">
+																	<xs:complexType mixed="true">
+																		<xs:simpleContent>
+																			<xs:extension base="xs:integer">
+																				<xs:attribute name="Typ" use="required" type="xs:token"/>
+																			</xs:extension>
+																		</xs:simpleContent>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element minOccurs="0" name="SonderzugBZ"/>
+													<xs:element name="nurVeroeffentlichung" minOccurs="0"/>
+													<xs:element name="VeroeffentlichungsGleisHineinfuehrend" type="xs:string" minOccurs="0"/>
+													<xs:element name="VeroeffentlichungsGleisHerausfuehrend" type="xs:string" minOccurs="0"/>
+													<xs:element name="Fahrweguebergang" minOccurs="0"/>
+													<xs:element name="Laengen">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:normalizedString">
+																	<xs:attribute name="StartBisFzMp" use="required" type="xs:integer"/>
+																	<xs:attribute name="FzMpBisEnde" use="required" type="xs:integer"/>
+																	<xs:attribute name="Gesamt" use="required" type="xs:integer"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="befehl" type="xs:boolean"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						    <xs:element name="Gleise" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" maxOccurs="unbounded" name="Gleis">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="ID"/>
+													<xs:element ref="Name"/>
+													<xs:element name="Nummer" type="xs:integer"/>
+													<xs:element name="Abschnitte">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element minOccurs="0" maxOccurs="unbounded" name="Abschnitt" type="ElementIDVerweis"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="idx" type="xs:integer"/>
+													<xs:element name="Optionen" type="xs:normalizedString"/>
+												</xs:sequence>
+											</xs:complexType>	
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>	
+							</xs:element>
+							<xs:element minOccurs="0" name="LWMalusWerte">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" maxOccurs="unbounded" name="LWMalusWert">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:integer">
+														<xs:attribute name="FW1" use="required" type="xs:string" />
+														<xs:attribute name="FW2" use="required" type="xs:string" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+
+
+	<!-- Verschiedene Elemente der nachfolgenden Spurplanknoten -->
+	<xs:element name="X" type="xs:token"/>
+	<xs:element name="Y" type="xs:token"/>
+	<xs:element name="ID" type="xs:integer"/>
+	<xs:element name="Kilometrierung" type="xs:token"/>
+	<xs:element name="ExterneID" type="xs:token"/>
+	<xs:element name="Zugmasse" type="xs:integer"/>
+	<xs:element name="Virtuell" type="xs:boolean"/>
+	<xs:element name="Modus" type="xs:integer"/>
+	<xs:element name="Stromart" type="xs:integer"/>
+	<xs:element name="Speisebezirk" type="xs:string"/>
+	<xs:element name="OptDis">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MaxDeltaEinbruch"/>
+				<xs:element ref="MaxDeltaAusbruch"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaxDeltaEinbruch">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" type="xs:token" fixed="s"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaxDeltaAusbruch">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" type="xs:token" fixed="s"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Spannung">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:decimal">
+					<xs:attribute name="Einheit" type="xs:token" fixed="V"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Frequenz">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:decimal">
+					<xs:attribute name="Einheit" type="xs:token" fixed="Hz"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Laenge" type="Distanz"/>
+    <xs:complexType name="Distanz">
+        <xs:annotation>
+            <xs:documentation>Dezimalzahl</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="Dezimalzahl">
+                <xs:attribute name="Einheit" type="EinheitDistanz" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+	<xs:simpleType name="EinheitDistanz">
+		<xs:annotation>
+			<xs:documentation>Werte: cm, m, km</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:whiteSpace value="collapse" fixed="true"/>
+			<xs:enumeration value="mm"/>
+			<xs:enumeration value="cm"/>
+			<xs:enumeration value="m"/>
+			<xs:enumeration value="km"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="sEoA">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" type="xs:token"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="sSVL">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" type="xs:token"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="tDPMA">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" type="xs:token"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+		<xs:element name="sDPMA">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" type="xs:token"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<!--  xs:element name="Art">
+		<xs:complexType>
+			<xs:attribute name="Kategorie" use="required" type="xs:string"/>
+			<xs:attribute name="Schluessel" use="required" type="xs:string"/>
+			<xs:attribute name="Typ" use="required" type="xs:string"/>
+		</xs:complexType>
+	</xs:element -->
+	<xs:element name="Bildkoordinaten">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="X"/>
+				<xs:element ref="Y"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PartnerBtrst" type="xs:token"/>
+	<xs:element name="Gleiskennzeichen" type="xs:integer"/>
+	<xs:complexType name="Einheit_m">
+		<xs:simpleContent>
+			<xs:extension base="xs:token">
+				<xs:attribute name="Einheit" use="required" type="xs:token" fixed="m"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="Einheit_s">
+		<xs:simpleContent>
+			<xs:extension base="xs:token">
+				<xs:attribute name="Einheit" use="required" type="xs:token" fixed="s"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="Einheit_kmh">
+		<xs:simpleContent>
+			<xs:extension base="xs:token">
+				<xs:attribute name="Einheit" use="required" type="xs:token" fixed="km/h"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+
+	<xs:element name="Wert">
+		<xs:complexType mixed="true">
+			<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+			<xs:attribute name="Typ" use="required" type="xs:token"/>
+		</xs:complexType>
+	</xs:element>
+    <xs:element name="ETCS1LS" type="xs:token"/>
+    <xs:element name="ETCS1FS" type="xs:token"/>
+    <xs:element name="ETCS2" type="xs:token"/>
+    <xs:element name="ETCS3" type="xs:token"/>
+	<xs:element name="ETCS3Hybrid" type="xs:token"/>
+	<xs:element name="ETCSProfile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ETCS1LS" minOccurs="0"/>
+				<xs:element ref="ETCS1FS" minOccurs="0"/>
+				<xs:element ref="ETCS2" minOccurs="0"/>
+				<xs:element ref="ETCS3" minOccurs="0"/>
+				<xs:element ref="ETCS3Hybrid" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FstrBildezeit">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" use="required" type="xs:token" fixed="s"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DWegAufloesezeit">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" use="required" type="xs:token" fixed="s"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Abfertigungszeit">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" use="required" type="xs:token" fixed="s"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AnzahlVSigBisRelevant" type="xs:integer"/>
+	<xs:element name="ReleaseSpeed">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" use="required" type="xs:token" fixed="km/h"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ApproachSpeed">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" use="required" type="xs:token" fixed="km/h"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="StutzenWahrscheinlichkeit" type="xs:decimal" />
+	<xs:element name="StutzenDauer">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:decimal">
+					<xs:attribute name="Einheit" use="required" type="xs:token" fixed="m"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HaltEinfahrt" type="xs:boolean"/>
+	<xs:element name="VS-Zuordnung" type="xs:integer"/>
+	<xs:element name="FstrAufloesezeit">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" use="required" type="xs:token" fixed="s"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Geschw">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" use="required" fixed="km/h"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GueltigAb" type="xs:integer"/>
+	<xs:element name="Haltezeit">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Wirkungsort" type="xs:token"/>
+	<xs:element name="Zugbeeinflussung" type="xs:token"/>
+	
+	<xs:complexType name="GeschwindigkeitsbandName">
+		<xs:simpleContent>
+			<xs:extension base="xs:token">
+				<xs:attribute name="Name" use="required" type="xs:token"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="GeschwindigkeitsbandNameMitGeschwindigkeit">
+	  <xs:simpleContent>
+		<xs:extension base="GeschwindigkeitsbandName">
+		  <xs:attribute name="Geschwindigkeit" use="required" type="xs:integer"/>
+		</xs:extension>
+	  </xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="GeschwindigkeitsbaenderNamenMitGeschwindigkeit">
+		<xs:sequence minOccurs="0">
+			<xs:element name="Geschwindigkeitsband" type="GeschwindigkeitsbandNameMitGeschwindigkeit" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="GeschwindigkeitsbaenderNamen">
+		<xs:sequence minOccurs="0">
+			<xs:element name="Geschwindigkeitsband" type="GeschwindigkeitsbandName" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="Ursache">
+		<xs:complexType mixed="true">
+			<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+			<xs:attribute name="Typ" use="required" type="xs:token" fixed="GESCHWIND-ABWEICH-URSACHE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Zusatzursache">
+		<xs:complexType mixed="true">
+			<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+			<xs:attribute name="Typ" use="required" type="xs:token" fixed="GESCHWIND-ABW-URS-ZUSATZBEM"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TFZArt">
+		<xs:complexType mixed="true">
+			<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+            <xs:attribute name="Typ" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                        <xs:enumeration value="TRIEBFAHRZEUG-ART"/>
+                        <xs:enumeration value="TRIEBFAHRZEUG-TYP"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Neigungstechnik">
+		<xs:complexType mixed="true">
+			<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+			<xs:attribute name="Typ" use="required" type="xs:token"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TFZBaureihe">
+		<xs:complexType mixed="true">
+			<xs:attribute name="Nr" use="required" type="xs:token"/>
+			<xs:attribute name="Typ" use="required" type="xs:token"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Beschreibungsvorlage">
+		<xs:complexType mixed="true">
+			<xs:attribute name="Kategorie" use="required" type="xs:token"/>
+			<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Besonderheiten">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="TFZArt" maxOccurs="unbounded"/>
+				<xs:element name="ZugartFV" type="xs:token" maxOccurs="unbounded"/>
+				<xs:element ref="Neigungstechnik" maxOccurs="unbounded"/>
+				<xs:element ref="Beschreibungsvorlage" maxOccurs="unbounded"/>
+				<xs:element ref="TFZBaureihe" maxOccurs="unbounded"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EinfahrtAufHalt">
+		<xs:complexType/>
+	</xs:element>
+	<xs:element name="KeinStartEndPunkt">
+		<xs:complexType/>
+	</xs:element>
+	<xs:element name="Gruppensignal">
+		<xs:complexType/>
+	</xs:element>
+	<xs:element name="DurchfahrtSichern">
+		<xs:complexType/>
+	</xs:element>
+	<xs:element name="OhneAZeit">
+		<xs:complexType/>
+	</xs:element>
+	<xs:element name="DwegAufloesezeit">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" use="required" type="xs:token" fixed="s"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ZeitType">
+		<xs:simpleContent>
+			<xs:extension base="xs:integer">
+				<xs:attribute name="Einheit" use="required" type="xs:token" fixed="s"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="Partnerknoten" type="ElementIDVerweis"/>
+	<xs:element name="NameAnfang" type="xs:token"/>
+	<xs:element name="NachbarAbzweig" type="ElementIDVerweis"/>
+	<xs:element name="NachbarAufKreuzendemGleis" type="ElementIDVerweis"/>
+	<xs:element name="NachbarGeradeaus" type="ElementIDVerweis"/>
+	<xs:element name="HauptknotenAnfang" type="ElementIDVerweis"/>
+	<xs:element name="HauptknotenEnde"  type="ElementIDVerweis"/>
+	<xs:element name="MassgebendeNeigung" type="xs:token"/>
+	<xs:element name="QuerschnittFallend">
+		<xs:complexType mixed="true">
+			<xs:attribute name="Einheit" use="required" type="xs:token" fixed="m2"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QuerschnittSteigend">
+		<xs:complexType mixed="true">
+			<xs:attribute name="Einheit" use="required" type="xs:token" fixed="m2"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Tunnelname" type="xs:token"/>
+	<xs:element name="Begegnungsverbot">
+		<xs:complexType>
+			<xs:attribute name="Fallend" use="required" type="xs:integer"/>
+			<xs:attribute name="Steigend" use="required" type="xs:integer"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Halteplaetze">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="Halteplatz"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Halteplatz">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:token">
+					<xs:attribute name="ID" use="required" type="xs:integer"/>
+					<xs:attribute name="Typ" use="required" type="xs:token"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Zugangssperrzeit" type="xs:integer"/>
+	<xs:element name="Abgangssperrzeit" type="xs:integer"/>
+
+
+	<!-- Alle Spurplanknoten -->
+	<xs:complexType name="Spurplanknoten">
+		<xs:sequence>
+			<xs:element ref="ID"/>
+			<xs:element ref="ExterneID" minOccurs="0"/>
+			<xs:element ref="Kilometrierung"/>
+			<xs:element ref="LetzteAenderung"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Spurplanknoten_Name">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element ref="Name" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Spurplanknoten_Name_NoMinOccurs">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element ref="Name" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Spurplanknoten_ETCSProfile">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="ETCSProfile"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Spurplanknoten_Modus">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="Modus"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Spurplanknoten_Wert">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="Wert"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="Spurplanknoten_Typ">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element name="Typ" type="xs:positiveInteger"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="Spurplanknoten_Halteplatz">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name">
+				<xs:sequence>
+					<xs:element ref="Laenge"/>
+					<xs:element ref="EinfahrtAufHalt" minOccurs="0"/>
+					<xs:element ref="KeinStartEndPunkt" minOccurs="0"/>
+					<xs:element ref="sEoA"/>
+					<xs:element ref="sSVL"/>
+					<xs:element ref="ReleaseSpeed"/>
+					<xs:element ref="tDPMA"/>
+					<xs:element ref="sDPMA"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Spurplanknoten_Bildkoordinaten">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="Bildkoordinaten"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Spurplanknoten_Partnerknoten">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element ref="Partnerknoten"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Spurplanknoten_Partnerknoten_Bildkoordinaten">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Partnerknoten">
+				<xs:sequence>
+					<xs:element ref="Name"/>
+					<xs:element ref="Bildkoordinaten"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Spurplanknoten_WW">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:choice>
+						<xs:element name="LiegtAmAnfang"/>
+						<xs:element name="LiegtAmEnde"/>
+					</xs:choice>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+    <xs:complexType name="UnterBereichAllgemein">
+        <xs:sequence>
+            <xs:element ref="ID"/>
+            <xs:element ref="Name"/>
+            <xs:element name="Text" type="xs:string"/>
+            <xs:element name="Zahl" type="xs:string"/>
+            <xs:element name="Kommentar" type="xs:string"/>
+            <xs:element name="Schluesselwert" type="RefSchluesselwert" minOccurs="0"/>
+            <xs:element minOccurs="0" name="Elemente">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:attribute name="ID" use="required" type="xs:integer"/>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+			<xs:element name="NameAutomatisch" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="UnterBereichStreckenKM">
+        <xs:complexContent>
+            <xs:extension base="UnterBereichAllgemein">
+                <xs:sequence>
+                    <xs:element name="StreckenNr" type="xs:token"/>
+                    <xs:element name="KMVon" type="Kilometrierung"/>
+                    <xs:element name="KMBis" type="Kilometrierung"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+	<xs:complexType name="Bahnuebergang">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name">
+				<xs:sequence>
+					<xs:element name="Art">
+						<xs:complexType mixed="true">
+							<xs:attribute name="Kategorie" use="required" type="xs:token" fixed="BÜ"/>
+							<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+							<xs:attribute name="Typ" use="required" type="xs:token" fixed="FAHRWEGPUNKT-ART"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element ref="Laenge"/>
+					<xs:element name="Einschaltkontakt" type="BahnuebergangSchaltkontakt"/>
+					<xs:element name="Ausschaltkontakt" type="BahnuebergangSchaltkontakt"/>
+					<xs:element name="EinschaltkontaktFallend" type="BahnuebergangSchaltkontakt"/>
+					<xs:element name="AusschaltkontaktFallend" type="BahnuebergangSchaltkontakt"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Betriebsstellengrenze">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element ref="PartnerBtrst"/>
+					<xs:element ref="Bildkoordinaten"/>
+					<xs:element ref="Gleiskennzeichen"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Bildpunkt">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="Bildkoordinaten"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Bogen">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element name="RadiusFallend" type="Einheit_m"/>
+					<xs:element name="RadiusSteigend" type="Einheit_m"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ETCSBlockkennzeichen">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name">
+				<xs:sequence>
+					<xs:element ref="FstrBildezeit"/>
+					<xs:element ref="ReleaseSpeed"/>
+					<xs:element ref="DWegAufloesezeit"/>
+					<xs:element ref="StutzenWahrscheinlichkeit"/>
+					<xs:element ref="StutzenDauer"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Fahrzeitmesspunkt">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name">
+				<xs:sequence>
+					<xs:element name="BSMitte" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Spurplanknoten_Zugschlussstelle">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="FstrAufloesezeit"/>
+					<xs:element ref="GueltigAb"/>
+					<xs:element ref="Virtuell"/>
+					<xs:element name="Ausfall" type="ZugschlussstelleAusfall" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="GeschwAbweichend">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="Geschw"/>
+					<xs:element ref="Wirkungsort"/>
+					<xs:element ref="Zugbeeinflussung"/>
+					<xs:element ref="Besonderheiten" minOccurs="0"/>
+					<xs:element ref="Ursache" minOccurs="0"/>
+					<xs:element ref="Zusatzursache" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="GeschwEndeSpeziell">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+						<xs:element ref="Wirkungsort"/>
+						<xs:element ref="Zugbeeinflussung"/>
+						<xs:element ref="Besonderheiten" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="GeschwZulaessig">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="Geschw"/>
+					<xs:element ref="Wirkungsort"/>
+					<xs:element ref="Zugbeeinflussung"/>
+					<xs:element ref="Besonderheiten" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="Geschwindigkeitsgruppe">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="Wirkungsort"/>
+					<xs:element ref="Zugbeeinflussung"/>
+					<xs:element name='Geschwindigkeitsbaender' type="GeschwindigkeitsbaenderNamenMitGeschwindigkeit" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="GeschwindigkeitsgruppeEnde">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="Wirkungsort"/>
+					<xs:element ref="Zugbeeinflussung"/>
+					<xs:element name='Geschwindigkeitsbaender' type="GeschwindigkeitsbaenderNamen" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="PunktGeschwindigkeitsgruppe">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="Laenge"/>
+					<xs:element name="ZuglaengeNichtBeachten" type="xs:boolean"/>
+					<xs:element name='Geschwindigkeitsbaender' type="GeschwindigkeitsbaenderNamenMitGeschwindigkeit"  minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Gleisbezeichnung">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name">
+				<xs:sequence>
+					<xs:element name="Rangiergleis" type="xs:integer"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Gleisende">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name">
+				<xs:sequence>
+					<xs:element ref="Bildkoordinaten"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Hauptsignal">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name">
+				<xs:sequence>
+					<xs:element ref="Gruppensignal" minOccurs="0"/>
+					<xs:element ref="DwegAufloesezeit"/>
+					<xs:element ref="DurchfahrtSichern" minOccurs="0"/>
+					<xs:element ref="ReleaseSpeed"/>
+					<xs:element ref="VS-Zuordnung"/>
+					<xs:element ref="OhneAZeit" minOccurs="0"/>
+					<xs:element ref="ApproachSpeed"/>
+					<xs:element ref="StutzenWahrscheinlichkeit"/>
+					<xs:element ref="StutzenDauer"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="LZBAnfang">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="MassgebendeNeigung"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="LZBBerKennungWechsel">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="MassgebendeNeigung"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="LZBBlockkennzeichen">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name">
+				<xs:sequence>
+					<xs:element ref="FstrBildezeit"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="LZBZugschlussstelle">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="FstrAufloesezeit"/>
+					<xs:element ref="GueltigAb"/>
+					<xs:element ref="Virtuell"/>
+					<xs:element name="Ausfall" type="ZugschlussstelleAusfall" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MassgebendeNeigungBrh">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element name="MassgebGefaelle" type="xs:token"/>
+					<xs:element name="MassgebSteigung" type="xs:token"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MassgebendeNeigungSaegelinie">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element name="Neigung" type="xs:token"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Ne14">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element name="Signalart" type="SignalArtType" minOccurs="0"/>
+					<xs:element name="DwegAufloesezeit" type="ZeitType"/>
+					<xs:element name="FstrBildezeit" type="ZeitType" minOccurs="0"/>
+					<xs:element name="WirktfuerBtrst" type="xs:normalizedString" minOccurs="0"/>
+					<xs:element minOccurs="0" ref="ReleaseSpeed"/>
+					<xs:element ref="StutzenWahrscheinlichkeit"/>
+					<xs:element ref="StutzenDauer"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Neigung">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element name="Fallend" type="xs:token"/>
+					<xs:element name="Steigend" type="xs:token"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="NVAnfang">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element name="Sichtzeit" type="ZeitType"/>
+					<xs:element name="Reaktionszeit" type="ZeitType"/>
+					<xs:element name="BremstafelAktiv" type="xs:token"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Oberleitungsschaltgruppe">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element name="Fallend" type="OberleitungsStr"/>
+					<xs:element name="Steigend" type="OberleitungsStr"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Prellbock">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="Bildkoordinaten"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Punktgeschw">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name">
+				<xs:sequence>
+					<xs:element ref="Geschw"/>
+					<xs:element ref="Laenge"/>
+					<xs:element name="ZuglaengeNichtBeachten" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Schutzsignal">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name">
+				<xs:sequence>
+					<xs:element ref="DwegAufloesezeit"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SignalZugschlussstelle">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="FstrAufloesezeit"/>
+					<xs:element ref="GueltigAb"/>
+					<xs:element ref="Virtuell"/>
+					<xs:element name="Ausfall" type="ZugschlussstelleAusfall" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Sperrung">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element name="Fallend" type="SperrungType"/>
+					<xs:element name="Steigend" type="SperrungType"/>
+					<xs:element name="Temporaer" type="SperrungZeit" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Streckenklasse">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element name="Fallend" type="xs:token"/>
+					<xs:element name="Steigend" type="xs:token"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="NoStoppingZoneAnfang">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="Zugmasse"/>
+					<xs:element name="Elektrotraktion" type="xs:boolean" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="StromAnfang">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="Spannung"/>
+					<xs:element ref="Frequenz"/>
+					<xs:element ref="Geschwindigkeit"/>
+					<xs:element ref="Stromart"/>
+					<xs:element ref="Speisebezirk"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Tunnel">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name">
+				<xs:sequence>
+					<xs:element ref="QuerschnittFallend"/>
+					<xs:element ref="QuerschnittSteigend"/>
+					<xs:element ref="Tunnelname"/>
+					<xs:element ref="Begegnungsverbot"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Vorsignal">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="FstrBildezeit"/>
+					<xs:element name="Bauart" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="KreuzungRechts">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element ref="NachbarGeradeaus"/>
+					<xs:element ref="HauptknotenAnfang"/>
+					<xs:element ref="HauptknotenEnde"/>
+					<xs:element name="ETCSLT" type="xs:integer" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="KreuzungAnfangLinks">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element ref="NameAnfang"/>
+					<xs:element ref="NachbarGeradeaus"/>
+					<xs:element ref="NachbarAufKreuzendemGleis"/>
+					<xs:element ref="Bildkoordinaten"/>
+					<xs:element name="ETCSLT" type="xs:integer" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="KreuzungEndeLinks">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element ref="NachbarGeradeaus"/>
+					<xs:element ref="NachbarAufKreuzendemGleis"/>
+					<xs:element name="ETCSLT" type="xs:integer" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="KreuzungsweicheAnfangLinks">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element ref="NameAnfang"/>
+					<xs:element ref="NachbarGeradeaus"/>
+					<xs:element ref="NachbarAbzweig" minOccurs="0"/>
+					<xs:element ref="Bildkoordinaten"/>
+					<xs:element name="ETCSLT" type="xs:integer" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="KreuzungsweicheEndeLinks">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element ref="NachbarGeradeaus"/>
+					<xs:element ref="NachbarAbzweig" minOccurs="0" />
+					<xs:element name="ETCSLT" type="xs:integer" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Weichenanfang">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element ref="Name"/>
+					<xs:element name="Stamm" type="ElementIDVerweis"/>
+					<xs:element name="Abzweig" type="ElementIDVerweis"/>
+					<xs:element ref="Bildkoordinaten"/>
+					<xs:element name="ETCSLT" type="xs:integer" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Weichenelement">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+				<xs:element name="Partner" type="ElementIDVerweis"/>
+				<xs:element name="ETCSLT" type="xs:integer" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Zugang">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element ref="Halteplaetze"/>
+					<xs:element ref="Zugangssperrzeit"/>
+					<xs:element ref="Abgangssperrzeit"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Zwangshalt">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name">
+				<xs:sequence>
+					<xs:element ref="Haltezeit"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Begegnungsverbottyp">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element name="NameFallend" type="xs:string" minOccurs="0"/>
+					<xs:element name="NameSteigend" type="xs:string" minOccurs="0"/>
+					<xs:element name="Zuordnungen">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="Zuordnung" minOccurs="0" maxOccurs="unbounded">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="Name1" type="xs:string"/>
+											<xs:element name="Name2" type="xs:string"/>
+											<xs:element name="RichtungEntgegen" type="Wahrheit"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element> 
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="KzaEZugartFahrdienstVorschrift">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element name="ZugartFV" type="xs:string"/>
+					<xs:element name="ZulassungSteigend" type="KzaEZulassungMitDefault"/>
+					<xs:element name="ZulassungFallend" type="KzaEZulassungMitDefault"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="KzaEZugartFahrdienstBaureihe">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element ref="TFZBaureihe" maxOccurs="unbounded"/>
+					<xs:element name="ZulassungSteigend" type="KzaEZulassungMitDefault"/>
+					<xs:element name="ZulassungFallend" type="KzaEZulassungMitDefault"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="KzaEFuerSchluesselwert">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element name="Schluesselwert" type="RefSchluesselwert"/>
+					<xs:element name="ZulassungSteigend" type="KzaEZulassungMitDefault"/>
+					<xs:element name="ZulassungFallend" type="KzaEZulassungMitDefault"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="UICProfil">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element name="ProfilFallend" type="RefSchluesselwert_Profilabschnitte" minOccurs="0"/>
+					<xs:element name="ProfilSteigend" type="RefSchluesselwert_Profilabschnitte" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="GrenzeKzaE">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element name="KzaESteigend">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="RefKzaESchluesselwert" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="KzaEFallend">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="RefKzaESchluesselwert" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="GrenzeKzaEWW">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_WW">
+				<xs:sequence>
+					<xs:element name="KzaE">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="RefKzaESchluesselwert" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="GrenzeElektrifizierung">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_Name_NoMinOccurs">
+				<xs:sequence>
+					<xs:element name="StromVersorgungsart" type="RefSchluesselwert_Stromversorgungsart"/>
+					<xs:element name="SpannungsartSteigend" type="RefSchluesselwert_Spannung" minOccurs="0"/>
+					<xs:element name="SpannungsartFallend" type="RefSchluesselwert_Spannung" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="GrenzeElektrifizierungWW">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_WW">
+				<xs:sequence>
+					<xs:element name="StromVersorgungsart" type="RefSchluesselwert_Stromversorgungsart"/>
+					<xs:element name="Spannungsart" type="RefSchluesselwert_Spannung" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="GrenzeKVProfil">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element name="ProfilSteigend" type="RefSchluesselwert_Profilabschnitte" minOccurs="0"/>
+					<xs:element name="ProfilFallend" type="RefSchluesselwert_Profilabschnitte" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="GrenzeKVProfilWW">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_WW">
+				<xs:sequence>
+					<xs:element name="KVProfil" type="RefSchluesselwert_Profilabschnitte" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="GrenzeBVe">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element name="VESteigend" type="xs:string"/>
+					<xs:element name="VEFallend" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="GrenzeBVeWW">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_WW">
+				<xs:sequence>
+					<xs:element name="VE" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="GrenzeStreckencluster">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element name="StreckenclusterFallend" type="RefSchluesselwert_Streckencluster"/>
+					<xs:element name="StreckenclusterSteigend" type="RefSchluesselwert_Streckencluster"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="GrenzeStreckenclusterWW">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_WW">
+				<xs:sequence>
+					<xs:element name="Streckencluster" type="RefSchluesselwert_Streckencluster"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="GrenzeZustaendigkeitsbereich">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten">
+				<xs:sequence>
+					<xs:element name="ZustaendigkeitsbereichFallend" type="Zustaendigkeitsbereichart"/>
+					<xs:element name="ZustaendigkeitsbereichSteigend" type="Zustaendigkeitsbereichart"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="GrenzeZustaendigkeitsbereichWW">
+		<xs:complexContent>
+			<xs:extension base="Spurplanknoten_WW">
+				<xs:sequence>
+					<xs:element name="Zustaendigkeitsbereich" type="Zustaendigkeitsbereichart"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="RefSchluesselwert" mixed="true">
+		<xs:attribute name="Schluessel" type="xs:token" use="required"/>
+		<xs:attribute name="Typ" type="xs:token" use="required"/>
+		<xs:attribute name="Kategorie" type="xs:token" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="RefSchluesselwert_Profilabschnitte" mixed="true">
+		<xs:attribute name="Schluessel" type="xs:token" use="required"/>
+		<xs:attribute name="Typ" type="xs:token" use="required" fixed="PROFILABSCHNITTE"/>
+		<xs:attribute name="Kategorie" type="xs:token" use="optional"/>	
+	</xs:complexType>
+	<xs:complexType name="RefSchluesselwert_Stromversorgungsart" mixed="true">
+		<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+		<xs:attribute name="Typ" use="required" type="xs:token" fixed="STROMVERSORGUNGSART"/>
+		<xs:attribute name="Kategorie" type="xs:token" use="optional"/>	
+	</xs:complexType>
+	<xs:complexType name="RefSchluesselwert_Spannung" mixed="true">
+		<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+		<xs:attribute name="Typ" use="required" type="xs:token" fixed="SPANNUNG"/>
+		<xs:attribute name="Kategorie" type="xs:token" use="optional"/>	
+	</xs:complexType>
+	<xs:complexType name="RefSchluesselwert_Streckencluster" mixed="true">
+		<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+		<xs:attribute name="Typ" use="required" type="xs:token" fixed="Streckencluster"/>
+	</xs:complexType>
+	<xs:complexType name="Zustaendigkeitsbereichart" mixed="true">
+		<xs:attribute name="Oertlichkeit" use="required" type="xs:string"/>
+		<xs:attribute name="Name" use="required" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:simpleType name="KzaEZulassung">
+		<xs:restriction base="xs:token">
+			<xs:whiteSpace value="collapse" fixed="true"/>
+			<xs:enumeration value="KzaE_verboten"/>
+			<xs:enumeration value="KzaE_zugelassen"/>
+			<xs:enumeration value="KzaE_geboten"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="KzaEZulassungMitDefault">
+		<xs:simpleContent>
+			<xs:extension base="KzaEZulassung">
+				<xs:attribute name="istDefault" type="Wahrheit" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="Organisationseinheit">
+		<xs:sequence>
+			<xs:element name="Nr">
+				<xs:simpleType>
+					<xs:restriction base="GanzeZahl">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="999999"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Kurzbez" type="Name"/>
+			<xs:element name="Name20" type="Name"/>
+			<xs:element name="Langname" type="Name"/>
+			<xs:element name="Niederlassung" type="Name" minOccurs="0"/>
+			<xs:element name="Art" type="RefSchluesselwert"/>
+			<xs:element name="RBKennzeichen" type="xs:token"/>
+			<xs:element name="FBBereich" type="RefOE" minOccurs="0"/>
+			<xs:element name="Abkuerzung" type="xs:token" minOccurs="0"/>
+			<xs:element ref="LetzteAenderung" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="RefOE">
+		<xs:simpleContent>
+			<xs:extension base="Name">
+				<xs:attribute name="Nr" use="required">
+					<xs:simpleType>
+						<xs:restriction base="GanzeZahl">
+							<xs:minInclusive value="0"/>
+							<xs:maxInclusive value="999999"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="Typ" type="Name" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:element name="Geschwindigkeit">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="Einheit" type="xs:token" fixed="km/h"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>	
+	<xs:element name="Verlauf">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Abzweig">
+					<xs:complexType/>
+				</xs:element>
+				<xs:element name="Stamm">
+					<xs:complexType/>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DWegVerlauf">
+        <xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Verlauf"/>
+    			<xs:element minOccurs="0" name="Ende" type="ElementIDVerweis"/>
+			</xs:sequence>	
+  		</xs:complexType>
+    </xs:element>
+	<xs:complexType name="ElementIDVerweis" mixed="true">
+		<xs:attribute name="ID" use="required" type="xs:integer"/>
+		<xs:attribute name="Typ" use="required" type="xs:token"/>
+	</xs:complexType>
+	<xs:complexType name="BahnuebergangSchaltkontakt">
+		<xs:simpleContent>
+			<xs:extension base="xs:integer">
+				<xs:attribute name="Einheit" type="xs:token"/>
+			</xs:extension>
+	</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="BremskurvenEintrag">
+		<xs:sequence>
+			<xs:element name="Geschwindigkeit" type="xs:token"/>
+			<xs:element name="a" type="xs:token"/>
+			<xs:element name="k_dry" type="xs:token"/>
+			<xs:element name="k_wet" type="xs:token"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NachbargleisbeziehungType">
+		<xs:sequence>
+			<xs:element ref="ID"/>
+			<xs:element ref="Kilometrierung"/>
+			<xs:element ref="LetzteAenderung"/>
+			<xs:element ref="Name" minOccurs="0"/>
+			<xs:element name="Bereichskennung" type="xs:integer"/>
+			<xs:element name="Knotennummer" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OberleitungsStr">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:token"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SperrungType" mixed="true">
+		<xs:attribute name="Schluessel" use="required" type="xs:token"/>
+		<xs:attribute name="Typ" use="required" type="xs:token" fixed="GLABSCH-BETRIEBSZUSTAND"/>
+	</xs:complexType>
+	
+	<xs:simpleType name="Dezimalzahl">
+		<xs:annotation>
+			<xs:documentation>Format: 123,45</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:whiteSpace value="collapse" fixed="true"/>
+			<xs:pattern value="-?[0-9]+(,[0-9]+)?|-?,[0-9]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="Gewicht">
+		<xs:annotation>
+			<xs:documentation>Dezimalzahl</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="Dezimalzahl">
+				<xs:attribute name="Einheit" type="EinheitGewicht" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:simpleType name="EinheitGewicht">
+		<xs:annotation>
+			<xs:documentation>Werte: g, kg, t</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:whiteSpace value="collapse"/>
+			<xs:enumeration value="g"/>
+			<xs:enumeration value="kg"/>
+			<xs:enumeration value="t"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="Verkehrstageschluessel">
+		<xs:sequence>
+			<xs:element name="Nr">
+				<xs:simpleType>
+					<xs:restriction base="GanzeZahl">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="99999"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Bezeichnung" type="xs:string"/>
+			<xs:element name="BezeichnungNachtsprung" type="xs:string"/>
+			<xs:element name="Nachfolger" type="RefVTS" minOccurs="0"/>
+			<xs:element ref="LetzteAenderung" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="RefVTS">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="Nr" use="required">
+					<xs:simpleType>
+						<xs:restriction base="GanzeZahl">
+							<xs:minInclusive value="0"/>
+							<xs:maxInclusive value="99999"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="SperrungZeit">
+		<xs:attribute name="Beginn" use="required" type="xs:token"/>
+		<xs:attribute name="Ende" use="required" type="xs:token"/>
+	</xs:complexType>
+	<xs:complexType name="ZugschlussstelleAusfall">
+		<xs:attribute name="Anfang" use="required" type="xs:token"/>
+		<xs:attribute name="Ende" use="required" type="xs:token"/>
+	</xs:complexType>
+	<xs:simpleType name="Wahrheit">
+		<xs:annotation>
+			<xs:documentation>Werte: Ja, Nein</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:whiteSpace value="collapse" fixed="true"/>
+			<xs:enumeration value="Ja"/>
+			<xs:enumeration value="Nein"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="RefFahrplanperiode">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="Kurzzeichen" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="Fahrplanperiode">
+		<xs:sequence>
+			<xs:element name="Kurzzeichen" type="xs:string"/>
+			<xs:element name="Art" type="xs:string" minOccurs="0"/>
+			<xs:element name="FahrplanabschnittArt" type="RefSchluesselwert" minOccurs="0"/>
+			<xs:element name="Beschreibung" type="xs:string"/>
+			<xs:element name="FahrplanperiodeVon" type="xs:string"/>
+			<xs:element name="FahrplanperiodeBis" type="xs:string"/>
+			<xs:element name="Fahrplanjahr" type="RefFahrplanperiode" minOccurs="0"/>
+			<xs:element name="LetzteAenderung" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="Text">
+		<xs:annotation>
+			<xs:documentation>String mit Leerzeichen</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="preserve" fixed="true"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Kilometrierung">
+		<xs:annotation>
+			<xs:documentation>Format: (-)123,45+67,89</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:whiteSpace value="collapse" fixed="true"/>
+			<xs:pattern value="[\-]?[0-9]+(,[0-9]+)?([\+][0-9]+(,[0-9]+)?)?"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Geschw">
+		<xs:annotation>
+			<xs:documentation>Dezimalzahl</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="Dezimalzahl">
+				<xs:attribute name="Einheit" type="EinheitGeschw" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="EinheitGeschw">
+		<xs:annotation>
+			<xs:documentation>Werte: m/s, km/h</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:whiteSpace value="collapse" fixed="true"/>
+			<xs:enumeration value="m/s"/>
+			<xs:enumeration value="km/h"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Zeitstempel">
+		<xs:annotation>
+			<xs:documentation>Format: 12.03.2004 12:34:56</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:whiteSpace value="collapse" fixed="true"/>
+			<xs:pattern value="[0-3][0-9].[0-1][0-9].[0-9]{4} [0-2][0-9]:[0-5][0-9]:[0-5][0-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="RefZugartFV">
+		<xs:simpleContent>
+			<xs:extension base="Name"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="Uhrzeit">
+		<xs:annotation>
+			<xs:documentation>Format: 12:34:56</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:whiteSpace value="collapse" fixed="true"/>
+			<xs:pattern value="[0-2][0-9]:[0-5][0-9]:[0-5][0-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

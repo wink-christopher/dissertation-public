@@ -1,0 +1,1978 @@
+     LUKS Streckenuntersuchung     Projekt Dissertation: Mischverkehrsstrecke 500m
+     Betriebsvariante              Standard
+     Version 3.9.1                 Strecke Mischverkehr generisch
+     03.04.2025 10:20:03           
+     ——————————————————————————————————————————————————————————————————————————————————
+
+     Maßgebender Abschnitt des Betriebsprogramms:
+     ————————————————————————————————————————————
+     Richtung 1:  K A (Knoten A)  -  K B (Knoten B)
+     Richtung 2:  K B (Knoten B)  -  K A (Knoten A)
+
+     Beschreibung des Streckenprojektes
+     ——————————————————————————————————
+
+      ----
+
+     Strecken-Definition
+     ———————————————————
+
+      Streckengleis Richtung 1  Richtung 1
+
+      Betriebs-                     Fahrwegpunkte
+      stelle          von       -      über       -       nach      
+
+      K A      Gleisende  Ende 1 - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S I      BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      B 4-1    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S II     BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      B 3-1    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S III    BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      B 4-2    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S IV     BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      K C      BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S V      BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      B 4-3    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S VI     BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      B 3-2    BstGrenze  0-1    - FzMessPkt  Gl 1 - BstGrenze  0-9    
+      S VII    BstGrenze  0-9    - FzMessPkt  1    - BstGrenze  0-1    
+      B 4-4    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S VIII   BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      B 3-3    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S IX     BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      B 4-5    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S X      BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      K B      BstGrenze  0-1    - FzMessPkt  Gl 2 - Gleisende  Ende 2 
+
+      Streckengleis Richtung 2  Richtung 2
+
+      Betriebs-                     Fahrwegpunkte
+      stelle          von       -      über       -       nach      
+
+      K B      Gleisende  GE-W7  - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S X      BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      B 4-5    BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S IX     BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      B 3-3    BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S VIII   BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      B 4-4    BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S VII    BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-1    
+      B 3-2    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S VI     BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      B 4-3    BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S V      BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      K C      BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S IV     BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      B 4-2    BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S III    BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      B 3-1    BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S II     BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      B 4-1    BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S I      BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      K A      BstGrenze  0-7    - FzMessPkt  Gl 3 - Gleisende  GE-W9  
+
+      Überholungsmöglichkeiten
+
+      Spalte Kreuzung:  X = das durchgehende Hauptgleis der Gegenrichtung
+                            muss gekreuzt werden
+
+      Betriebs-                            Halte            Aus- / Ein-
+      stelle         Gleis     Richtung   Rz   Gz  Kreuzung  fädelung
+
+      K A      FzMessPkt  Gl 1    1       ja   ja           K A     K A     
+      K A      FzMessPkt  Gl 4    2       ja   ja           K A     K A     
+      B 4-1    FzMessPkt  Gl 1    1       ja   ja           B 4-1   B 4-1   
+      B 4-1    FzMessPkt  Gl 4    2       ja   ja           B 4-1   B 4-1   
+      B 3-1    FzMessPkt  Gl 1    1       ja  nein          B 3-1   B 3-1   
+      B 4-2    FzMessPkt  Gl 1    1       ja   ja           B 4-2   B 4-2   
+      B 4-2    FzMessPkt  Gl 4    2       ja   ja           B 4-2   B 4-2   
+      K C      FzMessPkt  Gl 1    1       ja   ja           K C     K C     
+      K C      FzMessPkt  Gl 4    2       ja   ja           K C     K C     
+      B 4-3    FzMessPkt  Gl 1    1       ja   ja           B 4-3   B 4-3   
+      B 4-3    FzMessPkt  Gl 4    2       ja   ja           B 4-3   B 4-3   
+      B 3-2    FzMessPkt  Gl 3    2       ja  nein          B 3-2   B 3-2   
+      B 4-4    FzMessPkt  Gl 1    1       ja   ja           B 4-4   B 4-4   
+      B 4-4    FzMessPkt  Gl 4    2       ja   ja           B 4-4   B 4-4   
+      B 3-3    FzMessPkt  Gl 1    1       ja  nein          B 3-3   B 3-3   
+      B 4-5    FzMessPkt  Gl 1    1       ja   ja           B 4-5   B 4-5   
+      B 4-5    FzMessPkt  Gl 4    2       ja   ja           B 4-5   B 4-5   
+      K B      FzMessPkt  Gl 1    1       ja   ja           K B     K B     
+      K B      FzMessPkt  Gl 4    2       ja   ja           K B     K B     
+
+
+     Infrastrukturelemente der durchgehenden Hauptgleise
+     ———————————————————————————————————————————————————
+
+      Streckengleis Richtung 1  Richtung 1
+
+      Bst  Strecke  km 	Name	Erläuterung
+
+      K A    0    -2.200	Ende 1	Gleisende
+      K A    0    -2.200		ZB-Anfang	Steigend, ETCS1( DB Netz AG SRS 3.6.0  <ETCS 1 (FS) | ETCS 2>)/ETCS2( DB Netz AG SRS 3.6.0  <ETCS 1 (FS) | ETCS 2>)
+      K A    0    -2.200		Geschwindigkeit Abweichend	Steigend, v=160km/h, Wirkung ab hier, Alle, Ursache=, Zusatzbem.=
+      K A    0    -2.050	029	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K A    0    -2.000		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K A    0    -1.550	031	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=-1km/h
+      K A    0    -1.500		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K A    0    -1.050	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      K A    0    -0.980		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K A    0    -0.855	W02	Weiche, Stamm
+      K A    0    -0.855	W02	Weiche, Anfang
+      K A    0    -0.818		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    -0.780	W03	Weiche, Anfang
+      K A    0    -0.780	W03	Weiche, Stamm
+      K A    0    -0.680		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    -0.630	W05	Weiche, Anfang
+      K A    0    -0.630	W05	Weiche, Stamm
+      K A    0    -0.580		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    -0.510	ZR21	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K A    0    -0.440		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K A    0    0.000	ZR22	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K A    0    0.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      K A    0    0.070		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K A    0    0.375	H 2 Pv s	Halteplatz	Steigend, Personenzug, l=420.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K A    0    0.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K A    0    0.510	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      K A    0    0.510		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K A    0    0.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K A    0    0.630	W07	Weiche, Stamm
+      K A    0    0.630	W07	Weiche, Anfang
+      K A    0    0.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    0.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      K A    0    0.668	_DUP (16)	Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      K A    0    0.705	W09	Weiche, Anfang
+      K A    0    0.705	W09	Weiche, Stamm
+      K A    0    0.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    0.930	W12	Weiche, Stamm
+      K A    0    0.930	W12	Weiche, Anfang
+      K A    0    0.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    0.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K A    0    1.050	101	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K A    0    1.100		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K A    0    1.525	103	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K A    0    1.575		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K A    0    2.000	105	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K A    0    2.050		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K A    0    2.200	0-2	Betriebsstellengrenze	=>S I 0-2, Gleis 2
+      S I    0    2.200	0-2	Betriebsstellengrenze	=>K A 0-2, Gleis 2
+      S I    0    2.496	107	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    2.546		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S I    0    2.992	109	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    3.042		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S I    0    3.489	111	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    3.539		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S I    0    3.985	113	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    4.035		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S I    0    4.482	115	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    4.532		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S I    0    4.978	117	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    5.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S I    0    5.028		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S I    0    5.475	119	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    5.525		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S I    0    5.971	121	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    6.021		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S I    0    6.468	123	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    6.518		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S I    0    6.964	125	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    7.014		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S I    0    7.461	127	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    7.511		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S I    0    7.800	0-1	Betriebsstellengrenze	=>B 4-1 0-1, Gleis 1
+      B 4-1  0    7.800	0-1	Betriebsstellengrenze	=>S I 0-1, Gleis 1
+      B 4-1  0    7.957	129	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-1  0    8.007		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-1  0    8.454	131	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-1  0    8.504		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-1  0    8.950	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-1  0    9.020		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-1  0    9.145	W02	Weiche, Stamm
+      B 4-1  0    9.145	W02	Weiche, Anfang
+      B 4-1  0    9.182		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    9.220	W03	Weiche, Anfang
+      B 4-1  0    9.220	W03	Weiche, Stamm
+      B 4-1  0    9.320		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    9.370	W05	Weiche, Anfang
+      B 4-1  0    9.370	W05	Weiche, Stamm
+      B 4-1  0    9.420		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    9.490	ZR21	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-1  0    9.560		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-1  0    10.000	ZR22	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-1  0    10.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 4-1  0    10.070		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-1  0    10.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-1  0    10.510	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-1  0    10.510		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-1  0    10.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-1  0    10.630	W07	Weiche, Stamm
+      B 4-1  0    10.630	W07	Weiche, Anfang
+      B 4-1  0    10.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    10.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-1  0    10.668	_DUP (16)	Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      B 4-1  0    10.705	W09	Weiche, Anfang
+      B 4-1  0    10.705	W09	Weiche, Stamm
+      B 4-1  0    10.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    10.930	W12	Weiche, Stamm
+      B 4-1  0    10.930	W12	Weiche, Anfang
+      B 4-1  0    10.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    10.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-1  0    11.050	201	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-1  0    11.100		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-1  0    11.550	203	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-1  0    11.600		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-1  0    12.050	205	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-1  0    12.100		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-1  0    12.200	0-2	Betriebsstellengrenze	=>S II 0-2, Gleis 2
+      S II   0    12.200	0-2	Betriebsstellengrenze	=>B 4-1 0-2, Gleis 2
+      S II   0    12.559	207	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    12.609		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S II   0    13.072	209	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    13.122		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S II   0    13.584	211	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    13.634		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S II   0    14.096	213	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    14.146		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S II   0    14.609	215	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    14.659		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S II   0    15.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S II   0    15.121	217	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    15.171		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S II   0    15.634	219	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    15.684		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S II   0    16.146	221	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    16.196		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S II   0    16.658	223	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    16.708		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S II   0    17.171	225	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    17.221		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S II   0    17.683	227	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    17.733		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S II   0    17.800	0-1	Betriebsstellengrenze	=>B 3-1 0-1, Gleis 1
+      B 3-1  0    17.800	0-1	Betriebsstellengrenze	=>S II 0-1, Gleis 1
+      B 3-1  0    18.195	229	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-1  0    18.245		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-1  0    18.708	231	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-1  0    18.758		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-1  0    19.220	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-1  0    19.290		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-1  0    19.415	W02	Weiche, Stamm
+      B 3-1  0    19.415	W02	Weiche, Anfang
+      B 3-1  0    19.452		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    19.490	W03	Weiche, Anfang
+      B 3-1  0    19.490	W03	Weiche, Stamm
+      B 3-1  0    19.540		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    19.640	W05	Weiche, Anfang
+      B 3-1  0    19.640	W05	Weiche, Stamm
+      B 3-1  0    19.690		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    19.760	ZR2	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-1  0    19.830		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-1  0    20.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 3-1  0    20.240	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-1  0    20.240		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-1  0    20.310		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-1  0    20.360	W06	Weiche, Stamm
+      B 3-1  0    20.360	W06	Weiche, Anfang
+      B 3-1  0    20.398		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    20.398		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 3-1  0    20.398	_DUP (11)	Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      B 3-1  0    20.435	W07	Weiche, Anfang
+      B 3-1  0    20.435	W07	Weiche, Stamm
+      B 3-1  0    20.485		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    20.660	W10	Weiche, Stamm
+      B 3-1  0    20.660	W10	Weiche, Anfang
+      B 3-1  0    20.710		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    20.710		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-1  0    20.780	301	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-1  0    20.830		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-1  0    21.280	303	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-1  0    21.330		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-1  0    21.780	305	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-1  0    21.830		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-1  0    22.200	0-2	Betriebsstellengrenze	=>S III 0-2, Gleis 2
+      S III  0    22.200	0-2	Betriebsstellengrenze	=>B 3-1 0-2, Gleis 2
+      S III  0    22.289	307	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    22.339		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S III  0    22.802	309	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    22.852		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S III  0    23.314	311	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    23.364		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S III  0    23.826	313	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    23.876		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S III  0    24.339	315	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    24.389		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S III  0    24.851	317	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    24.901		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S III  0    25.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S III  0    25.364	319	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    25.414		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S III  0    25.876	321	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    25.926		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S III  0    26.388	323	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    26.438		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S III  0    26.901	325	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    26.951		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S III  0    27.413	327	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    27.463		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S III  0    27.800	0-1	Betriebsstellengrenze	=>B 4-2 0-1, Gleis 1
+      B 4-2  0    27.800	0-1	Betriebsstellengrenze	=>S III 0-1, Gleis 1
+      B 4-2  0    27.925	329	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-2  0    27.975		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-2  0    28.438	331	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-2  0    28.488		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-2  0    28.950	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-2  0    29.020		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-2  0    29.145	W02	Weiche, Stamm
+      B 4-2  0    29.145	W02	Weiche, Anfang
+      B 4-2  0    29.182		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    29.220	W03	Weiche, Anfang
+      B 4-2  0    29.220	W03	Weiche, Stamm
+      B 4-2  0    29.320		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    29.370	W05	Weiche, Anfang
+      B 4-2  0    29.370	W05	Weiche, Stamm
+      B 4-2  0    29.420		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    29.490	ZR21	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-2  0    29.560		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-2  0    30.000	ZR22	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-2  0    30.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 4-2  0    30.070		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-2  0    30.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-2  0    30.510	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-2  0    30.510		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-2  0    30.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-2  0    30.630	W07	Weiche, Stamm
+      B 4-2  0    30.630	W07	Weiche, Anfang
+      B 4-2  0    30.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    30.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-2  0    30.668	_DUP (16)	Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      B 4-2  0    30.705	W09	Weiche, Anfang
+      B 4-2  0    30.705	W09	Weiche, Stamm
+      B 4-2  0    30.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    30.930	W12	Weiche, Stamm
+      B 4-2  0    30.930	W12	Weiche, Anfang
+      B 4-2  0    30.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    30.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-2  0    31.050	401	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-2  0    31.100		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-2  0    31.525	403	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-2  0    31.575		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-2  0    32.000	405	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-2  0    32.050		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-2  0    32.200	0-2	Betriebsstellengrenze	=>S IV 0-2, Gleis 2
+      S IV   0    32.200	0-2	Betriebsstellengrenze	=>B 4-2 0-2, Gleis 2
+      S IV   0    32.496	407	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    32.546		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IV   0    32.992	409	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    33.042		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IV   0    33.489	411	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    33.539		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IV   0    33.985	413	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    34.035		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IV   0    34.482	415	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    34.532		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IV   0    34.978	417	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    35.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S IV   0    35.028		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IV   0    35.475	419	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    35.525		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IV   0    35.971	421	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    36.021		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IV   0    36.468	423	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    36.518		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IV   0    36.964	425	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    37.014		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IV   0    37.461	427	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    37.511		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IV   0    37.800	0-1	Betriebsstellengrenze	=>K C 0-1, Gleis 1
+      K C    0    37.800	0-1	Betriebsstellengrenze	=>S IV 0-1, Gleis 1
+      K C    0    37.957	429	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K C    0    38.007		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K C    0    38.454	431	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K C    0    38.504		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K C    0    38.950	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      K C    0    39.020		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K C    0    39.145	W02	Weiche, Stamm
+      K C    0    39.145	W02	Weiche, Anfang
+      K C    0    39.182		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    39.220	W03	Weiche, Anfang
+      K C    0    39.220	W03	Weiche, Stamm
+      K C    0    39.320		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    39.370	W05	Weiche, Anfang
+      K C    0    39.370	W05	Weiche, Stamm
+      K C    0    39.420		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    39.490	ZR21	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K C    0    39.560		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K C    0    40.000	ZR22	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K C    0    40.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      K C    0    40.070		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K C    0    40.375	H 2 Pv s	Halteplatz	Steigend, Personenzug, l=420.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K C    0    40.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K C    0    40.510	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      K C    0    40.510		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K C    0    40.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K C    0    40.630	W07	Weiche, Stamm
+      K C    0    40.630	W07	Weiche, Anfang
+      K C    0    40.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    40.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      K C    0    40.668	_DUP (16)	Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      K C    0    40.705	W09	Weiche, Anfang
+      K C    0    40.705	W09	Weiche, Stamm
+      K C    0    40.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    40.930	W12	Weiche, Stamm
+      K C    0    40.930	W12	Weiche, Anfang
+      K C    0    40.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    40.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K C    0    41.050	501	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K C    0    41.100		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K C    0    41.525	503	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K C    0    41.575		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K C    0    42.000	505	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K C    0    42.050		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K C    0    42.200	0-2	Betriebsstellengrenze	=>S V 0-2, Gleis 2
+      S V    0    42.200	0-2	Betriebsstellengrenze	=>K C 0-2, Gleis 2
+      S V    0    42.496	507	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    42.546		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S V    0    42.992	509	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    43.042		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S V    0    43.489	511	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    43.539		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S V    0    43.985	513	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    44.035		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S V    0    44.482	515	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    44.532		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S V    0    44.978	517	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    45.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S V    0    45.028		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S V    0    45.475	519	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    45.525		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S V    0    45.971	521	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    46.021		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S V    0    46.468	523	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    46.518		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S V    0    46.964	525	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    47.014		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S V    0    47.461	527	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    47.511		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S V    0    47.800	0-1	Betriebsstellengrenze	=>B 4-3 0-1, Gleis 1
+      B 4-3  0    47.800	0-1	Betriebsstellengrenze	=>S V 0-1, Gleis 1
+      B 4-3  0    47.957	529	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-3  0    48.007		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-3  0    48.454	531	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-3  0    48.504		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-3  0    48.950	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-3  0    49.020		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-3  0    49.145	W02	Weiche, Stamm
+      B 4-3  0    49.145	W02	Weiche, Anfang
+      B 4-3  0    49.182		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    49.220	W03	Weiche, Anfang
+      B 4-3  0    49.220	W03	Weiche, Stamm
+      B 4-3  0    49.320		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    49.370	W05	Weiche, Anfang
+      B 4-3  0    49.370	W05	Weiche, Stamm
+      B 4-3  0    49.420		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    49.490	ZR21	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-3  0    49.560		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-3  0    50.000	ZR22	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-3  0    50.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 4-3  0    50.070		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-3  0    50.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-3  0    50.510	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-3  0    50.510		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-3  0    50.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-3  0    50.630	W07	Weiche, Stamm
+      B 4-3  0    50.630	W07	Weiche, Anfang
+      B 4-3  0    50.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    50.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-3  0    50.668	_DUP (16)	Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      B 4-3  0    50.705	W09	Weiche, Anfang
+      B 4-3  0    50.705	W09	Weiche, Stamm
+      B 4-3  0    50.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    50.930	W12	Weiche, Stamm
+      B 4-3  0    50.930	W12	Weiche, Anfang
+      B 4-3  0    50.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    50.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-3  0    51.050	601	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-3  0    51.100		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-3  0    51.550	603	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-3  0    51.600		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-3  0    52.050	605	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-3  0    52.100		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-3  0    52.200	0-2	Betriebsstellengrenze	=>S VI 0-2, Gleis 2
+      S VI   0    52.200	0-2	Betriebsstellengrenze	=>B 4-3 0-2, Gleis 2
+      S VI   0    52.559	607	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    52.609		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VI   0    53.072	609	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    53.122		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VI   0    53.584	611	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    53.634		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VI   0    54.096	613	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    54.146		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VI   0    54.609	615	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    54.659		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VI   0    55.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S VI   0    55.121	617	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    55.171		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VI   0    55.634	619	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    55.684		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VI   0    56.146	621	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    56.196		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VI   0    56.658	623	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    56.708		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VI   0    57.171	625	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    57.221		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VI   0    57.683	627	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    57.733		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VI   0    57.800	0-1	Betriebsstellengrenze	=>B 3-2 0-1, Gleis 1
+      B 3-2  0    57.800	0-1	Betriebsstellengrenze	=>S VI 0-1, Gleis 1
+      B 3-2  0    58.195	629	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-2  0    58.245		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-2  0    58.708	631	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=-1km/h
+      B 3-2  0    58.758		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-2  0    59.220	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-2  0    59.290		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-2  0    59.415	W02	Weiche, Stamm
+      B 3-2  0    59.415	W02	Weiche, Anfang
+      B 3-2  0    59.452		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    59.490	W03	Weiche, Anfang
+      B 3-2  0    59.490	W03	Weiche, Stamm
+      B 3-2  0    59.540		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    59.768	ZR1	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-2  0    59.838		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-2  0    60.000	Gl 1	Fahrzeitmesspunkt	Beide Richtungen
+      B 3-2  0    60.180	H 1 Pv f	Halteplatz	Steigend, Personenzug, l=210.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 3-2  0    60.315	N1	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-2  0    60.315		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-2  0    60.385		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-2  0    60.435	W07	Weiche, Anfang
+      B 3-2  0    60.435	W07	Weiche, Stamm
+      B 3-2  0    60.475		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    60.660	W10	Weiche, Stamm
+      B 3-2  0    60.660	W10	Weiche, Anfang
+      B 3-2  0    60.710		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    60.710		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-2  0    60.823	701	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-2  0    60.873		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-2  0    61.331	703	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-2  0    61.381		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-2  0    61.839	705	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-2  0    61.889		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-2  0    62.200	0-9	Betriebsstellengrenze	=>S VII 0-9, Gleis 9
+      S VII  0    62.200	0-9	Betriebsstellengrenze	=>B 3-2 0-9, Gleis 9
+      S VII  0    62.347	707	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    62.397		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VII  0    62.855	709	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    62.905		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VII  0    63.363	711	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    63.413		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VII  0    63.871	713	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    63.921		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VII  0    64.379	715	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    64.429		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VII  0    64.886	717	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    64.936		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VII  0    65.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S VII  0    65.394	719	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    65.444		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VII  0    65.902	721	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    65.952		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VII  0    66.410	723	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    66.460		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VII  0    66.918	725	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    66.968		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VII  0    67.426	727	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    67.476		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VII  0    67.800	0-1	Betriebsstellengrenze	=>B 4-4 0-1, Gleis 1
+      B 4-4  0    67.800	0-1	Betriebsstellengrenze	=>S VII 0-1, Gleis 1
+      B 4-4  0    67.934	729	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-4  0    67.984		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-4  0    68.442	731	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-4  0    68.492		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-4  0    68.950	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-4  0    69.020		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-4  0    69.145	W02	Weiche, Stamm
+      B 4-4  0    69.145	W02	Weiche, Anfang
+      B 4-4  0    69.182		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    69.220	W03	Weiche, Anfang
+      B 4-4  0    69.220	W03	Weiche, Stamm
+      B 4-4  0    69.320		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    69.370	W05	Weiche, Anfang
+      B 4-4  0    69.370	W05	Weiche, Stamm
+      B 4-4  0    69.420		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    69.490	ZR21	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-4  0    69.560		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-4  0    70.000	ZR22	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-4  0    70.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 4-4  0    70.070		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-4  0    70.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-4  0    70.510	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-4  0    70.510		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-4  0    70.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-4  0    70.630	W07	Weiche, Stamm
+      B 4-4  0    70.630	W07	Weiche, Anfang
+      B 4-4  0    70.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    70.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-4  0    70.668	_DUP (16)	Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      B 4-4  0    70.705	W09	Weiche, Anfang
+      B 4-4  0    70.705	W09	Weiche, Stamm
+      B 4-4  0    70.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    70.930	W12	Weiche, Stamm
+      B 4-4  0    70.930	W12	Weiche, Anfang
+      B 4-4  0    70.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    70.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-4  0    71.050	801	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-4  0    71.100		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-4  0    71.550	803	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-4  0    71.600		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-4  0    72.050	805	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-4  0    72.100		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-4  0    72.200	0-2	Betriebsstellengrenze	=>S VIII 0-2, Gleis 2
+      S VIII 0    72.200	0-2	Betriebsstellengrenze	=>B 4-4 0-2, Gleis 2
+      S VIII 0    72.559	807	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    72.609		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VIII 0    73.072	809	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    73.122		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VIII 0    73.584	811	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    73.634		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VIII 0    74.096	813	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    74.146		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VIII 0    74.609	815	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    74.659		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VIII 0    75.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S VIII 0    75.121	817	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    75.171		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VIII 0    75.634	819	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    75.684		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VIII 0    76.146	821	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    76.196		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VIII 0    76.658	823	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    76.708		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VIII 0    77.171	825	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    77.221		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VIII 0    77.683	827	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=-1km/h
+      S VIII 0    77.733		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VIII 0    77.800	0-1	Betriebsstellengrenze	=>B 3-3 0-1, Gleis 1
+      B 3-3  0    77.800	0-1	Betriebsstellengrenze	=>S VIII 0-1, Gleis 1
+      B 3-3  0    78.195	829	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-3  0    78.245		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-3  0    78.708	831	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-3  0    78.758		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-3  0    79.220	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-3  0    79.290		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-3  0    79.415	W02	Weiche, Stamm
+      B 3-3  0    79.415	W02	Weiche, Anfang
+      B 3-3  0    79.452		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    79.490	W03	Weiche, Anfang
+      B 3-3  0    79.490	W03	Weiche, Stamm
+      B 3-3  0    79.540		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    79.640	W05	Weiche, Anfang
+      B 3-3  0    79.640	W05	Weiche, Stamm
+      B 3-3  0    79.690		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    79.760	ZR2	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-3  0    79.830		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-3  0    80.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 3-3  0    80.240	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-3  0    80.240		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-3  0    80.310		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-3  0    80.360	W06	Weiche, Stamm
+      B 3-3  0    80.360	W06	Weiche, Anfang
+      B 3-3  0    80.398		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    80.398		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 3-3  0    80.398	_DUP (11)	Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      B 3-3  0    80.435	W07	Weiche, Anfang
+      B 3-3  0    80.435	W07	Weiche, Stamm
+      B 3-3  0    80.485		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    80.660	W10	Weiche, Stamm
+      B 3-3  0    80.660	W10	Weiche, Anfang
+      B 3-3  0    80.710		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    80.710		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-3  0    80.780	901	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-3  0    80.830		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-3  0    81.280	903	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-3  0    81.330		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-3  0    81.780	905	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-3  0    81.830		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-3  0    82.200	0-2	Betriebsstellengrenze	=>S IX 0-2, Gleis 2
+      S IX   0    82.200	0-2	Betriebsstellengrenze	=>B 3-3 0-2, Gleis 2
+      S IX   0    82.289	907	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    82.339		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IX   0    82.802	909	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    82.852		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IX   0    83.314	911	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    83.364		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IX   0    83.826	913	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    83.876		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IX   0    84.339	915	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    84.389		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IX   0    84.851	917	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    84.901		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IX   0    85.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S IX   0    85.364	919	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    85.414		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IX   0    85.876	921	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    85.926		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IX   0    86.388	923	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    86.438		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IX   0    86.901	925	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    86.951		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IX   0    87.413	927	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    87.463		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IX   0    87.800	0-1	Betriebsstellengrenze	=>B 4-5 0-1, Gleis 1
+      B 4-5  0    87.800	0-1	Betriebsstellengrenze	=>S IX 0-1, Gleis 1
+      B 4-5  0    87.925	929	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-5  0    87.975		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-5  0    88.438	931	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-5  0    88.488		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-5  0    88.950	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-5  0    89.020		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-5  0    89.145	W02	Weiche, Stamm
+      B 4-5  0    89.145	W02	Weiche, Anfang
+      B 4-5  0    89.182		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    89.220	W03	Weiche, Anfang
+      B 4-5  0    89.220	W03	Weiche, Stamm
+      B 4-5  0    89.320		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    89.370	W05	Weiche, Anfang
+      B 4-5  0    89.370	W05	Weiche, Stamm
+      B 4-5  0    89.420		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    89.490	ZR21	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-5  0    89.560		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-5  0    90.000	ZR22	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-5  0    90.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 4-5  0    90.070		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-5  0    90.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-5  0    90.510	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-5  0    90.510		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-5  0    90.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-5  0    90.630	W07	Weiche, Stamm
+      B 4-5  0    90.630	W07	Weiche, Anfang
+      B 4-5  0    90.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    90.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-5  0    90.668	_DUP (16)	Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      B 4-5  0    90.705	W09	Weiche, Anfang
+      B 4-5  0    90.705	W09	Weiche, Stamm
+      B 4-5  0    90.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    90.930	W12	Weiche, Stamm
+      B 4-5  0    90.930	W12	Weiche, Anfang
+      B 4-5  0    90.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    90.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-5  0    91.050	1001	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-5  0    91.100		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-5  0    91.525	1003	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-5  0    91.575		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-5  0    92.000	1005	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-5  0    92.050		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-5  0    92.200	0-2	Betriebsstellengrenze	=>S X 0-2, Gleis 2
+      S X    0    92.200	0-2	Betriebsstellengrenze	=>B 4-5 0-2, Gleis 2
+      S X    0    92.496	1007	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    92.546		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S X    0    92.992	1009	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    93.042		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S X    0    93.489	1011	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    93.539		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S X    0    93.985	1013	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    94.035		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S X    0    94.482	1015	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    94.532		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S X    0    94.978	1017	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    95.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S X    0    95.028		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S X    0    95.475	1019	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    95.525		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S X    0    95.971	1021	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    96.021		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S X    0    96.468	1023	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    96.518		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S X    0    96.964	1025	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    97.014		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S X    0    97.461	1027	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    97.511		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S X    0    97.800	0-1	Betriebsstellengrenze	=>K B 0-1, Gleis 1
+      K B    0    97.800	0-1	Betriebsstellengrenze	=>S X 0-1, Gleis 1
+      K B    0    97.957	1029	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K B    0    98.007		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K B    0    98.454	1031	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K B    0    98.504		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K B    0    98.950	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      K B    0    99.020		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K B    0    99.145	W02	Weiche, Stamm
+      K B    0    99.145	W02	Weiche, Anfang
+      K B    0    99.182		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    99.220	W03	Weiche, Anfang
+      K B    0    99.220	W03	Weiche, Stamm
+      K B    0    99.320		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    99.370	W05	Weiche, Anfang
+      K B    0    99.370	W05	Weiche, Stamm
+      K B    0    99.420		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    99.490	ZR21	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K B    0    99.560		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K B    0    100.000	ZR22	Ne 14	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K B    0    100.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      K B    0    100.070		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K B    0    100.375	H 2 Pv s	Halteplatz	Steigend, Personenzug, l=420.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K B    0    100.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K B    0    100.510	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      K B    0    100.510		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K B    0    100.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K B    0    100.630	W07	Weiche, Stamm
+      K B    0    100.630	W07	Weiche, Anfang
+      K B    0    100.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    100.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      K B    0    100.668	_DUP (16)	Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      K B    0    100.705	W09	Weiche, Anfang
+      K B    0    100.705	W09	Weiche, Stamm
+      K B    0    100.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    100.930	W12	Weiche, Stamm
+      K B    0    100.930	W12	Weiche, Anfang
+      K B    0    100.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    100.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K B    0    101.050	1101	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K B    0    101.100		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K B    0    101.550	1103	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K B    0    101.600		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K B    0    102.050	1105	ZB-Blockkennzeichen	Steigend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K B    0    102.100		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K B    0    102.200	Ende 2	Gleisende
+
+      Streckengleis Richtung 2  Richtung 2
+
+      Bst  Strecke  km 	Name	Erläuterung
+
+      K B    0    102.880	GE-W7	Gleisende
+      K B    0    102.200		ZB-Anfang	Fallend, ETCS1( DB Netz AG SRS 3.6.0  <ETCS 1 (FS) | ETCS 2>)/ETCS2( DB Netz AG SRS 3.6.0  <ETCS 1 (FS) | ETCS 2>)
+      K B    0    102.200	160	Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K B    0    102.050	1130	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K B    0    102.000		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K B    0    101.550	1132	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K B    0    101.500		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K B    0    101.050	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      K B    0    100.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K B    0    100.855	W11	Weiche, Stamm
+      K B    0    100.855	W11	Weiche, Anfang
+      K B    0    100.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    100.780	W10	Weiche, Anfang
+      K B    0    100.780	W10	Weiche, Stamm
+      K B    0    100.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    100.630	W08	Weiche, Anfang
+      K B    0    100.630	W08	Weiche, Stamm
+      K B    0    100.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    100.510	ZS32	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K B    0    100.440		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K B    0    100.000	ZS31	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K B    0    100.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      K B    0    99.930		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K B    0    99.625	H 3 Pv f	Halteplatz	Fallend, Personenzug, l=420.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K B    0    99.625	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K B    0    99.490	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      K B    0    99.490		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K B    0    99.420		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K B    0    99.370	W06	Weiche, Abzw. rechts
+      K B    0    99.370	W06	Weiche, Anfang
+      K B    0    99.332		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    99.332	_DUP (7)	Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      K B    0    99.332		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      K B    0    99.295	W04	Weiche, Anfang
+      K B    0    99.295	W04	Weiche, Stamm
+      K B    0    99.245		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    99.070	W01	Weiche, Stamm
+      K B    0    99.070	W01	Weiche, Anfang
+      K B    0    99.020		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    99.020		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K B    0    98.950	1032	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K B    0    98.900		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K B    0    98.475	1030	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K B    0    98.425		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K B    0    98.000	1028	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K B    0    97.950		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K B    0    97.800	0-2	Betriebsstellengrenze	=>S X 0-2, Gleis 2
+      S X    0    97.800	0-2	Betriebsstellengrenze	=>K B 0-2, Gleis 2
+      S X    0    97.504	1026	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    97.454		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S X    0    97.008	1024	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    96.958		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S X    0    96.511	1022	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    96.461		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S X    0    96.015	1020	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    95.965		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S X    0    95.518	1018	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    95.468		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S X    0    95.022	1016	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    95.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S X    0    94.972		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S X    0    94.525	1014	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    94.475		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S X    0    94.029	1012	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    93.979		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S X    0    93.532	1010	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    93.482		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S X    0    93.036	1008	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    92.986		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S X    0    92.539	1006	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S X    0    92.489		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S X    0    92.200	0-7	Betriebsstellengrenze	=>B 4-5 0-7, Gleis 7
+      B 4-5  0    92.200	0-7	Betriebsstellengrenze	=>S X 0-7, Gleis 7
+      B 4-5  0    92.043	1004	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-5  0    91.993		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-5  0    91.546	1002	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-5  0    91.496		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-5  0    91.050	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-5  0    90.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-5  0    90.855	W11	Weiche, Stamm
+      B 4-5  0    90.855	W11	Weiche, Anfang
+      B 4-5  0    90.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    90.780	W10	Weiche, Anfang
+      B 4-5  0    90.780	W10	Weiche, Stamm
+      B 4-5  0    90.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    90.630	W08	Weiche, Anfang
+      B 4-5  0    90.630	W08	Weiche, Stamm
+      B 4-5  0    90.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    90.510	ZS32	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-5  0    90.440		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-5  0    90.000	ZS31	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-5  0    90.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      B 4-5  0    89.930		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-5  0    89.625	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-5  0    89.490	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-5  0    89.490		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-5  0    89.420		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-5  0    89.370	W06	Weiche, Abzw. rechts
+      B 4-5  0    89.370	W06	Weiche, Anfang
+      B 4-5  0    89.332		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    89.332	_DUP (7)	Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      B 4-5  0    89.332		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-5  0    89.295	W04	Weiche, Anfang
+      B 4-5  0    89.295	W04	Weiche, Stamm
+      B 4-5  0    89.245		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    89.070	W01	Weiche, Stamm
+      B 4-5  0    89.070	W01	Weiche, Anfang
+      B 4-5  0    89.020		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    89.020		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-5  0    88.950	932	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-5  0    88.900		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-5  0    88.450	930	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-5  0    88.400		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-5  0    87.950	928	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-5  0    87.900		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-5  0    87.800	0-2	Betriebsstellengrenze	=>S IX 0-2, Gleis 2
+      S IX   0    87.800	0-2	Betriebsstellengrenze	=>B 4-5 0-2, Gleis 2
+      S IX   0    87.441	926	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    87.391		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IX   0    86.928	924	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    86.878		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IX   0    86.416	922	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    86.366		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IX   0    85.904	920	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    85.854		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IX   0    85.391	918	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    85.341		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IX   0    85.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S IX   0    84.879	916	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    84.829		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IX   0    84.366	914	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    84.316		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IX   0    83.854	912	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    83.804		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IX   0    83.342	910	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    83.292		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IX   0    82.829	908	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IX   0    82.779		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IX   0    82.317	906	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=-1km/h
+      S IX   0    82.267		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IX   0    82.200	0-7	Betriebsstellengrenze	=>B 3-3 0-7, Gleis 7
+      B 3-3  0    82.200	0-7	Betriebsstellengrenze	=>S IX 0-7, Gleis 7
+      B 3-3  0    81.805	904	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-3  0    81.755		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-3  0    81.292	902	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-3  0    81.242		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-3  0    80.780	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-3  0    80.710		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-3  0    80.585	W09	Weiche, Stamm
+      B 3-3  0    80.585	W09	Weiche, Anfang
+      B 3-3  0    80.548		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    80.510	W08	Weiche, Anfang
+      B 3-3  0    80.510	W08	Weiche, Stamm
+      B 3-3  0    80.460		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    80.233	ZS3	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=-1km/h
+      B 3-3  0    80.163		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-3  0    80.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      B 3-3  0    79.820	H 3 Pv f	Halteplatz	Fallend, Personenzug, l=210.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 3-3  0    79.685	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-3  0    79.685		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-3  0    79.615		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-3  0    79.565	W04	Weiche, Anfang
+      B 3-3  0    79.565	W04	Weiche, Stamm
+      B 3-3  0    79.525		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    79.340	W01	Weiche, Stamm
+      B 3-3  0    79.340	W01	Weiche, Anfang
+      B 3-3  0    79.290		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    79.290		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-3  0    79.177	832	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-3  0    79.127		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-3  0    78.669	830	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-3  0    78.619		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-3  0    78.161	828	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-3  0    78.111		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-3  0    77.800	0-2	Betriebsstellengrenze	=>S VIII 0-2, Gleis 2
+      S VIII 0    77.800	0-2	Betriebsstellengrenze	=>B 3-3 0-2, Gleis 2
+      S VIII 0    77.653	826	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    77.603		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VIII 0    77.145	824	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    77.095		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VIII 0    76.637	822	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    76.587		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VIII 0    76.129	820	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    76.079		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VIII 0    75.621	818	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    75.571		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VIII 0    75.114	816	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    75.064		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VIII 0    75.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S VIII 0    74.606	814	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    74.556		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VIII 0    74.098	812	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    74.048		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VIII 0    73.590	810	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=-1km/h
+      S VIII 0    73.540		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VIII 0    73.082	808	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    73.032		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VIII 0    72.574	806	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VIII 0    72.524		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VIII 0    72.200	0-7	Betriebsstellengrenze	=>B 4-4 0-7, Gleis 7
+      B 4-4  0    72.200	0-7	Betriebsstellengrenze	=>S VIII 0-7, Gleis 7
+      B 4-4  0    72.066	804	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-4  0    72.016		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-4  0    71.558	802	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-4  0    71.508		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-4  0    71.050	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-4  0    70.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-4  0    70.855	W11	Weiche, Stamm
+      B 4-4  0    70.855	W11	Weiche, Anfang
+      B 4-4  0    70.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    70.780	W10	Weiche, Anfang
+      B 4-4  0    70.780	W10	Weiche, Stamm
+      B 4-4  0    70.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    70.630	W08	Weiche, Anfang
+      B 4-4  0    70.630	W08	Weiche, Stamm
+      B 4-4  0    70.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    70.510	ZS32	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-4  0    70.440		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-4  0    70.000	ZS31	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-4  0    70.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      B 4-4  0    69.930		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-4  0    69.625	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-4  0    69.490	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-4  0    69.490		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-4  0    69.420		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-4  0    69.370	W06	Weiche, Abzw. rechts
+      B 4-4  0    69.370	W06	Weiche, Anfang
+      B 4-4  0    69.332		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    69.332	_DUP (7)	Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      B 4-4  0    69.332		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-4  0    69.295	W04	Weiche, Anfang
+      B 4-4  0    69.295	W04	Weiche, Stamm
+      B 4-4  0    69.245		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    69.070	W01	Weiche, Stamm
+      B 4-4  0    69.070	W01	Weiche, Anfang
+      B 4-4  0    69.020		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    69.020		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-4  0    68.950	732	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-4  0    68.900		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-4  0    68.450	730	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-4  0    68.400		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-4  0    67.950	728	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-4  0    67.900		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-4  0    67.800	0-2	Betriebsstellengrenze	=>S VII 0-2, Gleis 2
+      S VII  0    67.800	0-2	Betriebsstellengrenze	=>B 4-4 0-2, Gleis 2
+      S VII  0    67.441	726	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    67.391		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VII  0    66.928	724	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    66.878		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VII  0    66.416	722	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    66.366		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VII  0    65.904	720	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    65.854		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VII  0    65.391	718	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    65.341		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VII  0    65.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S VII  0    64.879	716	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    64.829		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VII  0    64.366	714	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    64.316		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VII  0    63.854	712	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    63.804		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VII  0    63.342	710	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    63.292		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VII  0    62.829	708	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    62.779		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VII  0    62.317	706	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VII  0    62.267		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VII  0    62.200	0-1	Betriebsstellengrenze	=>B 3-2 0-1, Gleis 1
+      B 3-2  0    62.200	0-1	Betriebsstellengrenze	=>S VII 0-1, Gleis 1
+      B 3-2  0    61.805	704	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-2  0    61.755		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-2  0    61.292	702	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-2  0    61.242		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-2  0    60.780	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-2  0    60.710		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-2  0    60.585	W09	Weiche, Stamm
+      B 3-2  0    60.585	W09	Weiche, Anfang
+      B 3-2  0    60.548		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    60.510	W08	Weiche, Anfang
+      B 3-2  0    60.510	W08	Weiche, Stamm
+      B 3-2  0    60.460		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    60.360	W06	Weiche, Anfang
+      B 3-2  0    60.360	W06	Weiche, Stamm
+      B 3-2  0    60.310		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    60.240	ZS2	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-2  0    60.170		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-2  0    60.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 3-2  0    59.760	P2	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-2  0    59.760		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-2  0    59.690		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-2  0    59.640	W05	Weiche, Stamm
+      B 3-2  0    59.640	W05	Weiche, Anfang
+      B 3-2  0    59.602		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    59.602	_DUP (6)	Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      B 3-2  0    59.602		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 3-2  0    59.565	W04	Weiche, Anfang
+      B 3-2  0    59.565	W04	Weiche, Stamm
+      B 3-2  0    59.515		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    59.340	W01	Weiche, Stamm
+      B 3-2  0    59.340	W01	Weiche, Anfang
+      B 3-2  0    59.290		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    59.290		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-2  0    59.220	732	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-2  0    59.170		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-2  0    58.720	630	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-2  0    58.670		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-2  0    58.220	628	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-2  0    58.170		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-2  0    57.800	0-2	Betriebsstellengrenze	=>S VI 0-2, Gleis 2
+      S VI   0    57.800	0-2	Betriebsstellengrenze	=>B 3-2 0-2, Gleis 2
+      S VI   0    57.711	626	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    57.661		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VI   0    57.198	624	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    57.148		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VI   0    56.686	622	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    56.636		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VI   0    56.174	620	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    56.124		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VI   0    55.661	618	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    55.611		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VI   0    55.149	616	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    55.099		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VI   0    55.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S VI   0    54.636	614	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    54.586		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VI   0    54.124	612	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    54.074		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VI   0    53.612	610	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    53.562		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VI   0    53.099	608	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    53.049		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VI   0    52.587	606	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S VI   0    52.537		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VI   0    52.200	0-7	Betriebsstellengrenze	=>B 4-3 0-7, Gleis 7
+      B 4-3  0    52.200	0-7	Betriebsstellengrenze	=>S VI 0-7, Gleis 7
+      B 4-3  0    52.075	604	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-3  0    52.025		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-3  0    51.562	602	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-3  0    51.512		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-3  0    51.050	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-3  0    50.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-3  0    50.855	W11	Weiche, Stamm
+      B 4-3  0    50.855	W11	Weiche, Anfang
+      B 4-3  0    50.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    50.780	W10	Weiche, Anfang
+      B 4-3  0    50.780	W10	Weiche, Stamm
+      B 4-3  0    50.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    50.630	W08	Weiche, Anfang
+      B 4-3  0    50.630	W08	Weiche, Stamm
+      B 4-3  0    50.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    50.510	ZS32	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-3  0    50.440		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-3  0    50.000	ZS31	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-3  0    50.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      B 4-3  0    49.930		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-3  0    49.625	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-3  0    49.490	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-3  0    49.490		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-3  0    49.420		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-3  0    49.370	W06	Weiche, Abzw. rechts
+      B 4-3  0    49.370	W06	Weiche, Anfang
+      B 4-3  0    49.332		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    49.332	_DUP (7)	Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      B 4-3  0    49.332		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-3  0    49.295	W04	Weiche, Anfang
+      B 4-3  0    49.295	W04	Weiche, Stamm
+      B 4-3  0    49.245		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    49.070	W01	Weiche, Stamm
+      B 4-3  0    49.070	W01	Weiche, Anfang
+      B 4-3  0    49.020		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    49.020		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-3  0    48.950	532	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-3  0    48.900		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-3  0    48.475	530	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-3  0    48.425		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-3  0    48.000	528	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-3  0    47.950		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-3  0    47.800	0-2	Betriebsstellengrenze	=>S V 0-2, Gleis 2
+      S V    0    47.800	0-2	Betriebsstellengrenze	=>B 4-3 0-2, Gleis 2
+      S V    0    47.504	526	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    47.454		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S V    0    47.008	524	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    46.958		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S V    0    46.511	522	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    46.461		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S V    0    46.015	520	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    45.965		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S V    0    45.518	518	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    45.468		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S V    0    45.022	516	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    45.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S V    0    44.972		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S V    0    44.525	514	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    44.475		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S V    0    44.029	512	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    43.979		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S V    0    43.532	510	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    43.482		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S V    0    43.036	508	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    42.986		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S V    0    42.539	506	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S V    0    42.489		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S V    0    42.200	0-7	Betriebsstellengrenze	=>K C 0-7, Gleis 7
+      K C    0    42.200	0-7	Betriebsstellengrenze	=>S V 0-7, Gleis 7
+      K C    0    42.043	504	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K C    0    41.993		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K C    0    41.546	502	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K C    0    41.496		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K C    0    41.050	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      K C    0    40.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K C    0    40.855	W11	Weiche, Stamm
+      K C    0    40.855	W11	Weiche, Anfang
+      K C    0    40.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    40.780	W10	Weiche, Anfang
+      K C    0    40.780	W10	Weiche, Stamm
+      K C    0    40.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    40.630	W08	Weiche, Anfang
+      K C    0    40.630	W08	Weiche, Stamm
+      K C    0    40.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    40.510	ZS32	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K C    0    40.440		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K C    0    40.000	ZS31	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K C    0    40.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      K C    0    39.930		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K C    0    39.625	H 3 Pv f	Halteplatz	Fallend, Personenzug, l=420.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K C    0    39.625	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K C    0    39.490	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      K C    0    39.490		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K C    0    39.420		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K C    0    39.370	W06	Weiche, Abzw. rechts
+      K C    0    39.370	W06	Weiche, Anfang
+      K C    0    39.332		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    39.332	_DUP (7)	Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      K C    0    39.332		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      K C    0    39.295	W04	Weiche, Anfang
+      K C    0    39.295	W04	Weiche, Stamm
+      K C    0    39.245		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    39.070	W01	Weiche, Stamm
+      K C    0    39.070	W01	Weiche, Anfang
+      K C    0    39.020		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    39.020		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K C    0    38.950	432	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K C    0    38.900		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K C    0    38.475	430	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K C    0    38.425		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K C    0    38.000	428	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K C    0    37.950		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K C    0    37.800	0-2	Betriebsstellengrenze	=>S IV 0-2, Gleis 2
+      S IV   0    37.800	0-2	Betriebsstellengrenze	=>K C 0-2, Gleis 2
+      S IV   0    37.504	426	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    37.454		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IV   0    37.008	424	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    36.958		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IV   0    36.511	422	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    36.461		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IV   0    36.015	420	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    35.965		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IV   0    35.518	418	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    35.468		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IV   0    35.022	416	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    35.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S IV   0    34.972		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IV   0    34.525	414	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    34.475		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IV   0    34.029	412	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    33.979		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IV   0    33.532	410	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    33.482		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IV   0    33.036	408	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    32.986		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IV   0    32.539	406	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S IV   0    32.489		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IV   0    32.200	0-7	Betriebsstellengrenze	=>B 4-2 0-7, Gleis 7
+      B 4-2  0    32.200	0-7	Betriebsstellengrenze	=>S IV 0-7, Gleis 7
+      B 4-2  0    32.043	404	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-2  0    31.993		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-2  0    31.546	402	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-2  0    31.496		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-2  0    31.050	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-2  0    30.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-2  0    30.855	W11	Weiche, Stamm
+      B 4-2  0    30.855	W11	Weiche, Anfang
+      B 4-2  0    30.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    30.780	W10	Weiche, Anfang
+      B 4-2  0    30.780	W10	Weiche, Stamm
+      B 4-2  0    30.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    30.630	W08	Weiche, Anfang
+      B 4-2  0    30.630	W08	Weiche, Stamm
+      B 4-2  0    30.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    30.510	ZS32	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-2  0    30.440		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-2  0    30.000	ZS31	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-2  0    30.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      B 4-2  0    29.930		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-2  0    29.625	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-2  0    29.490	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-2  0    29.490		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-2  0    29.420		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-2  0    29.370	W06	Weiche, Abzw. rechts
+      B 4-2  0    29.370	W06	Weiche, Anfang
+      B 4-2  0    29.332		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    29.332	_DUP (7)	Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      B 4-2  0    29.332		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-2  0    29.295	W04	Weiche, Anfang
+      B 4-2  0    29.295	W04	Weiche, Stamm
+      B 4-2  0    29.245		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    29.070	W01	Weiche, Stamm
+      B 4-2  0    29.070	W01	Weiche, Anfang
+      B 4-2  0    29.020		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    29.020		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-2  0    28.950	332	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-2  0    28.900		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-2  0    28.450	330	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-2  0    28.400		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-2  0    27.950	328	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-2  0    27.900		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-2  0    27.800	0-2	Betriebsstellengrenze	=>S III 0-2, Gleis 2
+      S III  0    27.800	0-2	Betriebsstellengrenze	=>B 4-2 0-2, Gleis 2
+      S III  0    27.441	326	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    27.391		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S III  0    26.928	324	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    26.878		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S III  0    26.416	322	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    26.366		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S III  0    25.904	320	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    25.854		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S III  0    25.391	318	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    25.341		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S III  0    25.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S III  0    24.879	316	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    24.829		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S III  0    24.366	314	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    24.316		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S III  0    23.854	312	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    23.804		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S III  0    23.342	310	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    23.292		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S III  0    22.829	308	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    22.779		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S III  0    22.317	306	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S III  0    22.267		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S III  0    22.200	0-7	Betriebsstellengrenze	=>B 3-1 0-7, Gleis 7
+      B 3-1  0    22.200	0-7	Betriebsstellengrenze	=>S III 0-7, Gleis 7
+      B 3-1  0    21.805	304	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-1  0    21.755		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-1  0    21.292	302	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-1  0    21.242		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-1  0    20.780	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-1  0    20.710		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-1  0    20.585	W09	Weiche, Stamm
+      B 3-1  0    20.585	W09	Weiche, Anfang
+      B 3-1  0    20.548		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    20.510	W08	Weiche, Anfang
+      B 3-1  0    20.510	W08	Weiche, Stamm
+      B 3-1  0    20.460		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    20.233	ZS3	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-1  0    20.163		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-1  0    20.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      B 3-1  0    19.820	H 3 Pv f	Halteplatz	Fallend, Personenzug, l=210.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 3-1  0    19.685	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-1  0    19.685		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-1  0    19.615		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-1  0    19.565	W04	Weiche, Anfang
+      B 3-1  0    19.565	W04	Weiche, Stamm
+      B 3-1  0    19.525		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    19.340	W01	Weiche, Stamm
+      B 3-1  0    19.340	W01	Weiche, Anfang
+      B 3-1  0    19.290		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    19.290		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-1  0    19.177	232	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-1  0    19.127		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-1  0    18.669	230	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-1  0    18.619		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-1  0    18.161	228	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 3-1  0    18.111		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-1  0    17.800	0-2	Betriebsstellengrenze	=>S II 0-2, Gleis 2
+      S II   0    17.800	0-2	Betriebsstellengrenze	=>B 3-1 0-2, Gleis 2
+      S II   0    17.653	226	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    17.603		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S II   0    17.145	224	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    17.095		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S II   0    16.637	222	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    16.587		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S II   0    16.129	220	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    16.079		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S II   0    15.621	218	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    15.571		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S II   0    15.114	216	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    15.064		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S II   0    15.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S II   0    14.606	214	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    14.556		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S II   0    14.098	212	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    14.048		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S II   0    13.590	210	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    13.540		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S II   0    13.082	208	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    13.032		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S II   0    12.574	206	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S II   0    12.524		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S II   0    12.200	0-7	Betriebsstellengrenze	=>B 4-1 0-7, Gleis 7
+      B 4-1  0    12.200	0-7	Betriebsstellengrenze	=>S II 0-7, Gleis 7
+      B 4-1  0    12.066	204	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-1  0    12.016		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-1  0    11.558	202	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-1  0    11.508		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-1  0    11.050	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-1  0    10.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-1  0    10.855	W11	Weiche, Stamm
+      B 4-1  0    10.855	W11	Weiche, Anfang
+      B 4-1  0    10.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    10.780	W10	Weiche, Anfang
+      B 4-1  0    10.780	W10	Weiche, Stamm
+      B 4-1  0    10.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    10.630	W08	Weiche, Anfang
+      B 4-1  0    10.630	W08	Weiche, Stamm
+      B 4-1  0    10.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    10.510	ZS32	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-1  0    10.440		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-1  0    10.000	ZS31	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-1  0    10.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      B 4-1  0    9.930		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-1  0    9.625	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-1  0    9.490	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-1  0    9.490		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-1  0    9.420		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-1  0    9.370	W06	Weiche, Abzw. rechts
+      B 4-1  0    9.370	W06	Weiche, Anfang
+      B 4-1  0    9.332		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    9.332	_DUP (7)	Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      B 4-1  0    9.332		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-1  0    9.295	W04	Weiche, Anfang
+      B 4-1  0    9.295	W04	Weiche, Stamm
+      B 4-1  0    9.245		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    9.070	W01	Weiche, Stamm
+      B 4-1  0    9.070	W01	Weiche, Anfang
+      B 4-1  0    9.020		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    9.020		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-1  0    8.950	132	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-1  0    8.900		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-1  0    8.475	130	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-1  0    8.425		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-1  0    8.000	128	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      B 4-1  0    7.950		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-1  0    7.800	0-2	Betriebsstellengrenze	=>S I 0-2, Gleis 2
+      S I    0    7.800	0-2	Betriebsstellengrenze	=>B 4-1 0-2, Gleis 2
+      S I    0    7.504	126	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    7.454		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S I    0    7.008	124	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    6.958		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S I    0    6.511	122	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    6.461		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S I    0    6.015	120	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    5.965		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S I    0    5.518	118	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    5.468		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S I    0    5.022	116	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    5.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S I    0    4.972		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S I    0    4.525	114	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    4.475		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S I    0    4.029	112	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    3.979		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S I    0    3.532	110	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    3.482		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S I    0    3.036	108	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    2.986		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S I    0    2.539	106	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      S I    0    2.489		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S I    0    2.200	0-7	Betriebsstellengrenze	=>K A 0-7, Gleis 7
+      K A    0    2.200	0-7	Betriebsstellengrenze	=>S I 0-7, Gleis 7
+      K A    0    2.043	104	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K A    0    1.993		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K A    0    1.546	102	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K A    0    1.496		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K A    0    1.050	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      K A    0    0.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K A    0    0.855	W11	Weiche, Stamm
+      K A    0    0.855	W11	Weiche, Anfang
+      K A    0    0.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    0.780	W10	Weiche, Anfang
+      K A    0    0.780	W10	Weiche, Stamm
+      K A    0    0.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    0.630	W08	Weiche, Anfang
+      K A    0    0.630	W08	Weiche, Stamm
+      K A    0    0.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    0.510	ZS32	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K A    0    0.440		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K A    0    0.000	ZS31	Ne 14	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K A    0    0.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      K A    0    -0.070		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K A    0    -0.375	H 3 Pv f	Halteplatz	Fallend, Personenzug, l=420.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K A    0    -0.375	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K A    0    -0.510	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      K A    0    -0.510		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K A    0    -0.580		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K A    0    -0.630	W06	Weiche, Abzw. rechts
+      K A    0    -0.630	W06	Weiche, Anfang
+      K A    0    -0.668		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    -0.668	_DUP (7)	Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L2
+      K A    0    -0.668		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      K A    0    -0.705	W04	Weiche, Anfang
+      K A    0    -0.705	W04	Weiche, Stamm
+      K A    0    -0.755		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    -0.930	W01	Weiche, Stamm
+      K A    0    -0.930	W01	Weiche, Anfang
+      K A    0    -0.980		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    -0.980		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K A    0    -1.050	032	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K A    0    -1.100		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K A    0    -1.550	030	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K A    0    -1.600		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K A    0    -2.050	028	ZB-Blockkennzeichen	Fallend, ETCS, Fb=9.00s, DFa=3s, rs=20km/h
+      K A    0    -2.100		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K A    0    -2.200	GE-W9	Gleisende
+
+     Modellzugdaten
+     ——————————————
+
+      Richtung 1  Richtung 1
+
+      Modellzug Name            FV Ri 1_L2
+      Teilzug  Zugnummer        FV Ri 1_L2
+        Zuggattung ICE-W
+        Triebfahrzeug(e)        80 5407-3.16  BR 407, 2x 8tlg, 15kV AC, 16MW 
+                                    (600A, 900A, 1000A, 1440A) [D] [D] [D] [D]
+        Zuglänge 401.4 m        Wagenzugmasse 0 t
+        V_max 320 km/h          vMax_Signalsicht 160 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1 / 2   
+        Neigetechnik            ---
+        Laufweg von - bis       K A - K B
+
+      Modellzug Name            GV langsam Ri 1_L2
+      Teilzug  Zugnummer        GV langsam Ri 1_L2
+        Zuggattung EZK
+        Triebfahrzeug(e)        80 2248-1.2  Vectron Dual Mode (15kV-Modus) [D]
+        Zuglänge 500 m          Wagenzugmasse 1000 t
+        V_max 90 km/h           vMax_Signalsicht 90 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1 / 2   
+        Neigetechnik            ---
+        Laufweg von - bis       K A - K B
+
+      Modellzug Name            GV schnell Ri 1_L2
+      Teilzug  Zugnummer        GV schnell Ri 1_L2
+        Zuggattung DGS
+        Triebfahrzeug(e)        80 6193-2.2  Siemens Vectron high Power (15/
+                                    25kV), Pu=6,4MW [D]
+        Zuglänge 500 m          Wagenzugmasse 1250 t
+        V_max 100 km/h          vMax_Signalsicht 100 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1 / 2   
+        Neigetechnik            ---
+        Laufweg von - bis       K A - K B
+
+      Modellzug Name            NV langsam Ri 1_L2
+      Teilzug  Zugnummer        NV langsam Ri 1_L2
+        Zuggattung RB
+        Triebfahrzeug(e)        80 8442-5.2  TALENT 3 E427, 4T, 215SP, 3.030kW 
+                                    [D]
+                                80 8442-4.25  TALENT 3 E315, 3T, Io_max<200A [D]
+        Zuglänge 128.2 m        Wagenzugmasse 0 t
+        V_max 140 km/h          vMax_Signalsicht 140 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1 / 2   
+        Neigetechnik            ---
+        Laufweg von - bis       K A - K B
+
+      Modellzug Name            NV schnell Ri 1_L2
+      Teilzug  Zugnummer        NV schnell Ri 1_L2
+        Zuggattung DPN-D
+        Triebfahrzeug(e)        80 0462-34.19  0462 Desiro HC, 4-T, 4,0MW, 
+                                    Imax=320A [D]
+                                80 0462-34.19  0462 Desiro HC, 4-T, 4,0MW, 
+                                    Imax=320A [D]
+        Zuglänge 210 m          Wagenzugmasse 0 t
+        V_max 160 km/h          vMax_Signalsicht 160 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1 / 2   
+        Neigetechnik            ---
+        Laufweg von - bis       K A - K B
+
+      Richtung 2  Richtung 2
+
+      Modellzug Name            FV Ri 2_L2
+      Teilzug  Zugnummer        FV Ri 2_L2
+        Zuggattung ICE-W
+        Triebfahrzeug(e)        80 5407-3.16  BR 407, 2x 8tlg, 15kV AC, 16MW 
+                                    (600A, 900A, 1000A, 1440A) [D] [D] [D] [D]
+        Zuglänge 401.4 m        Wagenzugmasse 0 t
+        V_max 320 km/h          vMax_Signalsicht 160 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1 / 2   
+        Neigetechnik            ---
+        Laufweg von - bis       K B - K A
+
+      Modellzug Name            GV langsam Ri 2_L2
+      Teilzug  Zugnummer        GV langsam Ri 2_L2
+        Zuggattung EZK
+        Triebfahrzeug(e)        80 2248-1.2  Vectron Dual Mode (15kV-Modus) [D]
+        Zuglänge 500 m          Wagenzugmasse 1000 t
+        V_max 90 km/h           vMax_Signalsicht 90 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1 / 2   
+        Neigetechnik            ---
+        Laufweg von - bis       K B - K A
+
+      Modellzug Name            GV schnell Ri 2_L2
+      Teilzug  Zugnummer        GV schnell Ri 2_L2
+        Zuggattung DGS
+        Triebfahrzeug(e)        80 6193-2.2  Siemens Vectron high Power (15/
+                                    25kV), Pu=6,4MW [D]
+        Zuglänge 500 m          Wagenzugmasse 1250 t
+        V_max 100 km/h          vMax_Signalsicht 100 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1 / 2   
+        Neigetechnik            ---
+        Laufweg von - bis       K B - K A
+
+      Modellzug Name            NV langsam Ri 2_L2
+      Teilzug  Zugnummer        NV langsam Ri 2_L2
+        Zuggattung RB
+        Triebfahrzeug(e)        80 8442-5.2  TALENT 3 E427, 4T, 215SP, 3.030kW 
+                                    [D]
+                                80 8442-4.25  TALENT 3 E315, 3T, Io_max<200A [D]
+        Zuglänge 128.2 m        Wagenzugmasse 0 t
+        V_max 140 km/h          vMax_Signalsicht 140 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1 / 2   
+        Neigetechnik            ---
+        Laufweg von - bis       K B - K A
+
+      Modellzug Name            NV schnell Ri 2_L2
+      Teilzug  Zugnummer        NV schnell Ri 2_L2
+        Zuggattung DPN-D
+        Triebfahrzeug(e)        80 0462-34.19  0462 Desiro HC, 4-T, 4,0MW, 
+                                    Imax=320A [D]
+                                80 0462-34.19  0462 Desiro HC, 4-T, 4,0MW, 
+                                    Imax=320A [D]
+        Zuglänge 210 m          Wagenzugmasse 0 t
+        V_max 160 km/h          vMax_Signalsicht 160 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1 / 2   
+        Neigetechnik            ---
+        Laufweg von - bis       K B - K A
+
+     Allgemeine Angaben zur Berechnung
+     —————————————————————————————————
+
+     Bezugszeitraum:                16 Stunden von 6 bis 22 Uhr
+     Rangordnung der Zugfolgefälle: ungleichrangige Zugfolgefälle gleichrangig, 
+                                    wenn günstiger (Matrixvergleich)
+     Zugfolgefälle:                 nach erweitertem Ganglinienverfahren
+     Mindestlänge der Überholungsabschnitte für Güterzüge:  3000 m
+     Verfahren zur Ermittlung der Folgeverspätungen: 
+                                    Mittelwert-basiert (nach Schwanhäußer 1974)
+     Qualitätsfaktoren q
+                Qualitätsstufe      Bereich        Hochrechnung für
+                premium             q < 0.5            q = 0.5
+                optimal             0.5 <= q <= 1.2    q = 1.0
+                risikobehaftet      1.2 <  q <= 1.5    q = 1.2
+                mangelhaft          q > 1.5            q = 1.5
+
+
+     Leistungskennwerte der Strecke Mischverkehr generisch  Richtung 1  Richtung 1
+     —————————————————————————————————————————————————————————————————————————————
+
+      Betriebsprogramm im Bezugszeitraum
+      ——————————————————————————————————
+
+      lfd.   Zug-          Zug-        Rang Anzahl   Verspätungsniveau 
+      Nr.   gattung       nummer                    t_V,ein,m   p_V,ein
+
+        1    ICE-W      FV Ri 1_L2       4    30       5.00      0.50
+        2     EZK   GV langsam Ri 1_L2  18    12      10.00      0.60
+        3     DGS   GV schnell Ri 1_L2  18    19      10.00      0.60
+        4     RB    NV langsam Ri 1_L2  10    16       4.50      0.60
+        5    DPN-D  NV schnell Ri 1_L2   4    36       4.50      0.60
+
+      Summe                                  113
+
+
+      Leistungskennwerte
+      ——————————————————
+
+      Anteil der Reisezüge                           p_Rz           0.726
+
+      zulässige Summen der Folgeverspätungen
+
+         Betriebsqualität     Summe der Folgeverspätungen     zugehörige Länge   
+                             im Bezugszeitraum   je Stunde    der Warteschlange  
+                                   [min]          [min/h]             [-]        
+
+         premium                    49              3.04             0.05        
+         optimal *                  97              6.07             0.10        
+         risikobehaftet             117             7.29             0.12        
+         mangelhaft                 146             9.11             0.15        
+
+         * gilt für die Nennleistung (= optimale Zugzahl Betrieb)
+
+      mittlere Mindestzugfolgezeit [min]
+
+         für alle Zugfolgefälle                      t_Zm            3.50
+         für gleichrangige Zugfolgefälle             t_Zgr           2.74
+         für verschiedenrangige Zugfolgefälle        t_Zvr           3.96
+
+      Wahrscheinlichkeit gleichrangiger 
+      Zugfolgefälle:                                 p_gr           0.373
+
+      vorhandene Summe der Folgeverspätungen
+
+         im Bezugszeitraum [min / 16 h]                               108
+         je Stunde [min / h]                                         6.75
+         zugehörige mittlere Pufferzeit [min]        t_P,m           4.99
+
+      Nennleistung (= optimale Zugzahl Betrieb)
+
+         im Bezugszeitraum [Anzahl Züge / 16 h]      L_F              108
+         je Stunde [Anzahl Züge / h]                                 6.75
+         zugehörige mittlere Pufferzeit [min]        t_P,m           5.35
+         Nutzungsgrad                                                1.04
+         Qualitätsfaktor                             q_0             1.11
+
+      Faktor zur Hochrechnung des zugrunde gelegten Betriebsprogramms
+      an die Leistungsgrenze (Hochrechnungsfaktor) bei Qualitätsstufe
+
+         premium                                                     0.72
+         optimal                                                     0.96
+         risikobehaftet                                              1.03
+         mangelhaft                                                  1.12
+
+
+      weitere Kennwerte
+      —————————————————
+                                       Anzahl nach      zulässige Anzahl der Züge     
+      lfd.   Zug-          Zug-         Betriebs-         bei Betriebsqualität        
+      Nr.   gattung       nummer        programm    premium optimal risikobeh. mangelh.
+
+        1    ICE-W      FV Ri 1_L2         30       21.7     28.8     30.9     33.6
+        2     EZK   GV langsam Ri 1_L2     12        8.7     11.5     12.4     13.4
+        3     DGS   GV schnell Ri 1_L2     19       13.7     18.2     19.6     21.3
+        4     RB    NV langsam Ri 1_L2     16       11.6     15.4     16.5     17.9
+        5    DPN-D  NV schnell Ri 1_L2     36       26.0     34.5     37.1     40.3
+
+      Summe (abgerundet)                  113         81      108      116      126
+
+      zulässige Anzahl der Züge
+         in der Spitzenstunde *                        8        9       10       10
+           bei mittl. Pufferzeit [min]              4.00     3.17     2.50     2.50   
+         in 4 Spitzenstunden *                        23       30       32       34
+           bei mittl. Pufferzeit [min]              6.93     4.50     4.00     3.56   
+
+         * Die zulässige Anzahl der Züge in 1 bzw. 4 Spitzenstunden
+           entspricht der Anzahl der Zugfolgezeiten, die bei
+           zufälliger Häufung kleiner Pufferzeiten vollständig in
+           diesem Zeitraum liegen können.
+
+      Theoretische Leistungsfähigkeit (ohne Pufferzeiten)
+
+         im Bezugszeitraum [Anzahl Züge / 16 h]      L_F,th           274
+         je Stunde [Anzahl Züge / h]                                17.13
+         Nutzungsgrad der theoret. Leistungsfähigkeit                0.41
+
+
+
+
+     Leistungskennwerte der Strecke Mischverkehr generisch  Richtung 2  Richtung 2
+     —————————————————————————————————————————————————————————————————————————————
+
+      Betriebsprogramm im Bezugszeitraum
+      ——————————————————————————————————
+
+      lfd.   Zug-          Zug-        Rang Anzahl   Verspätungsniveau 
+      Nr.   gattung       nummer                    t_V,ein,m   p_V,ein
+
+        6    ICE-W      FV Ri 2_L2       4    30       5.00      0.50
+        7     EZK   GV langsam Ri 2_L2  18    12      10.00      0.60
+        8     DGS   GV schnell Ri 2_L2  18    19      10.00      0.60
+        9     RB    NV langsam Ri 2_L2  10    16       4.50      0.60
+       10    DPN-D  NV schnell Ri 2_L2   4    36       4.50      0.60
+
+      Summe                                  113
+
+
+      Leistungskennwerte
+      ——————————————————
+
+      Anteil der Reisezüge                           p_Rz           0.726
+
+      zulässige Summen der Folgeverspätungen
+
+         Betriebsqualität     Summe der Folgeverspätungen     zugehörige Länge   
+                             im Bezugszeitraum   je Stunde    der Warteschlange  
+                                   [min]          [min/h]             [-]        
+
+         premium                    49              3.04             0.05        
+         optimal *                  97              6.07             0.10        
+         risikobehaftet             117             7.29             0.12        
+         mangelhaft                 146             9.11             0.15        
+
+         * gilt für die Nennleistung (= optimale Zugzahl Betrieb)
+
+      mittlere Mindestzugfolgezeit [min]
+
+         für alle Zugfolgefälle                      t_Zm            3.50
+         für gleichrangige Zugfolgefälle             t_Zgr           2.74
+         für verschiedenrangige Zugfolgefälle        t_Zvr           3.96
+
+      Wahrscheinlichkeit gleichrangiger 
+      Zugfolgefälle:                                 p_gr           0.373
+
+      vorhandene Summe der Folgeverspätungen
+
+         im Bezugszeitraum [min / 16 h]                               108
+         je Stunde [min / h]                                         6.75
+         zugehörige mittlere Pufferzeit [min]        t_P,m           4.99
+
+      Nennleistung (= optimale Zugzahl Betrieb)
+
+         im Bezugszeitraum [Anzahl Züge / 16 h]      L_F              108
+         je Stunde [Anzahl Züge / h]                                 6.75
+         zugehörige mittlere Pufferzeit [min]        t_P,m           5.35
+         Nutzungsgrad                                                1.04
+         Qualitätsfaktor                             q_0             1.11
+
+      Faktor zur Hochrechnung des zugrunde gelegten Betriebsprogramms
+      an die Leistungsgrenze (Hochrechnungsfaktor) bei Qualitätsstufe
+
+         premium                                                     0.72
+         optimal                                                     0.96
+         risikobehaftet                                              1.03
+         mangelhaft                                                  1.12
+
+
+      weitere Kennwerte
+      —————————————————
+                                       Anzahl nach      zulässige Anzahl der Züge     
+      lfd.   Zug-          Zug-         Betriebs-         bei Betriebsqualität        
+      Nr.   gattung       nummer        programm    premium optimal risikobeh. mangelh.
+
+        6    ICE-W      FV Ri 2_L2         30       21.7     28.8     30.9     33.6
+        7     EZK   GV langsam Ri 2_L2     12        8.7     11.5     12.4     13.4
+        8     DGS   GV schnell Ri 2_L2     19       13.7     18.2     19.6     21.3
+        9     RB    NV langsam Ri 2_L2     16       11.5     15.4     16.5     17.9
+       10    DPN-D  NV schnell Ri 2_L2     36       26.0     34.5     37.1     40.3
+
+      Summe (abgerundet)                  113         81      108      116      126
+
+      zulässige Anzahl der Züge
+         in der Spitzenstunde *                        8        9       10       10
+           bei mittl. Pufferzeit [min]              4.00     3.16     2.50     2.50   
+         in 4 Spitzenstunden *                        23       30       32       34
+           bei mittl. Pufferzeit [min]              6.93     4.50     4.00     3.56   
+
+         * Die zulässige Anzahl der Züge in 1 bzw. 4 Spitzenstunden
+           entspricht der Anzahl der Zugfolgezeiten, die bei
+           zufälliger Häufung kleiner Pufferzeiten vollständig in
+           diesem Zeitraum liegen können.
+
+      Theoretische Leistungsfähigkeit (ohne Pufferzeiten)
+
+         im Bezugszeitraum [Anzahl Züge / 16 h]      L_F,th           274
+         je Stunde [Anzahl Züge / h]                                17.13
+         Nutzungsgrad der theoret. Leistungsfähigkeit                0.41
+
+

@@ -1,0 +1,1500 @@
+     LUKS Streckenuntersuchung     Projekt Dissertation: Mischverkehrsstrecke 3000m
+     Betriebsvariante              Standard
+     Version 3.9.1                 Strecke Mischverkehr generisch
+     02.04.2025 15:59:48           
+     ———————————————————————————————————————————————————————————————————————————————————
+
+     Maßgebender Abschnitt des Betriebsprogramms:
+     ————————————————————————————————————————————
+     Richtung 1:  K A (Knoten A)  -  K B (Knoten B)
+     Richtung 2:  K B (Knoten B)  -  K A (Knoten A)
+
+     Beschreibung des Streckenprojektes
+     ——————————————————————————————————
+
+      ----
+
+     Strecken-Definition
+     ———————————————————
+
+      Streckengleis Richtung 1  Richtung 1
+
+      Betriebs-                     Fahrwegpunkte
+      stelle          von       -      über       -       nach      
+
+      K A      Gleisende  Ende 1 - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S I      BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      B 4-1    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S II     BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      B 3-1    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S III    BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      B 4-2    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S IV     BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      K C      BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S V      BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      B 4-3    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S VI     BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      B 3-2    BstGrenze  0-1    - FzMessPkt  Gl 1 - BstGrenze  0-9    
+      S VII    BstGrenze  0-9    - FzMessPkt  1    - BstGrenze  0-1    
+      B 4-4    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S VIII   BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      B 3-3    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S IX     BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      B 4-5    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S X      BstGrenze  0-2    - FzMessPkt  1    - BstGrenze  0-1    
+      K B      BstGrenze  0-1    - FzMessPkt  Gl 2 - Gleisende  Ende 2 
+
+      Streckengleis Richtung 2  Richtung 2
+
+      Betriebs-                     Fahrwegpunkte
+      stelle          von       -      über       -       nach      
+
+      K B      Gleisende  GE-W7  - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S X      BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      B 4-5    BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S IX     BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      B 3-3    BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S VIII   BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      B 4-4    BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S VII    BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-1    
+      B 3-2    BstGrenze  0-1    - FzMessPkt  Gl 2 - BstGrenze  0-2    
+      S VI     BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      B 4-3    BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S V      BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      K C      BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S IV     BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      B 4-2    BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S III    BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      B 3-1    BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S II     BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      B 4-1    BstGrenze  0-7    - FzMessPkt  Gl 3 - BstGrenze  0-2    
+      S I      BstGrenze  0-2    - FzMessPkt  2    - BstGrenze  0-7    
+      K A      BstGrenze  0-7    - FzMessPkt  Gl 3 - Gleisende  GE-W9  
+
+      Überholungsmöglichkeiten
+
+      Spalte Kreuzung:  X = das durchgehende Hauptgleis der Gegenrichtung
+                            muss gekreuzt werden
+
+      Betriebs-                            Halte            Aus- / Ein-
+      stelle         Gleis     Richtung   Rz   Gz  Kreuzung  fädelung
+
+      K A      FzMessPkt  Gl 1    1       ja   ja           K A     K A     
+      K A      FzMessPkt  Gl 4    2       ja   ja           K A     K A     
+      B 4-1    FzMessPkt  Gl 1    1       ja   ja           B 4-1   B 4-1   
+      B 4-1    FzMessPkt  Gl 4    2       ja   ja           B 4-1   B 4-1   
+      B 3-1    FzMessPkt  Gl 1    1       ja  nein          B 3-1   B 3-1   
+      B 4-2    FzMessPkt  Gl 1    1       ja   ja           B 4-2   B 4-2   
+      B 4-2    FzMessPkt  Gl 4    2       ja   ja           B 4-2   B 4-2   
+      K C      FzMessPkt  Gl 1    1       ja   ja           K C     K C     
+      K C      FzMessPkt  Gl 4    2       ja   ja           K C     K C     
+      B 4-3    FzMessPkt  Gl 1    1       ja   ja           B 4-3   B 4-3   
+      B 4-3    FzMessPkt  Gl 4    2       ja   ja           B 4-3   B 4-3   
+      B 3-2    FzMessPkt  Gl 3    2       ja  nein          B 3-2   B 3-2   
+      B 4-4    FzMessPkt  Gl 1    1       ja   ja           B 4-4   B 4-4   
+      B 4-4    FzMessPkt  Gl 4    2       ja   ja           B 4-4   B 4-4   
+      B 3-3    FzMessPkt  Gl 1    1       ja  nein          B 3-3   B 3-3   
+      B 4-5    FzMessPkt  Gl 1    1       ja   ja           B 4-5   B 4-5   
+      B 4-5    FzMessPkt  Gl 4    2       ja   ja           B 4-5   B 4-5   
+      K B      FzMessPkt  Gl 1    1       ja   ja           K B     K B     
+      K B      FzMessPkt  Gl 4    2       ja   ja           K B     K B     
+
+
+     Infrastrukturelemente der durchgehenden Hauptgleise
+     ———————————————————————————————————————————————————
+
+      Streckengleis Richtung 1  Richtung 1
+
+      Bst  Strecke  km 	Name	Erläuterung
+
+      K A    0    -2.880	Ende 1	Gleisende
+      K A    0    -2.880		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      K A    0    -2.200		ZB-Anfang	Steigend, PZB
+      K A    0    -2.200		ZB-Anfang	Steigend, ETCS1( DB Netz AG SRS 3.6.0  <ETCS 1 (FS) | ETCS 2>)/ETCS2( DB Netz AG SRS 3.6.0  <ETCS 1 (FS) | ETCS 2>)
+      K A    0    -2.200		Geschwindigkeit Abweichend	Steigend, v=160km/h, Wirkung ab hier, Alle, Ursache=, Zusatzbem.=
+      K A    0    -2.180	Va	Vorsignal	Steigend, Fb=9s, Unbekannt
+      K A    0    -1.440		Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      K A    0    -1.320		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      K A    0    -1.180	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      K A    0    -1.180	Vn1	Vorsignal	Steigend, Fb=9s, Unbekannt
+      K A    0    -0.980		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K A    0    -0.855	W02	Weiche, Stamm
+      K A    0    -0.855	W02	Weiche, Anfang
+      K A    0    -0.818		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    -0.780	W03	Weiche, Anfang
+      K A    0    -0.780	W03	Weiche, Stamm
+      K A    0    -0.680		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    -0.630	W05	Weiche, Anfang
+      K A    0    -0.630	W05	Weiche, Stamm
+      K A    0    -0.580		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    0.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      K A    0    0.120	PZB 500	Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      K A    0    0.375	H 2 Pv s	Halteplatz	Steigend, Personenzug, l=420.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K A    0    0.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K A    0    0.380	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      K A    0    0.380		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K A    0    0.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K A    0    0.630	W07	Weiche, Stamm
+      K A    0    0.630	W07	Weiche, Anfang
+      K A    0    0.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    0.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      K A    0    0.705	W09	Weiche, Anfang
+      K A    0    0.705	W09	Weiche, Stamm
+      K A    0    0.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    0.930	W12	Weiche, Stamm
+      K A    0    0.930	W12	Weiche, Anfang
+      K A    0    0.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    0.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K A    0    1.400		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      K A    0    2.100	VS -1 101	Vorsignal	Steigend, Fb=9s, Unbekannt
+      K A    0    2.200	0-2	Betriebsstellengrenze	=>S I 0-2, Gleis 2
+      S I    0    2.200	0-2	Betriebsstellengrenze	=>K A 0-2, Gleis 2
+      S I    0    3.100	101	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S I    0    3.150	SZSS -1 101	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S I    0    4.400		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S I    0    5.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S I    0    5.100	VS -1 103	Vorsignal	Steigend, Fb=9s, Unbekannt
+      S I    0    6.100	103	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S I    0    6.150	SZSS -1 103	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S I    0    7.120		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S I    0    7.800	0-1	Betriebsstellengrenze	=>B 4-1 0-1, Gleis 1
+      B 4-1  0    7.800	0-1	Betriebsstellengrenze	=>S I 0-1, Gleis 1
+      B 4-1  0    7.820	Va	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 4-1  0    8.560		Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 4-1  0    8.680		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 4-1  0    8.820	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-1  0    8.820	Vn1	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 4-1  0    9.020		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-1  0    9.145	W02	Weiche, Stamm
+      B 4-1  0    9.145	W02	Weiche, Anfang
+      B 4-1  0    9.182		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    9.220	W03	Weiche, Anfang
+      B 4-1  0    9.220	W03	Weiche, Stamm
+      B 4-1  0    9.320		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    9.370	W05	Weiche, Anfang
+      B 4-1  0    9.370	W05	Weiche, Stamm
+      B 4-1  0    9.420		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    10.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 4-1  0    10.120	PZB 500	Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 4-1  0    10.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-1  0    10.380	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-1  0    10.380		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-1  0    10.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-1  0    10.630	W07	Weiche, Stamm
+      B 4-1  0    10.630	W07	Weiche, Anfang
+      B 4-1  0    10.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    10.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-1  0    10.705	W09	Weiche, Anfang
+      B 4-1  0    10.705	W09	Weiche, Stamm
+      B 4-1  0    10.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    10.930	W12	Weiche, Stamm
+      B 4-1  0    10.930	W12	Weiche, Anfang
+      B 4-1  0    10.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    10.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-1  0    11.535		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 4-1  0    12.200	0-2	Betriebsstellengrenze	=>S II 0-2, Gleis 2
+      S II   0    12.200	0-2	Betriebsstellengrenze	=>B 4-1 0-2, Gleis 2
+      S II   0    12.235	VS -1 201	Vorsignal	Steigend, Fb=9s, Unbekannt
+      S II   0    13.235	201	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S II   0    13.285	SZSS -1 201	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S II   0    14.535		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S II   0    15.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S II   0    15.235	VS -1 203	Vorsignal	Steigend, Fb=9s, Unbekannt
+      S II   0    16.235	203	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S II   0    16.285	SZSS -1 203	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S II   0    17.390		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S II   0    17.800	0-1	Betriebsstellengrenze	=>B 3-1 0-1, Gleis 1
+      B 3-1  0    17.800	0-1	Betriebsstellengrenze	=>S II 0-1, Gleis 1
+      B 3-1  0    18.090	Va	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 3-1  0    18.410		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 3-1  0    18.830		Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 3-1  0    19.090	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-1  0    19.090	Vn1	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 3-1  0    19.290		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-1  0    19.415	W02	Weiche, Stamm
+      B 3-1  0    19.415	W02	Weiche, Anfang
+      B 3-1  0    19.452		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    19.490	W03	Weiche, Anfang
+      B 3-1  0    19.490	W03	Weiche, Stamm
+      B 3-1  0    19.540		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    19.640	W05	Weiche, Anfang
+      B 3-1  0    19.640	W05	Weiche, Stamm
+      B 3-1  0    19.690		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    19.850	PZB 500	Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 3-1  0    20.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 3-1  0    20.110	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-1  0    20.110		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-1  0    20.310		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-1  0    20.360	W06	Weiche, Stamm
+      B 3-1  0    20.360	W06	Weiche, Anfang
+      B 3-1  0    20.398		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    20.398		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 3-1  0    20.435	W07	Weiche, Anfang
+      B 3-1  0    20.435	W07	Weiche, Stamm
+      B 3-1  0    20.485		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    20.660	W10	Weiche, Stamm
+      B 3-1  0    20.660	W10	Weiche, Anfang
+      B 3-1  0    20.710		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    20.710		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-1  0    21.265		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 3-1  0    21.965	VS -1 301	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 3-1  0    22.200	0-2	Betriebsstellengrenze	=>S III 0-2, Gleis 2
+      S III  0    22.200	0-2	Betriebsstellengrenze	=>B 3-1 0-2, Gleis 2
+      S III  0    22.965	301	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S III  0    23.015	SZSS -1 301	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S III  0    24.265		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S III  0    24.965	VS -1 303	Vorsignal	Steigend, Fb=9s, Unbekannt
+      S III  0    25.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S III  0    25.965	303	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S III  0    26.015	SZSS -1 303	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S III  0    27.120		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S III  0    27.800	0-1	Betriebsstellengrenze	=>B 4-2 0-1, Gleis 1
+      B 4-2  0    27.800	0-1	Betriebsstellengrenze	=>S III 0-1, Gleis 1
+      B 4-2  0    27.820	Va	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 4-2  0    28.560		Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 4-2  0    28.680		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 4-2  0    28.820	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-2  0    28.820	Vn1	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 4-2  0    29.020		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-2  0    29.145	W02	Weiche, Stamm
+      B 4-2  0    29.145	W02	Weiche, Anfang
+      B 4-2  0    29.182		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    29.220	W03	Weiche, Anfang
+      B 4-2  0    29.220	W03	Weiche, Stamm
+      B 4-2  0    29.320		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    29.370	W05	Weiche, Anfang
+      B 4-2  0    29.370	W05	Weiche, Stamm
+      B 4-2  0    29.420		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    30.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 4-2  0    30.120	PZB 500	Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 4-2  0    30.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-2  0    30.380	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-2  0    30.380		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-2  0    30.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-2  0    30.630	W07	Weiche, Stamm
+      B 4-2  0    30.630	W07	Weiche, Anfang
+      B 4-2  0    30.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    30.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-2  0    30.705	W09	Weiche, Anfang
+      B 4-2  0    30.705	W09	Weiche, Stamm
+      B 4-2  0    30.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    30.930	W12	Weiche, Stamm
+      B 4-2  0    30.930	W12	Weiche, Anfang
+      B 4-2  0    30.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    30.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-2  0    31.400		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 4-2  0    32.100	VS -1 401	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 4-2  0    32.200	0-2	Betriebsstellengrenze	=>S IV 0-2, Gleis 2
+      S IV   0    32.200	0-2	Betriebsstellengrenze	=>B 4-2 0-2, Gleis 2
+      S IV   0    33.100	401	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S IV   0    33.150	SZSS -1 401	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IV   0    34.400		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S IV   0    35.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S IV   0    35.100	VS -1 403	Vorsignal	Steigend, Fb=9s, Unbekannt
+      S IV   0    36.100	403	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S IV   0    36.150	SZSS -1 403	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IV   0    37.120		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S IV   0    37.800	0-1	Betriebsstellengrenze	=>K C 0-1, Gleis 1
+      K C    0    37.800	0-1	Betriebsstellengrenze	=>S IV 0-1, Gleis 1
+      K C    0    37.820	Va	Vorsignal	Steigend, Fb=9s, Unbekannt
+      K C    0    38.560		Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      K C    0    38.680		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      K C    0    38.820	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      K C    0    38.820	Vn1	Vorsignal	Steigend, Fb=9s, Unbekannt
+      K C    0    39.020		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K C    0    39.145	W02	Weiche, Stamm
+      K C    0    39.145	W02	Weiche, Anfang
+      K C    0    39.182		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    39.220	W03	Weiche, Anfang
+      K C    0    39.220	W03	Weiche, Stamm
+      K C    0    39.320		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    39.370	W05	Weiche, Anfang
+      K C    0    39.370	W05	Weiche, Stamm
+      K C    0    39.420		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    40.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      K C    0    40.120	PZB 500	Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      K C    0    40.375	H 2 Pv s	Halteplatz	Steigend, Personenzug, l=420.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K C    0    40.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K C    0    40.380	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      K C    0    40.380		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K C    0    40.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K C    0    40.630	W07	Weiche, Stamm
+      K C    0    40.630	W07	Weiche, Anfang
+      K C    0    40.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    40.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      K C    0    40.705	W09	Weiche, Anfang
+      K C    0    40.705	W09	Weiche, Stamm
+      K C    0    40.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    40.930	W12	Weiche, Stamm
+      K C    0    40.930	W12	Weiche, Anfang
+      K C    0    40.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    40.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K C    0    41.400		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      K C    0    42.100	VS -1 501	Vorsignal	Steigend, Fb=9s, Unbekannt
+      K C    0    42.200	0-2	Betriebsstellengrenze	=>S V 0-2, Gleis 2
+      S V    0    42.200	0-2	Betriebsstellengrenze	=>K C 0-2, Gleis 2
+      S V    0    43.100	501	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S V    0    43.150	SZSS -1 501	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S V    0    44.400		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S V    0    45.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S V    0    45.100	VS -1 503	Vorsignal	Steigend, Fb=9s, Unbekannt
+      S V    0    46.100	503	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S V    0    46.150	SZSS -1 503	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S V    0    47.120		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S V    0    47.800	0-1	Betriebsstellengrenze	=>B 4-3 0-1, Gleis 1
+      B 4-3  0    47.800	0-1	Betriebsstellengrenze	=>S V 0-1, Gleis 1
+      B 4-3  0    47.820	Va	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 4-3  0    48.560		Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 4-3  0    48.680		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 4-3  0    48.820	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-3  0    48.820	Vn1	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 4-3  0    49.020		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-3  0    49.145	W02	Weiche, Stamm
+      B 4-3  0    49.145	W02	Weiche, Anfang
+      B 4-3  0    49.182		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    49.220	W03	Weiche, Anfang
+      B 4-3  0    49.220	W03	Weiche, Stamm
+      B 4-3  0    49.320		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    49.370	W05	Weiche, Anfang
+      B 4-3  0    49.370	W05	Weiche, Stamm
+      B 4-3  0    49.420		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    50.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 4-3  0    50.120	PZB 500	Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 4-3  0    50.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-3  0    50.380	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-3  0    50.380		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-3  0    50.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-3  0    50.630	W07	Weiche, Stamm
+      B 4-3  0    50.630	W07	Weiche, Anfang
+      B 4-3  0    50.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    50.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-3  0    50.705	W09	Weiche, Anfang
+      B 4-3  0    50.705	W09	Weiche, Stamm
+      B 4-3  0    50.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    50.930	W12	Weiche, Stamm
+      B 4-3  0    50.930	W12	Weiche, Anfang
+      B 4-3  0    50.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    50.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-3  0    51.535		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 4-3  0    52.200	0-2	Betriebsstellengrenze	=>S VI 0-2, Gleis 2
+      S VI   0    52.200	0-2	Betriebsstellengrenze	=>B 4-3 0-2, Gleis 2
+      S VI   0    52.235	VS -1 601	Vorsignal	Steigend, Fb=9s, Unbekannt
+      S VI   0    53.235	601	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S VI   0    53.285	SZSS -1 601	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VI   0    54.535		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S VI   0    55.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S VI   0    55.235	VS -1 603	Vorsignal	Steigend, Fb=9s, Unbekannt
+      S VI   0    56.235	603	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S VI   0    56.285	SZSS -1 603	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VI   0    57.390		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S VI   0    57.800	0-1	Betriebsstellengrenze	=>B 3-2 0-1, Gleis 1
+      B 3-2  0    57.800	0-1	Betriebsstellengrenze	=>S VI 0-1, Gleis 1
+      B 3-2  0    58.090	Va	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 3-2  0    58.485		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 3-2  0    58.830		Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 3-2  0    59.090	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-2  0    59.090	Vn1	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 3-2  0    59.290		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-2  0    59.415	W02	Weiche, Stamm
+      B 3-2  0    59.415	W02	Weiche, Anfang
+      B 3-2  0    59.452		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    59.490	W03	Weiche, Anfang
+      B 3-2  0    59.490	W03	Weiche, Stamm
+      B 3-2  0    59.540		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    59.925	PZB 500	Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 3-2  0    60.000	Gl 1	Fahrzeitmesspunkt	Beide Richtungen
+      B 3-2  0    60.180	H 1 Pv f	Halteplatz	Steigend, Personenzug, l=210.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 3-2  0    60.185	N1	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-2  0    60.185		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-2  0    60.385		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-2  0    60.435	W07	Weiche, Anfang
+      B 3-2  0    60.435	W07	Weiche, Stamm
+      B 3-2  0    60.475		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    60.660	W10	Weiche, Stamm
+      B 3-2  0    60.660	W10	Weiche, Anfang
+      B 3-2  0    60.710		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    60.710		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-2  0    61.303		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 3-2  0    62.003	VS -1 701	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 3-2  0    62.200	0-9	Betriebsstellengrenze	=>S VII 0-9, Gleis 9
+      S VII  0    62.200	0-9	Betriebsstellengrenze	=>B 3-2 0-9, Gleis 9
+      S VII  0    63.003	701	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S VII  0    63.053	SZSS -1 701	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VII  0    64.303		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S VII  0    65.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S VII  0    65.003	VS -1 703	Vorsignal	Steigend, Fb=9s, Unbekannt
+      S VII  0    66.003	703	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S VII  0    66.053	SZSS -1 703	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VII  0    67.120		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S VII  0    67.800	0-1	Betriebsstellengrenze	=>B 4-4 0-1, Gleis 1
+      B 4-4  0    67.800	0-1	Betriebsstellengrenze	=>S VII 0-1, Gleis 1
+      B 4-4  0    67.820	Va	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 4-4  0    68.560		Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 4-4  0    68.680		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 4-4  0    68.820	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-4  0    68.820	Vn1	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 4-4  0    69.020		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-4  0    69.145	W02	Weiche, Stamm
+      B 4-4  0    69.145	W02	Weiche, Anfang
+      B 4-4  0    69.182		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    69.220	W03	Weiche, Anfang
+      B 4-4  0    69.220	W03	Weiche, Stamm
+      B 4-4  0    69.320		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    69.370	W05	Weiche, Anfang
+      B 4-4  0    69.370	W05	Weiche, Stamm
+      B 4-4  0    69.420		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    70.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 4-4  0    70.120	PZB 500	Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 4-4  0    70.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-4  0    70.380	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-4  0    70.380		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-4  0    70.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-4  0    70.630	W07	Weiche, Stamm
+      B 4-4  0    70.630	W07	Weiche, Anfang
+      B 4-4  0    70.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    70.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-4  0    70.705	W09	Weiche, Anfang
+      B 4-4  0    70.705	W09	Weiche, Stamm
+      B 4-4  0    70.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    70.930	W12	Weiche, Stamm
+      B 4-4  0    70.930	W12	Weiche, Anfang
+      B 4-4  0    70.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    70.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-4  0    71.535		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 4-4  0    72.200	0-2	Betriebsstellengrenze	=>S VIII 0-2, Gleis 2
+      S VIII 0    72.200	0-2	Betriebsstellengrenze	=>B 4-4 0-2, Gleis 2
+      S VIII 0    72.235	VS -1 801	Vorsignal	Steigend, Fb=9s, Unbekannt
+      S VIII 0    73.235	801	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S VIII 0    73.285	SZSS -1 801	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VIII 0    74.535		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S VIII 0    75.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S VIII 0    75.235	VS -1 803	Vorsignal	Steigend, Fb=9s, Unbekannt
+      S VIII 0    76.235	803	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S VIII 0    76.285	SZSS -1 803	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S VIII 0    77.390		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S VIII 0    77.800	0-1	Betriebsstellengrenze	=>B 3-3 0-1, Gleis 1
+      B 3-3  0    77.800	0-1	Betriebsstellengrenze	=>S VIII 0-1, Gleis 1
+      B 3-3  0    78.090	Va	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 3-3  0    78.410		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 3-3  0    78.830		Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 3-3  0    79.090	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-3  0    79.090	Vn1	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 3-3  0    79.290		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-3  0    79.415	W02	Weiche, Stamm
+      B 3-3  0    79.415	W02	Weiche, Anfang
+      B 3-3  0    79.452		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    79.490	W03	Weiche, Anfang
+      B 3-3  0    79.490	W03	Weiche, Stamm
+      B 3-3  0    79.540		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    79.640	W05	Weiche, Anfang
+      B 3-3  0    79.640	W05	Weiche, Stamm
+      B 3-3  0    79.690		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    79.850	PZB 500	Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 3-3  0    80.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 3-3  0    80.110	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-3  0    80.110		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-3  0    80.310		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 3-3  0    80.360	W06	Weiche, Stamm
+      B 3-3  0    80.360	W06	Weiche, Anfang
+      B 3-3  0    80.398		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    80.398		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 3-3  0    80.435	W07	Weiche, Anfang
+      B 3-3  0    80.435	W07	Weiche, Stamm
+      B 3-3  0    80.485		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    80.660	W10	Weiche, Stamm
+      B 3-3  0    80.660	W10	Weiche, Anfang
+      B 3-3  0    80.710		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    80.710		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-3  0    81.265		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 3-3  0    81.965	VS -1 901	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 3-3  0    82.200	0-2	Betriebsstellengrenze	=>S IX 0-2, Gleis 2
+      S IX   0    82.200	0-2	Betriebsstellengrenze	=>B 3-3 0-2, Gleis 2
+      S IX   0    82.965	901	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S IX   0    83.015	SZSS -1 901	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IX   0    84.265		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S IX   0    84.965	VS -1 903	Vorsignal	Steigend, Fb=9s, Unbekannt
+      S IX   0    85.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S IX   0    85.965	903	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S IX   0    86.015	SZSS -1 903	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S IX   0    87.120		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S IX   0    87.800	0-1	Betriebsstellengrenze	=>B 4-5 0-1, Gleis 1
+      B 4-5  0    87.800	0-1	Betriebsstellengrenze	=>S IX 0-1, Gleis 1
+      B 4-5  0    87.820	Va	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 4-5  0    88.560		Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 4-5  0    88.680		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 4-5  0    88.820	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-5  0    88.820	Vn1	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 4-5  0    89.020		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-5  0    89.145	W02	Weiche, Stamm
+      B 4-5  0    89.145	W02	Weiche, Anfang
+      B 4-5  0    89.182		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    89.220	W03	Weiche, Anfang
+      B 4-5  0    89.220	W03	Weiche, Stamm
+      B 4-5  0    89.320		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    89.370	W05	Weiche, Anfang
+      B 4-5  0    89.370	W05	Weiche, Stamm
+      B 4-5  0    89.420		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    90.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 4-5  0    90.120	PZB 500	Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      B 4-5  0    90.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-5  0    90.380	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-5  0    90.380		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-5  0    90.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      B 4-5  0    90.630	W07	Weiche, Stamm
+      B 4-5  0    90.630	W07	Weiche, Anfang
+      B 4-5  0    90.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    90.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-5  0    90.705	W09	Weiche, Anfang
+      B 4-5  0    90.705	W09	Weiche, Stamm
+      B 4-5  0    90.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    90.930	W12	Weiche, Stamm
+      B 4-5  0    90.930	W12	Weiche, Anfang
+      B 4-5  0    90.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    90.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-5  0    91.400		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      B 4-5  0    92.100	VS -1 1001	Vorsignal	Steigend, Fb=9s, Unbekannt
+      B 4-5  0    92.200	0-2	Betriebsstellengrenze	=>S X 0-2, Gleis 2
+      S X    0    92.200	0-2	Betriebsstellengrenze	=>B 4-5 0-2, Gleis 2
+      S X    0    93.100	1001	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S X    0    93.150	SZSS -1 1001	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S X    0    94.400		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S X    0    95.000	1	Fahrzeitmesspunkt	Beide Richtungen
+      S X    0    95.100	VS -1 1003	Vorsignal	Steigend, Fb=9s, Unbekannt
+      S X    0    96.100	1003	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      S X    0    96.150	SZSS -1 1003	Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      S X    0    97.120		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      S X    0    97.800	0-1	Betriebsstellengrenze	=>K B 0-1, Gleis 1
+      K B    0    97.800	0-1	Betriebsstellengrenze	=>S X 0-1, Gleis 1
+      K B    0    97.820	Va	Vorsignal	Steigend, Fb=9s, Unbekannt
+      K B    0    98.560		Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      K B    0    98.680		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      K B    0    98.820	A	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      K B    0    98.820	Vn1	Vorsignal	Steigend, Fb=9s, Unbekannt
+      K B    0    99.020		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K B    0    99.145	W02	Weiche, Stamm
+      K B    0    99.145	W02	Weiche, Anfang
+      K B    0    99.182		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    99.220	W03	Weiche, Anfang
+      K B    0    99.220	W03	Weiche, Stamm
+      K B    0    99.320		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    99.370	W05	Weiche, Anfang
+      K B    0    99.370	W05	Weiche, Stamm
+      K B    0    99.420		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    100.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      K B    0    100.120	PZB 500	Punktbeeinflussung	Steigend, Konventionell, kennung=500
+      K B    0    100.375	H 2 Pv s	Halteplatz	Steigend, Personenzug, l=420.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K B    0    100.375	H 2 Gv s	Halteplatz	Steigend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K B    0    100.380	N2	Hauptsignal	Steigend, DFa=3s, rs=20km/h, appr.=0km/h
+      K B    0    100.380		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K B    0    100.580		Zugschlussstelle	Steigend, Signal, Fa=3.00s, SvL
+      K B    0    100.630	W07	Weiche, Stamm
+      K B    0    100.630	W07	Weiche, Anfang
+      K B    0    100.668		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    100.668		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      K B    0    100.705	W09	Weiche, Anfang
+      K B    0    100.705	W09	Weiche, Stamm
+      K B    0    100.755		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    100.930	W12	Weiche, Stamm
+      K B    0    100.930	W12	Weiche, Anfang
+      K B    0    100.980		Zugschlussstelle	Steigend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    100.980		Geschwindigkeit Zulässig	Steigend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K B    0    101.400		Punktbeeinflussung	Steigend, ETCS L1 FS, kennung=1
+      K B    0    102.200	Ende 2	Gleisende
+
+      Streckengleis Richtung 2  Richtung 2
+
+      Bst  Strecke  km 	Name	Erläuterung
+
+      K B    0    102.880	GE-W7	Gleisende
+      K B    0    102.880		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      K B    0    102.200		ZB-Anfang	Fallend, PZB
+      K B    0    102.200		ZB-Anfang	Fallend, ETCS1( DB Netz AG SRS 3.6.0  <ETCS 1 (FS) | ETCS 2>)/ETCS2( DB Netz AG SRS 3.6.0  <ETCS 1 (FS) | ETCS 2>)
+      K B    0    102.200	160	Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K B    0    102.180	Vf	Vorsignal	Fallend, Fb=9s, Unbekannt
+      K B    0    101.440		Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      K B    0    101.320		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      K B    0    101.180	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      K B    0    101.180	Vp1	Vorsignal	Fallend, Fb=9s, Unbekannt
+      K B    0    100.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K B    0    100.855	W11	Weiche, Stamm
+      K B    0    100.855	W11	Weiche, Anfang
+      K B    0    100.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    100.780	W10	Weiche, Anfang
+      K B    0    100.780	W10	Weiche, Stamm
+      K B    0    100.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    100.630	W08	Weiche, Anfang
+      K B    0    100.630	W08	Weiche, Stamm
+      K B    0    100.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    100.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      K B    0    99.880	PZB 500	Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      K B    0    99.625	H 3 Pv f	Halteplatz	Fallend, Personenzug, l=420.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K B    0    99.625	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K B    0    99.620	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      K B    0    99.620		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K B    0    99.420		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K B    0    99.370	W06	Weiche, Abzw. rechts
+      K B    0    99.370	W06	Weiche, Anfang
+      K B    0    99.332		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    99.332		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      K B    0    99.295	W04	Weiche, Anfang
+      K B    0    99.295	W04	Weiche, Stamm
+      K B    0    99.245		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    99.070	W01	Weiche, Stamm
+      K B    0    99.070	W01	Weiche, Anfang
+      K B    0    99.020		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K B    0    99.020		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K B    0    98.600		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      K B    0    97.900	VS -1 1004	Vorsignal	Fallend, Fb=9s, Unbekannt
+      K B    0    97.800	0-2	Betriebsstellengrenze	=>S X 0-2, Gleis 2
+      S X    0    97.800	0-2	Betriebsstellengrenze	=>K B 0-2, Gleis 2
+      S X    0    96.900	1004	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S X    0    96.850	SZSS -1 1004	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S X    0    95.600		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S X    0    95.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S X    0    94.900	VS -1 1002	Vorsignal	Fallend, Fb=9s, Unbekannt
+      S X    0    93.900	1002	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S X    0    93.850	SZSS -1 1002	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S X    0    92.800		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S X    0    92.200	0-7	Betriebsstellengrenze	=>B 4-5 0-7, Gleis 7
+      B 4-5  0    92.200	0-7	Betriebsstellengrenze	=>S X 0-7, Gleis 7
+      B 4-5  0    92.180	Vf	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 4-5  0    91.440		Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 4-5  0    91.320		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 4-5  0    91.180	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-5  0    91.180	Vp1	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 4-5  0    90.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-5  0    90.855	W11	Weiche, Stamm
+      B 4-5  0    90.855	W11	Weiche, Anfang
+      B 4-5  0    90.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    90.780	W10	Weiche, Anfang
+      B 4-5  0    90.780	W10	Weiche, Stamm
+      B 4-5  0    90.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    90.630	W08	Weiche, Anfang
+      B 4-5  0    90.630	W08	Weiche, Stamm
+      B 4-5  0    90.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    90.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      B 4-5  0    89.880	PZB 500	Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 4-5  0    89.625	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-5  0    89.620	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-5  0    89.620		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-5  0    89.420		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-5  0    89.370	W06	Weiche, Abzw. rechts
+      B 4-5  0    89.370	W06	Weiche, Anfang
+      B 4-5  0    89.332		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    89.332		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-5  0    89.295	W04	Weiche, Anfang
+      B 4-5  0    89.295	W04	Weiche, Stamm
+      B 4-5  0    89.245		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    89.070	W01	Weiche, Stamm
+      B 4-5  0    89.070	W01	Weiche, Anfang
+      B 4-5  0    89.020		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-5  0    89.020		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-5  0    88.465		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 4-5  0    87.800	0-2	Betriebsstellengrenze	=>S IX 0-2, Gleis 2
+      S IX   0    87.800	0-2	Betriebsstellengrenze	=>B 4-5 0-2, Gleis 2
+      S IX   0    87.765	VS -1 904	Vorsignal	Fallend, Fb=9s, Unbekannt
+      S IX   0    86.765	904	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S IX   0    86.715	SZSS -1 904	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IX   0    85.465		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S IX   0    85.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S IX   0    84.765	VS -1 902	Vorsignal	Fallend, Fb=9s, Unbekannt
+      S IX   0    83.765	902	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S IX   0    83.715	SZSS -1 902	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IX   0    82.610		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S IX   0    82.200	0-7	Betriebsstellengrenze	=>B 3-3 0-7, Gleis 7
+      B 3-3  0    82.200	0-7	Betriebsstellengrenze	=>S IX 0-7, Gleis 7
+      B 3-3  0    81.910	Vf	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 3-3  0    81.515		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 3-3  0    81.170		Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 3-3  0    80.910	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-3  0    80.910	Vp1	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 3-3  0    80.710		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-3  0    80.585	W09	Weiche, Stamm
+      B 3-3  0    80.585	W09	Weiche, Anfang
+      B 3-3  0    80.548		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    80.510	W08	Weiche, Anfang
+      B 3-3  0    80.510	W08	Weiche, Stamm
+      B 3-3  0    80.460		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    80.075	PZB 500	Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 3-3  0    80.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      B 3-3  0    79.820	H 3 Pv f	Halteplatz	Fallend, Personenzug, l=210.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 3-3  0    79.815	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-3  0    79.815		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-3  0    79.615		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-3  0    79.565	W04	Weiche, Anfang
+      B 3-3  0    79.565	W04	Weiche, Stamm
+      B 3-3  0    79.525		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    79.340	W01	Weiche, Stamm
+      B 3-3  0    79.340	W01	Weiche, Anfang
+      B 3-3  0    79.290		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-3  0    79.290		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-3  0    78.698		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 3-3  0    77.998	VS -1 804	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 3-3  0    77.800	0-2	Betriebsstellengrenze	=>S VIII 0-2, Gleis 2
+      S VIII 0    77.800	0-2	Betriebsstellengrenze	=>B 3-3 0-2, Gleis 2
+      S VIII 0    76.998	804	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S VIII 0    76.948	SZSS -1 804	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VIII 0    75.698		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S VIII 0    75.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S VIII 0    74.998	VS -1 802	Vorsignal	Fallend, Fb=9s, Unbekannt
+      S VIII 0    73.998	802	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S VIII 0    73.948	SZSS -1 802	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VIII 0    72.880		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S VIII 0    72.200	0-7	Betriebsstellengrenze	=>B 4-4 0-7, Gleis 7
+      B 4-4  0    72.200	0-7	Betriebsstellengrenze	=>S VIII 0-7, Gleis 7
+      B 4-4  0    72.180	Vf	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 4-4  0    71.440		Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 4-4  0    71.320		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 4-4  0    71.180	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-4  0    71.180	Vp1	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 4-4  0    70.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-4  0    70.855	W11	Weiche, Stamm
+      B 4-4  0    70.855	W11	Weiche, Anfang
+      B 4-4  0    70.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    70.780	W10	Weiche, Anfang
+      B 4-4  0    70.780	W10	Weiche, Stamm
+      B 4-4  0    70.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    70.630	W08	Weiche, Anfang
+      B 4-4  0    70.630	W08	Weiche, Stamm
+      B 4-4  0    70.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    70.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      B 4-4  0    69.880	PZB 500	Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 4-4  0    69.625	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-4  0    69.620	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-4  0    69.620		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-4  0    69.420		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-4  0    69.370	W06	Weiche, Abzw. rechts
+      B 4-4  0    69.370	W06	Weiche, Anfang
+      B 4-4  0    69.332		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    69.332		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-4  0    69.295	W04	Weiche, Anfang
+      B 4-4  0    69.295	W04	Weiche, Stamm
+      B 4-4  0    69.245		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    69.070	W01	Weiche, Stamm
+      B 4-4  0    69.070	W01	Weiche, Anfang
+      B 4-4  0    69.020		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-4  0    69.020		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-4  0    68.465		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 4-4  0    67.800	0-2	Betriebsstellengrenze	=>S VII 0-2, Gleis 2
+      S VII  0    67.800	0-2	Betriebsstellengrenze	=>B 4-4 0-2, Gleis 2
+      S VII  0    67.765	VS -1 704	Vorsignal	Fallend, Fb=9s, Unbekannt
+      S VII  0    66.765	704	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S VII  0    66.715	SZSS -1 704	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VII  0    65.465		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S VII  0    65.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S VII  0    64.765	VS -1 702	Vorsignal	Fallend, Fb=9s, Unbekannt
+      S VII  0    63.765	702	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S VII  0    63.715	SZSS -1 702	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VII  0    62.610		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S VII  0    62.200	0-1	Betriebsstellengrenze	=>B 3-2 0-1, Gleis 1
+      B 3-2  0    62.200	0-1	Betriebsstellengrenze	=>S VII 0-1, Gleis 1
+      B 3-2  0    61.910	Vf	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 3-2  0    61.590		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 3-2  0    61.170		Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 3-2  0    60.910	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-2  0    60.910	Vp1	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 3-2  0    60.710		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-2  0    60.585	W09	Weiche, Stamm
+      B 3-2  0    60.585	W09	Weiche, Anfang
+      B 3-2  0    60.548		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    60.510	W08	Weiche, Anfang
+      B 3-2  0    60.510	W08	Weiche, Stamm
+      B 3-2  0    60.460		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    60.360	W06	Weiche, Anfang
+      B 3-2  0    60.360	W06	Weiche, Stamm
+      B 3-2  0    60.310		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    60.150	PZB 500	Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 3-2  0    60.000	Gl 2	Fahrzeitmesspunkt	Beide Richtungen, BS-Mitte
+      B 3-2  0    59.890	P2	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-2  0    59.890		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-2  0    59.690		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-2  0    59.640	W05	Weiche, Stamm
+      B 3-2  0    59.640	W05	Weiche, Anfang
+      B 3-2  0    59.602		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    59.602		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 3-2  0    59.565	W04	Weiche, Anfang
+      B 3-2  0    59.565	W04	Weiche, Stamm
+      B 3-2  0    59.515		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    59.340	W01	Weiche, Stamm
+      B 3-2  0    59.340	W01	Weiche, Anfang
+      B 3-2  0    59.290		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-2  0    59.290		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-2  0    58.735		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 3-2  0    58.035	VS -1 604	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 3-2  0    57.800	0-2	Betriebsstellengrenze	=>S VI 0-2, Gleis 2
+      S VI   0    57.800	0-2	Betriebsstellengrenze	=>B 3-2 0-2, Gleis 2
+      S VI   0    57.035	604	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S VI   0    56.985	SZSS -1 604	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VI   0    55.735		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S VI   0    55.035	VS -1 602	Vorsignal	Fallend, Fb=9s, Unbekannt
+      S VI   0    55.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S VI   0    54.035	602	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S VI   0    53.985	SZSS -1 602	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S VI   0    52.880		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S VI   0    52.200	0-7	Betriebsstellengrenze	=>B 4-3 0-7, Gleis 7
+      B 4-3  0    52.200	0-7	Betriebsstellengrenze	=>S VI 0-7, Gleis 7
+      B 4-3  0    52.180	Vf	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 4-3  0    51.440		Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 4-3  0    51.320		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 4-3  0    51.180	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-3  0    51.180	Vp1	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 4-3  0    50.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-3  0    50.855	W11	Weiche, Stamm
+      B 4-3  0    50.855	W11	Weiche, Anfang
+      B 4-3  0    50.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    50.780	W10	Weiche, Anfang
+      B 4-3  0    50.780	W10	Weiche, Stamm
+      B 4-3  0    50.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    50.630	W08	Weiche, Anfang
+      B 4-3  0    50.630	W08	Weiche, Stamm
+      B 4-3  0    50.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    50.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      B 4-3  0    49.880	PZB 500	Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 4-3  0    49.625	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-3  0    49.620	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-3  0    49.620		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-3  0    49.420		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-3  0    49.370	W06	Weiche, Abzw. rechts
+      B 4-3  0    49.370	W06	Weiche, Anfang
+      B 4-3  0    49.332		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    49.332		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-3  0    49.295	W04	Weiche, Anfang
+      B 4-3  0    49.295	W04	Weiche, Stamm
+      B 4-3  0    49.245		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    49.070	W01	Weiche, Stamm
+      B 4-3  0    49.070	W01	Weiche, Anfang
+      B 4-3  0    49.020		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-3  0    49.020		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-3  0    48.600		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 4-3  0    47.900	VS -1 504	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 4-3  0    47.800	0-2	Betriebsstellengrenze	=>S V 0-2, Gleis 2
+      S V    0    47.800	0-2	Betriebsstellengrenze	=>B 4-3 0-2, Gleis 2
+      S V    0    46.900	504	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S V    0    46.850	SZSS -1 504	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S V    0    45.600		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S V    0    45.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S V    0    44.900	VS -1 502	Vorsignal	Fallend, Fb=9s, Unbekannt
+      S V    0    43.900	502	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S V    0    43.850	SZSS -1 502	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S V    0    42.880		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S V    0    42.200	0-7	Betriebsstellengrenze	=>K C 0-7, Gleis 7
+      K C    0    42.200	0-7	Betriebsstellengrenze	=>S V 0-7, Gleis 7
+      K C    0    42.180	Vf	Vorsignal	Fallend, Fb=9s, Unbekannt
+      K C    0    41.440		Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      K C    0    41.320		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      K C    0    41.180	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      K C    0    41.180	Vp1	Vorsignal	Fallend, Fb=9s, Unbekannt
+      K C    0    40.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K C    0    40.855	W11	Weiche, Stamm
+      K C    0    40.855	W11	Weiche, Anfang
+      K C    0    40.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    40.780	W10	Weiche, Anfang
+      K C    0    40.780	W10	Weiche, Stamm
+      K C    0    40.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    40.630	W08	Weiche, Anfang
+      K C    0    40.630	W08	Weiche, Stamm
+      K C    0    40.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    40.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      K C    0    39.880	PZB 500	Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      K C    0    39.625	H 3 Pv f	Halteplatz	Fallend, Personenzug, l=420.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K C    0    39.625	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K C    0    39.620	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      K C    0    39.620		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K C    0    39.420		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K C    0    39.370	W06	Weiche, Abzw. rechts
+      K C    0    39.370	W06	Weiche, Anfang
+      K C    0    39.332		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    39.332		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      K C    0    39.295	W04	Weiche, Anfang
+      K C    0    39.295	W04	Weiche, Stamm
+      K C    0    39.245		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    39.070	W01	Weiche, Stamm
+      K C    0    39.070	W01	Weiche, Anfang
+      K C    0    39.020		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K C    0    39.020		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K C    0    38.600		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      K C    0    37.900	VS -1 404	Vorsignal	Fallend, Fb=9s, Unbekannt
+      K C    0    37.800	0-2	Betriebsstellengrenze	=>S IV 0-2, Gleis 2
+      S IV   0    37.800	0-2	Betriebsstellengrenze	=>K C 0-2, Gleis 2
+      S IV   0    36.900	404	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S IV   0    36.850	SZSS -1 404	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IV   0    35.600		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S IV   0    35.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S IV   0    34.900	VS -1 402	Vorsignal	Fallend, Fb=9s, Unbekannt
+      S IV   0    33.900	402	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S IV   0    33.850	SZSS -1 402	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S IV   0    32.880		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S IV   0    32.200	0-7	Betriebsstellengrenze	=>B 4-2 0-7, Gleis 7
+      B 4-2  0    32.200	0-7	Betriebsstellengrenze	=>S IV 0-7, Gleis 7
+      B 4-2  0    32.180	Vf	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 4-2  0    31.440		Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 4-2  0    31.320		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 4-2  0    31.180	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-2  0    31.180	Vp1	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 4-2  0    30.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-2  0    30.855	W11	Weiche, Stamm
+      B 4-2  0    30.855	W11	Weiche, Anfang
+      B 4-2  0    30.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    30.780	W10	Weiche, Anfang
+      B 4-2  0    30.780	W10	Weiche, Stamm
+      B 4-2  0    30.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    30.630	W08	Weiche, Anfang
+      B 4-2  0    30.630	W08	Weiche, Stamm
+      B 4-2  0    30.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    30.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      B 4-2  0    29.880	PZB 500	Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 4-2  0    29.625	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-2  0    29.620	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-2  0    29.620		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-2  0    29.420		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-2  0    29.370	W06	Weiche, Abzw. rechts
+      B 4-2  0    29.370	W06	Weiche, Anfang
+      B 4-2  0    29.332		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    29.332		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-2  0    29.295	W04	Weiche, Anfang
+      B 4-2  0    29.295	W04	Weiche, Stamm
+      B 4-2  0    29.245		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    29.070	W01	Weiche, Stamm
+      B 4-2  0    29.070	W01	Weiche, Anfang
+      B 4-2  0    29.020		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-2  0    29.020		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-2  0    28.465		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 4-2  0    27.800	0-2	Betriebsstellengrenze	=>S III 0-2, Gleis 2
+      S III  0    27.800	0-2	Betriebsstellengrenze	=>B 4-2 0-2, Gleis 2
+      S III  0    27.765	VS -1 304	Vorsignal	Fallend, Fb=9s, Unbekannt
+      S III  0    26.765	304	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S III  0    26.715	SZSS -1 304	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S III  0    25.465		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S III  0    25.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S III  0    24.765	VS -1 302	Vorsignal	Fallend, Fb=9s, Unbekannt
+      S III  0    23.765	302	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S III  0    23.715	SZSS -1 302	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S III  0    22.610		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S III  0    22.200	0-7	Betriebsstellengrenze	=>B 3-1 0-7, Gleis 7
+      B 3-1  0    22.200	0-7	Betriebsstellengrenze	=>S III 0-7, Gleis 7
+      B 3-1  0    21.910	Vf	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 3-1  0    21.515		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 3-1  0    21.170		Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 3-1  0    20.910	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-1  0    20.910	Vp1	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 3-1  0    20.710		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-1  0    20.585	W09	Weiche, Stamm
+      B 3-1  0    20.585	W09	Weiche, Anfang
+      B 3-1  0    20.548		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    20.510	W08	Weiche, Anfang
+      B 3-1  0    20.510	W08	Weiche, Stamm
+      B 3-1  0    20.460		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    20.075	PZB 500	Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 3-1  0    20.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      B 3-1  0    19.820	H 3 Pv f	Halteplatz	Fallend, Personenzug, l=210.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 3-1  0    19.815	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 3-1  0    19.815		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-1  0    19.615		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 3-1  0    19.565	W04	Weiche, Anfang
+      B 3-1  0    19.565	W04	Weiche, Stamm
+      B 3-1  0    19.525		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    19.340	W01	Weiche, Stamm
+      B 3-1  0    19.340	W01	Weiche, Anfang
+      B 3-1  0    19.290		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 3-1  0    19.290		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 3-1  0    18.698		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 3-1  0    17.998	VS -1 204	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 3-1  0    17.800	0-2	Betriebsstellengrenze	=>S II 0-2, Gleis 2
+      S II   0    17.800	0-2	Betriebsstellengrenze	=>B 3-1 0-2, Gleis 2
+      S II   0    16.998	204	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S II   0    16.948	SZSS -1 204	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S II   0    15.698		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S II   0    15.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S II   0    14.998	VS -1 202	Vorsignal	Fallend, Fb=9s, Unbekannt
+      S II   0    13.998	202	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S II   0    13.948	SZSS -1 202	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S II   0    12.880		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S II   0    12.200	0-7	Betriebsstellengrenze	=>B 4-1 0-7, Gleis 7
+      B 4-1  0    12.200	0-7	Betriebsstellengrenze	=>S II 0-7, Gleis 7
+      B 4-1  0    12.180	Vf	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 4-1  0    11.440		Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 4-1  0    11.320		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 4-1  0    11.180	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-1  0    11.180	Vp1	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 4-1  0    10.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-1  0    10.855	W11	Weiche, Stamm
+      B 4-1  0    10.855	W11	Weiche, Anfang
+      B 4-1  0    10.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    10.780	W10	Weiche, Anfang
+      B 4-1  0    10.780	W10	Weiche, Stamm
+      B 4-1  0    10.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    10.630	W08	Weiche, Anfang
+      B 4-1  0    10.630	W08	Weiche, Stamm
+      B 4-1  0    10.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    10.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      B 4-1  0    9.880	PZB 500	Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      B 4-1  0    9.625	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      B 4-1  0    9.620	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      B 4-1  0    9.620		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-1  0    9.420		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      B 4-1  0    9.370	W06	Weiche, Abzw. rechts
+      B 4-1  0    9.370	W06	Weiche, Anfang
+      B 4-1  0    9.332		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    9.332		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      B 4-1  0    9.295	W04	Weiche, Anfang
+      B 4-1  0    9.295	W04	Weiche, Stamm
+      B 4-1  0    9.245		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    9.070	W01	Weiche, Stamm
+      B 4-1  0    9.070	W01	Weiche, Anfang
+      B 4-1  0    9.020		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      B 4-1  0    9.020		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      B 4-1  0    8.600		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      B 4-1  0    7.900	VS -1 104	Vorsignal	Fallend, Fb=9s, Unbekannt
+      B 4-1  0    7.800	0-2	Betriebsstellengrenze	=>S I 0-2, Gleis 2
+      S I    0    7.800	0-2	Betriebsstellengrenze	=>B 4-1 0-2, Gleis 2
+      S I    0    6.900	104	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S I    0    6.850	SZSS -1 104	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S I    0    5.600		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S I    0    5.000	2	Fahrzeitmesspunkt	Beide Richtungen
+      S I    0    4.900	VS -1 102	Vorsignal	Fallend, Fb=9s, Unbekannt
+      S I    0    3.900	102	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      S I    0    3.850	SZSS -1 102	Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      S I    0    2.880		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      S I    0    2.200	0-7	Betriebsstellengrenze	=>K A 0-7, Gleis 7
+      K A    0    2.200	0-7	Betriebsstellengrenze	=>S I 0-7, Gleis 7
+      K A    0    2.180	Vf	Vorsignal	Fallend, Fb=9s, Unbekannt
+      K A    0    1.440		Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      K A    0    1.320		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      K A    0    1.180	F	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      K A    0    1.180	Vp1	Vorsignal	Fallend, Fb=9s, Unbekannt
+      K A    0    0.980		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K A    0    0.855	W11	Weiche, Stamm
+      K A    0    0.855	W11	Weiche, Anfang
+      K A    0    0.818		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    0.780	W10	Weiche, Anfang
+      K A    0    0.780	W10	Weiche, Stamm
+      K A    0    0.730		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    0.630	W08	Weiche, Anfang
+      K A    0    0.630	W08	Weiche, Stamm
+      K A    0    0.580		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    0.000	Gl 3	Fahrzeitmesspunkt	Beide Richtungen
+      K A    0    -0.120	PZB 500	Punktbeeinflussung	Fallend, Konventionell, kennung=500
+      K A    0    -0.375	H 3 Pv f	Halteplatz	Fallend, Personenzug, l=420.0m, Rechts, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K A    0    -0.375	H 3 Gv f	Halteplatz	Fallend, Güterzug, l=740.0m, Ohne, sEoA=0m, sSVL=0m, rs=-1km/h, Halteinfahrt
+      K A    0    -0.380	P3	Hauptsignal	Fallend, DFa=3s, rs=20km/h, appr.=0km/h
+      K A    0    -0.380		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K A    0    -0.580		Zugschlussstelle	Fallend, Signal, Fa=3.00s, SvL
+      K A    0    -0.630	W06	Weiche, Abzw. rechts
+      K A    0    -0.630	W06	Weiche, Anfang
+      K A    0    -0.668		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    -0.668		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, ETCS L1 FS
+      K A    0    -0.705	W04	Weiche, Anfang
+      K A    0    -0.705	W04	Weiche, Stamm
+      K A    0    -0.755		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    -0.930	W01	Weiche, Stamm
+      K A    0    -0.930	W01	Weiche, Anfang
+      K A    0    -0.980		Zugschlussstelle	Fallend, Fahrstraße, Fa=3.00s, SvL
+      K A    0    -0.980		Geschwindigkeit Zulässig	Fallend, v=160km/h, 
+                      	   	Wirkung ab hier, Alle
+      K A    0    -1.400		Punktbeeinflussung	Fallend, ETCS L1 FS, kennung=1
+      K A    0    -2.200	GE-W9	Gleisende
+
+     Modellzugdaten
+     ——————————————
+
+      Richtung 1  Richtung 1
+
+      Modellzug Name            FV Ri 1_L1 FS
+      Teilzug  Zugnummer        FV Ri 1_L1 FS
+        Zuggattung ICE-W
+        Triebfahrzeug(e)        80 5407-3.16  BR 407, 2x 8tlg, 15kV AC, 16MW 
+                                    (600A, 900A, 1000A, 1440A) [D] [D] [D] [D]
+        Zuglänge 401.4 m        Wagenzugmasse 0 t
+        V_max 320 km/h          vMax_Signalsicht 160 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1   
+        Neigetechnik            ---
+        Laufweg von - bis       K A - K B
+
+      Modellzug Name            GV langsam Ri 1_L1 FS
+      Teilzug  Zugnummer        GV langsam Ri 1_L1 FS
+        Zuggattung DGS
+        Triebfahrzeug(e)        80 2248-1.2  Vectron Dual Mode (15kV-Modus) [D]
+        Zuglänge 500 m          Wagenzugmasse 1000 t
+        V_max 90 km/h           vMax_Signalsicht 90 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1   
+        Neigetechnik            ---
+        Laufweg von - bis       K A - K B
+
+      Modellzug Name            GV schnell Ri 1_L1 FS
+      Teilzug  Zugnummer        GV schnell Ri 1_L1 FS
+        Zuggattung DGS
+        Triebfahrzeug(e)        80 6193-2.2  Siemens Vectron high Power (15/
+                                    25kV), Pu=6,4MW [D]
+        Zuglänge 500 m          Wagenzugmasse 1250 t
+        V_max 100 km/h          vMax_Signalsicht 100 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1   
+        Neigetechnik            ---
+        Laufweg von - bis       K A - K B
+
+      Modellzug Name            NV langsam Ri 1_L1 FS
+      Teilzug  Zugnummer        NV langsam Ri 1_L1 FS
+        Zuggattung RB
+        Triebfahrzeug(e)        80 8442-5.2  TALENT 3 E427, 4T, 215SP, 3.030kW 
+                                    [D]
+                                80 8442-4.25  TALENT 3 E315, 3T, Io_max<200A [D]
+        Zuglänge 128.2 m        Wagenzugmasse 0 t
+        V_max 140 km/h          vMax_Signalsicht 140 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1   
+        Neigetechnik            ---
+        Laufweg von - bis       K A - K B
+
+      Modellzug Name            NV schnell Ri 1_L1 FS
+      Teilzug  Zugnummer        NV schnell Ri 1_L1 FS
+        Zuggattung RE-D
+        Triebfahrzeug(e)        80 0462-34.19  0462 Desiro HC, 4-T, 4,0MW, 
+                                    Imax=320A [D]
+                                80 0462-34.19  0462 Desiro HC, 4-T, 4,0MW, 
+                                    Imax=320A [D]
+        Zuglänge 210 m          Wagenzugmasse 0 t
+        V_max 160 km/h          vMax_Signalsicht 160 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1   
+        Neigetechnik            ---
+        Laufweg von - bis       K A - K B
+
+      Richtung 2  Richtung 2
+
+      Modellzug Name            FV Ri 2_L1 FS
+      Teilzug  Zugnummer        FV Ri 2_L1 FS
+        Zuggattung ICE-W
+        Triebfahrzeug(e)        80 5407-3.16  BR 407, 2x 8tlg, 15kV AC, 16MW 
+                                    (600A, 900A, 1000A, 1440A) [D] [D] [D] [D]
+        Zuglänge 401.4 m        Wagenzugmasse 0 t
+        V_max 320 km/h          vMax_Signalsicht 160 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1   
+        Neigetechnik            ---
+        Laufweg von - bis       K B - K A
+
+      Modellzug Name            GV langsam Ri 2_L1 FS
+      Teilzug  Zugnummer        GV langsam Ri 2_L1 FS
+        Zuggattung DGS
+        Triebfahrzeug(e)        80 2248-1.2  Vectron Dual Mode (15kV-Modus) [D]
+        Zuglänge 500 m          Wagenzugmasse 1000 t
+        V_max 90 km/h           vMax_Signalsicht 90 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1   
+        Neigetechnik            ---
+        Laufweg von - bis       K B - K A
+
+      Modellzug Name            GV schnell Ri 2_L1 FS
+      Teilzug  Zugnummer        GV schnell Ri 2_L1 FS
+        Zuggattung DGS
+        Triebfahrzeug(e)        80 6193-2.2  Siemens Vectron high Power (15/
+                                    25kV), Pu=6,4MW [D]
+        Zuglänge 500 m          Wagenzugmasse 1250 t
+        V_max 100 km/h          vMax_Signalsicht 100 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1   
+        Neigetechnik            ---
+        Laufweg von - bis       K B - K A
+
+      Modellzug Name            NV langsam Ri 2_L1 FS
+      Teilzug  Zugnummer        NV langsam Ri 2_L1 FS
+        Zuggattung RB
+        Triebfahrzeug(e)        80 8442-5.2  TALENT 3 E427, 4T, 215SP, 3.030kW 
+                                    [D]
+                                80 8442-4.25  TALENT 3 E315, 3T, Io_max<200A [D]
+        Zuglänge 128.2 m        Wagenzugmasse 0 t
+        V_max 140 km/h          vMax_Signalsicht 140 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1   
+        Neigetechnik            ---
+        Laufweg von - bis       K B - K A
+
+      Modellzug Name            NV schnell Ri 2_L1 FS
+      Teilzug  Zugnummer        NV schnell Ri 2_L1 FS
+        Zuggattung RE-D
+        Triebfahrzeug(e)        80 0462-34.19  0462 Desiro HC, 4-T, 4,0MW, 
+                                    Imax=320A [D]
+                                80 0462-34.19  0462 Desiro HC, 4-T, 4,0MW, 
+                                    Imax=320A [D]
+        Zuglänge 210 m          Wagenzugmasse 0 t
+        V_max 160 km/h          vMax_Signalsicht 160 km/h
+        Sicherungstechnik       ETCS Level 1 LS / 1   
+        Neigetechnik            ---
+        Laufweg von - bis       K B - K A
+
+     Allgemeine Angaben zur Berechnung
+     —————————————————————————————————
+
+     Bezugszeitraum:                8 Stunden von 22 bis 6 Uhr
+     Rangordnung der Zugfolgefälle: ungleichrangige Zugfolgefälle gleichrangig, 
+                                    wenn günstiger (Matrixvergleich)
+     Zugfolgefälle:                 nach erweitertem Ganglinienverfahren
+     Mindestlänge der Überholungsabschnitte für Güterzüge:  3000 m
+     Verfahren zur Ermittlung der Folgeverspätungen: 
+                                    Mittelwert-basiert (nach Schwanhäußer 1974)
+     Qualitätsfaktoren q
+                Qualitätsstufe      Bereich        Hochrechnung für
+                premium             q < 0.5            q = 0.5
+                optimal             0.5 <= q <= 1.2    q = 1.0
+                risikobehaftet      1.2 <  q <= 1.5    q = 1.2
+                mangelhaft          q > 1.5            q = 1.5
+
+
+     Leistungskennwerte der Strecke Mischverkehr generisch  Richtung 1  Richtung 1
+     —————————————————————————————————————————————————————————————————————————————
+
+      Betriebsprogramm im Bezugszeitraum
+      ——————————————————————————————————
+
+      lfd.   Zug-           Zug-          Rang Anzahl   Verspätungsniveau 
+      Nr.   gattung        nummer                      t_V,ein,m   p_V,ein
+
+        1    ICE-W      FV Ri 1_L1 FS       4     1       5.00      0.50
+        2     DGS   GV langsam Ri 1_L1 FS  18     8      10.00      0.60
+        3     DGS   GV schnell Ri 1_L1 FS  18    23      10.00      0.60
+        4     RB    NV langsam Ri 1_L1 FS  10     5       4.50      0.60
+        5    RE-D   NV schnell Ri 1_L1 FS   4     7       4.50      0.60
+
+      Summe                                      44
+
+
+      Leistungskennwerte
+      ——————————————————
+
+      Anteil der Reisezüge                           p_Rz           0.295
+
+      zulässige Summen der Folgeverspätungen
+
+         Betriebsqualität     Summe der Folgeverspätungen     zugehörige Länge   
+                             im Bezugszeitraum   je Stunde    der Warteschlange  
+                                   [min]          [min/h]             [-]        
+
+         premium                    42              5.31             0.09        
+         optimal *                  85             10.62             0.18        
+         risikobehaftet             102            12.75             0.21        
+         mangelhaft                 127            15.94             0.27        
+
+         * gilt für die Nennleistung (= optimale Zugzahl Betrieb)
+
+      mittlere Mindestzugfolgezeit [min]
+
+         für alle Zugfolgefälle                      t_Zm            4.84
+         für gleichrangige Zugfolgefälle             t_Zgr           5.15
+         für verschiedenrangige Zugfolgefälle        t_Zvr           4.51
+
+      Wahrscheinlichkeit gleichrangiger 
+      Zugfolgefälle:                                 p_gr           0.521
+
+      vorhandene Summe der Folgeverspätungen
+
+         im Bezugszeitraum [min / 8 h]                                 58
+         je Stunde [min / h]                                         7.21
+         zugehörige mittlere Pufferzeit [min]        t_P,m           6.07
+
+      Nennleistung (= optimale Zugzahl Betrieb)
+
+         im Bezugszeitraum [Anzahl Züge / 8 h]       L_F               50
+         je Stunde [Anzahl Züge / h]                                 6.25
+         zugehörige mittlere Pufferzeit [min]        t_P,m           4.68
+         Nutzungsgrad                                                0.87
+         Qualitätsfaktor                             q_0             0.68
+
+      Faktor zur Hochrechnung des zugrunde gelegten Betriebsprogramms
+      an die Leistungsgrenze (Hochrechnungsfaktor) bei Qualitätsstufe
+
+         premium                                                     0.89
+         optimal                                                     1.15
+         risikobehaftet                                              1.22
+         mangelhaft                                                  1.30
+
+
+      weitere Kennwerte
+      —————————————————
+                                          Anzahl nach      zulässige Anzahl der Züge     
+      lfd.   Zug-           Zug-           Betriebs-         bei Betriebsqualität        
+      Nr.   gattung        nummer          programm    premium optimal risikobeh. mangelh.
+
+        1    ICE-W      FV Ri 1_L1 FS          1        0.9      1.1      1.2      1.3
+        2     DGS   GV langsam Ri 1_L1 FS      8        7.1      9.2      9.7     10.4
+        3     DGS   GV schnell Ri 1_L1 FS     23       20.5     26.3     28.0     30.0
+        4     RB    NV langsam Ri 1_L1 FS      5        4.5      5.7      6.1      6.5
+        5    RE-D   NV schnell Ri 1_L1 FS      7        6.2      8.0      8.5      9.1
+
+      Summe (abgerundet)                      44         39       50       53       57
+
+      zulässige Anzahl der Züge
+         in der Spitzenstunde *                           7        8        8        9
+           bei mittl. Pufferzeit [min]                 3.73     2.66     2.66     1.82   
+         in 4 Spitzenstunden *                           22       27       29       31
+           bei mittl. Pufferzeit [min]                 6.07     4.05     3.43     2.90   
+
+         * Die zulässige Anzahl der Züge in 1 bzw. 4 Spitzenstunden
+           entspricht der Anzahl der Zugfolgezeiten, die bei
+           zufälliger Häufung kleiner Pufferzeiten vollständig in
+           diesem Zeitraum liegen können.
+
+      Theoretische Leistungsfähigkeit (ohne Pufferzeiten)
+
+         im Bezugszeitraum [Anzahl Züge / 8 h]       L_F,th            99
+         je Stunde [Anzahl Züge / h]                                12.38
+         Nutzungsgrad der theoret. Leistungsfähigkeit                0.44
+
+
+
+
+     Leistungskennwerte der Strecke Mischverkehr generisch  Richtung 2  Richtung 2
+     —————————————————————————————————————————————————————————————————————————————
+
+      Betriebsprogramm im Bezugszeitraum
+      ——————————————————————————————————
+
+      lfd.   Zug-           Zug-          Rang Anzahl   Verspätungsniveau 
+      Nr.   gattung        nummer                      t_V,ein,m   p_V,ein
+
+        6    ICE-W      FV Ri 2_L1 FS       4     1       5.00      0.50
+        7     DGS   GV langsam Ri 2_L1 FS  18     8      10.00      0.60
+        8     DGS   GV schnell Ri 2_L1 FS  18    23      10.00      0.60
+        9     RB    NV langsam Ri 2_L1 FS  10     5       4.50      0.60
+       10    RE-D   NV schnell Ri 2_L1 FS   4     7       4.50      0.60
+
+      Summe                                      44
+
+
+      Leistungskennwerte
+      ——————————————————
+
+      Anteil der Reisezüge                           p_Rz           0.295
+
+      zulässige Summen der Folgeverspätungen
+
+         Betriebsqualität     Summe der Folgeverspätungen     zugehörige Länge   
+                             im Bezugszeitraum   je Stunde    der Warteschlange  
+                                   [min]          [min/h]             [-]        
+
+         premium                    42              5.31             0.09        
+         optimal *                  85             10.62             0.18        
+         risikobehaftet             102            12.75             0.21        
+         mangelhaft                 127            15.94             0.27        
+
+         * gilt für die Nennleistung (= optimale Zugzahl Betrieb)
+
+      mittlere Mindestzugfolgezeit [min]
+
+         für alle Zugfolgefälle                      t_Zm            4.84
+         für gleichrangige Zugfolgefälle             t_Zgr           5.15
+         für verschiedenrangige Zugfolgefälle        t_Zvr           4.51
+
+      Wahrscheinlichkeit gleichrangiger 
+      Zugfolgefälle:                                 p_gr           0.521
+
+      vorhandene Summe der Folgeverspätungen
+
+         im Bezugszeitraum [min / 8 h]                                 58
+         je Stunde [min / h]                                         7.20
+         zugehörige mittlere Pufferzeit [min]        t_P,m           6.07
+
+      Nennleistung (= optimale Zugzahl Betrieb)
+
+         im Bezugszeitraum [Anzahl Züge / 8 h]       L_F               50
+         je Stunde [Anzahl Züge / h]                                 6.25
+         zugehörige mittlere Pufferzeit [min]        t_P,m           4.68
+         Nutzungsgrad                                                0.87
+         Qualitätsfaktor                             q_0             0.68
+
+      Faktor zur Hochrechnung des zugrunde gelegten Betriebsprogramms
+      an die Leistungsgrenze (Hochrechnungsfaktor) bei Qualitätsstufe
+
+         premium                                                     0.89
+         optimal                                                     1.15
+         risikobehaftet                                              1.22
+         mangelhaft                                                  1.30
+
+
+      weitere Kennwerte
+      —————————————————
+                                          Anzahl nach      zulässige Anzahl der Züge     
+      lfd.   Zug-           Zug-           Betriebs-         bei Betriebsqualität        
+      Nr.   gattung        nummer          programm    premium optimal risikobeh. mangelh.
+
+        6    ICE-W      FV Ri 2_L1 FS          1        0.9      1.1      1.2      1.3
+        7     DGS   GV langsam Ri 2_L1 FS      8        7.1      9.2      9.7     10.4
+        8     DGS   GV schnell Ri 2_L1 FS     23       20.5     26.3     28.0     30.0
+        9     RB    NV langsam Ri 2_L1 FS      5        4.5      5.7      6.1      6.5
+       10    RE-D   NV schnell Ri 2_L1 FS      7        6.2      8.0      8.5      9.1
+
+      Summe (abgerundet)                      44         39       50       53       57
+
+      zulässige Anzahl der Züge
+         in der Spitzenstunde *                           7        8        8        9
+           bei mittl. Pufferzeit [min]                 3.73     2.66     2.66     1.82   
+         in 4 Spitzenstunden *                           22       27       29       31
+           bei mittl. Pufferzeit [min]                 6.07     4.05     3.43     2.90   
+
+         * Die zulässige Anzahl der Züge in 1 bzw. 4 Spitzenstunden
+           entspricht der Anzahl der Zugfolgezeiten, die bei
+           zufälliger Häufung kleiner Pufferzeiten vollständig in
+           diesem Zeitraum liegen können.
+
+      Theoretische Leistungsfähigkeit (ohne Pufferzeiten)
+
+         im Bezugszeitraum [Anzahl Züge / 8 h]       L_F,th            99
+         je Stunde [Anzahl Züge / h]                                12.38
+         Nutzungsgrad der theoret. Leistungsfähigkeit                0.44
+
+

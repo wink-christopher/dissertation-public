@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<LuksISSIndex xsi:noNamespaceSchemaLocation=".\schema\LUKSISS_3_3_1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Ersteller>LUKS_User</Ersteller>
+    <Erstellzeitpunkt>03.04.2025 13:02:52</Erstellzeitpunkt>
+    <Kommentar></Kommentar>
+    <WerkzeugName>LUKS</WerkzeugName>
+    <WerkzeugVersion>3.9.1</WerkzeugVersion>
+    <SchnittstelleVersion>3.3.1</SchnittstelleVersion>
+    <StammdatenVersion>
+        <Name>JFPL 2021 (1. Berichtigung)</Name>
+        <Nummer>2</Nummer>
+        <GueltigAb>01.01.2009</GueltigAb>
+        <GueltigBis>31.12.2009</GueltigBis>
+        <Beschreibung>Stammdaten 2021</Beschreibung>
+        <LetzteAenderung>01.01.2009 01:01:01</LetzteAenderung>
+    </StammdatenVersion>
+    <OrdnungsrahmenVersion>
+        <Name>-1</Name>
+        <Nummer>0</Nummer>
+        <GueltigAb>01.01.2009</GueltigAb>
+        <GueltigBis>31.12.2009</GueltigBis>
+        <Beschreibung></Beschreibung>
+        <LetzteAenderung>01.01.2009 01:01:01</LetzteAenderung>
+    </OrdnungsrahmenVersion>
+    <SpurplandatenVersion>
+        <Name>-1</Name>
+        <Nummer>0</Nummer>
+        <GueltigAb>01.01.2009</GueltigAb>
+        <GueltigBis>31.12.2009</GueltigBis>
+        <Beschreibung></Beschreibung>
+        <LetzteAenderung>01.01.2009 01:01:01</LetzteAenderung>
+    </SpurplandatenVersion>
+    <Dateien>
+        <Datei>
+            <Name>Stammdaten_Bremsarten-Triebfahrzeugbaureihen.xml</Name>
+        </Datei>
+        <Datei>
+            <Name>Stammdaten_Verkehrstageschluesselliste-Geschwindigkeitsbaender.xml</Name>
+        </Datei>
+        <Datei>
+            <Name>Ordnungsrahmen_ORBtrstB 3-1-ORBtrstS X.xml</Name>
+        </Datei>
+        <Datei>
+            <Name>Ordnungsrahmen_ORStr0-ORStr0.xml</Name>
+        </Datei>
+        <Datei>
+            <Name>Spurplanbetriebsstellen_B 3-1-S X.xml</Name>
+        </Datei>
+        <Datei>
+            <Name>LinienfoermigeDarstellung_1.xml</Name>
+        </Datei>
+        <Datei>
+            <Name>InfrastrukturBereiche_0.xml</Name>
+        </Datei>
+    </Dateien>
+</LuksISSIndex>

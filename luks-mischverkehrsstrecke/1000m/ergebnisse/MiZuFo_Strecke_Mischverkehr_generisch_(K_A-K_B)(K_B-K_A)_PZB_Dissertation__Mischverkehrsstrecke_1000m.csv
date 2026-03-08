@@ -1,0 +1,17 @@
+MiZuFo für Strecke Mischverkehr generisch beide Richtungen;;
+
+;;;;Nr.;1;2;3;4;5;6;7;8;9;10;
+;;;;Richtung;1;1;1;1;1;2;2;2;2;2;
+;;;;Gattung;ICE-W;EZK;DGS;RB;DPN-D;ICE-W;EZK;DGS;RB;DPN-D;
+;;;;Zugnummer;FV Ri 1_PZB;GV langsam Ri 1_PZB;GV schnell Ri 1_PZB;NV langsam Ri 1_PZB;NV schnell Ri 1_PZB;FV Ri 2_PZB;GV langsam Ri 2_PZB;GV schnell Ri 2_PZB;NV langsam Ri 2_PZB;NV schnell Ri 2_PZB;
+Nr.;Ri.;Gattung;Zugnummer;Anzahl;30;12;19;16;36;30;12;19;16;36;
+1;1;ICE-W;FV Ri 1_PZB;30;04:57;02:02;02:02;02:06;02:06;---;---;---;---;---;
+2;1;EZK;GV langsam Ri 1_PZB;12;08:56;02:44;10:22;05:15;07:54;---;---;---;---;---;
+3;1;DGS;GV schnell Ri 1_PZB;19;06:54;02:22;02:29;04:00;06:20;---;---;---;---;---;
+4;1;RB;NV langsam Ri 1_PZB;16;04:23;01:45;01:45;03:58;07:46;---;---;---;---;---;
+5;1;DPN-D;NV schnell Ri 1_PZB;36;02:13;01:48;01:48;03:44;04:01;---;---;---;---;---;
+6;2;ICE-W;FV Ri 2_PZB;30;---;---;---;---;---;04:57;02:02;02:02;02:06;02:06;
+7;2;EZK;GV langsam Ri 2_PZB;12;---;---;---;---;---;08:56;02:44;10:22;05:15;07:54;
+8;2;DGS;GV schnell Ri 2_PZB;19;---;---;---;---;---;06:54;02:22;02:29;04:00;06:20;
+9;2;RB;NV langsam Ri 2_PZB;16;---;---;---;---;---;04:23;01:45;01:45;03:58;07:46;
+10;2;DPN-D;NV schnell Ri 2_PZB;36;---;---;---;---;---;02:13;01:48;01:48;03:44;04:01;

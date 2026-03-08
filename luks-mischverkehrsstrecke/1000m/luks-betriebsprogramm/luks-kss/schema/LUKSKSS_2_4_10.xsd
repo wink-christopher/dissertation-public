@@ -1,0 +1,1101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!-- xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="xsi.xsd"/ -->
+  <!-- xs:attribute name="noNamespaceSchemaLocation"/ -->
+  <xs:element name="KSS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="header"/>
+        <xs:choice>
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="LUKS_Zugfamilien"/>
+            <xs:element ref="indexTrassen"/>
+            <xs:element ref="railml"/>
+          </xs:sequence>
+          <xs:sequence>
+            <xs:element ref="LUKS_Betriebsvariante"/>
+          </xs:sequence>
+        </xs:choice>		
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string"/>
+      <!-- xs:attribute ref="xsi:noNamespaceSchemaLocation" use="required"/ -->
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="header">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="description"/>
+        <xs:element minOccurs="0" ref="comment"/>
+        <xs:element minOccurs="0" ref="userAbbreviation"/>
+        <xs:element minOccurs="0" ref="userTelephone"/>
+        <xs:element minOccurs="0" ref="userEmail"/>
+        <xs:element ref="timeOfBuild"/>
+        <xs:element ref="spurplanVersionDescription"/>
+        <xs:element ref="gfdiVersionDescription"/>
+        <xs:element ref="establishment"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="userTelephone" type="xs:string"/>
+  <xs:element name="userEmail" type="xs:string"/>
+  <xs:element name="description">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="scheduleVersion"/>
+        <xs:element ref="shortDescription"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="scheduleVersion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mode"/>
+        <xs:element ref="name"/>
+        <xs:element ref="number"/>
+        <xs:element ref="validity"/>
+        <xs:element minOccurs="0" ref="yearTimetable"/>
+        <xs:element ref="rectifyingNumber"/>
+        <xs:element minOccurs="0" ref="class"/>
+        <xs:element name="timeOfBuild" type="xs:date"/>
+        <xs:element minOccurs="0" ref="comment"/>
+        <xs:element ref="status"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="yearTimetable" type="xs:string"/>
+  <xs:element name="rectifyingNumber" type="xs:string"/>
+  <xs:element name="shortDescription" type="xs:string"/>
+  <xs:element name="class" type="xs:string"/>
+  <xs:element name="spurplanVersionDescription">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mode"/>
+        <xs:element ref="name"/>
+        <xs:element ref="number"/>
+        <xs:element ref="validity"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="gfdiVersionDescription">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mode"/>
+        <xs:element ref="name"/>
+        <xs:element ref="number"/>
+        <xs:element ref="validity"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="establishment" type="xs:string"/>
+  <xs:element name="LUKS_Zugfamilien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="LUKS_Zugfamilie"/>
+      </xs:sequence>
+    <xs:attribute name="Betriebsvariante" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="indexTrassen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="entryIndexTrassen"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="entryIndexTrassen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="isSpecialTrain"/>
+        <xs:element ref="trasseNumber"/>
+        <xs:element minOccurs="0" ref="sequenceNumber"/>
+        <xs:element minOccurs="0" ref="timetablePeriod"/>
+        <xs:element ref="validity"/>
+        <xs:element minOccurs="0" ref="additionalTimetable"/>
+        <xs:element minOccurs="0" ref="timeOfLastChange"/>
+      </xs:sequence>
+      <xs:attribute name="entryIndexTrassenID" type="xs:string"/>
+      <xs:attribute name="trainID" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isSpecialTrain" type="xs:boolean"/>
+  <xs:element name="trasseNumber" type="xs:string"/>
+  <xs:element name="sequenceNumber" type="xs:positiveInteger"/>
+  <xs:element name="additionalTimetable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="additionalTimetableMode"/>
+        <xs:element ref="additionalTimetableNumber"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="additionalTimetableMode">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="Schluessel" type="xs:string"/>
+          <xs:attribute name="Typ" use="required" type="xs:string"/>
+          <xs:attribute name="Kategorie" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="additionalTimetableNumber" type="xs:nonNegativeInteger"/>
+  <xs:element name="timeOfLastChange" type="xs:dateTime"/>
+  <xs:element name="railml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="LUKS_Modellzuege"/>
+        <xs:element ref="timetable"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_Modellzuege">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="train" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="timetable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="timetablePeriods"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="train"/>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="timetablePeriods">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="timetablePeriod"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="train">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="LUKS_Zugdaten"/>
+        <xs:element minOccurs="0" ref="timetableentries"/>
+        <xs:element ref="fineConstruction"/>
+        <xs:element minOccurs="0" ref="LUKS_MzBetriebsprogramm"/>
+      </xs:sequence>
+      <xs:attribute name="kind" type="xs:string"/>
+      <xs:attribute name="remarks" type="xs:string"/>
+      <xs:attribute name="timetablePeriodID" type="xs:string"/>
+      <xs:attribute name="trainID" type="xs:string"/>
+      <xs:attribute name="trainNumber" use="required" type="xs:string"/>
+      <xs:attribute name="trainStatus" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_Zugdaten">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="LUKS_Zugname"/>
+        <xs:element name="LUKS_Zugfamilie" type="xs:string"/>
+        <xs:element minOccurs="0" ref="ReisezeitRestriktion"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_Zugname" type="xs:string"/>
+  <xs:element name="ReisezeitRestriktion" type="xs:token"/>
+  <xs:element name="timetableentries">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="fineConstruction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="constructionTrain"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="connection"/>
+      </xs:sequence>
+      <xs:attribute name="entryIndexTrassenID" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="constructionTrain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="trainNumber"/>
+        <xs:element minOccurs="0" ref="LUKS_ExternerZugname"/>
+        <xs:element ref="status"/>
+        <xs:element minOccurs="0" ref="LUKS_Fahrtart"/>
+        <xs:element minOccurs="0" ref="LUKS_Deaktiviert"/>
+        <xs:element ref="characteristic"/>
+        <xs:element ref="services"/>
+        <xs:element ref="sequence"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="trainNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mainNumber"/>
+        <xs:element ref="subNumber"/>
+        <xs:element ref="userAbbreviation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_Deaktiviert" type="xs:boolean"/>
+  <xs:element name="LUKS_Fahrtart">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:NCName">
+          <xs:attribute name="Art" use="required" type="xs:integer"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="characteristic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="onDemand"/>
+        <xs:element ref="tractionUnits"/>
+        <xs:element minOccurs="0" ref="numberOfPassengerCars"/>
+        <xs:element ref="trainsetLength"/>
+        <xs:element ref="trainsetWeight"/>
+        <xs:element ref="tonnageRating"/>
+        <xs:element minOccurs="0" ref="trainsetVelocity"/>
+        <xs:element minOccurs="0" ref="constructionVelocity"/>
+        <xs:element ref="maxVelocity"/>
+        <xs:element minOccurs="0" ref="bodyTiltingTechnique"/>
+        <xs:element ref="lockingTrip"/>
+        <xs:element ref="isPhantom"/>
+        <xs:element minOccurs="0" ref="comment"/>
+        <xs:element ref="kind"/>
+        <xs:element ref="trainClass"/>
+        <xs:element ref="relevantStopPositionMode"/>
+        <xs:element ref="trainProtection"/>
+        <xs:element ref="totalLength"/>
+        <xs:element ref="totalWeight"/>
+        <xs:element ref="brakedWeightPercentage"/>
+        <xs:element ref="brakingSystem"/>
+        <xs:element ref="recoveryMarginProportion"/>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="airResistanceCoefficient"/>
+          <xs:element ref="bearingFrictionCoefficient"/>
+        </xs:sequence>
+        <xs:element ref="LUKS_characteristics"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="onDemand" type="xs:boolean"/>
+  <xs:element name="tractionUnits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tractionUnit"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tractionUnit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="isStandardTractionUnit"/>
+        <xs:element ref="position"/>
+        <xs:element ref="tractionUnitDesignSeries"/>
+        <xs:element minOccurs="0" ref="fromServicePoint"/>
+        <xs:element minOccurs="0" ref="toServicePoint"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isStandardTractionUnit" type="xs:boolean"/>
+  <xs:element name="position">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:NCName">
+          <xs:attribute name="Schluessel" use="required" type="xs:string"/>
+          <xs:attribute name="Typ" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tractionUnitDesignSeries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="designSeries"/>
+        <xs:element ref="variante"/>
+        <xs:element ref="stromart"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="designSeries">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+      <xs:attribute name="Nr" type="xs:nonNegativeInteger"/>
+      <xs:attribute name="Typ" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="variante" type="xs:nonNegativeInteger"/>
+  <xs:element name="stromart">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Schluessel" use="required" type="xs:string"/>
+      <xs:attribute name="Typ" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fromServicePoint" type="xs:string"/>
+  <xs:element name="toServicePoint" type="xs:string"/>
+  <xs:element name="numberOfPassengerCars" type="xs:nonNegativeInteger"/>
+  <xs:element name="trainsetLength" type="xs:token"/>
+  <xs:element name="trainsetWeight" type="xs:token"/>
+  <xs:element name="tonnageRating" type="xs:boolean"/>
+  <xs:element name="trainsetVelocity" type="xs:token"/>
+  <xs:element name="constructionVelocity" type="xs:token"/>
+  <xs:element name="maxVelocity" type="xs:token"/>
+  <xs:element name="bodyTiltingTechnique">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Schluessel" use="required" type="xs:string"/>
+      <xs:attribute name="Typ" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lockingTrip" type="xs:boolean"/>
+  <xs:element name="isPhantom" type="xs:boolean"/>
+  <xs:element name="kind">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:integer">
+          <xs:attribute name="Hauptnummer" use="required" type="xs:integer"/>
+          <xs:attribute name="ZuggattungsProdukt" use="required" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="trainClass" type="xs:NCName"/>
+  <xs:element name="trainProtection" type="xs:boolean"/>
+  <xs:element name="totalLength" type="xs:token"/>
+  <xs:element name="totalWeight" type="xs:token"/>
+  <xs:element name="brakedWeightPercentage" type="xs:nonNegativeInteger"/>
+  <xs:element name="brakingSystem">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Schluessel" use="required" type="xs:string"/>
+      <xs:attribute name="Typ" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="recoveryMarginProportion" type="xs:nonNegativeInteger"/>
+  <xs:element name="airResistanceCoefficient" type="xs:token"/>
+  <xs:element name="bearingFrictionCoefficient" type="xs:token"/>
+  <xs:element name="LUKS_characteristics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="LUKS_Sonderzug"/>
+        <xs:element minOccurs="0" ref="LUKS_KEignore"/>
+        <xs:element minOccurs="0" ref="PlanRang"/>
+        <xs:element minOccurs="0" ref="BetriebsRang"/>
+        <xs:element minOccurs="0" ref="Einbruchsverspaetungen"/>
+        <xs:element minOccurs="0" ref="Urverspaetungen"/>
+        <xs:element minOccurs="0" ref="BetriebshaltErlaubt"/>
+        <xs:element minOccurs="0" ref="VorplanErlaubt"/>
+        <xs:element minOccurs="0" ref="DurchfahrtSichern"/>
+        <xs:element minOccurs="0" ref="keinVerschiebenEinbruch"/>
+        <xs:element minOccurs="0" ref="BauZuschlagAbbau"/>
+        <xs:element minOccurs="0" ref="RegelZuschlagAbbau"/>
+        <xs:element minOccurs="0" ref="PZBaktiv"/>
+        <xs:element minOccurs="0" ref="ETCS1"/>
+        <xs:element minOccurs="0" ref="ETCS2"/>
+        <xs:element minOccurs="0" ref="ETCS3"/>
+        <xs:element minOccurs="0" ref="SBIavailable"/>
+        <xs:element minOccurs="0" ref="SBIfeedback"/>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="Kv-Faktoren"/>
+          <xs:element ref="Kr-Faktoren"/>
+        </xs:sequence>
+		<xs:element minOccurs="0" ref="Umleiter"/>
+		<xs:element minOccurs="0" ref="InArbeit" />
+		<xs:element minOccurs="0" ref="ATO"/>
+		<xs:element minOccurs="0" ref="DATC"/>
+		<xs:element minOccurs="0" ref="FATC"/>
+		<xs:element minOccurs="0" ref="GUICurve"/>
+        <xs:element minOccurs="0" name="Geschwindigkeitsbaender" type="GeschwindigkeitsbaenderNamen"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_Sonderzug" type="xs:boolean"/>
+  <xs:element name="LUKS_KEignore" type="xs:boolean"/>
+  <xs:element name="Umleiter" type="xs:boolean"/>
+  <xs:element name="InArbeit" type="xs:boolean"/>
+  <xs:element name="BetriebshaltErlaubt" type="xs:boolean"/>
+  <xs:element name="PlanRang" type="xs:nonNegativeInteger"/>
+  <xs:element name="BetriebsRang" type="xs:nonNegativeInteger"/>
+  <xs:element name="Einbruchsverspaetungen">
+    <xs:complexType>
+      <xs:attribute name="WahrschEinbruchsVersp" use="required" type="xs:token"/>
+      <xs:attribute name="mittlereEinbruchsVersp" use="required" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Urverspaetungen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="EinbruchsVersp"/>
+        <xs:element ref="cEinbruchsFrueh"/>
+        <xs:element ref="VerkehrshalteKomplex"/>
+        <xs:element ref="VerkehrshalteEinf"/>
+        <xs:element ref="VerkehrshalteKomplFrueh"/>
+        <xs:element ref="VerkehrshalteKomplPuenktl"/>
+        <xs:element ref="VerkehrshalteKomplVersp"/>
+        <xs:element ref="VerkehrshalteFruehGrenze"/>
+        <xs:element ref="VerkehrshalteSpaetGrenze"/>
+        <xs:element ref="BetriebshalteUV"/>
+        <xs:element ref="MaxAufschlag"/>
+        <xs:element minOccurs="0" ref="EinbruchAllgemein"/>
+        <xs:element minOccurs="0" ref="VerkehrshalteAllgemein"/>
+        <xs:element minOccurs="0" ref="BetriebshalteAllgemein"/>
+        <xs:element minOccurs="0" ref="AufschlagAllgemein"/>		
+      </xs:sequence>
+      <xs:attribute name="AllgemeinesModell" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EinbruchsVersp">
+    <xs:complexType>
+      <xs:attribute name="MittlVersp" use="required" type="xs:token"/>
+      <xs:attribute name="SystemAnteil" use="required" type="xs:token"/>
+      <xs:attribute name="Wahrscheinlichkeit" use="required" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cEinbruchsFrueh">
+    <xs:complexType>
+      <xs:attribute name="MittlVersp" use="required" type="xs:token"/>
+      <xs:attribute name="Wahrscheinlichkeit" use="required" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerkehrshalteKomplex" type="xs:boolean"/>
+  <xs:element name="VerkehrshalteEinf">
+    <xs:complexType>
+      <xs:attribute name="MittlVersp" use="required" type="xs:token"/>
+      <xs:attribute name="SystemAnteil" use="required" type="xs:token"/>
+      <xs:attribute name="Wahrscheinlichkeit" use="required" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerkehrshalteKomplFrueh">
+    <xs:complexType>
+      <xs:attribute name="MittlVersp" use="required" type="xs:token"/>
+      <xs:attribute name="SystemAnteil" use="required" type="xs:token"/>
+      <xs:attribute name="Wahrscheinlichkeit" use="required" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerkehrshalteKomplPuenktl">
+    <xs:complexType>
+      <xs:attribute name="MittlVersp" use="required" type="xs:token"/>
+      <xs:attribute name="SystemAnteil" use="required" type="xs:token"/>
+      <xs:attribute name="Wahrscheinlichkeit" use="required" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerkehrshalteKomplVersp">
+    <xs:complexType>
+      <xs:attribute name="MittlVersp" use="required" type="xs:token"/>
+      <xs:attribute name="SystemAnteil" use="required" type="xs:token"/>
+      <xs:attribute name="Wahrscheinlichkeit" use="required" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerkehrshalteFruehGrenze" type="xs:token"/>
+  <xs:element name="VerkehrshalteSpaetGrenze" type="xs:token"/>
+  <xs:element name="BetriebshalteUV">
+    <xs:complexType>
+      <xs:attribute name="MittlVersp" use="required" type="xs:token"/>
+      <xs:attribute name="SystemAnteil" use="required" type="xs:token"/>
+      <xs:attribute name="Wahrscheinlichkeit" use="required" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MaxAufschlag" type="xs:token"/>
+  <xs:element name="VerspIntervall">
+    <xs:complexType>
+      <xs:attribute name="unten" use="required" type="xs:token"/>
+      <xs:attribute name="oben" use="required" type="xs:token"/>
+      <xs:attribute name="p" use="required" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerspIntervalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="VerspIntervall"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UrverspaetungOrt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="VerspIntervalle"/>
+      </xs:sequence>
+      <xs:attribute name="DS100" type="xs:string"/>	  
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EinbruchAllgemein">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="UrverspaetungOrt"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerkehrshalteAllgemein">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="UrverspaetungOrt"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BetriebshalteAllgemein">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="VerspIntervalle"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AufschlagAllgemein">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="VerspIntervalle"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element> 
+  <xs:element name="BauZuschlagAbbau" type="xs:token"/>
+  <xs:element name="VorplanErlaubt" type="xs:boolean"/>
+  <xs:element name="DurchfahrtSichern" type="xs:boolean"/>
+  <xs:element name="keinVerschiebenEinbruch" type="xs:boolean"/>
+  <xs:element name="RegelZuschlagAbbau" type="xs:token"/>
+  <xs:element name="PZBaktiv" type="xs:boolean"/>
+  <xs:element name="ETCS1" type="xs:boolean"/>
+  <xs:element name="ETCS2" type="xs:boolean"/>
+  <xs:element name="ETCS3" type="xs:boolean"/>
+  <xs:element name="SBIfeedback" type="xs:boolean"/>
+  <xs:element name="SBIavailable" type="xs:boolean"/>
+  <xs:element name="ATO" type="xs:boolean"/>
+  <xs:element name="DATC" type="xs:boolean"/>
+  <xs:element name="FATC" type="xs:boolean"/>
+  <xs:element name="GUICurve" type="xs:boolean"/>
+  <xs:element name="Kv-Faktoren">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Kv-Faktor"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Kv-Faktor">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Geschwindigkeit" use="required" type="xs:nonNegativeInteger"/>
+      <xs:attribute name="Index" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Kr-Faktoren">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Kr-Faktor"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Kr-Faktor">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Index" use="required" type="xs:integer"/>
+      <xs:attribute name="Zuglaenge" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="services">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="service"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="service">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="operatingDay"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="special"/>
+      </xs:sequence>
+      <xs:attribute name="bitMask" use="required" type="xs:token"/>
+      <xs:attribute name="description" type="xs:string"/>
+      <xs:attribute name="endDate" type="xs:date"/>
+      <xs:attribute name="startDate" use="required" type="xs:date"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="operatingDay">
+    <xs:complexType>
+      <xs:attribute name="dayType" use="required" type="xs:string"/>
+      <xs:attribute name="operatingCode" use="required" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="special">
+    <xs:complexType>
+      <xs:attribute name="date" use="required" type="xs:date"/>  
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sequence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="breakin"/>
+        <xs:element minOccurs="0" ref="breakout"/>
+        <xs:element minOccurs="0" ref="startingVelocity"/>
+        <xs:element minOccurs="0" ref="LUKS_Startverhalten"/>
+        <xs:element minOccurs="0" ref="LUKS_Endverhalten"/>
+        <xs:element minOccurs="0" ref="sequenceServicePoints"/>
+        <xs:element minOccurs="0" ref="anchor"/>
+        <xs:element minOccurs="0" ref="edificialSurcharges"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="breakin" type="xs:boolean"/>
+  <xs:element name="breakout" type="xs:boolean"/>
+  <xs:element name="startingVelocity" type="xs:token"/>
+  <xs:element name="LUKS_Startverhalten">
+    <xs:complexType mixed="true">
+      <xs:attribute name="AnfangsHaltAuswerten" type="xs:boolean"/>
+      <xs:attribute name="Art" use="required" type="xs:integer"/>
+      <xs:attribute name="V_Einbruch" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_Endverhalten">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Art" use="required" type="xs:integer"/>
+      <xs:attribute name="EndeHaltAuswerten" type="xs:boolean"/>
+      <xs:attribute name="V_Ausbruch" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sequenceServicePoints">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="sequenceServicePoint"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sequenceServicePoint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="servicePoint"/>
+        <xs:element ref="longAppellation"/>
+        <xs:element ref="trackSystem"/>
+        <xs:element ref="trackSystemLength"/>
+        <xs:element minOccurs="0" ref="LUKS_FahrwegAnfang"/>
+        <xs:element minOccurs="0" ref="LUKS_FahrwegEnde"/>
+        <xs:element minOccurs="0" ref="LUKS_FahrzeitMesspunkt"/>
+        <xs:element minOccurs="0" ref="LUKS_Halteplatz"/>
+        <xs:element minOccurs="0" ref="arrival"/>
+        <xs:element minOccurs="0" ref="publishedArrival"/>
+        <xs:element minOccurs="0" ref="departure"/>
+        <xs:element minOccurs="0" ref="publishedDeparture"/>
+        <xs:element minOccurs="0" ref="LUKS_Rangierpunkte"/>
+        <xs:element minOccurs="0" ref="stopMode"/>
+        <xs:element minOccurs="0" ref="minStopTime"/>
+        <xs:element minOccurs="0" ref="additionalStop"/>
+        <xs:element minOccurs="0" ref="LUKS_additionalStops_weitere"/>
+        <xs:element minOccurs="0" ref="relevantStopPositionMode"/>
+        <xs:element minOccurs="0" ref="LUKS_Biegezuschlagfaktor"/>
+        <xs:element minOccurs="0" ref="LUKS_Bauzuschlag"/>
+        <xs:element minOccurs="0" ref="LUKS_Sonderzuschlag"/>
+        <xs:element minOccurs="0" ref="proportionalEdificialSurcharge"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="servicePoint" type="xs:string"/>
+  <xs:element name="longAppellation" type="xs:string"/>
+  <xs:element name="trackSystem" type="xs:string"/>
+  <xs:element name="trackSystemLength">
+	<xs:complexType>
+		<xs:simpleContent>
+			<xs:extension base="xs:normalizedString">
+				<xs:attribute name="StartBisFzMp" use="required" type="xs:integer"/>
+				<xs:attribute name="FzMpBisEnde" use="required" type="xs:integer"/>
+				<xs:attribute name="Gesamt" use="required" type="xs:integer"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_FahrwegAnfang">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="Art" use="required" type="xs:NCName"/>
+          <xs:attribute name="Partner" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_FahrwegEnde">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="Art" use="required" type="xs:NCName"/>
+          <xs:attribute name="Partner"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_FahrzeitMesspunkt">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Art" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_Halteplatz">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Art" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="arrival">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="nightLeap"/>
+        <xs:element ref="time"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="publishedArrival">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="nightLeap"/>
+        <xs:element ref="time"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="departure">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="nightLeap"/>
+        <xs:element ref="time"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="publishedDeparture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="nightLeap"/>
+        <xs:element ref="time"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nightLeap" type="xs:integer"/>
+  <xs:element name="time" type="xs:time"/>
+  <xs:element name="stopMode">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Schluessel" use="required" type="xs:string"/>
+      <xs:attribute name="Typ" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="minStopTime" type="xs:duration"/>
+  <xs:element name="LUKS_Rangierpunkte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="LUKS_Rangierpunkt"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_Rangierpunkt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="infrastructureElement"/>
+        <xs:element ref="isPublished"/>
+        <xs:element ref="LUKS_ISE_Info"/>
+        <xs:element minOccurs="0" ref="LUKS_ZusatzhaltArt"/>
+        <xs:element minOccurs="0" ref="LUKS_RangierpunktTime"/>
+        <xs:element ref="isBeforeArrivalDeparture"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_RangierpunktTime" type="xs:duration"/>
+  <xs:element name="additionalStop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="infrastructureElement"/>
+        <xs:element ref="isPublished"/>
+        <xs:element ref="LUKS_ISE_Info"/>
+        <xs:element minOccurs="0" ref="LUKS_ZusatzhaltArt"/>
+        <xs:element ref="additionalStopTime"/>
+        <xs:element ref="isBeforeArrivalDeparture"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_additionalStops_weitere">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="additionalStop"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="infrastructureElement">
+    <xs:complexType mixed="true">
+      <xs:attribute name="DS100" use="required" type="xs:string"/>
+      <xs:attribute name="ID" use="required" type="xs:integer"/>
+      <xs:attribute name="Typ" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isPublished" type="xs:boolean"/>
+  <xs:element name="LUKS_ISE_Info">
+    <xs:complexType>
+      <xs:attribute name="Strecke" use="required" type="xs:string"/>
+      <xs:attribute name="Typ" use="required" type="xs:NCName"/>
+      <xs:attribute name="km" use="required" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_ZusatzhaltArt">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:NCName">
+          <xs:attribute name="Art" use="required" type="xs:integer"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="additionalStopTime" type="xs:duration"/>
+  <xs:element name="relevantStopPositionMode" type="xs:NCName"/>
+  <xs:element name="isBeforeArrivalDeparture" type="xs:boolean"/>
+  <xs:element name="LUKS_Biegezuschlagfaktor" type="xs:token"/>
+  <xs:element name="LUKS_Bauzuschlag">
+    <xs:complexType>
+      <xs:attribute name="Minuten" type="xs:token"/>
+      <xs:attribute name="Prozent" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_Sonderzuschlag">
+    <xs:complexType>
+      <xs:attribute name="Minuten" type="xs:token"/>
+      <xs:attribute name="Prozent" type="xs:token"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="proportionalEdificialSurcharge" type="xs:duration"/>
+  <xs:element name="anchor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="anchorSequenceServicePoint"/>
+        <xs:element ref="anchorTime"/>
+        <xs:element minOccurs="0" ref="LUKS_Sollabfahrt"/>
+        <xs:element ref="isDepartureTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="anchorSequenceServicePoint" type="xs:string"/>
+  <xs:element name="anchorTime" type="xs:time"/>
+  <xs:element name="LUKS_Sollabfahrt" type="xs:time"/>
+  <xs:element name="isDepartureTime" type="xs:boolean"/>
+  <xs:element name="edificialSurcharges">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="edificialSurcharge"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="edificialSurcharge">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="startDS100"/>
+        <xs:element ref="endDS100"/>
+        <xs:element name="time" type="xs:duration"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="startDS100" type="xs:string"/>
+  <xs:element name="endDS100" type="xs:string"/>
+  <xs:element name="connection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="connectionMode"/>
+        <xs:element ref="firstTrain"/>
+        <xs:element ref="secondTrain"/>
+        <xs:element ref="firstServicePoint"/>
+        <xs:element minOccurs="0" ref="secondServicePoint"/>
+        <xs:element minOccurs="0" ref="timeValue"/>
+        <xs:element ref="status"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="connectionMode" type="xs:string"/>
+  <xs:element name="firstTrain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mainNumber"/>
+        <xs:element ref="subNumber"/>
+        <xs:element ref="userAbbreviation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="secondTrain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mainNumber"/>
+        <xs:element ref="subNumber"/>
+        <xs:element ref="userAbbreviation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="firstServicePoint" type="xs:string"/>
+  <xs:element name="secondServicePoint" type="xs:string"/>
+  <xs:element name="timeValue" type="xs:duration"/>
+  <xs:element name="mode" type="xs:string"/>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="number" type="xs:nonNegativeInteger"/>
+  <xs:element name="validity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="validFrom"/>
+        <xs:element minOccurs="0" ref="validTo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="validFrom" type="xs:date"/>
+  <xs:element name="validTo" type="xs:date"/>
+  <xs:element name="timeOfBuild" type="xs:dateTime"/>
+  <xs:element name="comment" type="xs:string"/>
+  <xs:element name="status" type="xs:string"/>
+  <xs:element name="LUKS_ExternerZugname" type="xs:string"/>
+  <xs:element name="LUKS_Zugfamilie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="LUKS_Zugfamilie_Kurz"/>
+        <xs:element minOccurs="0" ref="LUKS_Zugfamilie_Lang"/>
+        <xs:element minOccurs="0" ref="LUKS_Zugfamilie_Kommentar"/>
+		<xs:element minOccurs="0" ref="LUKS_Zugfamilie_Farbe"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LUKS_Zugfamilie_Kurz" type="xs:string"/>
+  <xs:element name="LUKS_Zugfamilie_Lang" type="xs:string"/>
+  <xs:element name="LUKS_Zugfamilie_Kommentar" type="xs:string"/>
+  <xs:element name="LUKS_Zugfamilie_Farbe" type="xs:integer"/>
+  <xs:element name="mainNumber" type="xs:string"/>
+  <xs:element name="subNumber" type="xs:nonNegativeInteger"/>
+  <xs:element name="userAbbreviation" type="xs:NCName"/>
+  <xs:element name="timetablePeriod">
+    <xs:complexType>
+      <xs:attribute name="description" type="xs:string"/>
+      <xs:attribute name="endDate" type="xs:date"/>
+      <xs:attribute name="startDate" type="xs:date"/>
+      <xs:attribute name="timetablePeriodID" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element> 
+  <xs:element name="LUKS_Betriebsvariante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Name" type="xs:string"/>
+        <xs:element name="Kommentar" type="xs:string"/>
+	<xs:element minOccurs="0" name="Name_Obervariante" type="xs:string"/>
+        <xs:element ref="AktiveSperrungen"/>
+        <xs:element ref="Szenarien"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>  
+  <xs:element name="AktiveSperrungen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Sperrung"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>  
+  <xs:element name="Sperrung">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Betriebsstelle" type="xs:string"/>
+        <xs:element name="Name" type="xs:string"/>
+        <xs:element name="Kilometrierung" type="xs:string"/>
+        <xs:element name="Fallend" type="xs:string"/>
+        <xs:element name="Steigend" type="xs:string"/>
+        <xs:element ref="Abschnitt"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>    
+  <xs:element name="Abschnitt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Anfang" type="xs:string"/>
+        <xs:element name="Ende" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>    
+  <xs:element name="Szenarien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Ordner"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>    
+  <xs:element name="Ordner">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Ordner"/>
+        <xs:element ref="Element"/>
+      </xs:choice>
+      <xs:attribute name="Name" type="xs:string" use="required"/>	
+      <xs:attribute name="Beschreibung" type="xs:string" use="required"/>	
+    </xs:complexType>
+  </xs:element>      
+  <xs:element name="Element">
+    <xs:complexType>
+      <xs:attribute name="Typ" type="xs:string" use="required"/>	
+      <xs:attribute name="Name" type="xs:string" use="required"/>	
+    </xs:complexType>
+  </xs:element>         
+  <xs:element name="LUKS_MzBetriebsprogramm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="MzReferenzBS"/>
+        <xs:element ref="Variation"/>
+        <xs:element minOccurs="0" ref="Zeiten"/>
+        <xs:element minOccurs="0" ref="Ganglinie"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MzReferenzBS">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="Ankunft" type="xs:boolean" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Variation">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:token">
+          <xs:attribute name="verteilt" type="xs:string" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Zeiten">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Zeit" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Zeit">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:time">
+          <xs:attribute name="TaktID" type="xs:integer"/>
+          <xs:attribute name="TaktNr" type="xs:nonNegativeInteger"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ganglinie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="FahrtenJeStunde" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FahrtenJeStunde">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:nonNegativeInteger">
+          <xs:attribute name="Stunde" type="xs:nonNegativeInteger" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="GeschwindigkeitsbandName">
+      <xs:simpleContent>
+          <xs:extension base="xs:token">
+              <xs:attribute name="Name" use="required" type="xs:token"/>
+          </xs:extension>
+      </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="GeschwindigkeitsbaenderNamen">
+      <xs:sequence minOccurs="0">
+          <xs:element name="Geschwindigkeitsband" type="GeschwindigkeitsbandName" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="isUsed" use="required" type="xs:boolean"/>
+  </xs:complexType>
+ </xs:schema>

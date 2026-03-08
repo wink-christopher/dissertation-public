@@ -1,0 +1,17 @@
+MiZuFo für Strecke Mischverkehr generisch beide Richtungen;;
+
+;;;;Nr.;1;2;3;4;5;6;7;8;9;10;
+;;;;Richtung;1;1;1;1;1;2;2;2;2;2;
+;;;;Gattung;ICE-W;DGS;DGS;RB;RE-D;ICE-W;DGS;DGS;RB;RE-D;
+;;;;Zugnummer;FV Ri 1_L1 FS;GV langsam Ri 1_L1 FS;GV schnell Ri 1_L1 FS;NV langsam Ri 1_L1 FS;NV schnell Ri 1_L1 FS;FV Ri 2_L1 FS;GV langsam Ri 2_L1 FS;GV schnell Ri 2_L1 FS;NV langsam Ri 2_L1 FS;NV schnell Ri 2_L1 FS;
+Nr.;Ri.;Gattung;Zugnummer;Anzahl;30;12;19;16;36;30;12;19;16;36;
+1;1;ICE-W;FV Ri 1_L1 FS;30;04:45;01:52;01:52;01:52;01:52;---;---;---;---;---;
+2;1;DGS;GV langsam Ri 1_L1 FS;12;09:12;02:04;09:47;04:06;07:16;---;---;---;---;---;
+3;1;DGS;GV schnell Ri 1_L1 FS;19;07:03;01:48;01:52;03:12;05:40;---;---;---;---;---;
+4;1;RB;NV langsam Ri 1_L1 FS;16;04:51;01:31;02:00;03:17;07:41;---;---;---;---;---;
+5;1;RE-D;NV schnell Ri 1_L1 FS;36;01:52;01:34;01:34;02:53;03:13;---;---;---;---;---;
+6;2;ICE-W;FV Ri 2_L1 FS;30;---;---;---;---;---;04:45;01:52;01:52;01:52;01:52;
+7;2;DGS;GV langsam Ri 2_L1 FS;12;---;---;---;---;---;09:12;02:27;09:50;04:06;07:16;
+8;2;DGS;GV schnell Ri 2_L1 FS;19;---;---;---;---;---;07:03;02:14;02:14;03:12;05:40;
+9;2;RB;NV langsam Ri 2_L1 FS;16;---;---;---;---;---;04:51;01:31;02:00;03:17;07:41;
+10;2;RE-D;NV schnell Ri 2_L1 FS;36;---;---;---;---;---;01:52;01:34;01:34;02:53;03:13;
