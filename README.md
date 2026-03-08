@@ -29,11 +29,11 @@ Sofern nicht anders angegeben, liegen die Daten in einer aufbereiteten Form vor,
 │   └── Grafiken der Infill-Optimierung
 │
 ├── luks-kreuzungsbahnhof
-│    │
+│   │
 │   ├── EdB_Szenario-0
 │   │   ├── ergebnisse
-│   │    │   └── Export von Fahrzeiten, Mindestzugfolgezeiten und Streckenleistungsfähigkeitsberechnung
-│   │    │
+│   │   │   └── Export von Fahrzeiten, Mindestzugfolgezeiten und Streckenleistungsfähigkeitsberechnung
+│   │   │
 │   │   ├── luks-betriebsprogramm
 │   │   │   └── Export des Betriebsprogramms im LUKS-KSS-Format
 │   │   │
