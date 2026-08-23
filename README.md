@@ -1,6 +1,6 @@
 # Datensatz zur Dissertation „Projektierung von ETCS Level 1 Full Supervision am Beispiel Deutschland“
 
-> **Hinweis**: Die Dissertation befindet sich derzit noch in der Erstellung. Die Veröffentlichung wird für das zweite Halbjahr 2026 angestrebt.
+> **Hinweis**: Die Dissertation befindet sich derzeit in der Veröffentlichung.
 
 Dieses Repository enthält die Datensätze, die im Rahmen der Dissertation „Projektierung von ETCS Level 1 Full Supervision am Beispiel Deutschland“ von Christopher Wink erstellt und verwendet wurden.
 
@@ -11,7 +11,7 @@ Die in diesem Repository enthaltenen Daten wurden im Rahmen der folgenden Disser
 - Titel: Projektierung von ETCS Level 1 Full Supervision am Beispiel Deutschland
 - Autor: [Christopher Wink](https://www.linkedin.com/in/wink-christopher)
 - Institution: [Verkehrswissenschaftliches Institut](https://www.via.rwth-aachen.de) der [RWTH Aachen](https://www.rwth-aachen.de)
-- Jahr: vsl. 2026
+- Jahr: 2026
 
 Die Datensätze unterstützen insbesondere die in folgenden Kapiteln vorgestellten Arbeiten:
 - Kapitel 4 – Infrastrukturausrüstung,
@@ -127,7 +127,7 @@ Einzelne Datensätze können:
 bereitgestellt sein, um Anforderungen des Datenschutzes, vertragliche Verpflichtungen oder Rechte Dritter zu berücksichtigen.
 
 ## Zitierempfehlung
-> **Hinweis**: Die Dissertation befindet sich derzit noch in der Erstellung. Die Veröffentlichung wird für das zweite Halbjahr 2026 angestrebt.
+> **Hinweis**: Die Dissertation befindet sich derzeit in der Veröffentlichung.
 
 Wenn Sie Daten aus diesem Repository verwenden, zitieren Sie bitte entweder die zugrunde liegende Dissertation
 ```
